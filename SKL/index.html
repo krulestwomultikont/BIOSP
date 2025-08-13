@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Święty Kościół Lewosławia – Strona Oficjalna</title>
+  <meta name="description" content="Oficjalna strona Świętego Kościoła Lewosławia." />
+  <style>
+    :root{
+      --bg:#0a2f1f;
+      --bg-soft:#0d3d29;
+      --fg:#e5e7eb;
+      --muted:#9ca3af;
+      --brand:#4ade80;
+      --brand-2:#22c55e;
+      --card:#0d3d29;
+      --border:#14532d;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial;}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{position:sticky;top:0;background:rgba(10,47,31,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:50}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:36px;height:36px;border-radius:8px}
+    .brand h1{font-size:18px;margin:0;font-weight:700}
+    .menu{display:flex;gap:16px}
+    .menu a{padding:10px 12px;border-radius:10px}
+    .menu a:hover{background:#052e1d}
+    .hero{padding:64px 0;background:linear-gradient(135deg,rgba(74,222,128,.08),rgba(34,197,94,.08));border-bottom:1px solid var(--border)}
+    .hero h2{font-size:36px;margin:0 0 12px}
+    .hero p{max-width:720px;color:var(--muted);line-height:1.7}
+    .cta{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--fg);font-weight:600}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));border:none}
+    section{padding:48px 0;border-bottom:1px solid var(--border)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+    .org-logo{max-width:200px;display:block;margin-bottom:8px}
+    .personnel{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:16px}
+    .kuria{display:grid;grid-template-columns:repeat(auto-fill,minmax(500px,1fr));gap:16px;margin-top:16px}
+    .person{background:var(--bg-soft);padding:24px;border-radius:24px;text-align:center}
+    .person img{width:150px;height:150px;border-radius:50%;object-fit:cover;margin-bottom:8px}
+    footer{padding:32px 0;background:#052e1d;color:var(--muted)}
+    .meta-list{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="./logo.png" alt="Logo Świętego Kościoła Lewosławia" />
+        <h1>Święty Kościół Lewosławia</h1>
+      </div>
+      <nav class="menu">
+        <a href="#o-kosciele">O Kościele</a>
+        <a href="#organy">Organy</a>
+        <a href="#kult">Kult lewosławny</a>
+      </nav>
+    </div>
+  </header>
+
+  <center>
+	    <img src="tapeta.png" width="100%">
+</center><br/><br/>
+
+  <main>
+    <section class="hero" id="o-kosciele">
+      <div class="container">
+        <h2>O Świętym Kościele Lewosławia</h2>
+        <p>Święty Kościół Lewosławia jest wspólnotą wiernych i uduchowionych żyjących wedle wartości nadanych przez boskiego opiekuna Naratusa oraz zgodnie z wolą Piątki. 
+          Jego misją jest wypełnianie woli bogów, nauczanie ich ścieżek i ochrona wiernych. Święty Kościół Lewosławia jest częścią Uniwersum Multikont. Lewosławie jest narodową religią Multikont.</p>
+        <div class="cta">
+          <a class="btn btn-primary" id="statut" href="./statut.pdf" target="_blank">📄 Statut Świętego Kościoła Lewosławia (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="organy">
+      <div class="container">
+        <h3>Organy Centralnego Kościoła</h3>
+        <div class="card">
+          <p>Organy Patriarchatu Lewosławia, serca Kościoła:</p>
+          <ul class="meta-list">
+            <li><a href="#patriarcha">Patriarcha Lewosławia</a></li>
+            <li><a href="#rada">Rada Pięciu Promieni</a></li>
+            <li><a href="#kolegium">Kolegium Doktrynalne</a></li>
+            <li><a href="#kuria">Kuria Patriarsza</a></li>
+            <li><a href="#trybunaly">Trybunały Kościoła</a></li>
+            <li><a href="#zakon">Zakon Szkarłatnych Ostrzy</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="patriarcha">
+      <div class="container">
+        <h3>Patriarcha Lewosławia</h3>
+        <img src="./logos/herb_patriarchy.png" alt="Herb Patriarchy" class="org-logo" />
+        <p>Najwyższy zwierzchnik duchowy i organizacyjny Kościoła, kieruje całością jego działań i czuwa nad czystością doktryny. Jest zwierzchnikiem Państwa-Miasta Narathor.</p>
+        <div class="personnel">
+          <div class="person"><img src="./people/patriarcha.png" alt="Patriarcha" /><br/><strong>Alaryk I Szkarłatny</strong><br/>Patriarcha Lewosławia</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rada">
+      <div class="container">
+        <h3>Rada Pięciu Promieni</h3>
+        
+        <p>Organ doradczy i wspierający Patriarchę, składa się z Wielkiego Archonta oraz pięciu kardynałów promienia.</p>
+        <div class="personnel">
+          <div class="person"><img src="./people/wielki-archont.png" alt="Wielki Archont" /><br/><strong>Hangvul</strong><br/>Wielki Archont</div></div>
+          <div class="personnel">
+          <div class="person"><img src="./people/kardynal1.png" alt="Kardynał" /><br/><strong>Renthurnak</strong><br/><i>Prominens Bellator Ignistrigoni </i>– Promień Wojenny Ignistrigona</div>
+          <div class="person"><img src="./people/kardynal2.png" alt="Kardynał" /><br/><strong>Imperius</strong><br/><i>Prominens Sapientiae Velmioris </i>– Promień Mądrości Velmiora</div>
+          <div class="person"><img src="./people/kardynal3.png" alt="Kardynał" /><br/><strong>Serenya</strong><br/><i>Prominens Misericordiae Elyavriae </i>– Promień Miłosierdzia Elyavrii</div>
+          <div class="person"><img src="./people/kardynal4.png" alt="Kardynał" /><br/><strong>Althaea</strong><br/><i>Prominens Visionis Ethelaris </i>– Promień Wizji Ethelary</div>
+          <div class="person"><img src="./people/kardynal5.png" alt="Kardynał" /><br/><strong>Stefan</strong><br/><i>Prominens Ordinis Thalorgaris </i>– Promień Porządku Thalorgara</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kolegium">
+      <div class="container">
+        <h3>Kolegium Doktrynalne</h3>
+        <p>Odpowiada za opracowywanie aktów doktrynalnych oraz ich interpretację zgodnie z wolą bogów.</p>
+        <div class="personnel">
+          <div class="person"><img src="./logos/kolegium.png" alt="Kronikarz" /><br/>W skład Kolegium wchodzi <strong>12 kronikarzy objawienia</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kuria">
+      <div class="container">
+        <h3>Kuria Patriarsza</h3>
+        
+        <p>Administracja Kościoła Centralnego, w skład której wchodzą Wielka Kancelaria, dykasterie, Archiwum Głosu i Biuro Ewidencji Diusz. Zwierzchnikiem Kurii Patriarszej jest Patriarcha Lewosławia.</p>
+        <div class="kuria">
+          <div class="person"><strong>Wielka Kancelaria</strong><br/>Prowadzi politykę wewnętrzną i zagraniczną Patriarchatu Lewosławia i Państwa-Miasta Narathor.</div>
+          <div class="person"><strong>Dykateria ds. Jedności Kultu Lewosławnego</strong><br/>Wykonuje zadania dotyczące nadzoru nad jednością nauki wiary lewosławnej na świecie.</div>
+          <div class="person"><strong>Dykateria ds. Lewosławnych Zakonów Rycerskich</strong><br/>Wykonuje zadania dotyczące nadzoru nad organizacją i funkcjonowaniem lewosławnych zakonów rycerskich.</div>
+          <div class="person"><strong>Dykateria ds. Egzarchów i Archiegzarchów</strong><br/>Wykonuje zadania dotyczące nadzoru nad powołaniami i działalnością egzarchów i archiegzarchów.</div>
+          <div class="person"><strong>Dykateria ds. Organizacji Siedzib Uduchowionych</strong><br/>Nadzoruje przydziały uduchowionych do siedzib.</div>
+          <div class="person"><strong>Dykateria ds. Rodziny i Życia</strong><br/>Odpowiada za organizację zasad życia wiernych i uduchowionych oraz organizacji rodziny w kulcie lewosławnym.</div>
+          <div class="person"><strong>Dykateria ds. Kultury, Nauki i Wiary</strong><br/>Odpowiada za opiekę nad kulturą lewosławną, nadzór nad stanem świątyń i innych zabytków kultury lewosławnej oraz za organizację
+            nauki wiary i kultury lewosławnej.</div>
+          <div class="person"><strong>Dykateria ds. Domów Profesji Kościelnych</strong><br/>Wykonuje zadania dotyczące nadzoru nad domami profesji kościelnych.</div>
+          <div class="person"><strong>Archiwum Głosu</strong><br/>Gromadzi, archiwizuje i publikuje akty doktrynalne i akty prawa religijnego.</div>
+          <div class="person"><strong>Biuro Ewidencji Dusz</strong><br/>Prowadzi spis wiernych i uduchowionych Lewosławia, w szczególności: urodzeń, małżeńst, konwersji, herezji i święceń.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trybunaly">
+      <div class="container">
+        <h3>Trybunały Kościoła</h3>
+        <p>Najwyższe organy sądownicze – Trybunał Strażników Lewosławia i Trybunał Boskiej Sprawiedliwości – czuwają nad przestrzeganiem prawa boskiego, sprawują wymiar boskiej sprawiedliwości oraz wydają 
+          wyroki w imieniu bogów.</p>
+        <div class="kuria">
+          <div class="person"><strong>Trybunał Strażników Lewosławia</strong> orzeka w sprawach:
+          <br/>1) środków zaskarżenia od orzeczeń kolegiów strażników Lewosławia;
+          <br/>2) ciężkich zbrodni przeciwko Kościołowi;
+          <br/>3) zbrodni dotyczących układania się z anime-demonami lub innymi wrogami Kościoła;
+          <br/>4) usunięcia sędziego z uwagi na utratę zaufania boskiego.</div>
+          <div class="person"><strong>Trybunał Boskiej Sprawiedliwości</strong> orzeka w sprawach:
+          <br/>1) nadzwyczajnych środków zaskarżenia od wyroków kościelnych sądów egzarchalnych;
+          <br/>2) herezji popełnionych przez kapłana;
+          <br/>3) ciężkich zbrodni przeciwko wiernym i uduchowionym; 
+          <br/>4) wykorzystania boskich mocy bez błogosławieństwa Kościoła;
+          <br/>5) wykorzystania mocy istot nieuznanych przez Kościół za bogów lewosławnych.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="zakon">
+      <div class="container">
+        <h3>Zakon Szkarłatnych Ostrzy</h3>
+        <p>Zakon Szkarłatnych Ostrzy stanowi zbrojne ramię Patriarchy i Świętego Kościoła Lewosławia. Składa się ze Szkarłatnych Braci i Szkarłatnych Sióstr.</p>
+        <div class="personnel">
+          <div class="person"><img src="./logos/herb_so.png" alt="Kronikarz" /><br/>Na czele Zakonu stoi <strong>Wielki Mistrz</strong></div>
+        </div>
+      </div>
+    </section>
+
+<section id="kult">
+      <div class="container">
+        <h3>Organizacja kultu Lewosławnego</h3>
+        <div class="card">
+          <p>Elementy organizacji kultu Lewosławnego:</p>
+          <ul class="meta-list">
+            <li><a href="#stopnie">Stopnie święceń uduchowionych</a></li>
+            <li><a href="#profesje">Stopnie profesji kościelnych</a></li>
+            <li><a href="#egzarchaty">Egzarchaty i metropolie</a></li>
+            <li><a href="#zakony">Lewosławne zakony rycerskie</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="stopnie">
+      <div class="container">
+        <h3>Stopnie święceń uduchowionych</h3>
+        <p>Uduchowieni przechodzą trzy stopnie święceń:</p>
+        <div class="personnel">
+          <div class="person"><strong>Płomycznik</strong><br/>Płomycznikiem zostaje uduchowiony, który w ustalonym trybie złoży śluby jednemu z bogów Piątki, tym samym obierając go na swojego opiekuna.</div>
+          <div class="person"><strong>Iskra</strong><br/> Płomycznik może zostać podniesiony do stopnia iskry, jeśli płomycznik ukończył szkolenie i uzyskał
+          stopień profesji w domu profesji kościelnej, oraz wykazał, że jest ekspertem w ścieżce boga, któremu złożył śluby.</div>
+          <div class="person"><strong>Promiennik</strong><br/>  Iskra może zostać podniesiony do stopnia promiennika, jeżeli iskra swoją działalnością wykazał, że
+          jest mistrzem w znajomości ścieżek bogów lewosławnych, potrafi mistrzowsko stosować moc swojego boga
+          opiekuna oraz sumiennie wykonywał swoją profesję kościelną.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profesje">
+      <div class="container">
+        <h3>Stopnie profesji kościelnych</h3>
+        <p>Uduchowieni uzyskują szkolenie w profesji kościelnej w domach profesji kościelnych.  Każdy uduchowiony podlega przydziałowi do jednego z domów od dnia uzyskania stopnia płomycznika. 
+          Uduchowiony kończąc szkolenia uzyskuje właściwy stopień profesji.</p>
+        <div class="personnel">
+          <div class="person"><strong>Dom Nauki i Teologii</strong><br/> Teolodzy nauczają, studiują i spisują wiedzę na temat teologii i wiary lewosławnej.</div>
+          <div class="person"><strong>Dom Rytuałów</strong><br/> Mistrzowie rytuałów przeprowadzają rytuały.</div>
+          <div class="person"><strong>Dom Paladynów</strong><br/> Paladyni służą w zakonach i straży świątynnej, broniąc Kościoła i wiernych.</div>
+          <div class="person"><strong>Dom Uzdrowicieli</strong><br/> Uzdrowiciele używają mocy bogów w celu uzdrawiania istot ludzkich.</div>
+          <div class="person"><strong>Dom Administratorów</strong><br/> Administratorzy pełnią funkcje w administracji kościelnej.</div>
+          <div class="person"><strong>Dom Boskiej Sprawiedliwości</strong><br/> Sędziowie sprawują wymiar sprawiedliwości w kościelnych sądach.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="egzarchaty">
+      <div class="container">
+        <h3>Organizacja Kościoła w egzarchatach i metropoliach</h3>
+        <p>Egzarchatem Kościoła jest określone terytorium i wspólnota wiernych i uduchowionych je zamieszkująca.  Zwierzchnikiem kultu lewosławnego w egzarchacie jest egzarcha. 
+          W egzarchatach o wyjątkowym znaczeniu kulturowym lub strategicznym Patriarcha może w miejsce egzarchy powołać archiegzarchę. Archiegzarcha, prócz funkcji zwierzchnika kultu lewosławnego w egzarchacie (nazywanego
+archiegzarchatem), może sprawować funkcję przewodniczącego metropolii. Metropolią jest grupa egzarchatów leżących w jednym państwie narodowym lub w inny sposób powiązanych.
+        </p>
+        <div class="personnel">
+          <div class="person"><strong>Metropolia: Lewosławny Kościół Azurii:</strong>
+          <br/>Archiegzarchat Kapitolu
+          <br/>Egzarchat Adasy
+          <br/>Egzarchat Zenburnu
+          <br/>Egzarchat Ifralasu
+          <br/>Egzarchat Valatoru
+          <br/>Egzarchat Ererc
+          <br/>Egzarchat Ikorory</div>
+          <div class="person"><strong>Metropolia: Lewosławny Kościół Krulestwa Multikont:</strong>
+          <br/>Archiegzarchat Tarkwinogrodu
+          <br/>Egzarchat Tarkwinogrodu Zachodniego
+          <br/>Egzarchat Discorda
+          <br/>Egzarchat Facebooka
+          <br/>Egzarchat Storisis
+          <br/>Egzarchat Twittera
+          <br/>Egzarchat Youtuba
+          <br/>Egzarchat Instagrama
+          <br/>Egzarchat Bellrunu
+          <br/>Egzarchat Exidoru
+          <br/>Egzarchat Achendalu</div>
+          <div class="person"><strong>Metropolia: Imperialny Lewosławny Kościół Felorków:</strong>
+          <br/>Archiegzarchat Ferrori
+          <br/>Egzarchat Grugakiru
+          <br/>Egzarchat Wrosy
+          <br/>Egzarchat Nubusu
+          <br/>Egzarchat Akaganu
+          <br/>Egzarchat Khirossu
+          <br/>Egzarchat Morvaku
+          <br/>Egzarchat Thangrimu
+          <br/>Egzarchat Vorsku</div>
+          <div class="person"><strong>Metropolia: Lewosławny Kościół Omyrii:</strong>
+          <br/>Archiegzarchat Varthelionu
+          <br/>Egzarchat Esris
+          <br/>Egzarchat Błękitnej Wyspy</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="zakony">
+      <div class="container">
+        <h3>Lewosławne zakony rycerskie</h3>
+        <p>Lewosławny zakon rycerski jest zbrojną organizacją służącą Kościołowi i Patriarsze. Patriarcha jest zwierzchnikiem lewosławnych zakonów rycerskich. Aktywne zakony:</p>
+        <div class="personnel">
+          <div class="person"><img src="./logos/herb_templariusze.png" alt="Zakon Templariuszy Adanosa" /><br/><strong>Zakon Templariuszy Adanosa</strong><br/> Zakon Templariuszy Adanosa
+          powstał w czasach wiekich odkryć Azurii aby szerzyć Lewosławie w nienznanej krainie na zachodzie. Templariusze Adanosa założyli własne państwo.</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="rok"></span> Święty Kościół Lewosławia | Krulestwo Multikont</p>
+    </div>
+    <script>document.getElementById('rok').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>
