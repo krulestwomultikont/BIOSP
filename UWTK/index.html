@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UWTK - Uniwersytet Wspaniałego Tomasza Karolaka</title>
+    <style>
+        /* Zmieniony styl CSS, kolor dominujący: Granat, akcenty: Szary */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f7; /* Bardzo jasny szary/niebieski */
+            color: #333;
+        }
+        header {
+            background-color: #0d47a1; /* Ciemny, głęboki Granat */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid #bdbdbd; /* Średni szary akcent */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #1a237e; /* Ciemniejszy granat dla nagłówków */
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h3 {
+            color: #0d47a1;
+            border-left: 5px solid #bdbdbd;
+            padding-left: 10px;
+        }
+   
+.logo-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0; /* Usuń szare tło */
+    border: none; /* Usuń ramkę */
+    margin: 0 auto 15px;
+    overflow: visible; /* Zmień na widoczny */
+    /* ... reszta stylów ... */
+}
+.personel-photo img, .logo-placeholder img { /* Upewnij się, że tag img ma 100% szerokości */
+    width: 100%;
+    height: auto; /* Zmień wysokość na auto */
+    object-fit: contain; /* Zmień na contain */
+    display: block;
+}
+
+/* --- POPRAWIONA WERSJA CSS DLA SAMEGO LOGO GŁÓWNEGO --- */
+.logo-placeholder {
+    /* Ustaw większy rozmiar, by logo się nie ucięło (np. 150x150) */
+    width: 250px;
+    height: 250px;
+    background-color: transparent; /* Ustaw przezroczystość zamiast szarości */
+    border: none;
+    margin: 0 auto 15px;
+    overflow: hidden; 
+    line-height: 150px;
+    text-align: center;
+    font-weight: bold;
+}
+.logo-placeholder img {
+    /* Upewnij się, że obraz wypełnia ten kontener */
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; /* Użyj 'contain' by widzieć cały obraz */
+    display: block;
+}
+        .personel-card {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .personel-photo {
+            width: 80px;
+            height: 80px;
+            background-color: #bdbdbd;
+            border: 2px solid #0d47a1;
+            margin-right: 15px;
+            line-height: 80px;
+            text-align: center;
+            font-size: 0.7em;
+            flex-shrink: 0;
+            overflow: hidden; 
+        }
+        .personel-photo img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover;
+            display: block;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #e3f2fd; /* Bardzo jasny niebieski/granat */
+            color: #1a237e;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        .faculty-header {
+            margin-bottom: 15px;
+            border-bottom: 1px dashed #e0e0e0;
+            padding-bottom: 10px;
+        }
+        .faculty-header h3 {
+            margin: 0;
+            border: none;
+            padding: 0;
+            color: #1a237e; /* Zmieniony styl dla czytelności po usunięciu loga */
+            border-left: 5px solid #bdbdbd;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-placeholder">
+            <img src="logo_uwtk.png" alt="Logo Uniwersytetu Wspaniałego Tomasza Karolaka">
+        </div>
+        <h1>Uniwersytet Wspaniałego Tomasza Karolaka w Tarkwinogrodzie</h1>
+        <p>UWTK - Aktorska Pasja, Nasza Misja</p>
+    </header>
+
+    <div class="container">
+
+        <section id="misja">
+            <h2>🏛️ Strona Główna – Witamy na UWTK</h2>
+            <p>Witamy na stronie głównej Uniwersytetu Wspaniałego Tomasza Karolaka w Tarkwinogrodzie – wiodącej w Feloroście narodowej placówki naukowej i edukacyjnej Krulestwa Mutlikont, która łączy tradycyjną akademicką rzetelność z przełomowym podejściem do zarządzania sukcesem. Nasza misja to kształcenie elit gotowych do podejmowania najtrudniejszych wyzwań – zarówno w dziedzinach ścisłych, humanistycznych i społecznych, jak i w życiu codziennym.</p>
+        </section>
+
+        <section id="wladze">
+            <h2>👨‍🎓 Rektor i Prorektorzy</h2>
+            <p>Władze Uniwersytetu Wspaniałego Tomasza Karolaka to zespół wizjonerów, którzy niestrudzenie pracują nad podtrzymaniem najwyższych standardów edukacyjnych oraz zapewnieniem absolwentom „Czynnika Karolakowego” – gwarancji sukcesu.</p>
+
+            <h3>Rektor Magnificus</h3>
+            <div class="personel-card">
+                <div class="personel-photo">
+                    <img src="rektor_aarchut.jpg" alt="Portret Archonta Prof. dr rehab. Aarchuta Tomaszewskiego">
+                </div>
+                <div>
+                    Stanowisko: Rektor Magnificus<br>
+                    Imię i Nazwisko: Archont Prof. dr rehab. Aarchut Tomaszewski
+                </div>
+            </div>
+
+            <h3>Prorektorzy</h3>
+            <table>
+                <tr>
+                    <th>Stanowisko</th>
+                    <th>Imię i Nazwisko</th>
+                    <th>Zakres Obowiązków</th>
+                </tr>
+                <tr>
+                    <td>Prorektor ds. Nauki i Rozwoju</td>
+                    <td>Prof. dr rehab. Borys Grotowski</td>
+                    <td>Nadzór nad strategicznznymi kierunkami badań naukowych Uczelni, koordynacja innowacji międzywydziałowych oraz zarządzanie pozyskiwaniem krajowych i międzynarodowych grantów rozwojowych.</td>
+                </tr>
+                <tr>
+                    <td>Prorektor ds. Studenckich</td>
+                    <td>Dr Maria Entuzjastyczna</td>
+                    <td>Monitorowanie jakości życia studenckiego, dbałość o kulturę akademicką, wspieranie organizacji studenckich, stypendia oraz nadzór nad procesami rekrutacyjnymi i adaptacyjnymi.</td>
+                </tr>
+                <tr>
+                    <td>Prorektor ds. Pracowniczych</td>
+                    <td>Mgr inż. Anna Kadrówka</td>
+                    <td>Zarządzanie polityką kadrową i rozwojem zasobów ludzkich Uczelni, prowadzenie szkoleń dla kadry dydaktycznej i administracyjnej oraz negocjacje zbiorowe i regulacje dotyczące zatrudnienia.</td>
+                </tr>
+                 <tr>
+                    <td>Prorektor ds. Administracji</td>
+                    <td>Inż. Paweł Logistyczny</td>
+                    <td>Odpowiedzialność za efektywność zarządzania infrastrukturą i majątkiem Uczelni, nadzór nad planowaniem finansowym, inwestycjami oraz bezpieczeństwem technicznym wszystkich obiektów.</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="wydzialy">
+            <h2>📘 Struktura Wydziałowa – Kierunki z Przyszłością</h2>
+            <p>UWTK łączy tradycyjną akademię z nowatorskimi dziedzinami, oferując kompleksowe wykształcenie w 13 głównych obszarach wiedzy.</p>
+
+            <section>
+                <div class="faculty-header">
+                    <h3>Wydział Teologii Lewosławnej i Religijnego Prawa Lewosławnego</h3>
+                </div>
+                <div class="personel-card">
+                    <div>
+                        Dziekan: Archont Prof. dr rehab. Mendelaj Wspólnicki<br>
+                        Opis: Wydział zajmuje się szkoleniem w sprawach wiary lewosławnej.
+                    </div>
+                </div>
+                <p>Kierunki: Teologia Lewosławna, Religijne Prawo Lewosławne</p>
+            </section>
+
+            <section>
+                <div class="faculty-header">
+                    <h3>Wydział Matematyki</h3>
+                </div>
+                <div class="personel-card">
+                    <div>
+                        Dziekan: Prof. dr rehab. Liczypiór Zuchwały<br>
+                        Opis: Pionierzy w analizie algorytmów złożoności, optymalizacji systemów oraz statystycznej teorii procesów losowych.
+                    </div>
+                </div>
+                <p>Kierunki: Matematyka Czysta; Analityka Danych Stosowanych; Statystyka i Modelowanie Procesów.</p>
+            </section>
+
+            <section>
+                <div class="faculty-header">
+                    <h3>Wydział Astrologii</h3>
+                </div>
+                <div class="personel-card">
+                    <div>
+                        Dziekan: Dr rehab. Zodiaka Gwiaździsta<br>
+                        Opis: Wydział zajmujący się badaniem wpływu ciał niebieskich na procesy historyczne, kosmologią systemową oraz interpretacją zjawisk kulturowych.
+                    </div>
+                </div>
+                <p>Kierunki: Astrologia Kulturalna; Kosmologia Teoretyczna; Numerologia Stosowana w Analityce.</p>
+            </section>
+            
+            <section>
+                <div class="faculty-header">
+                    <h3>Wydział Biologii</h3>
+                </div>
+                <div class="personel-card">
+                    <div>
+                        Dziekan: Prof. dr rehab. Fauna Floryszewska<br>
+                        Opis: Badania nad adaptacją biologiczną systemów żywych, bioinżynierią i biologią molekularną w zróżnicowanych środowiskach.
+                    </div>
+                </div>
+                <p>Kierunki: Bioinżynieria Genetyczna; Biologia Środowiskowa; Mutageneza Eksperymentalna.</p>
+            </section>
+
+            <section>
+                <div class="faculty-header">
+                    <h3>Wydział Chemii</h3>
+                </div>
+                <div class="personel-card">
+                    <div>
+                        Dziekan: Dr rehab. Wodorowy Kwasowski<br>
+                        Opis: Laboratorium analizy składu chemicznego, syntezy materiałów funkcjonalnych oraz zaawansowanej chemii organicznej.
+                    </div>
+                </div>
+                <p>Kierunki: Chemia Fizyczna i Materiałowa; Chemia Organiczna i Nanotechnologia; Inżynieria Chemiczna.</p>
+            </section>
+
+            <section>
+                <div class="faculty-header">
+                    <h3>Wydział Medyczny</h3>
+                </div>
+                <div class="personel-card">
+                    <div>
+                        Dziekan: Prof. dr rehab. Chirurg Dłutnicki<br>
+                        Opis: Kształcenie specjalistów w zakresie zdrowia publicznego, medycyny regeneracyjnej, diagnostyki klinicznej i terapii inwazyjnej.
+                    </div>
+                </div>
+                <p>Kierunki: Medycyna Estetyczna i Zdrowie Publiczne; Terapia Kryzysowa; Stresologia Kliniczna.</p>
+            </section>
+
+            <section>
+                <div class="faculty-header">
+                    <h3>Wydział Prawa i Administracji</h3>
+                </div>
+                <div class="personel-card">
+                    <div>
+                        Dziekan: Prof. dr rehab. Paragraf Prawniczy<br>
+                        Opis: Analiza systemów prawnych, regulacji cywilnoprawnych i gospodarczych oraz funkcjonowania organów administracji publicznej.
+                    </div>
+                </div>
+                <p>Kierunki: Prawo; Administracja Publiczna i Samorządowa.</p>
+            </section>
+
+            <section>
+                <div class="faculty-header">
+                    <h3>Wydział Filozofii</h3>
+                </div>
+                <div class="personel-card">
+                    <div>
+                        Dziekan: Dr rehab. Filozof Rozmyślny<br>
+                        Opis: Badanie teorii poznania, logiki, etyki, metafizyki oraz wpływu myśli na struktury społeczne.
+                    </div>
+                </div>
+                <p>Kierunki: Filozofia Egzystencjalna i Ontologia; Etyka Społeczna i Antropologia Systemowa.</p>
+            </section>
+
+            <section>
+                <div class="faculty-header">
+                    <h3>Wydział Nauk o Bezpieczeństwie</h3>
+                </div>
+                <div class="personel-card">
+                    <div>
+                        Dziekan: Prof. dr rehab. Patrol Stróżewski<br>
+                        Opis: Kształcenie ekspertów od analizy ryzyka, zarządzania kryzysowego, ochrony infrastruktury krytycznej i cyberbezpieczeństwa.
+                    </div>
+                </div>
+                <p>Kierunki: Bezpieczeństwo; Bezpieczeństwo Cyfrowe i Informatyczne; Zarządzanie Kryzysami i Ochrona Danych.</p>
+            </section>
+
+            <section>
+                <div class="faculty-header">
+                    <h3>Wydział Ekonomii i Finansów</h3>
+                </div>
+                <div class="personel-card">
+                    <div>
+                        Dziekan: Dr rehab. Kapitał Zyskowy<br>
+                        Opis: Analiza procesów makro- i mikroekonomicznych, modelowanie rynków finansowych i zarządzanie projektami inwestycyjnymi.
+                    </div>
+                </div>
+                <p>Kierunki: Ekonomia Stosowana; Finanse Projektów Inwestycyjnych i Dotacje; Rachunkowość.</p>
+            </section>
+
+            <section>
+                <div class="faculty-header">
+                    <h3>Wydział Nauk o Mediach Społecznościowych i Kontach</h3>
+                </div>
+                <div class="personel-card">
+                    <div>
+                        Dziekan: Prof. dr rehab. Bogdan Nowak<br>
+                        Opis: Dedykowany zjawisku kont, filozofii kont i kontologii.
+                    </div>
+                </div>
+                <p>Kierunki: Prawo Multikont; Kontologia</p>
+            </section>
+
+            <section>
+                <div class="faculty-header">
+                    <h3>Wydział Nauk Historycznych</h3>
+                </div>
+                <div class="personel-card">
+                    <div>
+                        Dziekan: Archont Dr rehab. Kronikarz Starożytny<br>
+                        Opis: Badania nad historycznym kontekstem procesów społecznych, dziejami kultury i archeologią cywilizacji starożytnych.
+                    </div>
+                </div>
+                <p>Kierunki: Historia; Archeologia i Dokumentacja Procesów Historycznych.</p>
+            </section>
+
+            <section>
+                <div class="faculty-header">
+                    <h3>Wydział Nauk Humanistycznych</h3>
+                </div>
+                <div class="personel-card">
+                    <div>
+                        Dziekan: Prof. dr rehab. Językoznawca Aferzysta<br>
+                        Opis: Analiza języka, retoryki, kulturoznawstwa oraz teoretycznych podstaw komunikacji międzyludzkiej i społecznej.
+                    </div>
+                </div>
+                <p>Kierunki: Polonistyka (spec. Nowomowa); Kulturoznawstwo i Teoria Komunikacji.</p>
+            </section>
+        </section>
+
+
+        <section id="kontakt">
+            <h2>📞 Kontakt</h2>
+            <ul>
+                <li>Adres: Tarkwinogród</li>
+                <li>E-mail: <a href="mailto:rektorat@uwtk.edu.pl">rektorat@uwtk.edu.krulestwomultikont</a></li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2025 Uniwersytet Wspaniałego Tomasza Karolaka w Tarkwinogrodzie. Wszystkie Prawa Zastrzeżone.
+    </footer>
+
+</body>
+</html>
