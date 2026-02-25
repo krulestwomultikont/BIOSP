@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krajowy Rejestr Arystokracji (KRA)</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif; /* Bardziej klasyczny krój pisma */
+            background-color: #f4f1ea;
+            color: #2c2c2c;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid #8b7355;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        h1 { color: #5d4037; text-transform: uppercase; letter-spacing: 2px; }
+
+        .registry-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .noble-item {
+            background: #fff;
+            border: 1px solid #dcd3c1;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        /* Tytuł zakładki wg pkt 1 */
+        .noble-header {
+            background-color: #8b7355;
+            color: white;
+            padding: 15px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .noble-header h2 { margin: 0; font-size: 1.1rem; font-weight: normal; }
+
+        .noble-content {
+            display: none;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        /* Podział na sekcje wg pkt 2, 3 i 4 */
+        .section-part {
+            padding: 20px 25px;
+        }
+
+        .separator {
+            border-top: 1px double #dcd3c1;
+            margin: 0 25px;
+            height: 1px;
+        }
+
+        .info-row {
+            margin-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Numeracja wg pkt 5 */
+        .label { 
+            font-weight: bold; 
+            color: #5d4037; 
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+        }
+
+        .value { font-size: 1.05rem; color: #333; }
+
+        .heraldry-container {
+            margin-top: 10px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .herb-img {
+            width: 100px;
+            height: 120px;
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        .arrow {
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 4px;
+            transform: rotate(45deg);
+        }
+        .active .arrow { transform: rotate(-135deg); }
+
+        /* Styl paska głównego */
+.navbar {
+    background-color: #5d4037;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-family: sans-serif;
+}
+
+/* Lista główna */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    color: #f4f1ea;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.menu > li > a:hover {
+    background-color: #8b7355;
+}
+
+/* Styl rozwijanego podmenu */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #dcd3c1;
+}
+
+.submenu li a {
+    color: #333;
+    padding: 12px 20px;
+    text-transform: none;
+    border-bottom: 1px solid #eee;
+}
+
+.submenu li a:hover {
+    background-color: #f4f1ea;
+    color: #5d4037;
+}
+
+/* Wyświetlanie po najechaniu myszką */
+.menu li:hover .submenu {
+    display: block;
+}
+
+.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #5d4037; /* Ten sam kolor co navbar dla spójności */
+    color: #f4f1ea;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-top: 2px solid #8b7355;
+    z-index: 1000;
+}
+
+/* Opcjonalnie: dodaj margines na dole głównej treści, 
+   aby ostatnia pozycja nie schowała się pod stopką */
+.main-content {
+    padding-bottom: 60px; 
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+  <ul class="menu">
+    <li>
+      <a href="#">Publikatory i Rejestry</a>
+        <ul class="submenu">
+            <li><a href="https://krulestwomultikont.github.io/KDU">Krulewski Dziennik Ustaw</a></li>
+            <li><a href="https://krulestwomultikont.github.io/MK">Monitor Krulewski</a></li>
+            <li><a href="https://krulestwomultikont.github.io/CBOSKiDWZZM">Centralna Baza Orzeczeń Sądów Krulestwa i DWZZM</a></li>
+            <li><a href="https://krulestwomultikont.github.io/BIOSP/KRA">Krajowy Rejestr Arystokracji</a></li>
+        </ul>
+    </li>
+    <li>
+      <a href="#">DWZZM</a>
+        <ul class="submenu">
+            <li><a href="https://krulestwomultikont.github.io/DUDWZZM">Dziennik Urzędowy DWZZM</a></li>
+        </ul>
+    </li>
+    <li><a href="https://krulestwomultikont.github.io/BIOSP/SKL">Święty Kościół Lewosławia</a></li>
+    <li><a href="">Wiki</a></li>
+  </ul>
+</nav>
+
+<header>
+    <h1>Krajowy Rejestr Arystokracji</h1>
+    <p>Rejestr elektroniczny prowadzony na podstawie Dekretu z 24.02.2026 r. o organizacji arystokracji (Kr. Dz. U. z 2026 r. poz. 5)</p>
+    <p>Organem prowadzącym rejestr jest Wiceprzewodniczący Rządu Koronnego</p>
+</header>
+
+<h1 style="text-align:center">Rodowe tytuły szlacheckie</h1>
+<div class="registry-container">
+
+    <div class="noble-item">
+        <div class="noble-header" onclick="toggleDetails(this)">
+            <h2><img src="../KRA/korona ksiecia.png" style="width: 12%">Poz. R.1. — Diuk Księstwa Świnków</h2>
+            <i class="arrow"></i>
+        </div>
+        
+        <div class="noble-content">
+            <div class="section-part">
+                <p>1. INFORMACJE O TYTULE</p>
+                <div class="info-row">
+                    <span class="label">N.1.1. Pełna nazwa tytułu szlacheckiego:</span>
+                    <span class="value">Diuk Księstwa Świnków</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.2. Klasa tytułu:</span>
+                    <span class="value">Tytuł związany z określoną funkcją publiczną</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.3. Ranga tytułu:</span>
+                    <span class="value">Książę</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.4. Prawa majątkowe powiązane z tytułem:</span>
+                    <span class="value">Dworek w Świdniku; Mercedes Benz</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.5. Podstawa prawna powiązania z funkcją publiczną:</span>
+                    <span class="value">Art. 102 ust. 1 Konstytucji Korony Krulestwa Multikont z 26.12.2025 r. (Kr. Dz. U. z 2025 r. poz. 26)</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.6. Opis sygnetu szlacheckiego:</span>
+                    <span class="value">Platynowy sygnet z ametystem</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.7. Data utworzenia tytułu/zniesienia tytułu:</span>
+                    <span class="value">24.02.2026 r./nie dotyczy</span>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="section-part">
+                <p>2. INFORMACJE O OSOBIE NOSZĄCEJ TYTUŁ</p>
+                <div class="info-row">
+                    <span class="label">N.2.1. Imię aktualnego arystokraty:</span>
+                    <span class="value">Bolszewicki Tata Świnka</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.2. Data nadania lub potwierdzenia tytułu:</span>
+                    <span class="value">24.02.2026 r.</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.3. Imiona poprzednich użytkowników tytułu:</span>
+                    <span class="value">Brak</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.4. Informacja o dziedzicu:</span>
+                    <span class="value">Ekologiczny Tata Świnka</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.5. Uprawnienia indywidualne:</span>
+                    <span class="value">Prawo własności nieruchomości o wielkości 28 ha, położonej w mieście Świdnik w kwadracie 8/120, prawo zasiadania w Izbie Arystokratów Senatu Koronnego</span>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="section-part">
+                <p>3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE</p>
+                <div class="info-row">
+                    <span class="label">N.3.1. Wzór używanego herbu arystokraty:</span>
+                    <div class="heraldry-container">
+                        <img src="../KRA/herb_pozr1.png" style="width: 200px; height: auto; border: 1px solid #dcd3c1; padding: 5px;">
+                        <div class="value" style="font-size: 0.9rem; font-style: italic;">
+                            Opis heraldyczny: Trzy złote świnki stojące na dwóch tylnych raciczkach, pierwsza i ostatnia zwrócone w lewo, środkowa w prawo, umieszczone w dwóch złotych pierścieniach nachylonych pod
+                            kątem 45' względem powierzchni, na tle tarczy o czterech barwach: w górnym lewym rogu czerwień, w górnym prawnym błękit, w dolnym lewym zieleń, a w dolnym prawym fiolet. 
+                            Nad tarczą herbową znajduje się korona rangowa księcia.
+                        </div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.3.2. Używany tytuł użytkowy:</span>
+                    <span class="value">Diuk</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.3.3. Informacje o innych tytułach arystokraty:</span>
+                    <span class="value">Tytuł Hrabiego Świdnickiego (poz. O.2. KRA)</span>
+                </div>
+            </div>    
+
+            <div class="separator"></div>
+
+            <div class="section-part">
+                <p>4. INFORMACJE O RODZIE SZLACHECKIM</p>
+                <div class="info-row">
+                    <span class="label">N.4.1. Wzór herbu rodu szlacheckiego:</span>
+                    <div class="heraldry-container">
+                        <img src="../KRA/herb_rod_poz1.png" style="width: 200px; height: auto; border: 1px solid #dcd3c1; padding: 5px;">
+                        <div class="value" style="font-size: 0.9rem; font-style: italic;">
+                            Opis heraldyczny: Trzy złote świnki stojące na dwóch tylnych raciczkach, pierwsza i ostatnia zwrócone w lewo, środkowa w prawo, umieszczone w dwóch złotych pierścieniach nachylonych pod
+                            kątem 45' względem powierzchni, na tle tarczy o czterech barwach: w górnym lewym rogu czerwień, w górnym prawnym błękit, w dolnym lewym zieleń, a w dolnym prawym fiolet.
+                        </div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.4.2. Członkowie rodu szlacheckiego:</span>
+                    <span class="value">Militarno-radziecki Wujek Świnka</span>
+                    <span class="value">Ludowo-socjalistyczny Wujek Świnka</span>
+                    <span class="value">Pani Bolszewicka</span>
+                    <span class="value">Ekologiczny Tata Świnka</span>
+                    <span class="value">Demokratyczny Tata Świnka</span>
+                    <span class="value">Kapitalistyczny Tata Świnka</span>
+                    <span class="value">Żydowski Tata Świnka</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.4.3. Siedziba rodu szlacheckiego:</span>
+                    <span class="value">Dworek w Świdniku</span>
+                </div>
+            </div>    
+
+        </div>
+    </div>
+
+    <div class="noble-item">
+        <div class="noble-header" onclick="toggleDetails(this)">
+            <h2><img src="../KRA/korona ksiecia.png" style="width: 12%">Poz. R.2. — Diuszessa Księstwa Margarity</h2>
+            <i class="arrow"></i>
+        </div>
+        
+        <div class="noble-content">
+            <div class="section-part">
+                <p>1. INFORMACJE O TYTULE</p>
+                <div class="info-row">
+                    <span class="label">N.1.1. Pełna nazwa tytułu szlacheckiego:</span>
+                    <span class="value">Diuszessa Księstwa Margarity</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.2. Klasa tytułu:</span>
+                    <span class="value">Tytuł związany z określoną funkcją publiczną</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.3. Ranga tytułu:</span>
+                    <span class="value">Książę</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.4. Prawa majątkowe powiązane z tytułem:</span>
+                    <span class="value">Nieruchomość - zamek na bagnie</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.5. Podstawa prawna powiązania z funkcją publiczną:</span>
+                    <span class="value">Art. 102 ust. 1 Konstytucji Korony Krulestwa Multikont z 26.12.2025 r. (Kr. Dz. U. z 2025 r. poz. 26)</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.6. Opis sygnetu szlacheckiego:</span>
+                    <span class="value">Platynowy sygnet z ametystem</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.7. Data utworzenia tytułu/zniesienia tytułu:</span>
+                    <span class="value">24.02.2026 r./nie dotyczy</span>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="section-part">
+                <p>2. INFORMACJE O OSOBIE NOSZĄCEJ TYTUŁ</p>
+                <div class="info-row">
+                    <span class="label">N.2.1. Imię aktualnego arystokraty:</span>
+                    <span class="value">Margarita</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.2. Data nadania lub potwierdzenia tytułu:</span>
+                    <span class="value">24.02.2026 r.</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.3. Imiona poprzednich użytkowników tytułu:</span>
+                    <span class="value">Brak</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.4. Informacja o dziedzicu:</span>
+                    <span class="value">Kunegunda</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.5. Uprawnienia indywidualne:</span>
+                    <span class="value">Prawo zasiadania w Izbie Arystokratów Senatu Koronnego</span>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="section-part">
+                <p>3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE</p>
+                <div class="info-row">
+                    <span class="label">N.3.1. Wzór używanego herbu arystokraty:</span>
+                    <div class="heraldry-container">
+                        <img src="../KRA/herb_pozr2.png" style="width: 200px; height: auto; border: 1px solid #dcd3c1; padding: 5px;">
+                        <div class="value" style="font-size: 0.9rem; font-style: italic;">
+                            Opis heraldyczny: Zielona żaba na tle błękitnej tarczy. Nad tarczą herbową znajduje się korona rangowa księcia.
+                        </div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.3.2. Używany tytuł użytkowy:</span>
+                    <span class="value">Diuszessa</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.3.3. Informacje o innych tytułach arystokraty:</span>
+                    <span class="value">Brak</span>
+                </div>
+            </div>    
+
+             <div class="separator"></div>
+
+            <div class="section-part">
+                <p>4. INFORMACJE O RODZIE SZLACHECKIM</p>
+                <div class="info-row">
+                    <span class="label">N.4.1. Wzór herbu rodu szlacheckiego:</span>
+                    <div class="heraldry-container">
+                        <img src="../KRA/herb_rod_poz2.png" style="width: 200px; height: auto; border: 1px solid #dcd3c1; padding: 5px;">
+                        <div class="value" style="font-size: 0.9rem; font-style: italic;">
+                            Opis heraldyczny: Zielona żaba na tle błękitnej tarczy. 
+                        </div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.4.2. Członkowie rodu szlacheckiego:</span>
+                    <span class="value">Kunegunda</span>
+                    <span class="value">Brat Mateusz</span>
+                    <span class="value">Brat Janusz</span>
+                    <span class="value">Brat Zygfryd</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.4.3. Siedziba rodu szlacheckiego:</span>
+                    <span class="value">Bagienny klasztor Rycerzy Margarity</span>
+                </div>
+            </div>  
+
+        </div>
+    </div>
+
+    <div class="noble-item">
+        <div class="noble-header" onclick="toggleDetails(this)">
+            <h2><img src="../KRA/korona ksiecia.png" style="width: 12%">Poz. R.3. — Diuk Księstwa Strigallorów</h2>
+            <i class="arrow"></i>
+        </div>
+        
+        <div class="noble-content">
+            <div class="section-part">
+                <p>1. INFORMACJE O TYTULE</p>
+                <div class="info-row">
+                    <span class="label">N.1.1. Pełna nazwa tytułu szlacheckiego:</span>
+                    <span class="value">Diuk Księstwa Strigallorów</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.2. Klasa tytułu:</span>
+                    <span class="value">Tytuł związany z określoną funkcją publiczną</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.3. Ranga tytułu:</span>
+                    <span class="value">Książę</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.4. Prawa majątkowe powiązane z tytułem:</span>
+                    <span class="value">Brak</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.5. Podstawa prawna powiązania z funkcją publiczną:</span>
+                    <span class="value">Art. 102 ust. 1 Konstytucji Korony Krulestwa Multikont z 26.12.2025 r. (Kr. Dz. U. z 2025 r. poz. 26)</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.6. Opis sygnetu szlacheckiego:</span>
+                    <span class="value">Platynowy sygnet z ametystem</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.7. Data utworzenia tytułu/zniesienia tytułu:</span>
+                    <span class="value">24.02.2026 r./nie dotyczy</span>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="section-part">
+                <p>2. INFORMACJE O OSOBIE NOSZĄCEJ TYTUŁ</p>
+                <div class="info-row">
+                    <span class="label">N.2.1. Imię aktualnego arystokraty:</span>
+                    <span class="value">Puchacz Potężny</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.2. Data nadania lub potwierdzenia tytułu:</span>
+                    <span class="value">24.02.2026 r.</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.3. Imiona poprzednich użytkowników tytułu:</span>
+                    <span class="value">Brak</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.4. Informacja o dziedzicu:</span>
+                    <span class="value">Archont Imperius</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.5. Uprawnienia indywidualne:</span>
+                    <span class="value">Prawo własności nieruchomości - Złota Dolina, prawo zasiadania w Izbie Arystokratów Senatu Koronnego</span>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="section-part">
+                <p>3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE</p>
+                <div class="info-row">
+                    <span class="label">N.3.1. Wzór używanego herbu arystokraty:</span>
+                    <div class="heraldry-container">
+                        <img src="../KRA/herb_pozr3.png" style="width: 200px; height: auto; border: 1px solid #dcd3c1; padding: 5px;">
+                        <div class="value" style="font-size: 0.9rem; font-style: italic;">
+                            Opis heraldyczny: Biało-brązowy Strigallor z błękitnymi oczami na tle złotej tarczy. Nad tarczą herbową znajduje się korona rangowa księcia.
+                        </div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.3.2. Używany tytuł użytkowy:</span>
+                    <span class="value">Diuk</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.3.3. Informacje o innych tytułach arystokraty:</span>
+                    <span class="value">Brak</span>
+                </div>
+            </div>   
+            
+            <div class="separator"></div>
+
+            <div class="section-part">
+                <p>4. INFORMACJE O RODZIE SZLACHECKIM</p>
+                <div class="info-row">
+                    <span class="label">N.4.1. Wzór herbu rodu szlacheckiego:</span>
+                    <div class="heraldry-container">
+                        <img src="../KRA/herb_rod_poz3.png" style="width: 200px; height: auto; border: 1px solid #dcd3c1; padding: 5px;">
+                        <div class="value" style="font-size: 0.9rem; font-style: italic;">
+                            Opis heraldyczny: Biało-brązowy Strigallor z błękitnymi oczami na tle złotej tarczy.
+                        </div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.4.2. Członkowie rodu szlacheckiego:</span>
+                    <span class="value">Archont Imperius</span>
+                    <span class="value">Athaurion</span>
+                    <span class="value">Meliostra</span>
+                    <span class="value">Valquintor</span>
+                    <span class="value">Drothellan</span>
+                    <span class="value">Othmarion</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.4.3. Siedziba rodu szlacheckiego:</span>
+                    <span class="value">Zamek w Sowigrodzie</span>
+                </div>
+            </div>  
+
+        </div>
+    </div>    
+
+</div>
+
+<h1 style="text-align:center">Osobiste tytuły szlacheckie</h1>
+<div class="registry-container">
+
+
+    <div class="noble-item">
+        <div class="noble-header" onclick="toggleDetails(this)">
+            <h2><img src="../KRA/korona ksiecia.png" style="width: 12%">Poz. O.1. — Wielki Diuk Korony Krulestwa Multikont</h2>
+            <i class="arrow"></i>
+        </div>
+        
+        <div class="noble-content">
+            <div class="section-part">
+                 <p>1. INFORMACJE O TYTULE</p>
+                <div class="info-row">
+                    <span class="label">N.1.1. Pełna nazwa tytułu szlacheckiego:</span>
+                    <span class="value">Wielki Diuk Korony Krulestwa Multikont</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.2. Klasa tytułu:</span>
+                    <span class="value">Tytuł związany z określoną funkcją publiczną</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.3. Ranga tytułu:</span>
+                    <span class="value">Książę</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.4. Prawa majątkowe powiązane z tytułem:</span>
+                    <span class="value">Brak</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.5. Podstawa prawna powiązania z funkcją publiczną:</span>
+                    <span class="value">Art. 76 ust. 2 i 3 Konstytucji Korony Krulestwa Multikont z 26.12.2025 r. (Kr. Dz. U. z 2025 r. poz. 26)</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.6. Opis sygnetu szlacheckiego:</span>
+                    <span class="value">Złoty sygnet z rubinem</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.7. Data utworzenia tytułu/zniesienia tytułu:</span>
+                    <span class="value">24.02.2026 r./nie dotyczy</span>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="section-part">
+                <p>2. INFORMACJE O OSOBIE NOSZĄCEJ TYTUŁ</p>
+                <div class="info-row">
+                    <span class="label">N.2.1. Imię aktualnego arystokraty:</span>
+                    <span class="value">Demokratyczny Tata Świnka</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.2. Data nadania lub potwierdzenia tytułu:</span>
+                    <span class="value">24.02.2026 r.</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.3. Imiona poprzednich użytkowników tytułu:</span>
+                    <span class="value">Brak</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.4. Informacja o dziedzicu:</span>
+                    <span class="value">Nie dotyczy</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.5. Uprawnienia indywidualne:</span>
+                    <span class="value">Prawo własności nieruchomości o wielkości 1 ha, położonej w mieście Tarkwinogród w kwadracie 25/23/2</span>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="section-part">
+                <p>3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE</p>
+                 <div class="info-row">
+                    <span class="label">N.3.1. Wzór używanego herbu arystokraty:</span>
+                    <div class="heraldry-container">
+                        <img src="../KRA/herb_pozo1.png" style="width: 200px; height: auto; border: 1px solid #dcd3c1; padding: 5px;">
+                        <div class="value" style="font-size: 0.9rem; font-style: italic;">
+                            Opis heraldyczny: Złota świnka stojąca na dwóch tylnych raciczkach, zwrócona w lewo, na tle błękitnej tarczy. Nad tarczą herbową znajduje się korona rangowa księcia.
+                        </div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.3.2. Używany tytuł użytkowy:</span>
+                    <span class="value">Wielki Diuk</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.3.3. Informacje o innych tytułach arystokraty:</span>
+                    <span class="value">Brak tytułów</span>
+                </div>
+                <span class="label">N.3.4. Wzór herbu osobistego:</span>
+                    <div class="heraldry-container">
+                        <img src="../KRA/herb_os_poz1.png" style="width: 200px; height: auto; border: 1px solid #dcd3c1; padding: 5px;">
+                        <div class="value" style="font-size: 0.9rem; font-style: italic;">
+                            Opis heraldyczny: Złota świnka stojąca na dwóch tylnych raciczkach, zwrócona w lewo, na tle błękitnej tarczy.
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="noble-item">
+        <div class="noble-header" onclick="toggleDetails(this)">
+            <h2><img src="../KRA/korona hrabiego.png" style="width: 12%">Poz. O.2. — Hrabia Świdnicki</h2>
+            <i class="arrow"></i>
+        </div>
+        
+        <div class="noble-content">
+            <div class="section-part">
+                 <p>1. INFORMACJE O TYTULE</p>
+                <div class="info-row">
+                    <span class="label">N.1.1. Pełna nazwa tytułu szlacheckiego:</span>
+                    <span class="value">Hrabia Świdnicki</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.2. Klasa tytułu:</span>
+                    <span class="value">Tytuł związany z majątkiem ziemskim</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.3. Ranga tytułu:</span>
+                    <span class="value">Hrabia</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.4. Prawa majątkowe powiązane z tytułem:</span>
+                    <span class="value">Nieruchomość ziemska o wielkości 30 ha, położona w gminie Świdnik</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.5. Podstawa prawna powiązania z funkcją publiczną:</span>
+                    <span class="value">Nie dotyczy</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.6. Opis sygnetu szlacheckiego:</span>
+                    <span class="value">Złoty sygnet z szafirem</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.7. Data utworzenia tytułu/zniesienia tytułu:</span>
+                    <span class="value">24.02.2026 r./nie dotyczy</span>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="section-part">
+                <p>2. INFORMACJE O OSOBIE NOSZĄCEJ TYTUŁ</p>
+                <div class="info-row">
+                    <span class="label">N.2.1. Imię aktualnego arystokraty:</span>
+                    <span class="value">Bolszewicki Tata Świnka</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.2. Data nadania lub potwierdzenia tytułu:</span>
+                    <span class="value">24.02.2026 r.</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.3. Imiona poprzednich użytkowników tytułu:</span>
+                    <span class="value">Brak</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.4. Informacja o dziedzicu:</span>
+                    <span class="value">Militarno-radziecki Wujek Świnka</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.5. Uprawnienia indywidualne:</span>
+                    <span class="value">Brak</span>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+             <div class="section-part">
+                <p>3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE</p>
+                <div class="info-row">
+                    <span class="label">N.3.1. Wzór używanego herbu arystokraty:</span>
+                    <div class="heraldry-container">
+                        <img src="../KRA/herb_pozr1.png" style="width: 200px; height: auto; border: 1px solid #dcd3c1; padding: 5px;">
+                        <div class="value" style="font-size: 0.9rem; font-style: italic;">
+                            Opis heraldyczny: Trzy złote świnki stojące na dwóch tylnych raciczkach, pierwsza i ostatnia zwrócone w lewo, środkowa w prawo, umieszczone w dwóch złotych pierścieniach nachylonych pod
+                            kątem 45' względem powierzchni, na tle tarczy o czterech barwach: w górnym lewym rogu czerwień, w górnym prawnym błękit, w dolnym lewym zieleń, a w dolnym prawym fiolet. 
+                            Nad tarczą herbową znajduje się korona rangowa księcia.
+                        </div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.3.2. Używany tytuł użytkowy:</span>
+                    <span class="value">Diuk</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.3.3. Informacje o innych tytułach arystokraty:</span>
+                    <span class="value">Tytuł Diuka Księstwa Świnków (poz. R.1. KRA)</span>
+                </div>
+                <span class="label">N.3.4. Wzór herbu osobistego:</span>
+                    <div class="heraldry-container">
+                        <img src="../KRA/herb_os_poz2.png" style="width: 200px; height: auto; border: 1px solid #dcd3c1; padding: 5px;">
+                        <div class="value" style="font-size: 0.9rem; font-style: italic;">
+                            Opis heraldyczny: Czerwona świnka ze złotą gwiazdą na tułowiu stojąca na dwóch tylnych raciczkach, zwrócona w lewo, na tle bordowej tarczy.
+                        </div>
+                    </div>
+            </div>    
+        </div>
+    </div> 
+
+    <div class="noble-item">
+        <div class="noble-header" onclick="toggleDetails(this)">
+            <h2><img src="../KRA/korona markiza.png" style="width: 12%">Poz. O.3. — Markiz Wschodniego Tarkwinogrodu</h2>
+            <i class="arrow"></i>
+        </div>
+        
+        <div class="noble-content">
+            <div class="section-part">
+                 <p>1. INFORMACJE O TYTULE</p>
+                <div class="info-row">
+                    <span class="label">N.1.1. Pełna nazwa tytułu szlacheckiego:</span>
+                    <span class="value">Markiz Wschodniego Tarkwinogrodu</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.2. Klasa tytułu:</span>
+                    <span class="value">Tytuł związany z majątkiem ziemskim</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.3. Ranga tytułu:</span>
+                    <span class="value">Markiz</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.4. Prawa majątkowe powiązane z tytułem:</span>
+                    <span class="value">Nieruchomość o wielkości 1 ha, położona w Tarkwinogrodzie oraz stojące na niej zabudowania</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.5. Podstawa prawna powiązania z funkcją publiczną:</span>
+                    <span class="value">Nie dotyczy</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.6. Opis sygnetu szlacheckiego:</span>
+                    <span class="value">Złoty sygnet ze szmaragdem</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.7. Data utworzenia tytułu/zniesienia tytułu:</span>
+                    <span class="value">24.02.2026 r./nie dotyczy</span>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="section-part">
+                <p>2. INFORMACJE O OSOBIE NOSZĄCEJ TYTUŁ</p>
+                <div class="info-row">
+                    <span class="label">N.2.1. Imię aktualnego arystokraty:</span>
+                    <span class="value">Ekologiczny Tata Świnka</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.2. Data nadania lub potwierdzenia tytułu:</span>
+                    <span class="value">24.02.2026 r.</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.3. Imiona poprzednich użytkowników tytułu:</span>
+                    <span class="value">Brak</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.4. Informacja o dziedzicu:</span>
+                    <span class="value">Feministyczny Tata Świnka</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.2.5. Uprawnienia indywidualne:</span>
+                    <span class="value">Prawo zasiadania w Senacie Koronnym</span>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+             <div class="section-part">
+                <p>3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE</p>
+                <div class="info-row">
+                    <span class="label">N.3.1. Wzór używanego herbu arystokraty:</span>
+                    <div class="heraldry-container">
+                        <img src="../KRA/herb_pozo3.png" style="width: 200px; height: auto; border: 1px solid #dcd3c1; padding: 5px;">
+                        <div class="value" style="font-size: 0.9rem; font-style: italic;">
+                            Opis heraldyczny: Biało-czarny lemur ze złotymi oczami na tle zielonej tarczy. Nad tarczą herbową znajduje się korona rangowa markiza.
+                        </div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.3.2. Używany tytuł użytkowy:</span>
+                    <span class="value">Markiz</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.3.3. Informacje o innych tytułach arystokraty:</span>
+                    <span class="value">Brak</span>
+                </div>
+                <span class="label">N.3.4. Wzór herbu osobistego:</span>
+                    <div class="heraldry-container">
+                        <img src="../KRA/herb_os_poz3.png" style="width: 200px; height: auto; border: 1px solid #dcd3c1; padding: 5px;">
+                        <div class="value" style="font-size: 0.9rem; font-style: italic;">
+                            Opis heraldyczny: Biało-czarny lemur ze złotymi oczami na tle zielonej tarczy.
+                        </div>
+                    </div>
+            </div>    
+        </div>
+    </div> 
+
+</div>
+
+<script>
+    function toggleDetails(element) {
+        element.classList.toggle("active");
+        var content = element.nextElementSibling;
+        content.style.display = (content.style.display === "block") ? "none" : "block";
+    }
+</script>
+
+<footer class="footer-fixed">
+    Krajowy Rejestr Arystokracji © 2026 – Pałac Krula
+</footer>
+
+</body>
+</html>
