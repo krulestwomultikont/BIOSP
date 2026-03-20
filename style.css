@@ -1,0 +1,124 @@
+/* Główne ustawienia */
+:root {
+    --primary-color: #2a2e33;    /* Ciemny antracyt dla nagłówków */
+    --accent-color: #8b4513;     /* Brąz "skórzany" dla linków i akcentów */
+    --bg-color: #f4f1ea;         /* Delikatny kremowy "papier" */
+    --sidebar-bg: #eae6da;       /* Nieco ciemniejszy papier dla menu */
+    --border-color: #c8c2b0;     /* Kolor obramowań */
+}
+
+body {
+    font-family: 'Georgia', serif; /* Font szeryfowy nadaje klimat fantasy */
+    margin: 0;
+    background-color: var(--bg-color);
+    color: #333;
+}
+
+/* Układ strony */
+.wiki-wrapper {
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+    min-height: 100vh;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Pasek boczny (Nawigacja) */
+.sidebar {
+    width: 260px;
+    background-color: var(--sidebar-bg);
+    padding: 20px;
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar h3 {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    font-variant: small-caps;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+/* Główna treść */
+.content {
+    flex: 1;
+    background: white;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    margin-top: 0;
+}
+
+/* Infobox - wizytówka po prawej */
+.infobox {
+    float: right;
+    width: 300px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    background: #fdfdfd;
+    font-size: 0.9rem;
+}
+
+.infobox-header {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.infobox img {
+    width: 100%;
+    display: block;
+}
+
+.infobox table {
+    width: 100%;
+    padding: 5px;
+}
+
+.infobox td {
+    padding: 4px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Sekcje i linki */
+.section-title {
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-left: 5px solid var(--accent-color);
+    margin-top: 25px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: #777;
+}
