@@ -4,232 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krajowy Rejestr Arystokracji (KRA)</title>
-    <style>
-        body {
-            font-family: 'Georgia', serif; /* Bardziej klasyczny krój pisma */
-            background-color: #f4f1ea;
-            color: #2c2c2c;
-            margin: 0;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            border-bottom: 2px solid #8b7355;
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-        }
-
-        h1 { color: #5d4037; text-transform: uppercase; letter-spacing: 2px; }
-
-        .registry-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .noble-item {
-            background: #fff;
-            border: 1px solid #dcd3c1;
-            margin-bottom: 15px;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        /* Tytuł zakładki wg pkt 1 */
-        .noble-header {
-            background-color: #8b7355;
-            color: white;
-            padding: 15px 25px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .noble-header h2 { margin: 0; font-size: 1.1rem; font-weight: normal; }
-
-        .noble-content {
-            display: none;
-            padding: 0;
-            background-color: #fff;
-        }
-
-        /* Podział na sekcje wg pkt 2, 3 i 4 */
-        .section-part {
-            padding: 20px 25px;
-        }
-
-        .separator {
-            border-top: 1px double #dcd3c1;
-            margin: 0 25px;
-            height: 1px;
-        }
-
-        .info-row {
-            margin-bottom: 12px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Numeracja wg pkt 5 */
-        .label { 
-            font-weight: bold; 
-            color: #5d4037; 
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            margin-bottom: 3px;
-        }
-
-        .value { font-size: 1.05rem; color: #333; }
-
-        .heraldry-container {
-            margin-top: 10px;
-            display: flex;
-            gap: 15px;
-            align-items: flex-start;
-        }
-
-        .herb-img {
-            width: 100px;
-            height: 120px;
-            background: #f9f9f9;
-            border: 1px solid #ccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.7rem;
-            text-align: center;
-        }
-
-        .arrow {
-            border: solid white;
-            border-width: 0 2px 2px 0;
-            display: inline-block;
-            padding: 4px;
-            transform: rotate(45deg);
-        }
-        .active .arrow { transform: rotate(-135deg); }
-
-        /* Styl paska głównego */
-.navbar {
-    background-color: #5d4037;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    font-family: sans-serif;
-}
-
-/* Lista główna */
-.menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.menu > li {
-    position: relative;
-}
-
-.menu a {
-    display: block;
-    color: #f4f1ea;
-    text-decoration: none;
-    padding: 15px 25px;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    transition: background 0.3s;
-}
-
-.menu > li > a:hover {
-    background-color: #8b7355;
-}
-
-/* Styl rozwijanego podmenu */
-.submenu {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 250px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border: 1px solid #dcd3c1;
-}
-
-.submenu li a {
-    color: #333;
-    padding: 12px 20px;
-    text-transform: none;
-    border-bottom: 1px solid #eee;
-}
-
-.submenu li a:hover {
-    background-color: #f4f1ea;
-    color: #5d4037;
-}
-
-/* Wyświetlanie po najechaniu myszką */
-.menu li:hover .submenu {
-    display: block;
-}
-
-.footer-fixed {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #5d4037; /* Ten sam kolor co navbar dla spójności */
-    color: #f4f1ea;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-top: 2px solid #8b7355;
-    z-index: 1000;
-}
-
-/* Opcjonalnie: dodaj margines na dole głównej treści, 
-   aby ostatnia pozycja nie schowała się pod stopką */
-.main-content {
-    padding-bottom: 60px; 
-}
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
     <nav class="navbar">
   <ul class="menu">
     <li>
-      <a href="#">Publikatory i Rejestry</a>
-        <ul class="submenu">
-            <li><a href="https://krulestwomultikont.github.io/KDU">Krulewski Dziennik Ustaw</a></li>
-            <li><a href="https://krulestwomultikont.github.io/MK">Monitor Krulewski</a></li>
-            <li><a href="https://krulestwomultikont.github.io/CBOSKiDWZZM">Centralna Baza Orzeczeń Sądów Krulestwa i DWZZM</a></li>
-            <li><a href="https://krulestwomultikont.github.io/BIOSP/KRA">Krajowy Rejestr Arystokracji</a></li>
-        </ul>
-    </li>
+	<a href="#">Publikatory</a>
+		<ul class="submenu">
+       	 	<li><a href="https://krulestwomultikont.github.io/KDU">Krulewski Dziennik Ustaw</a></li>
+       	 	<li><a href="https://krulestwomultikont.github.io/MK">Monitor Krulewski</a></li>
+			<li><a href="https://krulestwomultikont.github.io/BIOSP/KRA">Krajowy Rejestr Arystokracji</a></li>
+    	</ul>
+	</li>
     <li>
-      <a href="#">DWZZM</a>
-        <ul class="submenu">
-            <li><a href="https://krulestwomultikont.github.io/DUDWZZM">Dziennik Urzędowy DWZZM</a></li>
-        </ul>
+    <a href="#">DWZZM</a>
+     	<ul class="submenu">
+        	<li><a href="https://krulestwomultikont.github.io/DUDWZZM">Dziennik Urzędowy DWZZM</a></li>
+      	</ul>
     </li>
-    <li><a href="https://krulestwomultikont.github.io/BIOSP/SKL">Święty Kościół Lewosławia</a></li>
-    <li><a href="">Wiki</a></li>
+    <li><a href="https://krulestwomultikont.github.io/BIOSP">BIOSP</a></li>
   </ul>
 </nav>
 
 <header>
     <h1>Krajowy Rejestr Arystokracji</h1>
     <p>Rejestr elektroniczny prowadzony na podstawie Dekretu z 24.02.2026 r. o organizacji arystokracji (Kr. Dz. U. z 2026 r. poz. 5)</p>
-    <p>Organem prowadzącym rejestr jest Wiceprzewodniczący Rządu Koronnego</p>
+    <p>W Rejestrze ujawnia się informacje dotyczące Rodziny Krulewskiej oraz rodowych i osobistych tytułów szlacheckich.</p>
+    <p>Organem prowadzącym Rejestr jest Wiceprzewodniczący Rządu Koronnego</p>
 </header>
+
+<h1 style="text-align:center">Rodzina Krulewska</h1>
+<div class="registry-container">
+
+    <div class="noble-item">
+        <div class="noble-header" onclick="toggleDetails(this)">
+            <h2><img src="../KRA/korona krula.png" style="width: 12%">Ród Gryfionów</h2>
+            <i class="arrow"></i>
+        </div>
+        
+        <div class="noble-content">
+            <div class="section-part">
+            INFORMACJE UJAWNIONE NA PODSTAWIE ART. 15D I 15E DEKRETU Z 8.12.2023 R. O RODZINIE KRULEWSKIEJ I SUKCESJI TRONU KORONY (KR. DZ. U. Z 2026 R. POZ. 6)
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="section-part">
+                 <p>1. INFORMACJE O CZŁONKACH RODZINY KRULEWSKIEJ</p>
+                <div class="info-row">
+                    <span class="label">N.1.1. Imię Krula Multikont</span>
+                    <span class="value">Artur Gryfion</span>
+                </div>
+                <div class="info-row">
+                <span class="label">N.1.2. Wzór herbu Rodziny Krulewskiej:</span>
+                    <div class="heraldry-container">
+                        <img src="../KRA/herb_krul.png" style="width: 200px; height: auto; border: 1px solid #dcd3c1; padding: 5px;">
+                        <div class="value" style="font-size: 0.9rem; font-style: italic;">
+                            Opis heraldyczny: Szary gryf zwrócony w lewą stronę, stojący na dwóch tylnych łapach, na tle czerwono-złotej tarczy.
+                        </div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.3. Imię Krulowej:</span>
+                    <span class="value">Małgorzata Gryfion</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">N.1.4. Pozostali członkowie Rodziny Krulewskiej:</span>
+                    <span class="value">Książę tronu Bonifacy Gryfion</span>
+                    <span class="value">Książę sukcesor Młotek Gryfion</span>
+                    <span class="value">Książę sukcesor Bóbr Julek Gryfion</span>
+                    <span class="value">Książę Kazimierz Gryfion</span>
+                    <span class="value">Księżniczka Adolfina Gryfion</span>
+                    <span class="value">Książę sukcesor Henri Gryfion</span>
+                    <span class="value">Książę sukcesor Kapibariusz Gryfion</span>
+                    <span class="value">Diuk Bolszewicki Tata Świnka (tytuły poz. R.1., O.2.)</span>
+                    <span class="value">Wielki Diuk Demokratyczny Tata Świnka (tytuł poz. O.1.)</span>
+                    <span class="value">Urszula Gryfion-Frankowiczówna, Królowa Królestwa Azurii</span>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="section-part">
+                <p>2. INFORMACJE O SUKCESORACH</p>
+                <div class="info-row">
+                    <span class="label">N.2.1. Kolejność sukcesorów Tronu Korony</span>
+                    <span class="value">1. Książę tronu Bonifacy Gryfion</span>
+                    <span class="value">2. Książę sukcesor Młotek Gryfion</span>
+                    <span class="value">3. Książę sukcesor Bóbr Julek Gryfion</span>
+                    <span class="value">4. Książę sukcesor Henri Gryfion</span>
+                    <span class="value">5. Książę sukcesor Kapibariusz Gryfion</span>
+                    <span class="value">6. Diuk Bolszewicki Tata Świnka</span>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="section-part">
+                <p>3. POZOSTAŁE INFORMACJE</p>
+                 <div class="info-row">
+                    <span class="label">N.3.1. Wzór herbu używanego przez Krula:</span>
+                    <div class="heraldry-container">
+                        <img src="../KRA/herb_krul_uz.png" style="width: 200px; height: auto; border: 1px solid #dcd3c1; padding: 5px;">
+                        <div class="value" style="font-size: 0.9rem; font-style: italic;">
+                            Opis heraldyczny: Szary gryf zwrócony w lewą stronę, stojący na dwóch tylnych łapach, na tle czerwono-złotej tarczy. Nad tarczą znajduje się Korona Krula.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 
 <h1 style="text-align:center">Rodowe tytuły szlacheckie</h1>
 <div class="registry-container">
@@ -1240,6 +1130,8 @@
     </div> 
 
 </div>
+
+</br></br></br></br>
 
 <script>
     function toggleDetails(element) {
