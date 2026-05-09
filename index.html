@@ -1,61 +1,262 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wielka Encyklopedia Uniwersum Felorostu</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Święty Kościół Lewosławia – Strona Oficjalna</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="description" content="Oficjalna strona Świętego Kościoła Lewosławia – Arka Dogmatu." />
+  <style>
+    :root{
+      --bg:#0a2f1f;
+      --bg-soft:#0d3d29;
+      --fg:#e5e7eb;
+      --muted:#9ca3af;
+      --brand:#4ade80;
+      --brand-2:#22c55e;
+      --card:#0d3d29;
+      --border:#14532d;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial;}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{position:sticky;top:0;background:rgba(10,47,31,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:50}
+    .container{max-width:1300px;margin:0 auto;padding:0 16px}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:36px;height:36px;border-radius:8px}
+    .brand h1{font-size:18px;margin:0;font-weight:700}
+    .menu{display:flex;gap:16px}
+    .menu a{padding:10px 12px;border-radius:10px}
+    .menu a:hover{background:#052e1d}
+    .hero{padding:64px 0;background:linear-gradient(135deg,rgba(74,222,128,.08),rgba(34,197,94,.08));border-bottom:1px solid var(--border)}
+    .hero h2{font-size:36px;margin:0 0 12px}
+    .hero p{max-width:720px;color:var(--muted);line-height:1.7}
+    .cta{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--fg);font-weight:600}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));border:none}
+    section{padding:48px 0;border-bottom:1px solid var(--border)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+    .org-logo{max-width:200px;display:block;margin-bottom:8px}
+    .personnel{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:16px}
+    .kuria{display:grid;grid-template-columns:repeat(auto-fill,minmax(500px,1fr));gap:16px;margin-top:16px}
+    .person{background:var(--bg-soft);padding:24px;border-radius:24px;text-align:center;border:1px solid transparent;transition: 0.3s;}
+    .person:hover{border-color: var(--brand);}
+    .person img{width:250px;height:250px;border-radius:30%;object-fit:cover;margin-bottom:8px}
+    .robist{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:16px;margin-top:16px}
+    .robe{background:var(--bg-soft);padding:24px;border-radius:24px;text-align:center;border:1px solid transparent;transition: 0.3s;}
+    .robe:hover{border-color: var(--brand);}
+    .robe img{width:350px;height:350px;border-radius:30%;object-fit:cover;margin-bottom:8px}
+    footer{padding:32px 0;background:#052e1d;color:var(--muted)}
+    .meta-list{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+  </style>
 </head>
 <body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="./logo.png" alt="Logo Świętego Kościoła Lewosławia" />
+        <h1>Święty Kościół Lewosławia</h1>
+      </div>
+      <nav class="menu">
+        <a href="#o-kosciele">O Kościele</a>
+        <a href="#stopnie">Uduchowieni</a>
+        <a href="#organy">Patriarchat Lewosławia</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="wiki-wrapper">
-    <nav class="sidebar">
-        <div style="text-align: center; margin-bottom: 20px;">
-            <h2 style="margin: 0;">WIKI</h2>
-            <small>UNIWERSUM FELOROSTU</small>
+  <center>
+    <img src="tapeta.png" width="100%" alt="Panorama Narathoru">
+    
+  </center><i>Bazylika św. Artrupa I Wielkiego w Kapitolu</i><br/><br/>
+
+  <main>
+    <section class="hero" id="o-kosciele">
+      <div class="container">
+        <h2>O Świętym Kościele Lewosławia</h2>
+        <p>Święty Kościół Lewosławia jest wspólnotą wiernych i uduchowionych żyjących wedle wartości nadanych przez boskiego opiekuna Naratusa oraz zgodnie z wolą Piątki. Jako depozytariusz mądrości bogów w Feloroście, Kościół opiera się na jedności dogmatycznej i modelu federacyjnym, uznając Państwo-Miasto Narathor za suwerenną „Arkę Dogmatu” i nadrzędny wzorzec tradycji.</p>
+        <div class="cta">
+          <a class="btn btn-primary" id="statut" href="./Konstytucja_SKL.pdf" target="_blank">📄 Konstytucja Świętego Kościoła (PDF)</a>
         </div>
-        
-        <h3>Eksploracja</h3>
-        <ul>
-            <li><a href="https://krulestwomultikont.github.io/BIOSP/index.html">🏠 Strona Główna</a></li>
-            <li><a href="https://krulestwomultikont.github.io/BIOSP/postacie.html">👥 Postacie</a></li>
-            <li><a href="https://krulestwomultikont.github.io/BIOSP/miejsca.html">🌍 Miejsca</a></li>
-            <li><a href="https://krulestwomultikont.github.io/BIOSP/organizacje.html">🛡️ Państwa i Frakcje</a></li>
-        </ul>
+      </div>
+    </section>
 
-        <h3>Świat</h3>
-        <ul>
-            <li><a href="https://krulestwomultikont.github.io/BIOSP/historia.html">📜 Oś czasu</a></li>
-            <li><a href="https://krulestwomultikont.github.io/BIOSP/magia.html">✨ Teologia i Mistyka</a></li>
-            <li><a href="https://krulestwomultikont.github.io/BIOSP/bestiariusz.html">🐉 Bestiariusz</a></li>
-        </ul>
+    <section id="egzarchaty">
+      <div class="container">
+        <h3>Struktura Świętego Kościoła Lewosławia</h3>
+        <p>Podstawę Kościoła stanowią Święte Państwo-Miasto Narathor oraz autonomiczne Kościoły Narodowe, uznające duchowy prymat Patriarchy Lewosławia.</p>
+        <div class="personnel">
+          <div class="person"><img src="./logos/kosciol1.png" alt="Korona" /><br/><strong>Koronny Kościół Ignistrigona</strong><br/>Narodowy Kościół Korony Krulestwa Multikont, na którego czele stoi Krul Multikont.</div>
+          <div class="person"><img src="./logos/kosciol2.png" alt="Korona" /><br/><strong>Lewosławny Kościół Azurii</strong><br/>Pierwszy Kościół Lewosławian.</div>
+          <div class="person"><img src="./logos/kosciol3.png" alt="Korona" /><br/><strong>Imperialny Kościół Ursona</strong><br/>Kościół Ursona w Zachodnim Imperium Felorków. Kierowany przez szamanów Felorków Górskich.</div>
+          <div class="person"><img src="./logos/kosciol4.png" alt="Korona" /><br/><strong>Wielki Egzarchat Omyrii</strong><br/>Kościół państwa teokratycznego, kierowany przez Wielkiego Egzarchę Omyrii.</div>
+        </div>
+      </div>
+    </section>
 
-        <h3>Prawo Koronne i Multikont</h3>
-        <ul>
-            <li><a href="https://krulestwomultikont.github.io/KDU/">📜 Krulewski Dziennik Ustaw</a></li>
-            <li><a href="https://krulestwomultikont.github.io/DUDWZZM/">👥 DWZZM</a></li>
-        </ul>
-    </nav>
+    <section id="stopnie">
+      <div class="container">
+        <h3>Uduchowieni Świętego Kościoła</h3>
+        <p>Uduchowieni stanowią trzon Kościoła, który buduje struktury od wspólnot lokalnych, aż po jednostki centralne. Uduchowieni specjalizują się w ścieżkach bogów, określonych profesjach oraz przechodzą trzy stopnie święceń.</p>
+        <div class="robist">
+          <div class="robe">
+            <img src="./robes/adept_ceremonial.png" alt="Szaty Adepta" />
+            <h4>Adept</h4>
+            <p>Wierny, który złożył śluby jednemu z bogów Piątki. Studiuje ścieżki boga opiekuna i pełni służbę pomocniczą w świątyniach.</p>
+          </div>
+          <div class="robe">
+            <img src="./robes/pralat_ceremonial.png" alt="Szaty Prałata" />
+            <h4>Prałat</h4>
+            <p>Pełnoprawny kapłan Lewosławia po ukończeniu szkolenia w Domu Profesji. Uprawniony do sprawowania rytuałów i rytów mocy.</p>
+          </div>
+          <div class="robe">
+            <img src="./robes/egzarcha_ceremonial.png" alt="Szaty Egzarchy"/>
+            <h4>Egzarcha</h4>
+            <p>Najwyższy stopień uduchowionego. Mistrz w stosowaniu mocy bogów i wysokiej rangi dostojnik, członek grona wyborczego.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <main class="content">
-        <center><img src="obrazy/baner_biosp.png" width="100%"></center><br/><br/>
-        <h1>Witaj w Świecie Felorostu!</h1>
-        
-        <p>Niniejsza encyklopedia jest zbiorem wiedzy o świecie Multikont, Strigallorów i Felorków. Uniwersum Felorostu stanowi fantastykę prawniczą. Wszystkie jego elementy stanowią własność intelektualną autora.</p>
-        <p>Encyklopedia stanowi również miejsce publikacji artykułów Biuletynu Informacji o Sprawach Publicznych Korony Krulestwa Multikont.</p>
+    <section id="profesje">
+      <div class="container">
+        <h3>Domy Profesji Kościelnych</h3>
+        <p>W Kościele występuje sześć różnych Domów Profesji Kościelnych, których program nauczania jest centralnie kierowany przez Patriarchat Lewosławia.</p>
+        <div class="personnel">
+          <div class="person"><strong>Dom Nauki i Teologii</strong><br/>Kształcenie teologów i kronikarzy.</div>
+          <div class="person"><strong>Dom Rytuałów</strong><br/>Mistrzowie obrzędów i liturgii.</div>
+          <div class="person"><strong>Dom Paladynów</strong><br/>Rycerze wiary i straż świątynna.</div>
+          <div class="person"><strong>Dom Uzdrowicieli</strong><br/>Sztuka leczniczej mocy bogów.</div>
+          <div class="person"><strong>Dom Administratorów</strong><br/>Zarządzanie strukturami Kościoła.</div>
+          <div class="person"><strong>Dom Boskiej Sprawiedliwości</strong><br/>Sędziowie Prawdy i kanoniści.</div>
+        </div>
+      </div>
+    </section>
 
-        <div class="section-title"><h2>Aktualności i Wydarzenia</h2></div>
-        <p>Obecnie znajdujemy się w <strong>III Erze Felorostu</strong>. W tej erze w Feloroście zamieszkali ludzie, Strigallorowie i Multikonta, a także powstało Lewosławie.</p>
-        <p>Lata feloryjskie i ludzkie mogą się pokrywać, co jednak nie stanowi zasady.</p>
+    <section id="organy">
+      <div class="container">
+        <h3>Organy Centralnego Kościoła</h3>
+        <div class="card">
+          <p>Struktura zarządzania Patriarchatem Lewosławia i Centrum Jedności:</p>
+          <ul class="meta-list">
+            <li><a href="#patriarcha">Patriarcha Lewosławia</a></li>
+            <li><a href="#rada-ekumeniczna">Rada Ekumeniczna Lewosławia</a></li>
+            <li><a href="#rada">Rada Pięciu Promieni</a></li>
+            <li><a href="#kolegium">Kolegium Doktrynalne</a></li>
+            <li><a href="#kuria">Kuria Patriarsza</a></li>
+            <li><a href="#trybunaly">Trybunały Kościoła</a></li>
+            <li><a href="#zakon">Zakon Szkarłatnych Ostrzy</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <div class="section-title"><h2>Wkład w Wiki</h2></div>
-        <p>To uniwersum stale się rozwija. Jeśli chcesz dodać nową postać lub opisać nieznaną dotąd krainę, skontaktuj się z <a href = "https://www.facebook.com/profile.php?id=100057565129572">Pałacem Krula Multikont na FB.</a></p>
-        
-        <footer style="margin-top: 50px;">
-            © 2026 Wielka Kronika Uniwersum Felorostu. Wszystkie prawa zastrzeżone.
-        </footer>
-    </main>
-</div>
+    <section id="patriarcha">
+      <div class="container">
+        <h3>Patriarcha Lewosławia</h3>
+        <img src="./logos/herb_patriarchy.png" alt="Herb Patriarchy" class="org-logo" />
+        <p>Najwyższy zwierzchnik duchowy i strażnik jedności, następca Artrupa I Wybranego. Sprawuje absolutną i niepodzielną władzę nad Państwem-Miastem Narathorem, wydając Dekrety Objawienia wiążące cały Kościół.</p>
+        <div class="personnel">
+          <div class="person"><img src="./people/artruppatriarcha.png" alt="Patriarcha" /><br/><strong>Artrup I</strong><br/>I Patriarcha Lewosławia</div>
+          <div class="person"><img src="./people/patriarcha.png" alt="Patriarcha" /><br/><strong>Alaryk I Szkarłatny</strong><br/>II Patriarcha Lewosławia</div>
+        </div>
+      </div>
+    </section>
 
+    <section id="rada-ekumeniczna">
+      <div class="container">
+        <h3>Rada Ekumeniczna Lewosławia</h3>
+        <p>Najwyższe forum jedności doktrynalnej, w skład którego wchodzą Patriarcha, Rada Pięciu Promieni, Kardynałowie Zwyczajni oraz Archonci. Zatwierdza zmiany w Konstytucji i Aneksy Doktrynalne.</p>
+      <div class="robist">
+          <div class="robe"><img src="./robes/archont.png" alt="Archont"/><br/><strong>Archont</strong><br/><i>Ceremonialny strój Archonta zawiera błękitne barwy</i></div>
+          <div class="robe"><img src="./robes/kardynal.png" alt="Kardynał" /><br/><strong>Kardynał Zwyczajny</strong><br/><i>Ceremonialny strój Kardynała Zwyczajnego zawiera fioletowe barwy</i></div>
+          <div class="robe"><img src="./robes/kardynal_promienia.png" alt="Kardynał" /><br/><strong>Kardynał Promienia</strong><br/><i>Ceremonialny strój Kardynała Promienia zawiera fioletowe barwy i złote naszycia w szatach. Kardynałowie Promienia używają Kosturu Piątki.</i></div>
+      </div>
+      </div>
+    </section>
+
+    <section id="rada">
+      <div class="container">
+        <h3>Rada Pięciu Promieni</h3>
+        <p>Najwyższy organ kolegialny wspierający Patriarchę. Składa się z Wielkiego Archonta oraz pięciu Kardynałów Promienia, reprezentujących ścieżki każdego z bogów Piątki.</p>
+        <div class="personnel">
+          <div class="person"><img src="./people/wielki-archont.png" alt="Wielki Archont" /><br/><strong>Hangvul</strong><br/>Wielki Archont</div>
+        </div>
+        <div class="personnel">
+          <div class="person"><img src="./people/kardynal1.png" alt="Kardynał" /><br/><strong>Renthurnak</strong><br/><i>Prominens Bellator Ignistrigoni</i></div>
+          <div class="person"><img src="./people/kardynal2.png" alt="Kardynał" /><br/><strong>Imperius</strong><br/><i>Prominens Sapientiae Velmioris</i></div>
+          <div class="person"><img src="./people/kardynal3.png" alt="Kardynał" /><br/><strong>Serenya</strong><br/><i>Prominens Misericordiae Elyavriae</i></div>
+          <div class="person"><img src="./people/kardynal4.png" alt="Kardynał" /><br/><strong>Althaea</strong><br/><i>Prominens Visionis Ethelaris</i></div>
+          <div class="person"><img src="./people/kardynal5.png" alt="Kardynał" /><br/><strong>Stefan</strong><br/><i>Prominens Ordinis Thalorgaris</i></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kolegium">
+      <div class="container">
+        <h3>Kolegium Doktrynalne</h3>
+        <p>Odpowiada za opracowywanie i interpretację aktów doktrynalnych. Składa się z dwunastu Kronikarzy Objawienia, będących strażnikami Arki Dogmatu.</p>
+        <div class="personnel">
+          <div class="person"><img src="./logos/kolegium.png" alt="Kolegium" /><br/><strong>12 Kronikarzy Objawienia</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kuria">
+      <div class="container">
+        <h3>Kuria Patriarsza</h3>
+        <p>Centralna administracja Kościoła z siedzibą w Narathorze. Koncentruje się na dyplomacji, jedności kultu oraz nadzorze nad standardami nauczania.</p>
+        <div class="kuria">
+          <div class="person"><strong>Wielka Kancelaria</strong><br/>Polityka zagraniczna i relacje między Kościołami Narodowymi.</div>
+          <div class="person"><strong>Dykasteria ds. Jedności Kultu</strong><br/>Nadzór nad spójnością rytuałów i Dekretami Objawienia.</div>
+          <div class="person"><strong>Dykasteria ds. Uduchowionych</strong><br/>Centralny Rejestr Egzarchów i akredytacja stopni lokalnych.</div>
+          <div class="person"><strong>Dykasteria ds. Domów Profesji</strong><br/>Certyfikacja programów nauczania dla Adeptów i Prałatów.</div>
+          <div class="person"><strong>Dykasteria ds. Zakonów Rycerskich</strong><br/>Nadzór nad zbrojnymi organizacjami Kościoła.</div>
+          <div class="person"><strong>Archiwum Głosu</strong><br/>Dokumentacja aktów doktrynalnych i ewidencja dusz.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trybunaly">
+      <div class="container">
+        <h3>Trybunały Kościoła</h3>
+        <p>Wymiar Boskiej Sprawiedliwości sprawowany w imieniu bogów przez niezawisłych Sędziów Prawdy.</p>
+        <div class="kuria">
+          <div class="person"><strong>Trybunał Boskiej Sprawiedliwości</strong><br/>Najwyższy sąd w sprawach wiary, herezji oraz zbrodni popełnionych przez Egzarchów.</div>
+          <div class="person"><strong>Trybunał Strażników Lewosławia</strong><br/>Strażnik porządku konstytucyjnego i arbiter w sporach między Kościołami Narodowymi.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="zakon">
+      <div class="container">
+        <h3>Zakon Szkarłatnych Ostrzy</h3>
+        <p>Zbrojne ramię Patriarchy i armia Autarkii Narathoru. Składa się z uduchowionych, którzy złożyli przysięgę krwi i ognia służąc Ignistrigonowi.</p>
+        <div class="personnel">
+          <div class="person"><img src="./logos/herb_so.png" alt="Zakon" /><br/>Na czele stoi <strong>Egzekutor Narathoru</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="zakony">
+      <div class="container">
+        <h3>Lewosławne Zakony Rycerskie</h3>
+        <p>Suwerenne organizacje zbrojne podległe bezpośrednio Patriarsze, posiadające własne terytoria autonomiczne:</p>
+        <div class="personnel">
+          <div class="person"><img src="./logos/herb_templariusze.png" alt="Templariusze" /><br/><strong>Zakon Templariuszy Adanosa</strong><br/>Zakon Rycerski o randze Kościoła Narodowego, szerzący wiarę na zachodzie.</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="rok"></span> Święty Kościół Lewosławia | Arka Dogmatu – Narathor. Wszelkie elementy stanowią fikcję twórczą autora.</p>
+    </div>
+    <script>document.getElementById('rok').textContent = new Date().getFullYear();</script>
+  </footer>
 </body>
 </html>
