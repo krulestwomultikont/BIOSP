@@ -39,12 +39,12 @@
     section{padding:48px 0;border-bottom:1px solid var(--border)}
     .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
     .org-logo{max-width:200px;display:block;margin-bottom:8px}
-    .personnel{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:16px}
+    .personnel{display:flex;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:16px;justify-content: center}
     .kuria{display:grid;grid-template-columns:repeat(auto-fill,minmax(500px,1fr));gap:16px;margin-top:16px}
     .person{background:var(--bg-soft);padding:24px;border-radius:24px;text-align:center;border:1px solid transparent;transition: 0.3s;}
     .person:hover{border-color: var(--brand);}
     .person img{width:250px;height:250px;border-radius:30%;object-fit:cover;margin-bottom:8px}
-    .robist{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:16px;margin-top:16px}
+    .robist{display:flex;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:16px;margin-top:16px;justify-content: center}
     .robe{background:var(--bg-soft);padding:24px;border-radius:24px;text-align:center;border:1px solid transparent;transition: 0.3s;}
     .robe:hover{border-color: var(--brand);}
     .robe img{width:350px;height:350px;border-radius:30%;object-fit:cover;margin-bottom:8px}
@@ -62,7 +62,7 @@
       <nav class="menu">
         <a href="#o-kosciele">O Kościele</a>
         <a href="#stopnie">Uduchowieni</a>
-        <a href="#organy">Patriarchat Lewosławia</a>
+        <a href="#organy">Organy Kościoła</a>
       </nav>
     </div>
   </header>
@@ -76,9 +76,9 @@
     <section class="hero" id="o-kosciele">
       <div class="container">
         <h2>O Świętym Kościele Lewosławia</h2>
-        <p>Święty Kościół Lewosławia jest wspólnotą wiernych i uduchowionych żyjących wedle wartości nadanych przez boskiego opiekuna Naratusa oraz zgodnie z wolą Piątki. Jako depozytariusz mądrości bogów w Feloroście, Kościół opiera się na jedności dogmatycznej i modelu federacyjnym, uznając Państwo-Miasto Narathor za suwerenną „Arkę Dogmatu” i nadrzędny wzorzec tradycji.</p>
+        <p>Święty Kościół Lewosławia jest wspólnotą wiernych i uduchowionych żyjących wedle wartości nadanych przez boskiego opiekuna Naratusa oraz zgodnie z wolą Piątki. Jako depozytariusz mądrości bogów w Feloroście, Kościół opiera się na jedności dogmatycznej i modelu federacyjnym, uznając Patriarchę Lewosławia za zwierzchnika duchowego całego Kościoła i <i>Primus Inter Pares</i>.</p>
         <div class="cta">
-          <a class="btn btn-primary" id="statut" href="./Konstytucja_SKL.pdf" target="_blank">📄 Konstytucja Świętego Kościoła (PDF)</a>
+          <a class="btn btn-primary" id="statut" href="./KrDzU2026poz22.pdf" target="_blank">📄 Konkordat Szkarłatu i Złota (PDF)</a>
         </div>
       </div>
     </section>
@@ -86,10 +86,13 @@
     <section id="egzarchaty">
       <div class="container">
         <h3>Struktura Świętego Kościoła Lewosławia</h3>
-        <p>Podstawę Kościoła stanowią Święte Państwo-Miasto Narathor oraz autonomiczne Kościoły Narodowe, uznające duchowy prymat Patriarchy Lewosławia.</p>
+        <p>Podstawę Kościoła stanowią Patriarchat Lewosławia oraz autonomiczne Kościoły Narodowe, uznające duchowy prymat Patriarchy Lewosławia.</p>
+        <div class="robist">
+        <div class="robe"><img src="./logos/patriarchat.png" alt="Korona" /><br/><strong>Patriarchat Lewosławia</strong><br/>Stolica Kościoła położona w Świętym Państwie-Mieście Narathorze.</div>
+        </div>
         <div class="personnel">
           <div class="person"><img src="./logos/kosciol1.png" alt="Korona" /><br/><strong>Koronny Kościół Ignistrigona</strong><br/>Narodowy Kościół Korony Krulestwa Multikont, na którego czele stoi Krul Multikont.</div>
-          <div class="person"><img src="./logos/kosciol2.png" alt="Korona" /><br/><strong>Lewosławny Kościół Azurii</strong><br/>Pierwszy Kościół Lewosławian.</div>
+          <div class="person"><img src="./logos/kosciol2.png" alt="Korona" /><br/><strong>Lewosławny Kościół Azurii</strong><br/>Pierwszy Kościół Lewosławian. Pierwotnie Królestwo Azurii było połączone z Patriarchatem Lewosławia, jednak Artrup I wyodrębnił te dwa państwa.</div>
           <div class="person"><img src="./logos/kosciol3.png" alt="Korona" /><br/><strong>Imperialny Kościół Ursona</strong><br/>Kościół Ursona w Zachodnim Imperium Felorków. Kierowany przez szamanów Felorków Górskich.</div>
           <div class="person"><img src="./logos/kosciol4.png" alt="Korona" /><br/><strong>Wielki Egzarchat Omyrii</strong><br/>Kościół państwa teokratycznego, kierowany przez Wielkiego Egzarchę Omyrii.</div>
         </div>
@@ -114,7 +117,7 @@
           <div class="robe">
             <img src="./robes/egzarcha_ceremonial.png" alt="Szaty Egzarchy"/>
             <h4>Egzarcha</h4>
-            <p>Najwyższy stopień uduchowionego. Mistrz w stosowaniu mocy bogów i wysokiej rangi dostojnik, członek grona wyborczego.</p>
+            <p>Najwyższy stopień uduchowionego. Mistrz w stosowaniu mocy bogów i wysokiej rangi dostojnik. Egzarcha Narodowy jest mianowany przez władze Kościoła Narodowego, natomiast Egzarcha Kościoła jest mianowany przez Radę Pięciu Promieni.</p>
           </div>
         </div>
       </div>
@@ -123,7 +126,7 @@
     <section id="profesje">
       <div class="container">
         <h3>Domy Profesji Kościelnych</h3>
-        <p>W Kościele występuje sześć różnych Domów Profesji Kościelnych, których program nauczania jest centralnie kierowany przez Patriarchat Lewosławia.</p>
+        <p>W Kościele występuje sześć różnych Domów Profesji Kościelnych, których program nauczania jest centralnie kierowany przez Kurię Patriarszą.</p>
         <div class="personnel">
           <div class="person"><strong>Dom Nauki i Teologii</strong><br/>Kształcenie teologów i kronikarzy.</div>
           <div class="person"><strong>Dom Rytuałów</strong><br/>Mistrzowie obrzędów i liturgii.</div>
@@ -139,7 +142,7 @@
       <div class="container">
         <h3>Organy Centralnego Kościoła</h3>
         <div class="card">
-          <p>Struktura zarządzania Patriarchatem Lewosławia i Centrum Jedności:</p>
+          <p>Struktura zarządzania Świętym Kościołem Lewosławia:</p>
           <ul class="meta-list">
             <li><a href="#patriarcha">Patriarcha Lewosławia</a></li>
             <li><a href="#rada-ekumeniczna">Rada Ekumeniczna Lewosławia</a></li>
@@ -157,7 +160,7 @@
       <div class="container">
         <h3>Patriarcha Lewosławia</h3>
         <img src="./logos/herb_patriarchy.png" alt="Herb Patriarchy" class="org-logo" />
-        <p>Najwyższy zwierzchnik duchowy i strażnik jedności, następca Artrupa I Wybranego. Sprawuje absolutną i niepodzielną władzę nad Państwem-Miastem Narathorem, wydając Dekrety Objawienia wiążące cały Kościół.</p>
+        <p>Najwyższy zwierzchnik duchowy i strażnik jedności, następca Artrupa I Wybranego. Sprawuje duchowe zwierzchnictwo nad całym Kościołem.</p>
         <div class="personnel">
           <div class="person"><img src="./people/artruppatriarcha.png" alt="Patriarcha" /><br/><strong>Artrup I</strong><br/>I Patriarcha Lewosławia</div>
           <div class="person"><img src="./people/patriarcha.png" alt="Patriarcha" /><br/><strong>Alaryk I Szkarłatny</strong><br/>II Patriarcha Lewosławia</div>
@@ -168,11 +171,11 @@
     <section id="rada-ekumeniczna">
       <div class="container">
         <h3>Rada Ekumeniczna Lewosławia</h3>
-        <p>Najwyższe forum jedności doktrynalnej, w skład którego wchodzą Patriarcha, Rada Pięciu Promieni, Kardynałowie Zwyczajni oraz Archonci. Zatwierdza zmiany w Konstytucji i Aneksy Doktrynalne.</p>
+        <p>Najwyższe forum jedności doktrynalnej, w skład którego wchodzą Patriarcha, Rada Pięciu Promieni, Kardynałowie Zwyczajni oraz Archonci. Wprowadza zmiany w Konkordacie i zatwierdza Aneksy Doktrynalne.</p>
       <div class="robist">
-          <div class="robe"><img src="./robes/archont.png" alt="Archont"/><br/><strong>Archont</strong><br/><i>Ceremonialny strój Archonta zawiera błękitne barwy</i></div>
-          <div class="robe"><img src="./robes/kardynal.png" alt="Kardynał" /><br/><strong>Kardynał Zwyczajny</strong><br/><i>Ceremonialny strój Kardynała Zwyczajnego zawiera fioletowe barwy</i></div>
-          <div class="robe"><img src="./robes/kardynal_promienia.png" alt="Kardynał" /><br/><strong>Kardynał Promienia</strong><br/><i>Ceremonialny strój Kardynała Promienia zawiera fioletowe barwy i złote naszycia w szatach. Kardynałowie Promienia używają Kosturu Piątki.</i></div>
+          <div class="robe"><img src="./robes/archont.png" alt="Archont"/><br/><strong>Archont</strong><br/>Archonci to najwyżsi mędrcy Kościoła. Tytuł Archonta nadaje wybitnym Egzarchom Kościoła Patriarcha.</br><i>Ceremonialny strój Archonta zawiera błękitne barwy</i></div>
+          <div class="robe"><img src="./robes/kardynal.png" alt="Kardynał" /><br/><strong>Kardynał Zwyczajny</strong></br>Kardynałowie Zwyczajni są mianowani przez Patriarchę jako łącznicy między Patriarchatem Lewosławia i Kościołem Narodowym, a także jako kapłani kierujący strukturami Kościoła.<br/><i>Ceremonialny strój Kardynała Zwyczajnego zawiera fioletowe barwy</i></div>
+          <div class="robe"><img src="./robes/kardynal_promienia.png" alt="Kardynał" /><br/><strong>Kardynał Promienia</strong><br/>Kardynałowie Promienia w liczbie pięciu są wybierani przez zgromadzenia Egzarchów służących jednemu z bogów Piątki na 5-letnią kadencję. Kardynałowie Promienia reprezentują interesy uduchowionych swojej ścieżki i nadzorują kult ich boga Piątki.</br><i>Ceremonialny strój Kardynała Promienia zawiera fioletowe barwy i złote naszycia w szatach. Kardynałowie Promienia używają Kosturu Piątki.</i></div>
       </div>
       </div>
     </section>
@@ -182,14 +185,14 @@
         <h3>Rada Pięciu Promieni</h3>
         <p>Najwyższy organ kolegialny wspierający Patriarchę. Składa się z Wielkiego Archonta oraz pięciu Kardynałów Promienia, reprezentujących ścieżki każdego z bogów Piątki.</p>
         <div class="personnel">
-          <div class="person"><img src="./people/wielki-archont.png" alt="Wielki Archont" /><br/><strong>Hangvul</strong><br/>Wielki Archont</div>
+          <div class="person"><img src="./people/wielki-archont.png" alt="Wielki Archont" /><br/><strong>Wielki Archont Hangvul</strong><br/><i>Wielki Archont przewodniczy Radzie Pięciu Promieni i jest uważany za drugiego zaraz po Patriarsze Lewosławia.</i></div>
         </div>
         <div class="personnel">
-          <div class="person"><img src="./people/kardynal1.png" alt="Kardynał" /><br/><strong>Renthurnak</strong><br/><i>Prominens Bellator Ignistrigoni</i></div>
-          <div class="person"><img src="./people/kardynal2.png" alt="Kardynał" /><br/><strong>Imperius</strong><br/><i>Prominens Sapientiae Velmioris</i></div>
-          <div class="person"><img src="./people/kardynal3.png" alt="Kardynał" /><br/><strong>Serenya</strong><br/><i>Prominens Misericordiae Elyavriae</i></div>
-          <div class="person"><img src="./people/kardynal4.png" alt="Kardynał" /><br/><strong>Althaea</strong><br/><i>Prominens Visionis Ethelaris</i></div>
-          <div class="person"><img src="./people/kardynal5.png" alt="Kardynał" /><br/><strong>Stefan</strong><br/><i>Prominens Ordinis Thalorgaris</i></div>
+          <div class="person"><img src="./people/kardynal1.png" alt="Kardynał" /><br/><strong>Renthurnak</strong><br/><i>Prominens Bellator Ignistrigoni</i></br>(Promień Wojny Ignistrigona)</div>
+          <div class="person"><img src="./people/kardynal2.png" alt="Kardynał" /><br/><strong>Imperius</strong><br/><i>Prominens Sapientiae Velmioris</i></br>(Promień Mądrości Velmiora)</div>
+          <div class="person"><img src="./people/kardynal3.png" alt="Kardynał" /><br/><strong>Serenya</strong><br/><i>Prominens Misericordiae Elyavriae</i></br>(Promień Miłodzierdzia Elyavrii)</div>
+          <div class="person"><img src="./people/kardynal4.png" alt="Kardynał" /><br/><strong>Aralhazoros</strong><br/><i>Prominens Roboris Ursonis</i></br>(Promień Siły Ursona)</div>
+          <div class="person"><img src="./people/kardynal5.png" alt="Kardynał" /><br/><strong>Stefan</strong><br/><i>Prominens Ordinis Thalorgaris</i></br>(Promień Porządku Thalorgara)</div>
         </div>
       </div>
     </section>
@@ -197,7 +200,7 @@
     <section id="kolegium">
       <div class="container">
         <h3>Kolegium Doktrynalne</h3>
-        <p>Odpowiada za opracowywanie i interpretację aktów doktrynalnych. Składa się z dwunastu Kronikarzy Objawienia, będących strażnikami Arki Dogmatu.</p>
+        <p>Odpowiada za opracowywanie i interpretację aktów doktrynalnych. Składa się z dwunastu Kronikarzy Objawienia, będących strażnikami dogmatyki Kościoła.</p>
         <div class="personnel">
           <div class="person"><img src="./logos/kolegium.png" alt="Kolegium" /><br/><strong>12 Kronikarzy Objawienia</strong></div>
         </div>
@@ -210,9 +213,9 @@
         <p>Centralna administracja Kościoła z siedzibą w Narathorze. Koncentruje się na dyplomacji, jedności kultu oraz nadzorze nad standardami nauczania.</p>
         <div class="kuria">
           <div class="person"><strong>Wielka Kancelaria</strong><br/>Polityka zagraniczna i relacje między Kościołami Narodowymi.</div>
-          <div class="person"><strong>Dykasteria ds. Jedności Kultu</strong><br/>Nadzór nad spójnością rytuałów i Dekretami Objawienia.</div>
-          <div class="person"><strong>Dykasteria ds. Uduchowionych</strong><br/>Centralny Rejestr Egzarchów i akredytacja stopni lokalnych.</div>
-          <div class="person"><strong>Dykasteria ds. Domów Profesji</strong><br/>Certyfikacja programów nauczania dla Adeptów i Prałatów.</div>
+          <div class="person"><strong>Dykasteria ds. Jedności Kultu</strong><br/>Nadzór nad spójnością kultu lewosławnego.</div>
+          <div class="person"><strong>Dykasteria ds. Uduchowionych</strong><br/>Nadzór nad uduchowionymi.</div>
+          <div class="person"><strong>Dykasteria ds. Domów Profesji</strong><br/>Certyfikacja programów nauczania w Domach Profesji Kościelnych.</div>
           <div class="person"><strong>Dykasteria ds. Zakonów Rycerskich</strong><br/>Nadzór nad zbrojnymi organizacjami Kościoła.</div>
           <div class="person"><strong>Archiwum Głosu</strong><br/>Dokumentacja aktów doktrynalnych i ewidencja dusz.</div>
         </div>
@@ -222,7 +225,7 @@
     <section id="trybunaly">
       <div class="container">
         <h3>Trybunały Kościoła</h3>
-        <p>Wymiar Boskiej Sprawiedliwości sprawowany w imieniu bogów przez niezawisłych Sędziów Prawdy.</p>
+        <p>Wymiar Boskiej Sprawiedliwości sprawowany w imieniu bogów przez niezawisłych Sędziów Prawdy i Strażników Lewosławia.</p>
         <div class="kuria">
           <div class="person"><strong>Trybunał Boskiej Sprawiedliwości</strong><br/>Najwyższy sąd w sprawach wiary, herezji oraz zbrodni popełnionych przez Egzarchów.</div>
           <div class="person"><strong>Trybunał Strażników Lewosławia</strong><br/>Strażnik porządku konstytucyjnego i arbiter w sporach między Kościołami Narodowymi.</div>
@@ -233,7 +236,7 @@
     <section id="zakon">
       <div class="container">
         <h3>Zakon Szkarłatnych Ostrzy</h3>
-        <p>Zbrojne ramię Patriarchy i armia Autarkii Narathoru. Składa się z uduchowionych, którzy złożyli przysięgę krwi i ognia służąc Ignistrigonowi.</p>
+        <p>Zbrojne ramię Patriarchy i armia Państwa Narathoru. Składa się z uduchowionych, którzy złożyli przysięgę krwi i ognia służąc Ignistrigonowi.</p>
         <div class="personnel">
           <div class="person"><img src="./logos/herb_so.png" alt="Zakon" /><br/>Na czele stoi <strong>Egzekutor Narathoru</strong></div>
         </div>
@@ -254,7 +257,7 @@
 
   <footer>
     <div class="container">
-      <p>© <span id="rok"></span> Święty Kościół Lewosławia | Arka Dogmatu – Narathor. Wszelkie elementy stanowią fikcję twórczą autora.</p>
+      <p>© <span id="rok"></span> Święty Kościół Lewosławia | Wszelkie elementy stanowią fikcję twórczą autora.</p>
     </div>
     <script>document.getElementById('rok').textContent = new Date().getFullYear();</script>
   </footer>
