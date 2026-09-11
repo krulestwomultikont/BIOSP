@@ -36,7 +36,7 @@ const rodyWielkieDb = [
 
     // 4. INFORMACJE O RODZIE SZLACHECKIM
     n41_houseCategory: "Wielki Ród (głowa rodu w randze Księcia)",
-    n42_vassalStatus: "Suzeren regionalny Księstwa Świnków. Podległe rody wasalne: Ród Hrabstwa Świdnickiego (Akt Hołdu z 24.02.2026 r.).",
+    n42_vassalStatus: "Suzeren regionalny Księstwa Świnków. Podległe rody wasalne: Ród Markiza Zielonogrodu Świdnickiego (Ród Przysięgły, Akt Hołdu z 25.02.2026 r.) oraz Ród Hrabstwa Świdnickiego (Ród Przysięgły, Akt Hołdu z 25.02.2026 r.).",
     n43_houseHerbImg: "../KRA/herb_rod_poz1.png",
     n43_houseHerbDesc: "Trzy złote świnki stojące na dwóch tylnych raciczkach, pierwsza i ostatnia zwrócone w lewo, środkowa w prawo, umieszczone w dwóch złotych pierścieniach nachylonych pod kątem 45' względem powierzchni, na tle tarczy o czterech barwach: w górnym lewym rogu czerwień, w górnym prawnym błękit, w dolnym lewym zieleń, a w dolnym prawym fiolet.",
     n44_houseMembers: [

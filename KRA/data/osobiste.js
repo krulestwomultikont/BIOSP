@@ -36,43 +36,6 @@ const osobisteDb = [
     n34_personalHerbDesc: "Złota świnka stojąca na dwóch tylnych raciczkach, zwrócona w lewo, na tle błękitnej tarczy."
   },
 
-  // 3. MARKIZ WSCHODNIEGO TARKWINOGRODU (dawna poz. O.3.)
-  {
-    title: "Markiz Wschodniego Tarkwinogrodu",
-    ranga: "Markiz",
-    koronaImg: "../KRA/korona markiza.png",
-
-    // 1. INFORMACJE O TYTULE
-    n11_title: "Markiz Wschodniego Tarkwinogrodu",
-    n12_creationOrder: "Postanowienie Krula Multikont nr 8/T/2026 z dnia 24.02.2026 r.",
-    classes: {
-      publicFunction: false,
-      landAndBusiness: true,
-      honorary: false
-    },
-    n14_ranga: "Markiz",
-    n15_publicEstate: "Brak",
-    n16_businessEstate: "Nieruchomość o wielkości 1 ha, położona w Tarkwinogrodzie oraz stojące na niej zabudowania handlowo-usługowe",
-    n17_publicLegalBasis: "Nie dotyczy",
-    n18_ringDesc: "Złoty sygnet ze szmaragdem",
-    n19_dates: "24.02.2026 r./nie dotyczy",
-
-    // 2. INFORMACJE O OSOBIE NOSZĄCEJ TYTUŁ
-    n21_holderName: "Ekologiczny Tata Świnka",
-    n22_grantOrder: "Postanowienie Krula Multikont nr 10/N/2026 z dnia 24.02.2026 r.",
-    n23_prevHolders: "Brak",
-    n24_heir: "Feministyczny Tata Świnka",
-    n25_individualPrivileges: "Prawo zasiadania w Senacie Koronnym",
-
-    // 3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE
-    n31_usedHerbImg: "../KRA/herb_pozo3.png",
-    n31_usedHerbDesc: "Biało-czarny lemur ze złotymi oczami na tle zielonej tarczy. Nad tarczą herbową znajduje się korona rangowa markiza.",
-    n32_usageTitle: "Markiz",
-    n33_otherTitles: "Brak",
-    n34_personalHerbImg: "../KRA/herb_os_poz3.png",
-    n34_personalHerbDesc: "Biało-czarny lemur ze złotymi oczami na tle zielonej tarczy."
-  },
-
   // 4. HRABINA PODRZECZA WSCHODNIEGO (dawna poz. O.4.)
   {
     title: "Hrabina Podrzecza Wschodniego",

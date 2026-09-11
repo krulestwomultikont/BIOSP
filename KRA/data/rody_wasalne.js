@@ -1,5 +1,52 @@
 const rodyWasalneDb = [
-  // 1. RÓD PRZYSIĘGŁY: HRABIA ŚWIDNICKI (Wasal Wielkiego Rodu Świnków)
+  // 1. RÓD PRZYSIĘGŁY: MARKIZ ZIELONOGRODU ŚWIDNICKIEGO (Wasal Wielkiego Rodu Świnków)
+  {
+    title: "Markiz Zielonogrodu Świdnickiego",
+    ranga: "Markiz",
+    kategoriaRodu: "Ród Przysięgły",
+    koronaImg: "../KRA/korona markiza.png",
+
+    // 1. INFORMACJE O TYTULE
+    n11_title: "Markiz Zielonogrodu Świdnickiego",
+    n12_creationOrder: "Postanowienie Krula Multikont nr 12/T/2026 z dnia 24.02.2026 r.",
+    classes: {
+      publicFunction: false,
+      landAndBusiness: true,
+      honorary: false
+    },
+    n14_ranga: "Markiz",
+    n15_publicEstate: "Brak",
+    n16_businessEstate: "Dobra ziemskie i plantacje ekologiczne Zielonogrodu (45 ha) w Księstwie Świnków",
+    n17_publicLegalBasis: "Nie dotyczy",
+    n18_ringDesc: "Złoty sygnet ze szmaragdem",
+    n19_dates: "24.02.2026 r./nie dotyczy",
+
+    // 2. INFORMACJE O OSOBIE NOSZĄCEJ TYTUŁ
+    n21_holderName: "Ekologiczny Tata Świnka",
+    n22_grantOrder: "Postanowienie Krula Multikont nr 17/N/2026 z dnia 25.02.2026 r.",
+    n23_prevHolders: "Brak",
+    n24_heir: "Feministyczny Tata Świnka",
+    n25_individualPrivileges: "Prawo zasiadania w Senacie Koronnym",
+
+    // 3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE
+    n31_usedHerbImg: "../KRA/herb_pozo3.png",
+    n31_usedHerbDesc: "Biało-czarny lemur ze złotymi oczami na tle zielonej tarczy. Nad tarczą herbową znajduje się korona rangowa markiza.",
+    n32_usageTitle: "Markiz",
+    n33_otherTitles: "Brak",
+
+    // 4. INFORMACJE O RODZIE SZLACHECKIM I RELACJACH LENNYCH
+    n41_houseCategory: "Ród Przysięgły (głowa rodu w randze Markiza)",
+    n42_vassalStatus: "Wasal Księstwa Świnków. Akt Hołdu złożony przed Diukiem Bolszewickim Tatą Świnką w Świdniku w dniu 25.02.2026 r., zatwierdzony postanowieniem Krula Multikont.",
+    n43_houseHerbImg: "../KRA/herb_os_poz3.png",
+    n43_houseHerbDesc: "Biało-czarny lemur ze złotymi oczami na tle zielonej tarczy.",
+    n44_houseMembers: [
+      "Ekologiczny Tata Świnka",
+      "Feministyczny Tata Świnka"
+    ],
+    n45_houseSeat: "Pałac Ekologiczny w Zielonogrodzie Świdnickim"
+  },
+  
+  // 2. RÓD PRZYSIĘGŁY: HRABIA ŚWIDNICKI (Wasal Wielkiego Rodu Świnków)
   {
     title: "Hrabia Świdnicki",
     ranga: "Hrabia",
@@ -46,7 +93,7 @@ const rodyWasalneDb = [
     n45_houseSeat: "Dwór Hrabstwa Świdnickiego"
   },
 
-  // 2. RÓD ZIEMSKI: BARON POGRANICZA SOWIEGO (Wasal Wielkiego Rodu Strigallorów)
+  // 3. RÓD ZIEMSKI: BARON POGRANICZA SOWIEGO (Wasal Wielkiego Rodu Strigallorów)
   {
     title: "Baron Pogranicza Sowiego",
     ranga: "Baron",
@@ -76,16 +123,16 @@ const rodyWasalneDb = [
     n25_individualPrivileges: "Prawo poboru myta granicznego na rzecz rodu zwierzchniego",
 
     // 3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE
-    n31_usedHerbImg: "../KRA/herb_pozr3.png",
-    n31_usedHerbDesc: "Biało-brązowy Strigallor z błękitnymi oczami na tle złotej tarczy. Nad tarczą korona rangowa barona.",
+    n31_usedHerbImg: null,
+    n31_usedHerbDesc: "Brak",
     n32_usageTitle: "Baron",
     n33_otherTitles: "Brak",
 
     // 4. INFORMACJE O RODZIE SZLACHECKIM I RELACJACH LENNYCH
     n41_houseCategory: "Ród Ziemski (głowa rodu w randze Barona)",
     n42_vassalStatus: "Wasal Księstwa Strigallorów. Akt Hołdu złożony przed Diukiem Puchaczem Potężnym w Sowigrodzie w dniu 25.02.2026 r., zatwierdzony postanowieniem Krula Multikont.",
-    n43_houseHerbImg: "../KRA/herb_rod_poz3.png",
-    n43_houseHerbDesc: "Biało-brązowy Strigallor z błękitnymi oczami na tle złotej tarczy.",
+    n43_houseHerbImg: null,
+    n43_houseHerbDesc: "Brak",
     n44_houseMembers: [
       "Athaurion",
       "Valquintor"
@@ -93,7 +140,7 @@ const rodyWasalneDb = [
     n45_houseSeat: "Stanica Pogranicza"
   },
 
-  // 3. RÓD ZIEMSKI: BARON DOLINY DRAPIEŻNIKÓW (Bezpośredni Wasal Krula)
+  // 4. RÓD ZIEMSKI: BARON DOLINY DRAPIEŻNIKÓW (Bezpośredni Wasal Krula)
   {
     title: "Baron Doliny Drapieżników",
     ranga: "Baron",
@@ -123,16 +170,16 @@ const rodyWasalneDb = [
     n25_individualPrivileges: "Prawo jurysdykcji bartnej w granicach posiadłości",
 
     // 3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE
-    n31_usedHerbImg: "../KRA/herb_pozo6.png",
-    n31_usedHerbDesc: "Głowa drapieżnego gryfa na tle stalowej tarczy. Nad tarczą korona rangowa barona.",
+    n31_usedHerbImg: null,
+    n31_usedHerbDesc: "Brak",
     n32_usageTitle: "Baron",
     n33_otherTitles: "Brak",
 
     // 4. INFORMACJE O RODZIE SZLACHECKIM I RELACJACH LENNYCH
     n41_houseCategory: "Ród Ziemski (głowa rodu w randze Barona)",
     n42_vassalStatus: "Bezpośrednia zależność lenna od Krula Multikont (art. 36b ust. 1 in fine Dekretu – z uwagi na brak właściwego terytorialnie Wielkiego Rodu).",
-    n43_houseHerbImg: "../KRA/herb_os_poz6.png",
-    n43_houseHerbDesc: "Głowa drapieżnego gryfa na tle stalowej tarczy.",
+    n43_houseHerbImg: null,
+    n43_houseHerbDesc: "Brak",
     n44_houseMembers: [
       "Gromosław",
       "Mściwój"
