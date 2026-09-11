@@ -1,194 +1,480 @@
-        body {
-            font-family: 'Georgia', serif; /* Bardziej klasyczny krój pisma */
-            background-color: #f4f1ea;
-            color: #2c2c2c;
-            margin: 0;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            border-bottom: 2px solid #8b7355;
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-        }
-
-        h1 { color: #5d4037; text-transform: uppercase; letter-spacing: 2px; }
-
-        .registry-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .noble-item {
-            background: #fff;
-            border: 1px solid #dcd3c1;
-            margin-bottom: 15px;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        /* Tytuł zakładki wg pkt 1 */
-        .noble-header {
-            background-color: #8b7355;
-            color: white;
-            padding: 15px 25px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .noble-header h2 { margin: 0; font-size: 1.1rem; font-weight: normal; }
-
-        .noble-content {
-            display: none;
-            padding: 0;
-            background-color: #fff;
-        }
-
-        /* Podział na sekcje wg pkt 2, 3 i 4 */
-        .section-part {
-            padding: 20px 25px;
-        }
-
-        .separator {
-            border-top: 1px double #dcd3c1;
-            margin: 0 25px;
-            height: 1px;
-        }
-
-        .info-row {
-            margin-bottom: 12px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Numeracja wg pkt 5 */
-        .label { 
-            font-weight: bold; 
-            color: #5d4037; 
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            margin-bottom: 3px;
-        }
-
-        .value { font-size: 1.05rem; color: #333; }
-
-        .heraldry-container {
-            margin-top: 10px;
-            display: flex;
-            gap: 15px;
-            align-items: flex-start;
-        }
-
-        .herb-img {
-            width: 100px;
-            height: 120px;
-            background: #f9f9f9;
-            border: 1px solid #ccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.7rem;
-            text-align: center;
-        }
-
-        .arrow {
-            border: solid white;
-            border-width: 0 2px 2px 0;
-            display: inline-block;
-            padding: 4px;
-            transform: rotate(45deg);
-        }
-        .active .arrow { transform: rotate(-135deg); }
-
-        /* Styl paska głównego */
-.navbar {
-    background-color: #5d4037;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    font-family: sans-serif;
+/* ==========================================================================
+   RESET I USTAWIENIA BAZOWE
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-/* Lista główna */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f1f3f5;
+  color: #212529;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   PASEK NAWIGACYJNY (PORTAL RZĄDOWY)
+   ========================================================================== */
+.navbar {
+  background-color: #0f2d4a;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
 .menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .menu > li {
-    position: relative;
+  position: relative;
 }
 
 .menu a {
-    display: block;
-    color: #f4f1ea;
-    text-decoration: none;
-    padding: 15px 25px;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    transition: background 0.3s;
+  display: block;
+  color: #f8fafc;
+  text-decoration: none;
+  padding: 14px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.15s ease;
 }
 
 .menu > li > a:hover {
-    background-color: #8b7355;
+  background-color: #1b4570;
 }
 
-/* Styl rozwijanego podmenu */
+/* Rozwijane podmenu */
 .submenu {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 250px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border: 1px solid #dcd3c1;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #d0d7de;
+  border-top: none;
+  z-index: 1001;
 }
 
 .submenu li a {
-    color: #333;
-    padding: 12px 20px;
-    text-transform: none;
-    border-bottom: 1px solid #eee;
+  color: #24292f;
+  padding: 10px 16px;
+  text-transform: none;
+  font-size: 13px;
+  font-weight: 500;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.submenu li:last-child a {
+  border-bottom: none;
 }
 
 .submenu li a:hover {
-    background-color: #f4f1ea;
-    color: #5d4037;
+  background-color: #f6f8fa;
+  color: #0f2d4a;
 }
 
-/* Wyświetlanie po najechaniu myszką */
 .menu li:hover .submenu {
-    display: block;
+  display: block;
 }
 
+/* ==========================================================================
+   KONTENER GŁÓWNY I NAGŁÓWEK URZĘDOWY
+   ========================================================================== */
+.main-wrapper {
+  max-width: 960px;
+  margin: 30px auto 100px auto; /* 100px marginesu na dole chroni przed stopką */
+  padding: 0 16px;
+}
+
+.registry-header {
+  background: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 4px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-emblem-box {
+  flex-shrink: 0;
+}
+
+.header-emblem {
+  width: 75px;
+  height: auto;
+  display: block;
+}
+
+.header-text-box {
+  flex-grow: 1;
+}
+
+.registry-header h1 {
+  font-size: 20px;
+  margin: 0 0 4px 0;
+  color: #0f2d4a;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.registry-header .subtitle {
+  font-size: 13px;
+  color: #57606a;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.registry-header .legal-basis {
+  font-size: 12px;
+  color: #57606a;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.registry-header .operator {
+  font-size: 11px;
+  font-weight: 700;
+  color: #0969da;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   PASEK ZAKŁADEK (TABS)
+   ========================================================================== */
+.tabs-bar {
+  display: flex;
+  gap: 4px;
+  border-bottom: 2px solid #0f2d4a;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.tab-button {
+  background: #e1e4e8;
+  border: 1px solid #d0d7de;
+  border-bottom: none;
+  padding: 11px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #57606a;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.tab-button:hover {
+  background: #d8dee4;
+  color: #24292f;
+}
+
+.tab-button.active {
+  background: #0f2d4a;
+  color: #ffffff;
+  border-color: #0f2d4a;
+}
+
+/* ==========================================================================
+   KARTY WPISÓW REJESTROWYCH (AKORDEONY)
+   ========================================================================== */
+.item-card {
+  background: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.item-header {
+  background: #f6f8fa;
+  padding: 14px 20px;
+  border-bottom: 1px solid #d0d7de;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.item-header:hover {
+  background-color: #f1f3f5;
+}
+
+/* Wskaźnik zwinięcia / rozwinięcia */
+.item-header::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #57606a;
+  border-bottom: 2px solid #57606a;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  margin-left: 12px;
+}
+
+.item-header.active::after {
+  transform: rotate(-135deg);
+}
+
+.item-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rank-crown {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+.item-sig {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f2d4a;
+}
+
+/* Oznaczenia statusów (Badges) */
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 3px;
+  margin-left: auto;
+}
+
+.badge-grand {
+  background: #dafbe1;
+  color: #1a7f37;
+  border: 1px solid #aceebb;
+}
+
+.badge-vassal {
+  background: #ddf4ff;
+  color: #0969da;
+  border: 1px solid #b6e3ff;
+}
+
+.badge-personal {
+  background: #fff8c5;
+  color: #9a6700;
+  border: 1px solid #f1e05a;
+}
+
+.item-body {
+  display: none;
+  padding: 20px;
+}
+
+.item-body.open {
+  display: block;
+}
+
+/* ==========================================================================
+   SEKCJE DANYCH I STRUKTURA GRID
+   ========================================================================== */
+.meta-section {
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.meta-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #57606a;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  row-gap: 8px;
+  column-gap: 12px;
+  font-size: 13px;
+}
+
+.grid-key {
+  font-weight: 600;
+  color: #57606a;
+}
+
+.grid-val {
+  color: #24292f;
+}
+
+/* Tabela matrycy klas szlachectwa */
+.classes-table {
+  width: 100%;
+  max-width: 440px;
+  border-collapse: collapse;
+  margin: 4px 0;
+  font-size: 12px;
+  background: #ffffff;
+}
+
+.classes-table th,
+.classes-table td {
+  border: 1px solid #d0d7de;
+  padding: 5px 8px;
+}
+
+.classes-table th {
+  background: #f6f8fa;
+  color: #24292f;
+  font-weight: 600;
+  text-align: left;
+}
+
+.classes-table td.center {
+  text-align: center;
+  font-weight: 700;
+  width: 40px;
+}
+
+.classes-table tr.active-row td {
+  background: #fcfdfd;
+  color: #0f2d4a;
+  font-weight: 600;
+}
+
+/* Ramka zależności lennej */
+.vassal-box {
+  background: #f8fafc;
+  border-left: 3px solid #0f2d4a;
+  padding: 10px 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #1f2328;
+}
+
+/* Prezentacja herbów */
+.heraldry-preview {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-top: 6px;
+}
+
+.herb-thumb {
+  width: 110px;
+  height: auto;
+  border: 1px solid #d0d7de;
+  padding: 4px;
+  background: #ffffff;
+}
+
+.herb-blazon {
+  font-size: 12px;
+  font-style: italic;
+  color: #57606a;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   TABELE REJESTRU HONOROWEGO (RYCERZE)
+   ========================================================================== */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.official-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.official-table th,
+.official-table td {
+  border: 1px solid #d0d7de;
+  padding: 9px 12px;
+  text-align: left;
+}
+
+.official-table th {
+  background: #f6f8fa;
+  color: #0f2d4a;
+  font-weight: 700;
+}
+
+.official-table tr:hover {
+  background-color: #f8fafc;
+}
+
+/* ==========================================================================
+   STAŁA STOPKA RZĄDOWA
+   ========================================================================== */
 .footer-fixed {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #5d4037; /* Ten sam kolor co navbar dla spójności */
-    color: #f4f1ea;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-top: 2px solid #8b7355;
-    z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0f2d4a;
+  color: #f8fafc;
+  text-align: center;
+  padding: 12px 10px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-top: 1px solid #d0d7de;
+  z-index: 1000;
 }
 
-/* Opcjonalnie: dodaj margines na dole głównej treści, 
-   aby ostatnia pozycja nie schowała się pod stopką */
-.main-content {
-    padding-bottom: 60px; 
+/* ==========================================================================
+   RESPONSYWNOŚĆ (RWD)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .registry-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .meta-grid {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+  }
+  .grid-key {
+    margin-top: 6px;
+  }
+  .badge {
+    margin-left: 0;
+    margin-top: 6px;
+  }
+  .item-header {
+    flex-wrap: wrap;
+  }
 }
