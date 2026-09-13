@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rząd Koronny - Korona Krulestwa Multikont</title>
+    <link rel="icon" type="image/ico" href="herb_gryfionow.png" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ujednolicony układ siatki dla wszystkich członków rządu */
+        .government-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2.5rem 2rem; /* Odstęp między kafelkami */
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Minimalistyczny kafelek w stylu gov.pl */
+        .member-card {
+            width: 150px; /* Szerokość dopasowana do zdjęcia */
+            box-sizing: border-box;
+            background: transparent;
+            border: none; /* Całkowity brak obwódki */
+            border-radius: 0;
+            padding: 0;
+            text-align: left; /* Wyrównanie tekstu do lewej */
+            box-shadow: none; /* Brak cienia */
+            transition: none;
+        }
+
+        .member-card:hover {
+            transform: none; /* Wyłączenie unoszenia */
+        }
+
+        /* Kontener na zdjęcie bez obwódek i zaokrągleń */
+        .member-photo-container {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 0.75rem;
+            border: none;
+            border-radius: 0;
+            overflow: hidden;
+            background-color: #e9ecef; /* Jasnoszare tło zastępcze */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .member-photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Niebieskie, pogrubione imię i nazwisko na górze */
+        .member-name {
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: #0c569a; /* Klasyczny niebieski kolor gov.pl */
+            line-height: 1.3;
+            margin-bottom: 0.25rem;
+        }
+
+        /* Szara rola na samym dole */
+        .member-role {
+            font-size: 0.8rem;
+            color: #333333;
+            text-transform: none; /* Wyłączenie wielkich liter */
+            letter-spacing: normal;
+            font-weight: normal;
+            line-height: 1.4;
+        }
+
+        /* --- STYLIZACJA POJAWIANIA SIĘ PRZY SCROLLOWANIU (FALA) --- */
+
+        /* Ukrycie i przesunięcie startowe */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+                        transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: opacity, transform;
+        }
+
+        /* Stan po aktywacji przez IntersectionObserver */
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="herb_gryfionow.png" alt="Godło Korony Krulestwa Multikont" style="height: 60px; width: auto; border-radius: 4px;">
+                <div class="logo-text">
+                    <h1>Korona Krulestwa Multikont</h1>
+                    <p>Oficjalny Portal Rządowy</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Główna</a></li>
+                    <li><a href="konstytucja.html">Konstytucja</a></li>
+                    <li><a href="rzad.html" class="active">Rząd Koronny</a></li>
+                    <li><a href="senat.html">Senat Koronny</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
+        <div class="article-section">
+            <h2>Rząd Koronny</h2>
+            <p>Rząd Koronny kieruje polityką wewnętrzną i zewnętrzną państwa, zarządza administracją koronną oraz koordynuje pracami poszczególnych resortów w celu realizacji porządku prawnego i naturalnego.</p>
+        </div>
+
+        <!-- Lista członków rządu w stylu gov.pl (usunięto klasy delay-*, wszystko kontroluje skrypt) -->
+        <div class="government-grid">
+            
+            <!-- Przewodniczący -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/artur_gryfion.png" alt="Krul Artur I Gryfion">
+                </div>
+                <div class="member-name">Krul Artur I Gryfion</div>
+                <div class="member-role">Przewodniczący Rządu Koronnego</div>
+            </div>
+
+            <!-- Wiceprzewodniczący -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/tata_swinka.png" alt="Wielki Diuk Demokratyczny Tata Świnka">
+                </div>
+                <div class="member-name">Wielki Diuk Demokratyczny Tata Świnka</div>
+                <div class="member-role">Wiceprzewodniczący Rządu Koronnego i Minister Spraw Wewnętrznych i Bezpieczeństwa Państwa</div>
+            </div>
+
+            <!-- Finanse -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/blank.png" alt="Baron Benedykt Artrupovic">
+                </div>
+                <div class="member-name">Baron Benedykt Artrupovic</div>
+                <div class="member-role">Minister Finansów</div>
+            </div>
+
+            <!-- Sprawy Zagraniczne -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/archadius.png" alt="Baron Archadius Błękitny Smok">
+                </div>
+                <div class="member-name">Baron Archadius Błękitny Smok</div>
+                <div class="member-role">Minister Spraw Zagranicznych</div>
+            </div>
+
+            <!-- Edukacja -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/blank.png" alt="Loki 3.2">
+                </div>
+                <div class="member-name">Loki 3.2</div>
+                <div class="member-role">Minister Edukacji i Nauki</div>
+            </div>
+
+            <!-- Gospodarka -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/zydowski_tata_swinka.png" alt="Baron Żydowski Tata Świnka">
+                </div>
+                <div class="member-name">Baron Żydowski Tata Świnka</div>
+                <div class="member-role">Minister Gospodarki</div>
+            </div>
+
+            <!-- Regiony -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/kunegunda.png" alt="Kunegunda Piastowska">
+                </div>
+                <div class="member-name">Kunegunda Piastowska</div>
+                <div class="member-role">Minister Regionów</div>
+            </div>
+
+            <!-- Praca i Rodzina -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/ludowo-socjalistyczny wujek-swinka.png" alt="Ludowo-socjalistyczny Wujek Świnka">
+                </div>
+                <div class="member-name">Ludowo-socjalistyczny Wujek Świnka</div>
+                <div class="member-role">Minister Pracy i Rodziny</div>
+            </div>
+
+            <!-- Sprawiedliwość -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/bolszewicki.png" alt="Diuk Bolszewicki Tata Świnka">
+                </div>
+                <div class="member-name">Diuk Bolszewicki Tata Świnka</div>
+                <div class="member-role">Minister Sprawiedliwości</div>
+            </div>
+
+            <!-- Sprawy Religijne -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/anarchistyczny.png" alt="Anarchistyczny Tata Świnka">
+                </div>
+                <div class="member-name">Anarchistyczny Tata Świnka</div>
+                <div class="member-role">Minister Spraw Religijnych</div>
+            </div>
+
+            <!-- Zdrowie -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/jogobol.png" alt="Jogobol">
+                </div>
+                <div class="member-name">Jogobol</div>
+                <div class="member-role">Minister Zdrowia</div>
+            </div>
+
+            <!-- Rolnictwo -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/blank.png" alt="Zbysław Garncarski">
+                </div>
+                <div class="member-name">Zbysław Garncarski</div>
+                <div class="member-role">Minister Rolnictwa</div>
+            </div>
+
+            <!-- Wojska Lądowe -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/kretor.png" alt="Generał Kretor">
+                </div>
+                <div class="member-name">Generał Kretor</div>
+                <div class="member-role">Minister Wojsk Lądowych</div>
+            </div>
+
+            <!-- Armada -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/mlotek.png" alt="Admirał Książe Sukcesor Młotek Gryfion">
+                </div>
+                <div class="member-name">Admirał Książe Sukcesor Młotek Gryfion</div>
+                <div class="member-role">Minister Krulewskiej Armady</div>
+            </div>
+
+            <!-- Siły Powietrzne -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/blank.png" alt="Generał Athaurion">
+                </div>
+                <div class="member-name">Generał Athaurion</div>
+                <div class="member-role">Minister Sił Powietrznych i Obrony Przestrzeni</div>
+            </div>
+
+            <!-- Wojska Specjalne -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/blank.png" alt="Generał Papirz">
+                </div>
+                <div class="member-name">Generał Papirz</div>
+                <div class="member-role">Minister Koronnych Wojsk Specjalnych</div>
+            </div>
+
+            <!-- Współpraca Wojskowa -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/admiralkasztanov.png" alt="Admirał Ekspansji Kasztanov">
+                </div>
+                <div class="member-name">Admirał Ekspansji Kasztanov</div>
+                <div class="member-role">Minister Współpracy Wojskowej i Stabilizacji</div>
+            </div>
+
+            <!-- Logistyka i Uzbrojenie -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/kapibariusz.png" alt="Generał Książe Sukcesor Kapibariusz Gryfion">
+                </div>
+                <div class="member-name">Generał Książe Sukcesor Kapibariusz Gryfion</div>
+                <div class="member-role">Minister Logistyki i Uzbrojenia Korony</div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Korona Krulestwa Multikont. Wszelkie prawa zastrzeżone. Oficjalny serwis rządowy na straży prawa naturalnego.</p>
+    </footer>
+
+    <!-- INTELIGENTNY SKRYPT FALI -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: "0px 0px -50px 0px", // Delikatny margines od dołu, aby odpalać tuż przed wejściem
+                threshold: 0.05
+            };
+
+            // Ta funkcja obsługuje falowe pojawianie się elementów, które są aktualnie widoczne
+            const observer = new IntersectionObserver((entries, observer) => {
+                // Filtrujemy tylko te elementy, które właśnie wjechały na ekran
+                const visibleEntries = entries.filter(entry => entry.isIntersecting);
+                
+                // Sortujemy elementy według ich pozycji na stronie (od góry do dołu, od lewej do prawej)
+                visibleEntries.sort((a, b) => {
+                    const rectA = a.target.getBoundingClientRect();
+                    const rectB = b.target.getBoundingClientRect();
+                    return (rectA.top - rectB.top) || (rectA.left - rectB.left);
+                });
+
+                // Przypisujemy narastające opóźnienie dla grupy elementów wchodzących jednocześnie
+                visibleEntries.forEach((entry, index) => {
+                    const el = entry.target;
+                    // Każdy kolejny element w fali dostaje 120ms dodatkowego opóźnienia
+                    el.style.transitionDelay = `${index * 0.12}s`;
+                    el.classList.add("active");
+                    observer.unobserve(el); // Usuwamy z obserwacji po zaanimowaniu
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll(".reveal");
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

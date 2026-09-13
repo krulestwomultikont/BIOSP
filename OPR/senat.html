@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senat Koronny - Korona Krulestwa Multikont</title>
+    <link rel="icon" type="image/ico" href="herb_gryfionow.png" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Nadpisanie i dostosowanie stylów kafelków do minimalizmu gov.pl */
+        
+        .senate-section-title {
+            font-size: 1.5rem;
+            color: var(--primary-color); /* Wykorzystanie koloru z pliku style.css */
+            border-bottom: 2px solid var(--secondary-color); /* Wykorzystanie koloru z pliku style.css */
+            padding-bottom: 0.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Nowa płaska siatka dla kafelków w stylu gov.pl */
+        .government-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 2.5rem 2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Minimalistyczny kafelek gov.pl (nadpisujący ogólne style .member-card z style.css) */
+        .government-grid .member-card {
+            width: 170px;
+            box-sizing: border-box;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            text-align: left;
+            box-shadow: none;
+        }
+
+        /* Kontener na zdjęcie bez obwódek i zaokrągleń */
+        .member-photo-container {
+            width: 170px;
+            height: 170px;
+            margin-bottom: 0.75rem;
+            border: none;
+            border-radius: 0;
+            overflow: hidden;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .member-photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Niebieskie, pogrubione imię i nazwisko na górze */
+        .government-grid .member-name {
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: #0c569a; /* Klasyczny odcień niebieskiego z portalu gov */
+            line-height: 1.3;
+            margin-bottom: 0.25rem;
+        }
+
+        /* Ciemnoszara rola na samym dole */
+        .government-grid .member-role {
+            font-size: 0.8rem;
+            color: var(--text-color); /* Wykorzystanie koloru z pliku style.css */
+            text-transform: none;
+            letter-spacing: normal;
+            font-weight: normal;
+            line-height: 1.4;
+        }
+
+        /* INTERAKTYWNA PLANSZA PARLAMENTARNA (SALA PLENARNA) */
+        .parliament-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            background: var(--white); /* Wykorzystanie zmiennych z style.css */
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 3rem;
+            gap: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .chart-area {
+            position: relative;
+            width: 320px;
+            height: 160px; /* Połowa wysokości dla półkola */
+            overflow: hidden;
+        }
+
+        /* Półkole wykresu */
+        .donut-chart {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: conic-gradient(from 270deg, #cccccc 0deg 360deg);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Wycięcie środka (tworzenie pierścienia) */
+        .donut-hole {
+            width: 200px;
+            height: 200px;
+            background: var(--white); /* Musi pasować do tła kontenera (.parliament-container) */
+            border-radius: 50%;
+            position: absolute;
+            top: 60px;
+            left: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .donut-hole .total-seats {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .donut-hole .total-label {
+            font-size: 0.75rem;
+            color: #657786;
+            text-transform: uppercase;
+        }
+
+        /* Legenda i interaktywne informacje */
+        .legend-area {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .legend-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 0.75rem;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .legend-item:hover {
+            background: var(--light-bg); /* Wykorzystanie zmiennej z style.css */
+        }
+
+        .party-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .party-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+
+        .party-name {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        .party-seats {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        /* Style dla logo obok tytułu o senacie */
+        .senate-title-container {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Odstęp między logo a tekstem */
+            border-bottom: 2px solid var(--secondary-color); /* Złota linia pod całym zestawem */
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .senate-title-logo {
+            height: 150px; /* Wysokość logo dopasowana do nagłówka */
+            width: auto;
+            object-fit: contain;
+        }
+
+        .senate-title-text {
+            border-bottom: none !important; /* Usunięcie domyślnej linii z .article-section h2 */
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+            color: var(--primary-color);
+        }
+
+        /* RWD: Na telefonach układa logo nad tekstem */
+        @media (max-width: 600px) {
+            .senate-title-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+
+        /* --- STYLIZACJA POJAWIANIA SIĘ PRZY SCROLLOWANIU --- */
+
+        /* Ukrycie i przesunięcie startowe */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+                        transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: opacity, transform;
+        }
+
+        /* Stan po aktywacji przez IntersectionObserver */
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Kaskadowe opóźnienia pojawiania się sąsiednich kafelków */
+        .reveal.delay-1 { transition-delay: 0.15s; }
+        .reveal.delay-2 { transition-delay: 0.3s; }
+        .reveal.delay-3 { transition-delay: 0.45s; }
+        .reveal.delay-4 { transition-delay: 0.6s; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="herb_gryfionow.png" alt="Godło Korony Krulestwa Multikont" style="height: 60px; width: auto; border-radius: 4px;">
+                <div class="logo-text">
+                    <h1>Korona Krulestwa Multikont</h1>
+                    <p>Oficjalny Portal Rządowy</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Główna</a></li>
+                    <li><a href="konstytucja.html">Konstytucja</a></li>
+                    <li><a href="rzad.html">Rząd Koronny</a></li>
+                    <li><a href="senat.html" class="active">Senat Koronny</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="article-section">
+            <!-- Kontener wyrównujący logo i tytuł obok siebie -->
+            <div class="senate-title-container">
+                <img src="zdjecia/logo_senatu.png" alt="Logo Senatu" class="senate-title-logo">
+                <h2 class="senate-title-text">Senat Korony Krulestwa Multikont</h2>
+            </div>
+            <p>Senat stanowi najwyższy federalny organ ustawodawczy i kontrolny, stojąc na straży tradycji, stabilności prawa oraz reprezentując zarówno wielonarodowe społeczeństwo Multikonian, jak i szlachetną arystokrację.</p>
+        </div>
+
+        <!-- ================= INTERAKTYWNA PLANSZA PARLAMENTARNA ================= -->
+        <div class="senate-section-title">Rozkład Miejsc w Izbie Multikont</div>
+        <p>Działalność partii politycznych jest dozwolona.</p>
+        
+        <div class="parliament-container reveal">
+            <!-- Półkolisty wykres sali plenarnej -->
+            <div class="chart-area">
+                <div class="donut-chart" id="parliamentChart"></div>
+                <div class="donut-hole">
+                    <span class="total-seats" id="centerSeatsCount">100</span>
+                    <span class="total-label" id="centerLabel">Mandatów</span>
+                </div>
+            </div>
+
+            <!-- Legenda stronictwa politycznych -->
+            <div class="legend-area">
+                <ul class="legend-list" id="legendList">
+                    <!-- Elementy generowane automatycznie przez skrypt JS -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- ================= PIERWSZY SENATOR ================= -->
+        <div class="senate-section-title">Pierwszy Senator</div>
+        <div class="government-grid">
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/bonifacy.png" alt="Książe Tronu Bonifacy Gryfion">
+                </div>
+                <div class="member-name">Książe Tronu Bonifacy Gryfion</div>
+                <div class="member-role">Pierwszy Senator</div>
+            </div>
+        </div>
+
+        <!-- ================= IZBA MULTIKONT ================= -->
+        <div class="senate-section-title">Prezydium Izby Multikont</div>
+        <div class="government-grid">
+            <!-- Marszałek -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/nacjonalistyczny.png" alt="Nacjonalistyczny Tata Świnka">
+                </div>
+                <div class="member-name">Nacjonalistyczny Tata Świnka</div>
+                <div class="member-role">Marszałek Izby Multikont</div>
+            </div>
+            <!-- Wicemarszałkowie -->
+            <div class="member-card reveal delay-1">
+                <div class="member-photo-container">
+                    <img src="zdjecia/blank.png" alt="Decimus">
+                </div>
+                <div class="member-name">Decimus</div>
+                <div class="member-role">Wicemarszałek Izby Multikont</div>
+            </div>
+            <div class="member-card reveal delay-2">
+                <div class="member-photo-container">
+                    <img src="zdjecia/brodagast.png" alt="Brodagast Bury">
+                </div>
+                <div class="member-name">Brodagast Bury</div>
+                <div class="member-role">Wicemarszałek Izby Multikont</div>
+            </div>
+            <div class="member-card reveal delay-3">
+                <div class="member-photo-container">
+                    <img src="zdjecia/thor.png" alt="Thor Gruby">
+                </div>
+                <div class="member-name">Thor Gruby</div>
+                <div class="member-role">Wicemarszałek Izby Multikont</div>
+            </div>
+        </div>
+
+        <!-- ================= IZBA ARYSTOKRATÓW ================= -->
+        <div class="senate-section-title">Prezydium Izby Arystokratów</div>
+        <div class="government-grid">
+            <!-- Marszałek -->
+            <div class="member-card reveal">
+                <div class="member-photo-container">
+                    <img src="zdjecia/tata_swinka.png" alt="Wielki Diuk Demokratyczny Tata Świnka">
+                </div>
+                <div class="member-name">Wielki Diuk Demokratyczny Tata Świnka</div>
+                <div class="member-role">Marszałek Izby Arystokratów</div>
+            </div>
+            <!-- Wicemarszałkowie -->
+            <div class="member-card reveal delay-1">
+                <div class="member-photo-container">
+                    <img src="zdjecia/ivor.png" alt="Baron Ivor">
+                </div>
+                <div class="member-name">Baron Ivor</div>
+                <div class="member-role">Wicemarszałek Izby Arystokratów</div>
+            </div>
+            <div class="member-card reveal delay-2">
+                <div class="member-photo-container">
+                    <img src="zdjecia/mikar.png" alt="Kardynał Mikar">
+                </div>
+                <div class="member-name">Kardynał Mikar</div>
+                <div class="member-role">Wicemarszałek Izby Arystokratów</div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Korona Krulestwa Multikont. Wszelkie prawa zastrzeżone. Oficjalny serwis rządowy na straży prawa naturalnego.</p>
+    </footer>
+
+    <!-- SKRYPTY OBSŁUGUJĄCE DETEKCJĘ SCROLLOWANIA ORAZ PLANSZĘ -->
+    <script>
+        // 1. OBSŁUGA INTERSECTION OBSERVER (Animacja przy scrollowaniu)
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.15 // Wyzwala animację, gdy element jest widoczny w 15%
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target); // Wykonaj animację tylko raz
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll(".reveal");
+            revealElements.forEach(el => observer.observe(el));
+        });
+
+        // 2. LOGIKA WYKRESU PARLAMENTARNEGO
+        const partyData = [
+            { name: "KWZZM Narodowy Komunizm", seats: 7, color: "#6E0000" },
+            { name: "Koronna Partia Ekomunistyczna", seats: 9, color: "#327627" },
+            { name: "Demokratyczne Stronnictwo Multikont", seats: 9, color: "#478BCE" },
+            { name: "Narodowe Stronnictwo Multikont", seats: 18, color: "#DA1111" },
+            { name: "Liga Lewosławno-Konserwatywna", seats: 11, color: "#F3CB00" }
+        ];
+
+        const totalSeats = partyData.reduce((sum, party) => sum + party.seats, 0);
+        const chartEl = document.getElementById("parliamentChart");
+        const legendEl = document.getElementById("legendList");
+        const centerSeatsCount = document.getElementById("centerSeatsCount");
+        const centerLabel = document.getElementById("centerLabel");
+
+        function resetCenterText() {
+            centerSeatsCount.textContent = totalSeats;
+            centerLabel.textContent = "Mandaty";
+        }
+        resetCenterText();
+
+        // Funkcja renderująca półkolisty wykres typu semi-donut przy użyciu CSS conic-gradient
+        function renderChart(highlightedIndex = null) {
+            let currentDegrees = 0;
+            let gradientParts = [];
+
+            partyData.forEach((party, index) => {
+                const share = party.seats / totalSeats;
+                const degrees = share * 180; // mapujemy tylko na górne półkole (180 stopni)
+                
+                let color = party.color;
+                if (highlightedIndex !== null && highlightedIndex !== index) {
+                    color = "#e2e8f0"; // przyciemnienie nieaktywnych partii przy hoverze
+                }
+
+                gradientParts.push(`${color} ${currentDegrees}deg ${currentDegrees + degrees}deg`);
+                currentDegrees += degrees;
+            });
+
+            // Dolną część wykresu (od 180deg do 360deg) wypełniamy kolorem tła karty, aby stworzyć półkole
+            gradientParts.push(`var(--white) ${currentDegrees}deg 360deg`);
+
+            chartEl.style.background = `conic-gradient(from 270deg, ${gradientParts.join(', ')})`;
+        }
+
+        // Dynamiczne budowanie legendy z interakcjami mouseenter / mouseleave
+        partyData.forEach((party, index) => {
+            const li = document.createElement("li");
+            li.className = "legend-item";
+            li.innerHTML = `
+                <div class="party-info">
+                    <div class="party-color" style="background-color: ${party.color}"></div>
+                    <span class="party-name">${party.name}</span>
+                </div>
+                <span class="party-seats">${party.seats} (${Math.round((party.seats/totalSeats)*100)}%)</span>
+            `;
+
+            li.addEventListener("mouseenter", () => {
+                renderChart(index);
+                centerSeatsCount.textContent = party.seats;
+                centerLabel.textContent = "Mandatów";
+                centerSeatsCount.style.color = party.color;
+            });
+
+            li.addEventListener("mouseleave", () => {
+                renderChart();
+                resetCenterText();
+                centerSeatsCount.style.color = "var(--primary-color)";
+            });
+
+            legendEl.appendChild(li);
+        });
+
+        // Pierwsze uruchomienie wykresu
+        renderChart();
+    </script>
+</body>
+</html>

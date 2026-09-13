@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konstytucja Korony Krulestwa Multikont</title>
+    <link rel="icon" type="image/ico" href="herb_gryfionow.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .constitution-wrapper {
+            display: flex;
+            gap: 30px;
+            margin-top: 2rem;
+            align-items: flex-start;
+        }
+
+        .constitution-sidebar {
+            width: 300px;
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-top: 3px solid #0a2540;
+            position: sticky;
+            top: 20px;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        .constitution-sidebar h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            color: #0a2540;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 5px;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 0.4rem;
+        }
+
+        .sidebar-menu a {
+            color: #333333;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: block;
+            padding: 3px 5px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .sidebar-menu a:hover {
+            background: #f4f6f9;
+            color: #7a0010;
+            padding-left: 10px;
+        }
+
+        .sidebar-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            color: #7a0010;
+            margin-top: 1rem;
+            margin-bottom: 0.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .constitution-body {
+            flex: 1;
+            font-family: 'Lora', Georgia, serif;
+            background: #ffffff;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .constitution-body h1, .constitution-body h2, .constitution-body h3 {
+            font-family: 'Cinzel', serif;
+            color: #0a2540;
+            margin-bottom: 1.5rem;
+        }
+
+        .constitution-body h2 {
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 0.5rem;
+            color: #7a0010;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .constitution-body h3 {
+            font-size: 1.15rem;
+            margin-top: 2rem;
+            color: #0a2540;
+            border-left: 3px solid #d4af37;
+            padding-left: 10px;
+        }
+
+        .article-block {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dotted #eeeeee;
+        }
+
+        .article-block:last-child {
+            border: none;
+        }
+
+        .article-num {
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            color: #7a0010;
+            margin-bottom: 0.4rem;
+        }
+
+        .article-text {
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        .paragraph {
+            margin-bottom: 0.4rem;
+        }
+
+        .sub-paragraph {
+            text-indent: 1.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        @media (max-width: 1024px) {
+            .constitution-wrapper {
+                flex-direction: column;
+            }
+            .constitution-sidebar {
+                width: 100%;
+                position: relative;
+                max-height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="herb_gryfionow.png" alt="Godło Korony Krulestwa Multikont" style="height: 60px; width: auto; border-radius: 4px;">
+                <div class="logo-text">
+                    <h1>Korona Krulestwa Multikont</h1>
+                    <p>Oficjalny Portal Rządowy</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Główna</a></li>
+                    <li><a href="konstytucja.html" class="active">Konstytucja</a></li>
+                    <li><a href="rzad.html">Rząd Koronny</a></li>
+                    <li><a href="senat.html">Senat Koronny</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="max-width: 1400px;">
+        <div class="constitution-wrapper">
+            
+            <!-- BOCZNY PANEL NAWIGACYJNY -->
+            <aside class="constitution-sidebar">
+                <h3>Nawigacja</h3>
+                <ul class="sidebar-menu">
+                    <li><a href="#preambula">Preambuła</a></li>
+                    
+                    <div class="sidebar-label">Dział I: Państwo i Prawo</div>
+                    <li><a href="#rozdzial1">Rozdział 1: Korona Krulestwa</a></li>
+                    <li><a href="#rozdzial2">Rozdział 2: Ustrój Federalny</a></li>
+                    <li><a href="#rozdzial3">Rozdział 3: Krul Multikont</a></li>
+                    <li><a href="#rozdzial4">Rozdział 4: Źródła Prawa</a></li>
+                    
+                    <div class="sidebar-label">Dział II: Prawa i Obowiązki</div>
+                    <li><a href="#rozdzial5">Rozdział 5: Zasady Ogólne</a></li>
+                    <li><a href="#rozdzial6">Rozdział 6: Wolności i Prawa</a></li>
+                    <li><a href="#rozdzial7">Rozdział 7: Obowiązki</a></li>
+                    <li><a href="#rozdzial8">Rozdział 8: Arystokracja</a></li>
+                    
+                    <div class="sidebar-label">Dział III: Władza Koronna</div>
+                    <li><a href="#rozdzial9">Rozdział 9: Rząd Koronny</a></li>
+                    <li><a href="#rozdzial10">Rozdział 10: Senat Koronny</a></li>
+                    <li><a href="#rozdzial11">Rozdział 11: Bank Centralny</a></li>
+
+                    <div class="sidebar-label">Dział IV: Władze Regionalne</div>
+                    <li><a href="#rozdzial12">Rozdział 12: Przepisy Ogólne</a></li>
+                    <li><a href="#rozdzial13">Rozdział 13: Władza Wykonawcza</a></li>
+                    <li><a href="#rozdzial14">Rozdział 14: Parlament Regionalny</a></li>
+
+                    <div class="sidebar-label">Dział V: Sprawiedliwość</div>
+                    <li><a href="#rozdzial15">Rozdział 15: Ustrój Sądownictwa</a></li>
+                    <li><a href="#rozdzial16">Rozdział 16: Sądy i KSN</a></li>
+                    <li><a href="#rozdzial17">Rozdział 17: KTA i RSA</a></li>
+                    <li><a href="#rozdzial18">Rozdział 18: Wysoki Trybunał</a></li>
+
+                    <div class="sidebar-label">Dział VI: Ochrona Prawna</div>
+                    <li><a href="#rozdzial19">Rozdział 19: Inkwizycja Koronna</a></li>
+                    <li><a href="#rozdzial20">Rozdział 20: Rzecznicy Praw</a></li>
+                    <li><a href="#rozdzial21">Rozdział 21: Rada Obiektywizacji</a></li>
+                    <li><a href="#rozdzial22">Rozdział 22: Izba Kontroli</a></li>
+
+                    <div class="sidebar-label">Dział VII: Terytorium</div>
+                    <li><a href="#rozdzial23">Rozdział 23: Samorząd</a></li>
+
+                    <div class="sidebar-label">Dział VIII: Kościół</div>
+                    <li><a href="#rozdzial24">Rozdział 24: Kościół Ignistrigona</a></li>
+
+                    <div class="sidebar-label">Dział IX: Końcowe</div>
+                    <li><a href="#rozdzial25">Rozdział 25: Zmiana Konstytucji</a></li>
+                    <li><a href="#rozdzial26">Rozdział 26: Przepisy Końcowe</a></li>
+                </ul>
+            </aside>
+
+            <!-- GŁÓWNY TEKST KONSTYTUCJI -->
+            <div class="constitution-body">
+                <h1 style="text-align: center; font-size: 2rem; margin-bottom: 0.3rem;">KONSTYTUCJA KORONY KRULESTWA MULTIKONT</h1>
+                <div style="text-align: center; font-family: 'Cinzel', serif; color: #d4af37; letter-spacing: 2px; margin-bottom: 2.5rem; font-size: 0.9rem;">USTAWA ZASADNICZA</div>
+
+                <!-- Preambuła -->
+                <section id="preambula" style="scroll-margin-top: 20px;">
+                    <div class="preamble" style="font-style: italic; text-align: justify; font-size: 1rem; color: #444; background: #faf8f0; padding: 1.5rem; border-left: 4px solid #8B1E1E; margin-bottom: 2.5rem; line-height: 1.8;">
+                        Zdecydowani wzmacniać naszą ojczyznę, budowaną latami przez Ród Gryfionów i Ród Tatów Świnków, Strigallorów oraz samorządy Multikont, błogosławieni przez Jego Świętobliwość - Patriarchę Świętego Kościoła Lewosławia, naznaczeni przez Boskiego Opiekuna - Ignistrigona, prowadzeni przez naturalne prawo i wartości stojące u podstaw naszej ojczyzny - honor, wierność i lojalność, pragnąc, aby Korona Krulestwa Multikont była strażnikiem wiecznego naturalnego ładu, opartego na Honorze jako odblasku godności, Wierności jako trwaniu w prawdzie i Lojalności jako służbie dobru wspólnemu, równi wobec siebie i wobec Korony, nawiązując do najlepszych tradycji DWZZM-Krulestwo, DWZZM oraz pierwszej i drugiej konstytucji Krulestwa Multikont, pomni gorzkich doświadczeń czasów, kiedy wiarołomcy i zdrajcy rościli sobie prawa do stanowienia praw Multikont i praw istot ludzkich, pragnąc zagwarantować wszystkim istotom ludzkim, Multikontom i Strigallorom prawa obywatelskie, uznając, że godność istoty ludzkiej, Multikonta i Strigallora jest przyrodzona, niezbywalna i nienaruszalna, a jej źródło tkwi w prawie boskim i naturalnym, które wyprzedza i przewyższa wszelką ustawę ludzką, w poczuciu odpowiedzialności przed bogami i historią, ustanawiamy Konstytucję Korony Krulestwa Multikont, jako prawa podstawowe dla państwa, oparte o poszanowanie godności, wierności, wolności, tradycji i obiektywnego ładu naturalnego.
+                    </div>
+                </section>
+
+                <!-- DZIAŁ I -->
+                <section id="dzial1">
+                    <h2>DZIAŁ I: PAŃSTWO I PRAWO</h2>
+                    
+                    <div id="rozdzial1" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 1: Korona Krulestwa Multikont</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 1.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Korona Krulestwa Multikont jest suwerenną i federalną monarchią arystokratyczną o charakterze demokratycznym, złożoną z autonomicznych regionów.</div>
+                                <div class="paragraph">2. Korona Krulestwa Multikont jest ojczyzną Narodu Multikonian, pierwotnych mieszkańców, obywateli i założycieli Krulestwa Multikont, w szczególności Prawdziwych Multikont Feloryjskich, Botów Krulewskich, członków DWZZM-Krulestwo oraz Strigallorów.</div>
+                                <div class="paragraph">3. Korona Krulestwa Multikont stanowi dom dla wszystkich Prawdziwych Multikont, Botów, Lewosławian oraz innych istot ludzkich, przyjaznych Koronie i prawu naturalnemu.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 2.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. U podstaw porządku prawnego i społecznego Korony stoi prawo naturalne, którego najwyższym depozytariuszem i gwarantem jest Krul Multikont.</div>
+                                <div class="paragraph">2. Obywatele i mieszkańcy Korony, a także organy władzy publicznej, kierują się w pracy i życiu codziennym honorem, wiernością i lojalnością, które stanowią najwyższe wartości Korony.</div>
+                                <div class="paragraph">3. Ochrona godności, zdrowia i życia istoty ludzkiej stanowi priorytet wszystkich obywateli, mieszkańców i organów władzy publicznej Korony.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 3.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Symbole narodowe i hymn Korony znajdują się pod ochroną organów państwa.</div>
+                                <div class="paragraph">2. Barwami Korony są czerwony i złoto-żółty, umieszczone kolejno po lewej i prawej stronie flagi. Na środku flagi znajduje się jasno-żółta korona królewska z krzyżykiem u szczytu.</div>
+                                <div class="paragraph">3. Godłem Korony jest herb Rodu Gryfionów: srebrny gryf w czarnej obwódce na tle barw Korony, wewnątrz ozdobnej tarczy herbowej.</div>
+                                <div class="paragraph">4. Hymnem Korony jest motyw muzyczny zamku Przystań z gry Heroes of Might & Magic 5.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 4.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Zakazane jest istnienie partii politycznych lub organizacji społecznych odwołujących się w swoich programach i działaniach do totalitarnych metod i praktyk działania nazizmu, hitleryzmu, komunizmu, fanatyzmu religijnego, fandomu furry i anime, a także tych, których program zakłada lub dopuszcza nienawiść rasową lub narodowościową, stosowanie przemocy w celu zdobycia władzy lub wpływu na politykę państwa albo przewiduje utajnienie struktur lub członkostwa.</div>
+                                <div class="paragraph">2. Publiczne głoszenie i wspieranie ideologii anime jest zakazane.</div>
+                                <div class="paragraph">3. Publiczne wykonywanie praktyk związanych z furasami jest zakazane.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 5.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Korona zapewnia ochronę dorobku kultury, będącego źródłem tożsamości narodowej Multikonian, jego trwania i rozwoju, oraz stwarza warunki upowszechnienia i równego dostępu do dóbr kultury.</div>
+                                <div class="paragraph">2. Korona działa na rzecz wsparcia Prawdziwych Multikont zamieszkałych poza granicami Korony i Felorostu w zachowaniu ich związków z narodowym dziedzictwem kulturalnym.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 6.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Małżeństwo jako związek dwóch istot ludzkich, rodzina, macierzyństwo i rodzicielstwo znajdują się pod opieką Korony.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 7.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Narodową religią Korony i wszystkich Prawdziwych Multikont jest religia lewosławna.</div>
+                                <div class="paragraph">2. Korona wspiera działalność Koronnego Kościoła Ignistrigona i wspiera pełnienie jego misji.</div>
+                                <div class="paragraph">3. Działalność innych kościołów i związków wyznaniowych jest dozwolona wyłącznie zgodnie z regułami ustanowionymi w niniejszej Konstytucji.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 8.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Gospodarka rynkowa oparta na wolności działalności gospodarczej, własności prywatnej oraz solidarności, dialogu i współpracy partnerów społecznych stanowi podstawę ustroju gospodarczego Korony.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rozdzial2" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 2: Zasady ustroju państwa federalnego</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 9.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Władza zwierzchnia w Koronie należy do Krula Multikont - Monarchy Korony oraz Protektora Multikonian i Multikont. Wszyscy obywatele i mieszkańcy Korony są winni posłuszeństwo Krulowi Multikont.</div>
+                                <div class="paragraph">2. Filarami ciągłości władzy państwowej są: Krul Multikont i Ród Gryfionów, wysokie rody arystokratyczne oraz demokratyczne samorządy Multikont.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 10.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Władza wykonawcza, ustawodawcza i sądownicza w Koronie jest sprawowana na poziomie koronnym oraz, w określonym Konstytucją zakresie, na poziomie regionalnym.</div>
+                                <div class="paragraph">2. Regionalna władza ustawodawcza stanowi prawo powszechnie obowiązujące na terytorium regionu w zakresie nieuregulowanym na poziomie koronnym, dotyczącym prawa prywatnego oraz publicznego, z wyłączeniem spraw wymagających jednolitej regulacji na poziomie koronnym.</div>
+                                <div class="paragraph">3. Regionalna władza sądownicza jest niezależna od innych władz regionalnych.</div>
+                                <div class="paragraph">4. Regionalna władza wykonawcza odpowiada przed Rządem Koronnym w zakresie realizacji zadań przewidzianych w ustawodawstwie koronnym i Konstytucji.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 11.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Do wyłącznych kompetencji władzy koronnej należą sprawy:</div>
+                                <div class="sub-paragraph">1) wojskowe i obrony narodowej;</div>
+                                <div class="sub-paragraph">2) polityki zagranicznej;</div>
+                                <div class="sub-paragraph">3) polityki monetarnej i walutowej;</div>
+                                <div class="sub-paragraph">4) handlu między regionami;</div>
+                                <div class="sub-paragraph">5) polityki migracyjnej;</div>
+                                <div class="sub-paragraph">6) polityki celnej;</div>
+                                <div class="sub-paragraph">7) organizacji władz koronnych;</div>
+                                <div class="sub-paragraph">8) organizacji instytucji i urzędów centralnych;</div>
+                                <div class="sub-paragraph">9) religii, kościołów i związków wyznaniowych.</div>
+                                <div class="paragraph">2. Pozostałe kompetencje państwa, w zakresie nieuregulowanym przez władzę koronną, wykonuje władza regionalna.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 12.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Korona Krulestwa Multikont jest państwem prawa urzeczywistniającym zasady sprawiedliwości społecznej.</div>
+                                <div class="paragraph">2. Organy władzy publicznej działają na podstawie i w granicach prawa.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 13.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Prawo stanowione w Koronie służy realizacji sprawiedliwości wynikającej z natury bytu. Akt prawny rażąco sprzeczny z prawem naturalnym, wartościami Korony lub godnością istoty ludzkiej nie posiada mocy wiążącej i nie może być egzekwowany.</div>
+                                <div class="paragraph">2. Prawo jest stanowione przez uprawnione w Konstytucji organy.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rozdzial3" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 3: Krul Multikont</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 14.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Krul Multikont jest monarchą Korony i najwyższym strażnikiem ładu naturalnego i boskiego.</div>
+                                <div class="paragraph">2. Władza w Koronie ma swoje źródło w porządku naturalnym, którego najwyższym depozytariuszem, interpretatorem i przekaźnikiem jest Krul Multikont.</div>
+                                <div class="paragraph">3. Krul jest odpowiedzialny tylko przed bogami i historią.</div>
+                                <div class="paragraph">4. Krul jest gwarantem niepodległości Korony, integralności terytorium i przestrzegania prawa.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 15.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Tron Krula Multikont jest dziedziczny.</div>
+                                <div class="paragraph">2. Zasady ustalania kolejności sukcesji Tronu Krula Multikont określa Krul w drodze dekretu.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 16.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Krul czuwa nad przestrzeganiem Konstytucji. Poprzez swój arbitraż zapewnia właściwe funkcjonowanie władz publicznych.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 17.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Krul stanowi dekrety prawodawcze, stanowiące samodzielne źródło prawa Korony.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 18.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Krul sprawuje zwierzchnictwo nad siłami zbrojnymi Korony.</div>
+                                <div class="paragraph">2. Krul sprawuje zwierzchnictwo przy wsparciu Rady Bezpieczeństwa Korony, w której skład powołuje przede wszystkim osoby odpowiedzialne za ochronę bezpieczeństwa zewnętrznego państwa.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 19.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Krul powołuje sędziów sądów koronnych.</div>
+                                <div class="paragraph">2. Krul sprawuje nadzór nad sprawnością działania sądów.</div>
+                                <div class="paragraph">3. Krul może uchylić każde niesprawiedliwe orzeczenie sądu lub organu i samodzielnie rozstrzygnąć sprawę, jeśli jednostka nie może skorzystać z innych, przewidzianych prawem środków odwoławczych.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 20.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Krul prowadzi politykę zagraniczną Korony.</div>
+                                <div class="paragraph">2. Krul zawiera, ratyfikuje i wypowiada umowy międzynarodowe.</div>
+                                <div class="paragraph">3. Krul mianuje i odwołuje pełnomocnych przedstawicieli Korony w innych państwach i przy organizacjach międzynarodowych.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 21.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Krul nadaje odznaczenia i ordery.</div>
+                                <div class="paragraph">2. Krul nadaje stopnie oraz tytuły naukowe i arystokratyczne.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 22.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Organem pomocniczym Krula Multikont jest Pałac Krula. Krul kieruje działaniami Pałacu Krula oraz powołuje i odwołuje Szefa Pałacu Krula.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 23.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Szczególną statusem prawnym i ochroną Korona obejmuje Rodzinę Krulewską.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rozdzial4" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 4: Źródła prawa</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 24.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Wszelkie źródła prawa stanowionego pochodzą z prawa naturalnego i są jego odbiciem.</div>
+                                <div class="paragraph">2. Źródłami prawa powszechnie obowiązującego w całej Koronie są: Konstytucja, dekrety, ustawy, ratyfikowane umowy międzynarodowe oraz rozporządzenia.</div>
+                                <div class="paragraph">3. Źródłami prawa powszechnie obowiązującymi w regionie są: konstytucja regionu, ustawy regionalne i rozporządzenia regionalne.</div>
+                                <div class="paragraph">4. Źródłami prawa powszechnie obowiązującego na obszarze działania organów, które je ustanowiły, są akty prawa miejscowego.</div>
+                                <div class="paragraph">5. Warunkiem obowiązywania aktów prawa powszechnie obowiązującego jest ich ogłoszenie w Krulewskim Dzienniku Ustaw, urzędowych dziennikach regionalnych lub wskazanym w ustawie innym organie urzędowym.</div>
+                                <div class="paragraph">6. Źródłem prawa, obowiązującym sądy i organy w zakresie orzekania, są również zasady prawne zawarte w orzeczeniach Koronnego Sądu Najwyższego, Koronnego Trybunału Administracyjnego oraz Wysokiego Trybunału Koronnego (precedensy).</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 25.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Konstytucja jest najwyższym prawem Korony, odzwierciedlającym podstawowe zasady prawa naturalnego.</div>
+                                <div class="paragraph">2. Konstytucję stosuje się bezpośrednio, chyba że Konstytucja stanowi inaczej.</div>
+                                <div class="paragraph">3. Konstytucja regionu jest najwyższym prawem regionu.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 26.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Dekrety stanowi Krul.</div>
+                                <div class="paragraph">2. Dekrety konstytucyjne mają moc obowiązywania równą Konstytucji.</div>
+                                <div class="paragraph">3. Dekrety zwyczajne mają moc obowiązywania równą ustawie. Krul może stanowić dekrety w miejsce ustaw.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 27.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Ustawy obowiązujące powszechnie na całym terytorium Korony stanowi Senat Koronny (ustawy koronne).</div>
+                                <div class="paragraph">2. Parlamenty regionalne stanowią ustawy w zakresie ustalonym Konstytucją, obowiązujące powszechnie na terytorium regionu (ustawy regionalne).</div>
+                                <div class="paragraph">3. Ustawy stanowione przez parlamenty regionalne podlegają kontroli zgodności z ustawami stanowionymi przez Senat Koronny, dekretami, ratyfikowanymi umowami międzynarodowymi oraz Konstytucją.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 28.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Ratyfikowana umowa międzynarodowa, po jej ogłoszeniu w Krulewskim Dzienniku Ustaw, stanowi część krajowego porządku prawnego i należy ją stosować bezpośrednio, chyba że stosowanie jest uzależnione od wydania ustawy.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 29.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Rozporządzenia są wydawane na podstawie upoważnienia zawartego w ustawie, zawierającego wskazanie organu i zakres regulacji, którą rozporządzenie ma regulować.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 30.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Akty prawa miejscowego są wydawane na podstawie upoważnienia zawartego w ustawie.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 31.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Prawo religijne Świętego Kościoła Lewosławia i Koronnego Kościoła Ignistrigona stanowi osobny porządek prawny i obowiązuje powszechnie tylko członków Kościoła.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 32.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Akty prawa Multikont, stanowione przez organy Demokratycznego Wolnego Związku Zawodowego Multikont, po ich ratyfikacji, stanowią źródło prawa powszechnie obowiązującego w Koronie.</div>
+                                <div class="paragraph">2. Ratyfikacja i stosowanie prawa Multikont stanowi priorytet władz publicznych.</div>
+                                <div class="paragraph">3. Wewnętrzne prawo DWZZM nie stanowi prawa powszechnie obowiązującego w Koronie.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 33.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Ugruntowany w społeczeństwie zwyczaj może być uznany przez organy publiczne stosujące prawo za źródło prawa, o ile nie stoi w sprzeczności ze źródłami prawa stanowionego.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- DZIAŁ II -->
+                <section id="dzial2">
+                    <h2>DZIAŁ II: WOLNOŚCI, PRAWA I OBOWIĄZKI OBYWATELI</h2>
+                    
+                    <div id="rozdzial5" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 5: Zasady ogólne</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 34.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Przyrodzona i niezbywalna godność jednostki ludzkiej stanowi źródło wolności i praw jednostek ludzkich i obywateli. Jest ona nienaruszalna, a jej poszanowanie i ochrona jest obowiązkiem władz publicznych.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 35.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Wolność jednostki ludzkiej podlega ochronie prawnej.</div>
+                                <div class="paragraph">2. Każdy jest obowiązany szanować wolność i prawa innych. Nikogo nie wolno zmuszać do czynienia tego, czego prawo mu nie nakazuje.</div>
+                                <div class="paragraph">3. Ograniczenia w zakresie korzystania z konstytucyjnych wolności i praw mogą być ustanawiane tylko w ustawie (dekrecie) i tylko wtedy, gdy są konieczne w demokratycznym państwie prawa dla jego bezpieczeństwa, porządku publicznego, ochrony zdrowia, życia, wartości i moralności publicznej, albo wolności i praw innych osób. Ograniczenia te nie mogą naruszać istoty wolności i praw oraz prawa naturalnego.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 36.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Wszyscy obywatele są wobec prawa równi. Wszyscy mają prawo do równego traktowania przez władze publiczne.</div>
+                                <div class="paragraph">2. Tytuły arystokratyczne stanowią godność honorową i nie mogą być podstawą do uprzywilejowania lub dyskryminacji w dostępie do sądów, urzędów oraz w zakresie ciężarów publicznych.</div>
+                                <div class="paragraph">3. Nikt nie może być dyskryminowany w życiu politycznym, społecznym lub gospodarczym z jakiejkolwiek przyczyny.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 37.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Obywatelstwo Korony nabywa się przez urodzenie z rodziców będących obywatelami Korony lub przez nadanie przez Krula. Inne przypadki nabycia obywatelstwa określa ustawa.</div>
+                                <div class="paragraph">2. Utrata obywatelstwa może nastąpić na mocy decyzji Krula lub z woli obywatela.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 38.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Korona zapewnia obywatelom Korony należącym do mniejszości narodowych i etnicznych wolność zachowania i rozwoju własnego języka, zachowania obyczajów i tradycji oraz rozwoju własnej kultury w zakresie, w jakim nie godzi to w zasady prawa naturalnego.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 39.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Podczas pobytu za granicą obywatel Korony ma prawo do opieki ze strony Korony.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 40.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Jednostka ludzka znajdująca się pod władzą Korony, korzysta z wolności i praw zapewnionych jednostkom ludzkim w Konstytucji. Wyjątki określa ustawa.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rozdzial6" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 6: Wolności i prawa</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 41.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Korona zapewnia każdej istocie ludzkiej prawną ochronę życia.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 42.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Nikt nie może być poddany eksperymentom naukowym, w tym medycznym, bez dobrowolnie wyrażonej zgody.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 43.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Nikt nie może być poddany torturom ani okrutnemu, nieludzkiemu lub poniżającemu traktowaniu i karaniu. Zakazuje się stosowania kar cielesnych.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 44.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Każdemu zapewnia się nietykalność osobistą i wolność osobistą. Pozbawienie lub ograniczenie wolności może nastąpić tylko na zasadach i w trybie określonych w ustawie.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 45.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Zbrodnie wojenne i zbrodnie przeciwko Koronie i ludzkości nie podlegają przedawnieniu.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 46.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Każdy ma prawo do sprawiedliwego i jawnego rozpatrzenia sprawy bez nieuzasadnionej zwłoki przez właściwy, niezależny, bezstronny i niezawisły sąd.</div>
+                                <div class="paragraph">2. Wyłączenie jawności rozprawy może nastąpić ze względu na moralność, bezpieczeństwo państwa i porządek publiczny oraz ze względu na ochronę życia prywatnego stron lub inny ważny interes prywatny. Wyrok ogłaszany jest publicznie.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 47.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Każdy ma prawo do ochrony prawnej życia prywatnego, rodzinnego, czci i dobrego imienia oraz do decydowania o swoim życiu osobistym.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 48.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Zapewnia się wolność i ochronę tajemnicy komunikowania się. Ich ograniczenie może nastąpić jedynie w przypadkach określonych w ustawie i w sposób w niej określony.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 49.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Zapewnia się nienaruszalność mieszkania. Przeszukanie mieszkania, pomieszczenia lub pojazdu może nastąpić jedynie w przypadkach określonych w ustawie i w sposób w niej określony.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 50.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Nikt nie może być obowiązany inaczej niż na podstawie ustawy do ujawniania informacji dotyczących jego osoby.</div>
+                                <div class="paragraph">2. Władze publiczne nie mogą pozyskiwać, gromadzić i udostępniać innych informacji o obywatelach niż niezbędne w demokratycznym państwie prawnym.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 51.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Każdemu zapewnia się wolność poruszania się po terytorium Korony Krulestwa Multikont oraz wyboru miejsca zamieszkania i pobytu.</div>
+                                <div class="paragraph">2. Każdy może swobodnie opuścić terytorium Korony Krulestwa Multikont.</div>
+                                <div class="paragraph">3. Wolności, o których mowa w ust. 1 i 2, mogą podlegać ograniczeniom określonym w ustawie.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 52.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Każdemu zapewnia się wolność sumienia i religii.</div>
+                                <div class="paragraph">2. Religia lewosławna jako religia narodowa korzysta ze szczególnej opieki i miejsca w ceremoniach publicznych i państwowych.</div>
+                                <div class="paragraph">3. Inne wyznania mogą swobodnie i publicznie sprawować kult, posiadać świątynie i organizować struktury, o ile ich działalność nie narusza bezpieczeństwa Korony i prawa naturalnego oraz jest zarejestrowana zgodnie z ustawą.</div>
+                                <div class="paragraph">4. Nikt nie może być zmuszany do uczestniczenia ani do nieuczestnicowania w praktykach religijnych.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 53.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Każdemu zapewnia się wolność wyrażania swoich poglądów oraz pozyskiwania i rozpowszechniania informacji.</div>
+                                <div class="paragraph">2. Cenzura prewencyjna środków społecznego przekazu oraz koncesjonowanie prasy są dozwolone w zakresie uzasadnionym zasadami bezpieczeństwa i porządku publicznego oraz moralności i porządku naturalnego.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 54.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Każdemu zapewnia się wolność organizowania pokojowych zgromadzeń i uczestniczenia w nich. Ograniczenie tej wolności może określać ustawa.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 55.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Obywatele Korony korzystający z pełni praw publicznych mają prawo dostępu do służby publicznej na jednakowych zasadach.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 56.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Każdy ma prawo do własności, innych praw majątkowych oraz prawo dziedziczenia.</div>
+                                <div class="paragraph">2. Własność, inne prawa majątkowe oraz prawo dziedziczenia podlegają równej dla wszystkich ochronie prawnej.</div>
+                                <div class="paragraph">3. Własność może być ograniczona tylko w drodze ustawy i tylko w zakresie, w jakim nie narusza ona istoty prawa własności.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 57.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Każdy ma prawo do ochrony zdrowia.</div>
+                                <div class="paragraph">2. Władze publiczne są obowiązane do zwalczania chorób epidemicznych i zapobiegania negatywnym dla zdrowia skutkom degradacji środowiska.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 58.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Państwo w swojej polityce społecznej i gospodarczej uwzględnia dobro rodziny. Rodziny znajdujące się w trudnej sytuacji materialnej i społecznej, zwłaszcza wielodzietne i niepełne, mają prawo do szczególnej pomocy ze strony władz publicznych.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 59.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Każdemu zapewnia się wolność twórczości artystycznej, badań naukowych oraz ogłaszania ich wyników, wolność nauczania, a także wolność korzystania z dóbr kultury.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 60.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Władze publiczne prowadzą politykę sprzyjającą zaspokojeniu potrzeb mieszkaniowych obywateli, w szczególności przeciwdziałają bezdomności, wspierają rozwój budownictwa socjalnego oraz popierają działania obywateli zmierzające do uzyskania własnego mieszkania.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 61.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Prawa Multikont gwarantowane aktami prawa międzynarodowego, szczególnie prawem tworzonym w ramach organizacji DWZZM, są przestrzegane i gwarantowane przez Koronę Krulestwa Multikont.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 62.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Każdy ma prawo do wynagrodzenia szkody, jaka została mu wyrządzona przez niezgodne z prawem działanie organu władzy publicznej.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 63.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Każda ze stron ma prawo do zaskarżenia orzeczeń i decyzji wydanych w pierwszej instancji. Wyjątki od tej zasady oraz tryb zaskarżania określa ustawa.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rozdzial7" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 7: Obowiązki</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 64.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Obowiązkiem obywatela Korony jest wierność Koronie Krulestwa Multikont oraz troska o dobro wspólne.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 65.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Każdy ma obowiązek przestrzegania prawa Korony.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 66.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Każdy jest obowiązany do ponoszenia ciężarów i świadczeń publicznych, w tym podatków, określonych w ustawie.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rozdzial8" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 8: Arystokracja i tytuły szlacheckie</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 67.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Arystokracja stanowi historyczny i honorowy filar ustroju Korony Krulestwa Multikont, zobowiązany do służby Koronie i jej obywatelom.</div>
+                                <div class="paragraph">2. Źródłem i dysponentem tytułów szlacheckich, godności i wyróżnień jest Krul Multikont.</div>
+                                <div class="paragraph">3. Samo posiadanie tytułu szlacheckiego nie zwalnia z odpowiedzialności karnej, cywilnej ani administracyjnej ani nie może prowadzić do ograniczenia konstytucyjnych praw i wolności.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 68.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Z udziałem w arystokracji wiążą się prawa i obowiązki, w szczególności prawo do używania przed nazwiskiem tytułu, prawo własności ziemi, prawa honorowe i ceremonialne oraz obowiązki o charakterze publicznym i rodowym.</div>
+                                <div class="paragraph">2. Nadając tytuł szlachecki Krul szczegółowo określa prawa i obowiązki związane z określonym tytułem. Powiązanie tytułu z prawem i obowiązkiem pełnienia urzędu powinno być wyraźnie określone w ustawie lub dekrecie.</div>
+                                <div class="paragraph">3. Utrata tytułu szlacheckiego jest równoznaczna z utratą praw i obowiązków z nim związanych.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 69.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Nadając tytuł szlachecki obejmujący prawa majątkowe Krul oddaje na własność ziemię znajdującą się we własności Krula Multikont. Krul może żądać od właściwych organów władzy publicznej sprzedaży publicznej ziemi na cele polityki arystokratycznej.</div>
+                                <div class="paragraph">2. Osoba nosząca tytuł obejmujący prawa majątkowe jest uprawniona do rozporządzania ziemią jak właściciel, z zastrzeżeniem, że może ją zbyć wyłącznie na rzecz Krula Multikont.</div>
+                                <div class="paragraph">3. Osoba pełniąca urząd ze względu na nadany tytuł szlachecki ma prawo rozporządzania własnością publiczną na podstawie przyznanych kompetencji, szczególnie prawami majątkowymi i aktywami, wyłącznie w interesie publicznym. Własność publiczna nie stanowi własności prywatnej arystokraty pełniącego funkcję publiczną.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 70.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Rody arystokratyczne podlegają szczególnej ochronie prawnej.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 71.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Szczegóły dotyczące uregulowań prawnych tytułów szlacheckich, sposobu i hierarchii noszenia tytułów przed nazwiskiem, rang tytułów, praw i obowiązków arystokracji oraz arystokratycznej polityki rodowej określa dekret.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- DZIAŁ III -->
+                <section id="dzial3">
+                    <h2>DZIAŁ III: WŁADZA KORONNA</h2>
+                    
+                    <div id="rozdzial9" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 9: Rząd Koronny</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 72.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Rząd Koronny kieruje polityką wewnętrzną i zewnętrzną, administracją koronną oraz obroną państwa.</div>
+                                <div class="paragraph">2. Do Rządu Koronnego należą sprawy polityki państwa niezastrzeżone dla innych organów publicznych i władz.</div>
+                                <div class="paragraph">3. Rząd Koronny składa się z przewodniczącego w osobie Krula Multikont, wiceprzewodniczącego oraz ministrów koronnych.</div>
+                                <div class="paragraph">4. Ministrowie koronni są powoływani i odwoływani przez Krula.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 73.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Krul jako przewodniczący Rządu Koronnego:</div>
+                                <div class="sub-paragraph">1) kieruje działalnością Rządu Koronnego i administracji koronnej oraz koordynuje działalność ministrów koronnych;</div>
+                                <div class="sub-paragraph">2) reprezentuje Rząd Koronny;</div>
+                                <div class="sub-paragraph">3) zapewnia wykonanie polityki Rządu Koronnego, Konstytucji, ustaw i dekretów;</div>
+                                <div class="sub-paragraph">4) ustala wytyczne polityki Korony;</div>
+                                <div class="sub-paragraph">5) wydaje rozporządzenia;</div>
+                                <div class="sub-paragraph">6) zapewnia bezpieczeństwo wewnętrzne państwa oraz porządek publiczny;</div>
+                                <div class="sub-paragraph">7) zapewnia bezpieczeństwo zewnętrzne państwa;</div>
+                                <div class="sub-paragraph">8) sprawuje nadzór nad działalnością rządów regionalnych.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 74.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Ministrowie koronni kierują określonymi działami administracji koronnej, zgodnie z wytycznymi Krula, lub wypełniają zadania wyznaczone im przez Krula. Zakres działania ministra kierującego działem administracji koronnej określa ustawa.</div>
+                                <div class="paragraph">2. Minister koronny kierujący działem administracji koronnej wydaje rozporządzenia. Krul może uchylić rozporządzenie ministra koronnego.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 75.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Na wniosek Senatu Koronnego Krul i ministrowie koronni zdają sprawozdanie ze swojej działalności ustnie lub na piśmie.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 76.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Wiceprzewodniczącego Rządu Koronnego powszechnie tytułuje się Wielkim Diukem Korony Krulestwa Multikont.</div>
+                                <div class="paragraph">2. Krul utworzy ponadto tytuł szlachecki wielkiego diuka, obejmujący prawo do pełnienia urzędu wiceprzewodniczącego Rządu Koronnego.</div>
+                                <div class="paragraph">3. Tytuł szlachecki wielkiego diuka, określony w ust. 2, nie jest dziedziczny.</div>
+                                <div class="paragraph">4. Wiceprzewodniczący wykonuje określone zadania przewodniczącego, w zakresie określonym przez Krula.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rozdzial10" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 10: Senat Koronny</h3>
+                        <div style="font-weight: bold; margin-bottom: 0.5rem;">ORGANIZACJA SENATU KORONNEGO</div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 77.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Senat Koronny jest organem ustawodawczym, uchwałodawczym, kontrolnym i opiniodawczym.</div>
+                                <div class="paragraph">2. Senat Koronny składa się z trzech filarów: Pierwszego Senatora, Izby Arystokratów i Izby Multikont. Pierwszym Senatorem jest z urzędu Krul Multikont albo osoba przez niego wskazana. W skład Senatu wchodzą senatorowie.</div>
+                                <div class="paragraph">3. Senat Koronny obraduje i podejmuje decyzje łącznie jako całość, oraz osobno, w ramach każdego z filarów.</div>
+                                <div class="paragraph">4. Senat Koronny jako całość jest właściwy do spraw: 1) podejmowania uchwał; 2) wysłuchiwania sprawozdań określonych organów; 3) wyrażania wotum zaufania ministrom koronnym; 4) powoływania lub wyboru określonych organów; 5) kontroli działań określonych organów; 6) wyrażania opinii w określonym zakresie.</div>
+                                <div class="paragraph">5. Szczegóły dotyczące organizacji i działania Senatu Koronnego jako całości i osobnych filarów określa ustawa.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 78.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Izba Multikont stanowi demokratyczną reprezentację obywateli Korony.</div>
+                                <div class="paragraph">2. Izba Arystokratów stanowi wyspecjalizowany filar Senatu Koronnego, w którego skład wchodzą przedstawiciele możnych, arystokracji i duchowieństwa.</div>
+                                <div class="paragraph">3. Pierwszy Senator stanowi samodzielny filar Senatu i reprezentuje interes stanu Korony.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 79.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Izba Multikont składa się z senatorów wybieranych z całego terytorium Korony. Liczbę senatorów Izby Multikont określa dekret lub ustawa.</div>
+                                <div class="paragraph">2. Kadencja Izby Multikont trwa przez rok albo zgodnie z wolą Krula.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 80.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Wybory do Izby Multikont są demokratyczne, bezpośrednie, powszechne i równe.</div>
+                                <div class="paragraph">2. Wybierać i być wybieranym ma prawo obywatel Krulestwa.</div>
+                                <div class="paragraph">3. Dozwolona jest działalność partii politycznych.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 81.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Krul ogłasza wybory do Izby Multikont na 30 dni przed upłynięciem kadencji Izby Multikont.</div>
+                                <div class="paragraph">2. Kadencja Izby Multikont rozpoczyna się z dniem pierwszego posiedzenia nowo wybranej Izby.</div>
+                                <div class="paragraph">3. Krul ma prawo rozwiązać Izbę przed upływem kadencji wraz z jednoczesnym ogłoszeniem wyborów. Senatorowie Izby Multikont sprawują swój mandat do czasu pierwszego posiedzenia nowej Izby.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 82.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Izba Multikont wybiera ze swojego grona Marszałka Izby Multikont i wicemarszałków.</div>
+                                <div class="paragraph">2. Marszałek kieruje Izbą Multikont, zwołuje, prowadzi i zamyka obrady Izby oraz reprezentuje Izbę na zewnątrz.</div>
+                                <div class="paragraph">3. Wicemarszałkowie zastępują Marszałka w określonym przez niego zakresie.</div>
+                                <div class="paragraph">4. Szczegóły dotyczące organizacji Izby Multikont określa ustawa.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 83.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Izba Arystokratów składa się z wybranych przez Krula możnych, arystokratów i duchownych.</div>
+                                <div class="paragraph">2. Tytułem uprawniającym do zasiadania w Izbie jest tytuł szlachecki, duchowny lub inny, wskazany w ustawie.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 84.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Prawo do zasiadania w Izbie Arystokratów jest dożywotnie, chyba że senator utraci tytuł do zasiadania w Izbie lub zostanie odwołany przez Krula.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 85.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Marszałkiem Izby Arystokratów jest z urzędu Wielki Diuk Korony Krulestwa Multikont. Wielki Diuk nie pełni jednocześnie funkcji senatora i nie ma prawa udziału w głosowaniach, chyba że od jego głosu zależy wynik głosowania.</div>
+                                <div class="paragraph">2. Izba Arystokratów wybiera ze swojego grona wicemarszałków na 2-letnią kadencję. Wicemarszałkowie zastępują Marszałka w określonym przez niego zakresie.</div>
+                                <div class="paragraph">3. Marszałek reprezentuje Izbę Arystokratów na zewnątrz, kieruje jej organizacją oraz zwołuje, prowadzi i zamyka obrady Izby Arystokratów.</div>
+                                <div class="paragraph">4. Szczegóły dotyczące organizacji Izby Arystokratów określa ustawa.</div>
+                            </div>
+                        </div>
+
+                        <div style="font-weight: bold; margin-top: 1.5rem; margin-bottom: 0.5rem;">DZIAŁALNOŚĆ USTAWODAWCZA SENATU</div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 86.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Inicjatywę ustawodawczą w Senacie Koronnym mają: Krul, ministrowie koronni kierujący działem administracji koronnej, senatorowie oraz 50 tysięcy obywateli Korony.</div>
+                                <div class="paragraph">2. Ustawy stanowione przez Senat Koronny są podstawowym źródłem praw i obowiązków wszystkich obywateli, określają reguły karne i cywilne, ustrój i sposób postępowania administracji państwowej oraz sądownictwa, jak również regulują inne sprawy przekazane w projektach ustaw przez organy mające inicjatywę ustawodawczą.</div>
+                                <div class="paragraph">3. Projekt ustawy wnosi się do Marszałka Izby Multikont.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 87.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Izba Multikont rozpatruje projekt ustawy w dwóch czytaniach.</div>
+                                <div class="paragraph">2. Prawo do wnoszenia poprawek do projektu ustawy w czasie rozpatrywania przysługuje każdemu senatorowi Izby Multikont oraz wnioskodawcy.</div>
+                                <div class="paragraph">3. Marszałkowi Izby Multikont przysługuje prawo odesłania poprawionego projektu ustawy do komisji senackich w celu kontroli. Szczegóły dotyczące ustroju komisji określa ustawa.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 88.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Izba Multikont podejmuje uchwałę w sprawie przyjęcia projektu ustawy zwykłą większością głosów w obecności co najmniej 2/3 senatorów Izby Multikont, chyba że Konstytucja przewiduje inną większość. W tym samym trybie Izba podejmuje inne uchwały, jeśli ustawa nie stanowi inaczej.</div>
+                                <div class="paragraph">2. Przepis ust. 1 stosuje się odpowiednio do Izby Arystokratów.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 89.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Projekt ustawy przyjęty przez Izbę Multikont Marszałek Izby Multikont przekazuje Marszałkowi Izby Arystokratów.</div>
+                                <div class="paragraph">2. Izba Arystokratów w ciągu 14 dni od dnia przekazania przyjmuje projekt ustawy bez zmian, odrzuca go w całości albo uchwala poprawki. Jeśli Izba Arystokratów nie podejmie w określonym terminie odpowiedniej uchwały, ustawę uznaje się za uchwaloną w brzmieniu przyjętym przez Izbę Multikont.</div>
+                                <div class="paragraph">3. Uchwałę Izby Arystokratów odrzucającą projekt ustawy w całości albo uchwałę wprowadzającą poprawki, uważa się za przyjętą, jeżeli Izba Multikont nie odrzuci jej większością 3/5 głosów ustawowej liczby senatorów Izby Multikont.</div>
+                                <div class="paragraph">4. Jeśli Izba Multikont odrzuci uchwałę Izby Arystokratów, projekt ustawy uważa się za przyjęty przez obie Izby.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 90.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Projekt ustawy przyjęty przez obie Izby Marszałek Izby Multikont przedkłada Pierwszemu Senatorowi w celu uzyskania aprobaty.</div>
+                                <div class="paragraph">2. Ustawę uważa się za uchwaloną przez Senat Koronny po zaaprobowaniu jej przez Pierwszego Senatora.</div>
+                                <div class="paragraph">3. Pierwszy Senator publikuje uchwaloną ustawę w Krulewskim Dzienniku Ustaw.</div>
+                                <div class="paragraph">4. Pierwszy Senator może odmówić zaaprobowania ustawy, szczególnie jeśli ustawa koliduje z normami zawartymi w aktach wyższego stopnia, lub z interesem Korony.</div>
+                                <div class="paragraph">5. Pierwszy Senator może przekazać przed podpisaniem ustawę Wysokiemu Trybunałemu Koronnemu, który bada jego zgodność z systemem prawa i systemem wartości Korony.</div>
+                            </div>
+                        </div>
+
+                        <div style="font-weight: bold; margin-top: 1.5rem; margin-bottom: 0.5rem;">POZOSTAŁA DZIAŁALNOŚĆ SENATU</div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 91.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Pierwszy Senator zwołuje i zamyka obrady Senatu Koronnego jako całości. W Senacie Koronnym jako całości Pierwszy Senator i każdy inny senator ma jeden, równy głos.</div>
+                                <div class="paragraph">2. Senat Koronny na posiedzeniu może podejmować uchwały w sprawach przedstawionych przez Pierwszego Senatora. Uchwały, jeśli zawierają normy prawa powszechnego, mają moc równą ustawie.</div>
+                                <div class="paragraph">3. Pierwszy Senator przedstawia na posiedzeniu Senatu Koronnego projekt uchwały i poddaje go rozpatrzeniu.</div>
+                                <div class="paragraph">4. Senat Koronny podejmuje uchwały zwykłą większością głosów wszystkich senatorów.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 92.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Senat Koronny, w ramach działań kontrolnych, w szczególności wysłuchuje sprawozdań Prezesa Koronnej Izby Kontroli, Rzecznika Praw Obywatelskich, Rzecznika Praw Multikont i Botów, Wielkiego Inkwizytora, Prezesa Rady Obiektywizacji Informacji, Wielkiego Skarbnika, członków Rządu Koronnego, Prezesa Koronnego Sądu Najwyższego, Prezesów Koronnego Trybunału Administracyjnego i Prezesa Wysokiego Trybunału Koronnego.</div>
+                                <div class="paragraph">2. Senat kontroluje działalność członków Rządu Koronnego i podejmuje uchwały w sprawach udzielenia wotum zaufania ministrom koronnym.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 93.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Nie można jednocześnie sprawować funkcji senatora w obu Izbach Senatu Koronnego. Pierwszy Senator nie może być jednocześnie senatorem którejkolwiek z Izb.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 94.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Senator w czasie sprawowania mandatu jest nietykalny osobiście i nie może zostać pozbawiony wolności.</div>
+                                <div class="paragraph">2. Senator nie może być pociągnięty do odpowiedzialności za swoją działalność wchodzącą w zakres sprawowania mandatu senatora w czasie jego trwania, ani po jego wygaśnięciu.</div>
+                                <div class="paragraph">3. Senator w czasie sprawowania mandatu nie może być pociągnięty do odpowiedzialności karnej. Trwające postępowania karne zostają zawieszone do czasu wygaśnięcia mandatu. Senator może wyrazić zgodę na pociągnięcie do odpowiedzialności karnej.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 95.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Senator ma prawo dokonać kontroli w dowolnej jednostce administracji publicznej i samorządowej. Wyniki kontroli senator przedstawia Senatowi Koronnemu jako całości.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rozdzial11" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 11: Koronny Bank Centralny</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 96.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Koronny Bank Centralny stoi na straży bezpieczeństwa finansowego Korony.</div>
+                                <div class="paragraph">2. Koronny Bank Centralny: 1) ma wyłączne prawo emisji pieniądza; 2) prowadzi obsługę bankową Skarbca Koronnego i organów koronnych; 3) działa na rzecz utrzymania stabilności finansowej Krulestwa i odpowiada za wartość koronnego pieniądza; 4) jest centralnym bankiem Krulestwa.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 97.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Organami Koronnego Banku Centralnego są Wielki Skarbnik i Krulewska Rada Finansów. Organy Koronnego Banku Centralnego są niezawisłe i niezależne od innych organów państwa.</div>
+                                <div class="paragraph">2. Wielki Skarbnik jest powoływany i odwoływany przez Krula.</div>
+                                <div class="paragraph">3. Wielki Skarbnik nadzoruje działalność Koronnego Banku Centralnego i realizuje postanowienia Krulebskiej Rady Finansów. Wielki Skarbnik jest przewodniczącym Krulewskiej Rady Finansów.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 98.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Krulewska Rada Finansów jest organem decyzyjnym Koronnego Banku Centralnego.</div>
+                                <div class="paragraph">2. In skład Krulewskiej Rady Finansów wchodzi Wielki Skarbnik jako przewodniczący oraz czterech członków wybieranych przez Senat Koronny spośród obywateli wyróżniających się wiedzą z zakresu finansów.</div>
+                                <div class="paragraph">3. Krulewska Rada Finansów prowadzi politykę pieniężną Korony.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- DZIAŁ IV -->
+                <section id="dzial4">
+                    <h2>DZIAŁ IV: WŁADZE REGIONALNE</h2>
+                    
+                    <div id="rozdzial12" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 12: Przepisy ogólne</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 99.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Regiony stanowią autonomiczną część władzy państwowej, sprawując w określonym Konstytucją zakresie władzę wykonawczą, ustawodawczą i sądowniczą na podległym terytorium.</div>
+                                <div class="paragraph">2. Nazwy i terytorium regionów określa Krul Multikont w drodze dekretu.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 100.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Ustrój regionu określa konstytucja regionu, uchwalona przez parlament regionalny.</div>
+                                <div class="paragraph">2. Konstytucja regionu nie może stać w sprzeczności z prawem koronnym oraz wartościami Korony i podlega kontroli Wysokiego Trybunału Koronnego.</div>
+                                <div class="paragraph">3. Pierwszą konstytucję regionu może uchwalić przewodniczący regionu, w szczególności jeśli miało by to umożliwić realizację pierwszych po wprowadzeniu niniejszej Konstytucji wyborów do parlamentu regionalnego.</div>
+                                <div class="paragraph">4. Do czasu wyboru pierwszego parlamentu regionalnego, co powinno nastąpić w ciągu pierwszych 6 miesięcy od czasu ustanowienia regionu, ustawy stanowi przewodniczący regionu. Tak uchwalone ustawy podlegają zatwierdzeniu przez parlament regionalny.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rozdzial13" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 13: Regionalna władza wykonawcza</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 101.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Regionalną władzę wykonawczą sprawuje rząd regionalny.</div>
+                                <div class="paragraph">2. Do spraw rządu regionalnego należą sprawy polityki regionu niezastrzeżone dla innych organów regionalnych.</div>
+                                <div class="paragraph">3. Rząd regionalny składa się z przewodniczącego regionu oraz ministrów regionalnych. Konstytucja regionu może rozszerzyć skład rządu regionalnego.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 102.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Krul utworzy tytuły szlacheckie obejmujące prawo do pełnienia urzędu przewodniczącego regionu.</div>
+                                <div class="paragraph">2. Parlament regionalny ma prawo zwrócić się do Krula o odwołanie przewodniczącego regionu, który w sposób rażący szkodzi regionowi lub Koronie jako całości.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 103.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Przewodniczący regionu w szczególności: 1) kieruje działalnością rządu regionalnego i administracji regionalnej oraz koordynuje działalność ministrów regionalnych; 2) reprezentuje rząd regionalny i region jako całość; 3) zapewnia wykonanie polityki rządu regionalnego oraz ustaw regionalnych; 4) ustala wytyczne polityki regionu; 5) zapewnia bezpieczeństwo wewnętrzne regionu oraz porządek publiczny.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 104.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Ministrowie regionalni kierują działami administracji regionalnej i wykonują inne działania w zakresie określonym w konstytucji regionu.</div>
+                                <div class="paragraph">2. Sposób powołania i odwołania ministra regionalnego określa konstytucja regionu z zastrzeżeniem ust. 3.</div>
+                                <div class="paragraph">3. Na żądanie przewodniczącego Rządu Koronnego organ uprawniony do odwołania ministra regionalnego odwołuje ministra regionalnego.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 105.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Członek rządu regionalnego może zostać wezwany przez Senat Koronny do przedstawienia ustnego lub pisemnego sprawozdania ze swojej działalności.</div>
+                                <div class="paragraph">2. Przewodniczący Rządu Koronnego sprawuje nadzór nad działalnością rządu regionalnego i może wezwać członków rządu regionalnego do wykonania konkretnych działań lub zaprzestania dokonywania działań szkodzących interesowi Korony.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rozdzial14" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 14: Parlament regionalny</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 106.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Parlament regionalny jest organem ustawodawczym, uchwałodawczym i kontrolnym regionu.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 107.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Parlament regionalny działa zgodnie z niniejszą Konstytucją oraz konstytucją regionu.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 108.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Jeśli konstytucja regionu nie stanowi inaczej, stosuje się uregulowania zawarte w niniejszym artykule.</div>
+                                <div class="paragraph">2. Parlament regionalny składa się z deputowanych w liczbie odpowiadającej kolejnym dziesiątkom tysięcy mieszkańców regionu, z tym że łączna liczba deputowanych nie może przekroczyć pięćdziesięciu.</div>
+                                <div class="paragraph">3. Kadencja parlamentu regionalnego trwa 2 lata.</div>
+                                <div class="paragraph">4. Przewodniczący parlamentu regionalnego jest przewodniczący regionu. Przewodniczący zwołuje, prowadzi i zamyka posiedzenia parlamentu regionalnego.</div>
+                                <div class="paragraph">5. Projekty ustaw i uchwał przedkładają: przewodniczący regionu, ministrowie regionalni, deputowani albo grupa 20 tys. obywateli regionu.</div>
+                                <div class="paragraph">6. Parlament podejmuje uchwały i stanowi ustawy zwykłą większością głosów obecnych deputowanych.</div>
+                                <div class="paragraph">7. Podjęta uchwała lub ustanowiona ustawa dla swojej ważności wymaga podpisu przewodniczącego parlamentu regionalnego.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 109.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Deputowani są wybierani w wyborach bezpośrednich, powszechnych, równych i demokratycznych z terytorium regionu. Szczegóły dotyczące podziału okręgów i sposobu głosowania określa parlament regionalny.</div>
+                                <div class="paragraph">2. Wybory regionalne ogłasza i organizuje przewodniczący regionu.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- DZIAŁ V -->
+                <section id="dzial5">
+                    <h2>DZIAŁ V: WYMIAR SPRAWIEDLIWOŚCI</h2>
+                    
+                    <div id="rozdzial15" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 15: Ustrój sądownictwa</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 110.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Sądy i Trybunały stanowią władzę sądowniczą i sprawują wymiar sprawiedliwości w Koronie.</div>
+                                <div class="paragraph">2. Sądy i Trybunały wydają wyroki w imieniu Krula Multikont.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 111.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Jeśli Konstytucja lub ustawa nie stanowi inaczej, sądy regionalne są właściwe do rozstrzygania spraw podległych prawu regionalnemu, a koronne - prawu koronnemu.</div>
+                                <div class="paragraph">2. Postępowanie sądowe jest co najmniej dwuinstancyjne na poziomie regionalnym i koronnym.</div>
+                                <div class="paragraph">3. Nadzwyczajne środki zaskarżenia od prawomocnych orzeczeń sądów regionalnych, przewidziane w ustawach, wnosi się do sądów koronnych.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 112.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Sędziowie są niezawiśli w zakresie orzekania. Zakazuje się wpływania na działalność orzeczniczą sędziów w sposób inny, niż określony w Konstytucji.</div>
+                                <div class="paragraph">2. Ustrój i kompetencje sądów koronnych i trybunałów reguluje prawo koronne. Sądami koronnymi są koronne sądy powszechne, Koronny Sąd Najwyższy. Trybunałami są Koronny Trybunał Administracyjny i Wysoki Trybunał Koronny.</div>
+                                <div class="paragraph">3. Ustrój i kompetencje sądów regionalnych reguluje konstytucja regionu i prawo regionalne, uwzględniając regulacje koronne. Sądami regionalnymi są regionalne sądy powszechne i regionalne sądy administracyjne.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 113.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Sędziowie koronni są powoływani przez Krula. Sędziowie koronni podlegają tylko prawu naturalnemu, ustawom koronnym, dekretom i Konstytucji.</div>
+                                <div class="paragraph">2. Sędziowie regionalni are powoływani przez przewodniczących regionów, zgodnie z regulacjami regionalnymi.</div>
+                                <div class="paragraph">3. Odwołanie sędziego koronnego może nastąpić wyłącznie z woli Krula.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 114.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Sędzia koronny nie może być pociągnięty do odpowiedzialności karnej ani pozbawiony wolności bez zgody Krula.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 115.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Władza wykonawcza zapewnia działalność sądów, sprawność sądowej administracji i finansowanie sądów. Szczegóły określają ustawy.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rozdzial16" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 16: Sądy powszechne i Koronny Sąd Najwyższy</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 116.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Regionalne i koronne sądy powszechne sprawują wymiar sprawiedliwości we wszystkich sprawach niezastrzeżonych dla innych sądów albo trybunałów.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 117.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Regionalne sądy powszechne nie podlegają zwyczajnej kontroli instancyjnej koronnych sądów powszechnych, chyba że Konstytucja lub ustawa koronna stanowi inaczej.</div>
+                                <div class="paragraph">2. Prawo koronne może delegować kompetencje powszechnym sądom regionalnym. W tym zakresie powszechne sądy regionalne mogą podlegać zwyczajnej kontroli instancyjnej sądów koronnych.</div>
+                                <div class="paragraph">3. Prawo koronne może uwzględniać zasady nadzwyczajnej kontroli koronnych sądów powszechnych nad orzecznictwem regionalnych sądów powszechnych.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 118.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Koronny Sąd Najwyższy sprawuje kontrolę nad działalnością koronnych sądów powszechnych w zakresie orzekania. Ustawa może również określać zakres nadzwyczajnej kontroli orzecznictwa powszechnych sądów koronnych i regionalnych sprawowanej przez Koronny Sąd Najwyższy.</div>
+                                <div class="paragraph">2. Koronny Sąd Najwyższy wykonuje także inne czynności określone w Konstytucji i ustawach.</div>
+                                <div class="paragraph">3. Prezesa Koronnego Sądu Najwyższego powołuje Krul spośród sędziów Koronnego Sądu Najwyższego.</div>
+                                <div class="paragraph">4. Koronny Sąd Najwyższy może zawrzeć w swoim orzeczeniu zasadę prawną, rozstrzygającą o sposobie rozstrzygania sądów w określonym stanie prawnym lub faktycznym.</div>
+                                <div class="paragraph">5. Zasady prawne zawarte w orzeczeniach Koronnego Sądu Najwyższego są wiążące dla sądów i innych organów w podobnych sprawach. Szczegóły określa ustawa.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rozdzial17" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 17: Regionalne sądy administracyjne i Koronny Trybunał Administracyjny</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 119.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Regionalne sądy administracyjne i Koronny Trybunał Administracyjny sprawują kontrolę nad działalnością administracji publicznej oraz aktami normatywnymi stanowionymi przez organy administracji koronnej, regionalnej i samorządu terytorialnego.</div>
+                                <div class="paragraph">2. Szczegółowy zakres kompetencji regionalnych sądów administracyjnych i Koronnego Trybunału Administracyjnego określają ustawy.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 120.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Koronny Trybunał Administracyjny składa się z dwóch instancji i sprawuje kontrolę: 1) nad działalnością regionalnych sądów administracyjnych w zakresie orzekania; 2) nad działalnością administracji koronnej oraz aktami normatywnymi stanowionymi przez organy administracji koronnej; 3) nad przebiegiem demokratycznych wyborów w zakresie określonym dekretem.</div>
+                                <div class="paragraph">2. Ustawa określa zakres kontroli instancyjnej orzecznictwa regionalnych sądów administracyjnych sprawowanej przez Koronny Trybunał Administracyjny.</div>
+                                <div class="paragraph">3. Prezesów obu instancji Koronnego Trybunału Administracyjnego powołuje Krul spośród sędziów właściwej instancji Koronnego Trybunału Administracyjnego.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rozdzial18" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 18: Wysoki Trybunał Koronny</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 121.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Wysoki Trybunał Koronny stoi na straży spójności systemu prawa oraz jego zgodności z wartościami Korony i prawem naturalnym.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 122.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Wysoki Trybunał Koronny orzeka w sprawach zgodności:</div>
+                                <div class="sub-paragraph">1) ustaw, dekretów i ratyfikowanych umów międzynarodowych z Konstytucją;</div>
+                                <div class="sub-paragraph">2) ustaw i dekretów z ratyfikowanymi umowami międzynarodowymi;</div>
+                                <div class="sub-paragraph">3) rozporządzeń z ustawami, dekretami, ratyfikowanymi umowami międzynarodowymi lub Konstytucją;</div>
+                                <div class="sub-paragraph">4) konstytucji regionu, ustaw regionalnych i rozporządzeń regionalnych z ustawami koronnymi, dekretami, ratyfikowanymi umowami międzynarodowymi lub Konstytucją;</div>
+                                <div class="sub-paragraph">5) aktów religijnego prawa lewosławnego z ratyfikowanymi umowami międzynarodowymi lub Konstytucją;</div>
+                                <div class="sub-paragraph">6) aktów prawa powszechnego i lewosławnego prawa religijnego z systemem wartości Korony i prawem naturalnym.</div>
+                                <div class="paragraph">2. Wysoki Trybunał Koronny orzeka o ważności koronnych wyborów demokratycznych.</div>
+                                <div class="paragraph">3. Wysoki Trybunał Koronny orzeka o zgodności statutowych założeń, praktyk i instytucji wyznań oraz religii z systemem prawa i wartości Korony.</div>
+                                <div class="paragraph">4. Wysoki Trybunał Koronny orzeka o zgodności programów i działań partii politycznych oraz zrzeszeń społecznych z systemem prawa i wartości Korony.</div>
+                                <div class="paragraph">5. Wysoki Trybunał Koronny orzeka w sprawach precedensowych.</div>
+                                <div class="paragraph">6. Wysoki Trybunał Korony wykonuje inne przewidziane Konstytucją lub ustawami zadania.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 123.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Wniosek do Wysokiego Trybunału Koronnego o rozpatrzenie spraw określonych w art. 122 mogą skierować: 1) Krul Multikont; 2) Pierwszy Senator; 3) grupa 10 senatorów; 4) Wielki Inkwizytor; 5) Rzecznik Praw Obywatelskich; 6) Rzecznik Praw Multikont i Botów; 7) Prezes Koronnego Sądu Najwyższego; 8) prezesi obu instancji Koronnego Trybunału Administracyjnego; 9) grupa 50 tysięcy obywateli; 10) grupa co najmniej piątej części łącznej liczby parlamentarzystów parlamentu regionalnego.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 124.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Każdy sąd koronny lub regionalny, jeśli jest to niezbędne dla rozstrzygnięcia konkretnej sprawy zawisłej przed tym sądem, może skierować do Wysokiego Trybunału Koronnego pytanie w sprawie zgodności aktu normatywnego z Konstytucją lub prawem naturalnym.</div>
+                                <div class="paragraph">2. Każdy sąd koronny lub regionalny, w przypadku gdy zawisła przed nim sprawa nie jest znana prawu koronnemu, ale prawo naturalne wymaga jej rozstrzygnięcia, kieruje do Wysokiego Trybunału Koronnego wniosek o rozstrzygnięcie nieznanego zagadnienia (sprawa precedensowa). Orzeczenie Wysokiego Trybunału Koronnego w sprawie precedensowej ma charakter prawodawczy i obowiązuje do czasu jego uchylenia przez ustawę lub inne orzeczenie precedensowe.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 125.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Wysoki Trybunał Koronny składa się z piętnastu sędziów koronnych wybieranych przez Senat i powoływanych przez Krula.</div>
+                                <div class="paragraph">2. Prezesa Wysokiego Trybunału Koronnego powołuje Krul spośród sędziów Wysokiego Trybunału Koronnego.</div>
+                                <div class="paragraph">3. Ustrój i sposób postępowania Wysokiego Trybunału Koronnego określa ustawa.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- DZIAŁ VI -->
+                <section id="dzial6">
+                    <h2>DZIAŁ VI: ORGANY OCHRONY PRAWNEJ</h2>
+                    
+                    <div id="rozdzial19" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 19: Inkwizycja Koronna</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 126.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Inkwizycja Koronna stoi na straży prawa koronnego i prawa naturalnego oraz wykonuje zadania z zakresu ścigania przestępstw koronnych.</div>
+                                <div class="paragraph">2. Na czele Inkwizycji Koronnej stoi Wielki Inkwizytor, powoływany przez Krula.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 127.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Inkwizycja współpracuje z organami władzy koronnej i regionalnej w celu wykonywania swoich zadań.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 128.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Ustrój Inkwizycji Koronnej określa ustawa.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rozdzial20" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 20: Rzecznik Praw Obywatelskich i Rzecznik Praw Multikont i Botów</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 129.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Rzecznik Praw Obywatelskich stoi na straży praw istot ludzkich oraz obywateli.</div>
+                                <div class="paragraph">2. Rzecznik Praw Multikont i Botów stoi na straży praw Multikont i Botów.</div>
+                                <div class="paragraph">3. Rzecznik Praw Multikont i Botów współdziała z organizacjami pozarządowymi i międzynarodowymi w celu ochrony praw Multikont na świecie oraz wydaje zalecenia kierowane do organów państwa i samorządu.</div>
+                                <div class="paragraph">4. Zakres działania Rzecznika Praw Obywatelskich i Rzecznika Praw Multikont i Botów określają ustawy.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 130.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Rzecznik Praw Obywatelskich jest powoływany i odwoływany przez Senat Koronny.</div>
+                                <div class="paragraph">2. Rzecznik Praw Obywatelskich jest w swojej działalności niezawisły i niezależny od innych organów państwowych. Odpowiada jedynie przed Senatem Koronnym.</div>
+                                <div class="paragraph">3. Rzecznik Praw Obywatelskich w trakcie pełnienia funkcji nie może być pociągnięty do odpowiedzialności karnej ani pozbawiony wolności.</div>
+                                <div class="paragraph">4. Przepisy ust. 1-3 stosuje się odpowiednio do Rzecznika Praw Multikont i Botów.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rozdzial21" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 21: Rada Obiektywizacji Informacji</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 131.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Rada Obiektywizacji Informacji stoi na straży wolności słowa i prawa do rzetelnego i obiektywnego informowania obywateli przez media publiczne.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 132.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Rada Obiektywizacji Informacji składa się z pięciu członków powoływanych i odwoływanych przez Senat Koronny.</div>
+                                <div class="paragraph">2. Członkowie Rady Obiektywizacji Informacji są w swojej działalności niezawiśli i niezależni od innych organów państwowych. Odpowiadają jedynie przed Senatem Koronnym.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 133.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Rada Obiektywizacji Informacji kontroluje stan mediów publicznych i może wydawać zalecenia oraz decyzje dotyczące wstrzymania nadawania mediów, które naruszają wolność słowa lub stosują propagandę.</div>
+                                <div class="paragraph">2. Zakres działania Rady Obiektywizacji Informacji określa ustawa.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rozdzial22" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 22: Koronna Izba Kontroli</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 134.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Koronna Izba Kontroli jest naczelnym organem kontroli państwowej.</div>
+                                <div class="paragraph">2. Koronna Izba Kontroli podlega Senatowi Koronnemu.</div>
+                                <div class="paragraph">3. Organizację i tryb działania Koronnej Izby Kontroli określa ustawa.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 135.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Koronna Izba Kontroli kontroluje działalność organów administracji koronnej, Koronnego Banku Centralnego, państwowych osób prawnych i innych państwowych jednostek organizacyjnych z punktu widzenia legalności, gospodarności, celowości i rzetelności.</div>
+                                <div class="paragraph">2. Koronna Izba Kontroli może kontrolować działania organów administracji regionalnej, regionalnych osób prawnych, regionalnych jednostek organizacyjnych, organów samorządu terytorialnego i samorządowych jednostek organizacyjnych z punktu widzenia legalności, gospodarności, celowości i rzetelności.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 136.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Koronna Izba Kontroli przedkłada Senatowi Koronnemu informacje o wynikach kontroli, wnioski i wystąpienia określone w ustawie.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 137.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Prezes Koronnej Izby Kontroli jest powoływany i odwoływany przez Senat Koronny.</div>
+                                <div class="paragraph">2. Prezes Koronnej Izby Kontroli w trakcie pełnienia funkcji nie może być pociągnięty do odpowiedzialności karnej ani pozbawiony wolności.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- DZIAŁ VII -->
+                <section id="dzial7">
+                    <h2>DZIAŁ VII: SAMORZĄD TERYTORIALNY</h2>
+                    
+                    <div id="rozdzial23" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 23: Ogólne zasady dotyczące samorządu terytorialnego</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 138.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Samorząd terytorialny działa w obrębie określonych terytorialnych jednostek organizacyjnych, zwanych jednostkami samorządu terytorialnego.</div>
+                                <div class="paragraph">2. Jednostki samorządu terytorialnego realizują podstawowe potrzeby swoich mieszkańców.</div>
+                                <div class="paragraph">3. Podstawowymi jednostkami samorządu terytorialnego są: 1) gmina dla potrzeb lokalnych mieszkańców; 2) prowincja dla potrzeb regionalnych mieszkańców.</div>
+                                <div class="paragraph">4. Sposób tworzenia, zmiany i znoszenia jednostek samorządu terytorialnego określają ustawy.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 139.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Władza samorządowa leży w rękach jego członków lub organów ustanowionych przez prawo. Podstawą działalności samorządu terytorialnego jest demokratyczna i powszechna kontrola jego władz ze strony wszystkich jego mieszkańców.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 140.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Samorząd terytorialny realizuje wszelkie swoje cele w zakresie określonym w ustawach oraz dekretach i niezastrzeżonym dla organów regionalnych lub koronnych.</div>
+                                <div class="paragraph">2. Samorząd terytorialny wykonuje wszelkie zadania publiczne, które są niezbędne dla prawidłowego funkcjonowania mieszkańców.</div>
+                                <div class="paragraph">3. Działalność samorządu terytorialnego jest finansowana z lokalnych podatków. Działalność podatkowa samorządu nie może stać w sprzeczności z interesem finansowym Korony.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 141.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Organy jednostki samorządu terytorialnego działają na podstawie i w granicach prawa.</div>
+                                <div class="paragraph">2. Działalność jednostki samorządu terytorialnego podlega kontroli sądowej z punktu widzenia legalności.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 142.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Organem nadzoru wobec działalności jednostek samorządu jest przewodniczący Rządu Koronnego i właściwe organy mu podległe, ustanowione ustawą.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- DZIAŁ VIII -->
+                <section id="dzial8">
+                    <h2>DZIAŁ VIII: KORONNY KOŚCIÓŁ IGNISTRIGONA</h2>
+                    
+                    <div id="rozdzial24" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 24: Ogólne zasady działania Koronnego Kościoła Ignistrigona</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 143.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Koronny Kościół Ignistrigona jest narodowym kościołem Korony Krulestwa Multikont, wspierającym obywateli w dążeniu do realizacji porządku naturalnego.</div>
+                                <div class="paragraph">2. Koronny Kościół Ignistrigona jest kierowany i finansowany przez organy Korony Krulestwa Multikont.</div>
+                                <div class="paragraph">3. Koronny Kościół Ignistrigona stanowi część Świętego Kościoła Lewosławia.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 144.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Głową Koronnego Kościoła Ignistrigona jest Krul Multikont.</div>
+                                <div class="paragraph">2. Krul Multikont wykonuje zadania z zakresu duchowego przewodnictwa nad Kościołem przy pomocy Arcybiskupa Koronnego Kościoła Ignistrigona i biskupów katedralnych.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 145.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Senat Koronny stanowi prawo religijne Koronnego Kościoła Ignistrigona. Prawo religijne Koronnego Kościoła Ignistrigona nie podlega publikacji w Krulewskim Dzienniku Ustaw i obowiązuje tylko wiernych i uduchowionych Kościoła, jednak podlega kontroli Wysokiego Trybunału Koronnego.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 146.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Uduchowieni Koronnego Kościoła Ignistrigona mogą sprawować funkcje publiczne w Koronie Krulestwa Multikont.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 147.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Szczegóły dotyczące ustroju Kościoła oraz praw i obowiązków wiernych i uduchowionych regulują właściwa umowa międzynarodowa zawarta ze Świętym Kościołem Lewosławia oraz ustawy.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- DZIAŁ IX -->
+                <section id="dzial9">
+                    <h2>DZIAŁ IX: POSTANOWIENIA KOŃCOWE</h2>
+                    
+                    <div id="rozdzial25" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 25: Procedura zmiany Konstytucji</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 148.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Zmiany Konstytucji dokonuje Krul na wniosek Senatu lub co najmniej połowy parlamentów regionalnych.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rozdzial26" style="scroll-margin-top: 20px;">
+                        <h3>Rozdział 26: Przepisy przejściowe i końcowe</h3>
+                        <div class="article-block">
+                            <div class="article-num">Art. 149.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Tracą moc obowiązującą: Konstytucja Krulestwa Multikont z 1.01.2023 r. (Kr. Dz. U. z 2023 r. poz. 1), Dekret Konstytucyjny z 29.08.2024 r. o arystokratycznej polityce rodowej i przywilejach szlacheckich (Kr. Dz. U. z 2024 r. poz. 18) oraz Dekret Konstytucyjny z 14.01.2025 r. o źródłach prawa w Krulestwie Multikont (Kr. Dz. U. z 2025 r. poz. 2).</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 150.</div>
+                            <div class="article-text">
+                                <div class="paragraph">Niniejsza Konstytucja, za wyjątkiem tego przepisu, który wchodzi w życie z dniem publikacji niniejszej Konstytucji, wchodzi w życie z dniem wejścia w życie ustaw wprowadzających niniejszą Konstytucję i dostosowujących obowiązujący stan prawny do nowego stanu ustrojowego. O spełnieniu wskazanej w zdaniu pierwszym przesłanki rozsądzi Krul w forme obwieszczenia opublikowanego w Krulewskim Dzienniku Ustaw.</div>
+                            </div>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-num">Art. 151.</div>
+                            <div class="article-text">
+                                <div class="paragraph">1. Wszelkie kwestie zasadnicze ustrojowo lub dotyczące zasadniczych praw lub obowiązków obywatela, nieuregulowane niniejszą Konstytucją, reguluje Krul w drodze dekretów konstytucyjnych. Dekrety konstytucyjne mają moc równą konstytucji.</div>
+                                <div class="paragraph">2. Jeśli jakakolwiek kwestia kluczowa prawnie lub społecznie nie jest uregulowana wymaganymi aktami prawa, Krul na pisemny wniosek reguluje daną kwestię w drodze dekretu. Dekret wydany na tej podstawie jest publikowany zgodnie z wymaganiami kategorii brakującego aktu prawnego. Regulacja ta obowiązuje do czasu uchwalenia odpowiedniego aktu prawnego.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <footer style="text-align: center; margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #d4af37; color: #5a4a42; font-size: 0.85rem;">
+                    <p>Korona Krulestwa Multikont</p>
+                    <p style="font-family: 'Cinzel', serif; font-weight: bold; margin-top: 0.3rem; color: #8B1E1E; letter-spacing: 1px;">HONOR • WIERNOŚĆ • LOJALNOŚĆ</p>
+                </footer>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Korona Krulestwa Multikont. Wszelkie prawa zastrzeżone. Oficjalny serwis rządowy na straży prawa naturalnego.</p>
+    </footer>
+
+</body>
+</html>
