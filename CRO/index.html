@@ -6,16 +6,103 @@
   <title>Centralne Repozytorium Orzeczeń Sądowych – Królestwo Multikont</title>
   <link rel="icon" type="image/ico" href="miniatura.png" />
   <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #f1f3f5;
+      background-color: #f1f3f5;
       color: #212529;
       margin: 0;
-      padding: 40px 20px;
+      padding: 0 0 40px 0;
+      line-height: 1.5;
     }
+
+    /* ==========================================================================
+       PASEK NAWIGACYJNY (PORTAL RZĄDOWY) - Styl ze style.css
+       ========================================================================== */
+    .navbar {
+      background-color: #0f2d4a;
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+    }
+
+    .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .menu > li {
+      position: relative;
+    }
+
+    .menu a {
+      display: block;
+      color: #f8fafc;
+      text-decoration: none;
+      padding: 14px 20px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: background-color 0.15s ease;
+    }
+
+    .menu > li > a:hover {
+      background-color: #1b4570;
+    }
+
+    /* Rozwijane podmenu */
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #ffffff;
+      min-width: 250px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border: 1px solid #d0d7de;
+      border-top: none;
+      z-index: 1001;
+    }
+
+    .submenu li a {
+      color: #24292f;
+      padding: 10px 16px;
+      text-transform: none;
+      font-size: 13px;
+      font-weight: 500;
+      border-bottom: 1px solid #f1f3f5;
+    }
+
+    .submenu li:last-child a {
+      border-bottom: none;
+    }
+
+    .submenu li a:hover {
+      background-color: #f6f8fa;
+      color: #0f2d4a;
+    }
+
+    .menu li:hover .submenu {
+      display: block;
+    }
+
+    /* ==========================================================================
+       GŁÓWNA ZAWARTOŚĆ REPOZYTORIUM
+       ========================================================================== */
     .container {
       max-width: 760px;
-      margin: 0 auto;
+      margin: 40px auto 0 auto;
       background: #ffffff;
       padding: 36px;
       border: 1px solid #d0d7de;
@@ -47,7 +134,6 @@
       font-size: 15px;
       border: 1px solid #8c959f;
       border-radius: 3px;
-      box-sizing: border-box;
     }
     input[type="text"]:focus {
       outline: none;
@@ -208,6 +294,37 @@
 </head>
 <body>
 
+<!-- Rządowy pasek nawigacyjny -->
+<nav class="navbar">
+  <ul class="menu">
+    <li>
+      <a href="#">Oficjalny Portal Rządowy</a>
+      <ul class="submenu">
+        <li><a href="https://krulestwomultikont.github.io/BIOSP/OPR">Strona Główna</a></li>
+        <li><a href="https://krulestwomultikont.github.io/BIOSP/OPR/konstytucja.html">Konstytucja Korony Krulestwa Multikont</a></li>
+        <li><a href="https://krulestwomultikont.github.io/BIOSP/OPR/rzad.html">Rząd Koronny</a></li>
+        <li><a href="https://krulestwomultikont.github.io/BIOSP/OPR/senat.html">Senat Koronny</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Publikatory</a>
+      <ul class="submenu">
+        <li><a href="https://krulestwomultikont.github.io/KDU">Krulewski Dziennik Ustaw</a></li>
+        <li><a href="https://krulestwomultikont.github.io/MK">Monitor Krulewski</a></li>
+        <li><a href="https://krulestwomultikont.github.io/BIOSP/KRA">Krajowy Rejestr Arystokracji</a></li>
+        <li><a href="https://krulestwomultikont.github.io/BIOSP/CRO">Centralne Repozytorium Orzeczeń Sądowych</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">DWZZM</a>
+      <ul class="submenu">
+        <li><a href="https://krulestwomultikont.github.io/DUDWZZM">Dziennik Urzędowy DWZZM</a></li>
+      </ul>
+    </li>
+    <li><a href="https://krulestwomultikont.github.io/BIOSP">BIOSP</a></li>
+  </ul>
+</nav>
+
 <div class="container">
   <h1>Centralne Repozytorium Orzeczeń Sądowych</h1>
   <div class="subtitle">Repozytorium orzeczeń sądów Korony Krulestwa Multikont oraz DWZZM</div>
@@ -229,9 +346,9 @@
 
 <script>
   function displayCase(caseData) {
-    const resultBox = document.getElementById("resultContainer"); //[cite: 8]
-    const badgeClass = caseData.isFinal ? "badge-valid" : "badge-pending"; //[cite: 8]
-    const badgeText = caseData.isFinal ? "Prawomocne" : "Nieprawomocne / W toku"; //[cite: 8]
+    const resultBox = document.getElementById("resultContainer");
+    const badgeClass = caseData.isFinal ? "badge-valid" : "badge-pending";
+    const badgeText = caseData.isFinal ? "Prawomocne" : "Nieprawomocne / W toku";
 
     // 1. Sekcja tezy – widoczna tylko jeśli thesis != null
     const thesisHtml = caseData.thesis
@@ -241,11 +358,11 @@
       `
       : '';
 
-    // 2. Przycisk uzasadnienia – widoczny tylko jeśli justificationUrl != null[cite: 8]
-    const justificationBtn = caseData.justificationUrl //[cite: 8]
+    // 2. Przycisk uzasadnienia – widoczny tylko jeśli justificationUrl != null
+    const justificationBtn = caseData.justificationUrl
       ? `<a href="${caseData.justificationUrl}" target="_blank" class="btn-pdf btn-pdf-justification">
            📑 Uzasadnienie orzeczenia
-         </a>` //[cite: 8]
+         </a>`
       : '';
 
     // 3. Przycisk odpisu orzeczenia – widoczny tylko jeśli pdfUrl != null
@@ -283,8 +400,8 @@
         <div class="sentence-box">${caseData.sentence}</div>
         ${footerBox}
       </div>
-    `; //[cite: 8]
-    resultBox.classList.remove("hidden"); //[cite: 8]
+    `;
+    resultBox.classList.remove("hidden");
   }
 
   function handleSearch() {
