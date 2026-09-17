@@ -136,8 +136,6 @@ function renderWielkieRody(container) {
       </header>
       
       <div class="item-body">
-        
-        <!-- 1. INFORMACJE O TYTULE -->
         <div class="meta-section">
           <div class="section-label">1. Informacje o tytule</div>
           <div class="meta-grid">
@@ -153,7 +151,6 @@ function renderWielkieRody(container) {
           </div>
         </div>
 
-        <!-- 2. INFORMACJE O OSOBIE NOSZĄCEJ TYTUŁ -->
         <div class="meta-section">
           <div class="section-label">2. Informacje o osobie noszącej tytuł</div>
           <div class="meta-grid">
@@ -165,7 +162,6 @@ function renderWielkieRody(container) {
           </div>
         </div>
 
-        <!-- 3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE -->
         <div class="meta-section">
           <div class="section-label">3. Pozostałe informacje o arystokracie</div>
           <div class="meta-grid">
@@ -179,7 +175,6 @@ function renderWielkieRody(container) {
           </div>
         </div>
 
-        <!-- 4. INFORMACJE O RODZIE SZLACHECKIM -->
         <div class="meta-section">
           <div class="section-label">4. Informacje o rodzie szlacheckim i relacjach lennych</div>
           <div class="meta-grid">
@@ -198,98 +193,99 @@ function renderWielkieRody(container) {
             <span class="grid-key">N.4.5. Siedziba rodu szlacheckiego:</span><span class="grid-val">${item.n45_houseSeat}</span>
           </div>
         </div>
-
       </div>
     </article>
   `).join('');
 }
 
-// 3. Fallbacki dla pozostałych zakładek
+// 3. Rody Wasalne i Przysięgłe
 function renderWasalne(container) {
   if (typeof rodyWasalneDb === "undefined" || !Array.isArray(rodyWasalneDb)) {
     container.innerHTML = `<div class="vassal-box">Oczekiwanie na bazę danych Rodów Wasalnych (data/rody_wasalne.js)...</div>`;
     return;
   }
 
-  container.innerHTML = rodyWasalneDb.map(item => `
-    <article class="item-card">
-      <header class="item-header" onclick="toggleCard(this)">
-        <div class="item-title-group">
-          <img src="${item.koronaImg}" class="rank-crown" alt="Korona">
-          <span class="item-sig">${item.title}</span>
-        </div>
-        <span class="badge badge-vassal">${item.kategoriaRodu || 'Ród Wasalny'}</span>
-      </header>
-      
-      <div class="item-body">
+  container.innerHTML = rodyWasalneDb.map(item => {
+    if (item.isDivider) {
+      return item.html;
+    }
+
+    return `
+      <article class="item-card">
+        <header class="item-header" onclick="toggleCard(this)">
+          <div class="item-title-group">
+            <img src="${item.koronaImg}" class="rank-crown" alt="Korona">
+            <span class="item-sig">${item.title}</span>
+          </div>
+          <span class="badge badge-vassal">${item.kategoriaRodu || 'Ród Wasalny'}</span>
+        </header>
         
-        <!-- 1. INFORMACJE O TYTULE -->
-        <div class="meta-section">
-          <div class="section-label">1. Informacje o tytule</div>
-          <div class="meta-grid">
-            <span class="grid-key">N.1.1. Pełna nazwa tytułu:</span><span class="grid-val">${item.n11_title}</span>
-            <span class="grid-key">N.1.2. Postanowienie o utworzeniu:</span><span class="grid-val"><strong>${item.n12_creationOrder}</strong></span>
-            <span class="grid-key">N.1.3. Klasy tytułu:</span><div class="grid-val">${renderClassesTable(item.classes)}</div>
-            <span class="grid-key">N.1.4. Ranga tytułu:</span><span class="grid-val">${item.n14_ranga}</span>
-            <span class="grid-key">N.1.5. Majątek publiczny:</span><span class="grid-val">${item.n15_publicEstate}</span>
-            <span class="grid-key">N.1.6. Majątek ziemski i przedsiębiorstwo:</span><span class="grid-val"><strong>${item.n16_businessEstate}</strong></span>
-            <span class="grid-key">N.1.7. Podstawa funkcji publicznej:</span><span class="grid-val">${item.n17_publicLegalBasis}</span>
-            <span class="grid-key">N.1.8. Opis sygnetu szlacheckiego:</span><span class="grid-val">${item.n18_ringDesc}</span>
-            <span class="grid-key">N.1.9. Data utworzenia / zniesienia:</span><span class="grid-val">${item.n19_dates}</span>
-          </div>
-        </div>
+        <div class="item-body">
+          <div class="meta-section">
+  <div class="section-label">1. Informacje o tytule</div>
+  <div class="meta-grid">
+    <span class="grid-key">N.1.1. Pełna nazwa tytułu:</span><span class="grid-val">${item.n11_title}</span>
+    <span class="grid-key">N.1.2. Postanowienie o utworzeniu:</span><span class="grid-val"><strong>${item.n12_creationOrder}</strong></span>
+    <span class="grid-key">N.1.3. Klasy tytułu:</span><div class="grid-val">${renderClassesTable(item.classes)}</div>
+    <span class="grid-key">N.1.4. Ranga tytułu:</span><span class="grid-val">${item.n14_ranga}</span>
+    <span class="grid-key">N.1.5. Podległe terytorium i funkcja:</span><span class="grid-val"><strong>${item.n15_territory || 'Brak / Nie dotyczy'}</strong></span>
+    <span class="grid-key">N.1.6. Majątek publiczny:</span><span class="grid-val">${item.n16_publicEstate || 'Brak'}</span>
+    <span class="grid-key">N.1.7. Majątek ziemski i przedsiębiorstwo:</span><span class="grid-val"><strong>${item.n17_businessEstate || 'Brak'}</strong></span>
+    <span class="grid-key">N.1.8. Podstawa funkcji publicznej:</span><span class="grid-val">${item.n18_publicLegalBasis}</span>
+    <span class="grid-key">N.1.9. Opis sygnetu szlacheckiego:</span><span class="grid-val">${item.n19_ringDesc}</span>
+    <span class="grid-key">N.1.10. Data utworzenia / zniesienia:</span><span class="grid-val">${item.n110_dates}</span>
+  </div>
+</div>
 
-        <!-- 2. INFORMACJE O OSOBIE NOSZĄCEJ TYTUŁ -->
-        <div class="meta-section">
-          <div class="section-label">2. Informacje o osobie noszącej tytuł</div>
-          <div class="meta-grid">
-            <span class="grid-key">N.2.1. Imię aktualnego arystokraty:</span><span class="grid-val"><strong>${item.n21_holderName}</strong></span>
-            <span class="grid-key">N.2.2. Postanowienie o nadaniu:</span><span class="grid-val"><strong>${item.n22_grantOrder}</strong></span>
-            <span class="grid-key">N.2.3. Imiona poprzednich użytkowników:</span><span class="grid-val">${item.n23_prevHolders}</span>
-            <span class="grid-key">N.2.4. Informacja o dziedzicu:</span><span class="grid-val">${item.n24_heir}</span>
-            <span class="grid-key">N.2.5. Uprawnienia indywidualne:</span><span class="grid-val">${item.n25_individualPrivileges}</span>
-          </div>
-        </div>
-
-        <!-- 3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE -->
-        <div class="meta-section">
-          <div class="section-label">3. Pozostałe informacje o arystokracie</div>
-          <div class="meta-grid">
-            <span class="grid-key">N.3.1. Wzór używanego herbu:</span>
-            <div class="grid-val heraldry-preview">
-              <img src="${item.n31_usedHerbImg}" class="herb-thumb" alt="Herb arystokraty">
-              <div class="herb-blazon">${item.n31_usedHerbDesc}</div>
+          <div class="meta-section">
+            <div class="section-label">2. Informacje o osobie noszącej tytuł</div>
+            <div class="meta-grid">
+              <span class="grid-key">N.2.1. Imię aktualnego arystokraty:</span><span class="grid-val"><strong>${item.n21_holderName}</strong></span>
+              <span class="grid-key">N.2.2. Postanowienie o nadaniu:</span><span class="grid-val"><strong>${item.n22_grantOrder}</strong></span>
+              <span class="grid-key">N.2.3. Imiona poprzednich użytkowników:</span><span class="grid-val">${item.n23_prevHolders}</span>
+              <span class="grid-key">N.2.4. Informacja o dziedzicu:</span><span class="grid-val">${item.n24_heir}</span>
+              <span class="grid-key">N.2.5. Uprawnienia indywidualne:</span><span class="grid-val">${item.n25_individualPrivileges}</span>
             </div>
-            <span class="grid-key">N.3.2. Używany tytuł użytkowy:</span><span class="grid-val">${item.n32_usageTitle}</span>
-            <span class="grid-key">N.3.3. Inne tytuły arystokraty:</span><span class="grid-val">${item.n33_otherTitles}</span>
+          </div>
+
+          <div class="meta-section">
+            <div class="section-label">3. Pozostałe informacje o arystokracie</div>
+            <div class="meta-grid">
+              <span class="grid-key">N.3.1. Wzór używanego herbu:</span>
+              <div class="grid-val heraldry-preview">
+                ${item.n31_usedHerbImg ? `<img src="${item.n31_usedHerbImg}" class="herb-thumb" alt="Herb arystokraty">` : ''}
+                <div class="herb-blazon">${item.n31_usedHerbDesc || 'Brak'}</div>
+              </div>
+              <span class="grid-key">N.3.2. Używany tytuł użytkowy:</span><span class="grid-val">${item.n32_usageTitle}</span>
+              <span class="grid-key">N.3.3. Inne tytuły arystokraty:</span><span class="grid-val">${item.n33_otherTitles}</span>
+            </div>
+          </div>
+
+          <div class="meta-section">
+            <div class="section-label">4. Informacje o rodzie szlacheckim i relacjach lennych</div>
+            <div class="meta-grid">
+              <span class="grid-key">N.4.1. Kategoria i ranga rodu:</span><span class="grid-val"><strong>${item.n41_houseCategory}</strong></span>
+              <span class="grid-key">N.4.2. Stosunek wasalitetu:</span>
+              <div class="grid-val">
+                <div class="vassal-box">${item.n42_vassalStatus}</div>
+              </div>
+              <span class="grid-key">N.4.3. Wzór herbu rodu szlacheckiego:</span>
+              <div class="grid-val heraldry-preview">
+                ${item.n43_houseHerbImg ? `<img src="${item.n43_houseHerbImg}" class="herb-thumb" alt="Herb rodu">` : ''}
+                <div class="herb-blazon">${item.n43_houseHerbDesc || 'Brak'}</div>
+              </div>
+              <span class="grid-key">N.4.4. Członkowie rodu szlacheckiego:</span>
+              <span class="grid-val">${Array.isArray(item.n44_houseMembers) ? item.n44_houseMembers.join(', ') : item.n44_houseMembers}</span>
+              <span class="grid-key">N.4.5. Siedziba rodu szlacheckiego:</span><span class="grid-val">${item.n45_houseSeat}</span>
+            </div>
           </div>
         </div>
-
-        <!-- 4. INFORMACJE O RODZIE SZLACHECKIM I RELACJACH LENNYCH -->
-        <div class="meta-section">
-          <div class="section-label">4. Informacje o rodzie szlacheckim i relacjach lennych</div>
-          <div class="meta-grid">
-            <span class="grid-key">N.4.1. Kategoria i ranga rodu:</span><span class="grid-val"><strong>${item.n41_houseCategory}</strong></span>
-            <span class="grid-key">N.4.2. Stosunek wasalitetu:</span>
-            <div class="grid-val">
-              <div class="vassal-box">${item.n42_vassalStatus}</div>
-            </div>
-            <span class="grid-key">N.4.3. Wzór herbu rodu szlacheckiego:</span>
-            <div class="grid-val heraldry-preview">
-              <img src="${item.n43_houseHerbImg}" class="herb-thumb" alt="Herb rodu">
-              <div class="herb-blazon">${item.n43_houseHerbDesc}</div>
-            </div>
-            <span class="grid-key">N.4.4. Członkowie rodu szlacheckiego:</span>
-            <span class="grid-val">${Array.isArray(item.n44_houseMembers) ? item.n44_houseMembers.join(', ') : item.n44_houseMembers}</span>
-            <span class="grid-key">N.4.5. Siedziba rodu szlacheckiego:</span><span class="grid-val">${item.n45_houseSeat}</span>
-          </div>
-        </div>
-
-      </div>
-    </article>
-  `).join('');
+      </article>
+    `;
+  }).join('');
 }
 
+// 4. Tytuły Osobiste
 function renderOsobiste(container) {
   if (typeof osobisteDb === "undefined" || !Array.isArray(osobisteDb)) {
     container.innerHTML = `<div class="vassal-box">Oczekiwanie na bazę danych Tytułów Osobistych (data/osobiste.js)...</div>`;
@@ -307,8 +303,6 @@ function renderOsobiste(container) {
       </header>
       
       <div class="item-body">
-        
-        <!-- 1. INFORMACJE O TYTULE -->
         <div class="meta-section">
           <div class="section-label">1. Informacje o tytule</div>
           <div class="meta-grid">
@@ -324,7 +318,6 @@ function renderOsobiste(container) {
           </div>
         </div>
 
-        <!-- 2. INFORMACJE O OSOBIE NOSZĄCEJ TYTUŁ -->
         <div class="meta-section">
           <div class="section-label">2. Informacje o osobie noszącej tytuł</div>
           <div class="meta-grid">
@@ -336,7 +329,6 @@ function renderOsobiste(container) {
           </div>
         </div>
 
-        <!-- 3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE -->
         <div class="meta-section">
           <div class="section-label">3. Pozostałe informacje o arystokracie</div>
           <div class="meta-grid">
@@ -364,12 +356,12 @@ function renderOsobiste(container) {
             </div>
           </div>
         </div>
-
       </div>
     </article>
   `).join('');
 }
 
+// 5. Rycerze Korony
 function renderRycerze(container) {
   if (typeof rycerzeDb === "undefined" || !Array.isArray(rycerzeDb)) {
     container.innerHTML = `<div class="vassal-box">Oczekiwanie na ewidencję Rycerzy Korony (data/rycerze.js)...</div>`;
@@ -429,45 +421,7 @@ function renderRycerze(container) {
 }
 
 // ==========================================================================
-// ROUTER I START
-// ==========================================================================
-
-function loadTab(tabName, btnElement) {
-  document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-  if (btnElement) btnElement.classList.add('active');
-
-  const container = document.getElementById("contentContainer");
-  if (!container) return;
-  container.innerHTML = "";
-
-  switch (tabName) {
-    case 'krolewska':
-      renderKrolewska(container);
-      break;
-    case 'wielkie':
-      renderWielkieRody(container);
-      break;
-    case 'wasalne':
-      renderWasalne(container);
-      break;
-    case 'osobiste':
-      renderOsobiste(container);
-      break;
-    case 'rycerze':
-      renderRycerze(container);
-      break;
-    default:
-      renderKrolewska(container);
-  }
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-  const defaultTabBtn = document.querySelector('.tab-button');
-  loadTab('krolewska', defaultTabBtn);
-});
-
-// ==========================================================================
-// ROUTER I START
+// ROUTER
 // ==========================================================================
 
 function loadTab(tabName, btnElement) {
@@ -500,7 +454,7 @@ function loadTab(tabName, btnElement) {
 }
 
 // ==========================================================================
-// OBSŁUGA WYSZUKIWARKI W CZASIE RZECZYWISTYM (TUTAJ WKLEJASZ TEN KOD)
+// OBSŁUGA WYSZUKIWARKI W CZASIE RZECZYWISTYM
 // ==========================================================================
 
 function hasMatch(value, query) {
@@ -563,9 +517,10 @@ function handleRegistrySearch() {
     });
   }
 
-  // 3. Rody Wasalne
+  // 3. Rody Wasalne (pomijamy rozdzielacze graficzne przy wyszukiwaniu)
   if (typeof rodyWasalneDb !== "undefined" && Array.isArray(rodyWasalneDb)) {
     rodyWasalneDb.forEach(item => {
+      if (item.isDivider) return;
       if (
         hasMatch(item.title, query) ||
         hasMatch(item.n11_title, query) ||
@@ -573,7 +528,8 @@ function handleRegistrySearch() {
         hasMatch(item.n12_creationOrder, query) ||
         hasMatch(item.n22_grantOrder, query) ||
         hasMatch(item.n42_vassalStatus, query) ||
-        hasMatch(item.n44_houseMembers, query)
+        hasMatch(item.n44_houseMembers, query) ||
+        hasMatch(item.n45_houseSeat, query)
       ) {
         matches.push({ type: 'wasalne', data: item });
       }
