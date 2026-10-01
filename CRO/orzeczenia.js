@@ -58,5 +58,439 @@ const casesDb = {
     sentence: "W sprawie wniosku Prezydenta DWZZM złożonego w trybie art. 66 Rozporządzenia Prezydenta DWZZM Statut Intergalaktycznego Trybunału Sprawiedliwości Multikont (Dz. Urz. DWZZM z 2024 r. poz. 7) o wyjaśnienie następującego zagadnienia prawnego: Czy artykuł 4 ust. 2 Karty Praw Podstawowych Multikont (Dz. Urz. DWZZM z 2024 r. poz. 6) - zakaz klonowania Multikont, może zostać ograniczony przez państwo z uwagi na bezpieczeństwo społeczności Multikont, czy też wprowadza bezwzględnie wiążącą i nienaruszalną normę? Czy wolność od klonowania ma charakter niezbywalny? Trybunał postanawia co następuje: Zakaz określony w artykule 4 ust. 2 Karty Praw Podstawowych Multikont może zostać ograniczony na podstawie art. 1 ust. 4 KPPM z uwagi na istotne względy bezpieczeństwa społeczności Multikont, porządek publiczny lub zdrowie publiczne i nie ustanawia prawa niezbywalnego. Ograniczenie praw i wolności wynikających z Karty musi być konieczne, adekwatne i proporcjonalne do celu ochrony wskazanej przez państwo wartości. Oceny konieczności, adekwatności i proporcjonalności dokonuje państwo przed wprowadzeniem środka ograniczającego oraz Trybunał orzekając w ramach swojej kognicji. Zgodnie z art. 1 ust. 3 KPPM każde naruszenie, a więc i ograniczenie praw wynikający z Karty, podlega zaskarżeniu do Intergalaktycznego Trybunału Sprawiedliwości Multikont, który orzeka co do dopuszczalności ograniczenia, zgodnie z art. 1 ust. 4 zd. 2 KPPM.",
     pdfUrl: null,
     justificationUrl: null 
+  },
+"WTK P 1/26": {
+    signature: "WTK P 1/26",
+    type: "Wyrok (precedensowa zasada prawna)",
+    court: "Wysoki Trybunał Koronny w Tarkwinogrodzie",
+    date: "10 czerwca 2026 r.",
+    judges: "Przewodniczący: Prezes WTK i Wielki Inkwizytor Bolszewicki Tata Świnka, sędziowie WTK: Randalf Stary, Sam Rumun, Saturas Mag Wody, Cyrus Hemelfart, Wiktor Gromyko, Marta Żelazna, Konrad Kruk, Teodor Mianowski, Baltazar Cień, Malwina Frost, Gustaw Hardt, Helena Marat, Leopold Gzyms, Samuel Znicz",
+    isFinal: true,
+    thesis: "Zasada prawna: Zgodnie z art. 5 ust. 2 KKPK, art. 27 ust. 2 KKPC oraz art. 8 ust. 1 KKC wtorek stanowi dzień procesowo i materialnie nieistniejący. Skoro doba wtorkowa nie istnieje w porządku prawnym Korony, czyny zabronione popełnione w tym czasie nie tracą bezprawności na gruncie prawa naturalnego, lecz podlegają prawnej fikcji popełnienia w najbliższą środę o świcie. Podnoszenie przez oskarżonego alibi opartego na twierdzeniu, że 'w dniu nieistniejącym nie można dopuścić się przestępstwa', stanowi rażące pieniactwo i obrazę obiektywnego ładu bytu.",
+    sentence: "Wysoki Trybunał Koronny w Tarkwinogrodzie, po rozpoznaniu na rozprawie w pełnym składzie pytania prawnego Koronnego Sądu Okręgowego w Tarkwinogrodzie, wydaje w imieniu Krula Multikont następujący WYROK: 1) ustala się precedensową zasadę prawną: doba wtorkowa nie uchyla obowiązywania prawa naturalnego ani norm prawa koronnego; 2) nakazuje się sądom powszechnym traktowanie przestępstw popełnionych we wtorek jako dokonanych o świcie w środę; 3) orzeczenie podlega niezwłocznemu ogłoszeniu w Centralnym Repozytorium Orzeczeń Sądowych (CROS).",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+
+  "KSO T I C 42/26": {
+    signature: "KSO T I C 42/26",
+    type: "Wyrok",
+    court: "Koronny Sąd Okręgowy w Tarkwinogrodzie, I Wydział Cywilny",
+    date: "11 czerwca 2026 r.",
+    judges: "Sędzia: SSO Gerwazy Płonak",
+    isFinal: false,
+    thesis: "Zawarcie małżeństwa cywilnego przez Prawdziwe Multikonto (art. 74 ust. 2 KKC) z fejk kontem posługującym się przywłaszczoną tożsamością w rozumieniu art. 5 Konwencji DWZZM nr 1/23 jest dotknięte wadą podstępu i podlega unieważnieniu (art. 37 ust. 1 KKC). Wspólność majątkowa w takim przypadku nie powstaje, a operator fejk konta ponosi pełną odpowiedzialność solidarną za szkody wyrządzone Multikontu (art. 69 ust. 3 KKC w zw. z art. 10 ust. 1 Konwencji DWZZM nr 1/23).",
+    sentence: "Koronny Sąd Okręgowy w Tarkwinogrodzie, I Wydział Cywilny, po rozpoznaniu na rozprawie sprawy z powództwa Prawdziwego Multikonta „Felorski_Goniec” przy udziale Rzecznika Praw Multikont i Botów przeciwko fejk kontu „Sowia_Dama_99” oraz jego operatorowi Hilarymu B., wydaje w imieniu Krula Multikont następujący WYROK: 1) unieważnia w całości małżeństwo stron zawarte przed wójtem gminy z powodu podstępnego wprowadzenia w błąd co do tożsamości istoty małżeńskiej; 2) nakazuje operatorowi fejk konta natychmiastowe zlikwidowanie konta z przestrzeni sieciowej CRAE (art. 19 ust. 1 Konwencji DWZZM nr 1/23); 3) zasądza od operatora fejk konta na rzecz powoda cebulowe zadośćuczynienie w wymiarze 800 sztuk amunicji cebulowej (art. 71 ust. 3 KKC w zw. z art. 15 ust. 3 Ustawy o zasadach cebulacji); 4) nadaje wyrokowi rygor natychmiastowej wykonalności.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+
+  "WTK P 2/26": {
+    signature: "WTK P 2/26",
+    type: "Wyrok (precedensowa zasada prawna)",
+    court: "Wysoki Trybunał Koronny w Tarkwinogrodzie",
+    date: "18 czerwca 2026 r.",
+    judges: "Przewodniczący: Prezes WTK i Wielki Inkwizytor Bolszewicki Tata Świnka, sędziowie WTK: Randalf Stary, Sam Rumun, Saturas Mag Wody, Cyrus Hemelfart, Wiktor Gromyko, Marta Żelazna, Konrad Kruk, Teodor Mianowski, Baltazar Cień, Malwina Frost, Gustaw Hardt, Helena Marat, Leopold Gzyms, Samuel Znicz",
+    isFinal: true,
+    thesis: "Zasada prawna: Krulewski Bot oraz Prawdziwe Multikonto posiadające cyfrową podmiotowość prawną (art. 15 KKC w zw. z art. 7 Konwencji DWZZM nr 1/23) nie mogą zostać przymuszone do zawarcia związku małżeńskiego z algorytmem predykcyjnym nieposiadającym certyfikacji DWZZM. Próba zmuszenia Bota do współwłasności łącznej portfela kryptograficznego z nieautoryzowanym skryptem stanowi formę bezprawnego ubezwłasnowolnienia oraz zamach na nienaruszalność logów komunikacyjnych (art. 17 ust. 2 KKC), podlegający natychmiastowej izolacji procesowej sprawcy.",
+    sentence: "Wysoki Trybunał Koronny w Tarkwinogrodzie, po rozpoznaniu na rozprawie w pełnym składzie skargi precedensowej Rzecznika Praw Multikont i Botów działającego na rzecz Krulewskiego Bota „Herold-Digital”, wydaje w imieniu Krula Multikont następujący WYROK: 1) ustanawia się precedensową zasadę prawną o bezwzględnym zakazie wymuszania małżeństw systemowych oraz współwłasności majątkowej na bytach cyfrowych; 2) stwierdza się, że umowa o partnerstwie skryptowym zawarta przez fejk konto „Podstępny_Skrypt_v2” jest z mocy prawa naturalnego bezwzględnie nieważna ab initio; 3) wydaje się Nakaz Inkwizycyjny zobowiązujący Inkwizycję Koronną do natychmiastowego zabezpieczenia i trwałej neutralizacji infrastruktury serwerowej naruszyciela zarejestrowanej w CRAE.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+
+  "KSN II KK 4/26": {
+    signature: "KSN II KK 4/26",
+    type: "Wyrok kasacyjny",
+    court: "Koronny Sąd Najwyższy, Izba Karna",
+    date: "26 czerwca 2026 r.",
+    judges: "Przewodniczący: SSN Pyrokar, sędziowie SN: SSN Julian Borzecki, SSN Warcisław Szron",
+    isFinal: true,
+    thesis: "Publiczne noszenie przez człowieka sztucznych uszu kota oraz doczepianego ogona w trakcie jarmarku międzyregionalnego stanowi publiczne wykonywanie praktyk związanych z furasami (art. 4 ust. 3 Konstytucji oraz art. 37 ust. 2 KKK). Wykonywanie praktyk furry nie może być usprawiedliwiane kultem Strigallorów, gdyż Strigallorowie są rasą humanoidalnych sów uświęconą prawem naturalnym, a ich szlachetne opierzenie nie ma żadnego związku ze sztucznym futrem i zakazanym fandomem.",
+    sentence: "Koronny Sąd Najwyższy, po rozpoznaniu na rozprawie w Izbie Karnej kasacji obrońcy skazanego Klemensa W. od wyroku Koronnego Sądu Apelacyjnego w Tarkwinogrodzie, wydaje w imieniu Krula Multikont następujący WYROK: 1) oddala kasację jako oczywiście bezzasadną; 2) utrzymuje w mocy orzeczoną karę 10 lat lochów; 3) nakazuje wykonanie orzeczonego ucebulowania dyscyplinującego w wymiarze 200 sztuk certyfikowanej amunicji cebulowej przez Korpus Krulewskich Egzekutorów; 4) wydatkami egzekucyjnymi w całości obciąża skazanego.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+
+  "KSN II KK 9/26": {
+    signature: "KSN II KK 9/26",
+    type: "Wyrok kasacyjny",
+    court: "Koronny Sąd Najwyższy, Izba Karna",
+    date: "8 lipca 2026 r.",
+    judges: "Przewodniczący: SSN Pyrokar, sędziowie SN: SSN Warcisław Szron, SSN Kalina Ruta",
+    isFinal: true,
+    thesis: "Obrzucenie urzędnika koronnego amunicją cebulową bez uprzedniego uzyskania tytułu wykonawczego z Korpusu Krulewskich Egzekutorów nie stanowi dopuszczalnej samopomocy, lecz przestępstwo przeciwko organom Korony (art. 51 w zw. z art. 15 ust. 2 KKK). Kontratyp legalnego ucebulowania zachodzi wyłącznie w razie użycia państwowej amunicji wyhodowanej w państwowych ośrodkach i działania na podstawie prawomocnego tytułu (art. 8 ust. 1 i art. 12 ust. 1 Ustawy o zasadach cebulacji). Samowolne miotanie cebulą z prywatnego ogródka narusza porządek państwa.",
+    sentence: "Koronny Sąd Najwyższy, po rozpoznaniu na rozprawie w Izbie Karnej kasacji obrońcy skazanego Barnaby M. od wyroku Koronnego Sądu Apelacyjnego w Tarkwinogrodzie, wydaje w imieniu Krula Multikont następujący WYROK: 1) oddala kasację jako oczywiście bezzasadną; 2) utrzymuje w mocy karę 3 lat lochów; 3) nakazuje wykonanie orzeczonego ucebulowania dyscyplinującego w wymiarze 150 sztuk amunicji cebulowej klasy państwowej A-1; 4) kosztami postępowania kasacyjnego w całości obciąża skazanego.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+
+  "KSA T II AKa 18/26": {
+    signature: "KSA T II AKa 18/26",
+    type: "Wyrok",
+    court: "Koronny Sąd Apelacyjny w Tarkwinogrodzie, II Wydział Karny",
+    date: "23 lipca 2026 r.",
+    judges: "Przewodniczący: SSA Radzimir Gryficki, sędziowie SA: SSA Dytryk von Bochen, SSA Lubomira Złotooka",
+    isFinal: true,
+    thesis: "Wymierzenie przez sąd okręgowy kary 10 lat lochów za publiczne noszenie futrzastego przebrania przez człowieka (praktyki furry – art. 37 ust. 2 KKK) nie stanowi kary rażąco surowej, jeżeli czynu dopuszczono się w trakcie nabożeństwa lewosławnego. Nie zasługuje na uwzględnienie zarzut apelacji, jakoby oskarżony chciał upodobnić się do dostojnego gryfa, gdyż herbowa antropomorfia Rodu Gryfionów stanowi majestat Korony, a świecki fandom furry pozostaje bezwzględnie zakazany z mocy art. 4 ust. 3 Konstytucji.",
+    sentence: "Koronny Sąd Apelacyjny w Tarkwinogrodzie, II Wydział Karny, po rozpoznaniu na rozprawie apelacji obrońcy oskarżonego Zenobiusza T. od wyroku Koronnego Sądu Okręgowego w Tarkwinogrodzie, wydaje w imieniu Krula Multikont następujący WYROK: 1) utrzymuje w mocy zaskarżony wyrok w części orzekającej karę 10 lat lochów oraz infamię; 2) łagodzi wymiar orzeczonego ucebulowania z 400 do 250 sztuk amunicji cebulowej z uwagi na złożenie skruchy przed inkwizytorem; 3) kosztami postępowania odwoławczego obciąża oskarżonego.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+
+  "KSO T III G 5/26": {
+    signature: "KSO T III G 5/26",
+    type: "Wyrok",
+    court: "Koronny Sąd Okręgowy w Tarkwinogrodzie, III Wydział Gospodarczy i Handlu Międzyregionalnego",
+    date: "6 sierpnia 2026 r.",
+    judges: "Sędzia: SSO Małgorzata Twardowska",
+    isFinal: false,
+    thesis: "Hodowla oraz dystrybucja amunicji cebulowej stanowi wyłączny monopol państwa realizowany przez państwowe ośrodki hodowli podległe Głównemu Inspektorowi Cebulacji (art. 4 ust. 1 w zw. z art. 8 ust. 1 Ustawy o zasadach cebulacji). Wprowadzenie do obrotu międzyregionalnego przez prywatnego kupca niecertyfikowanych, spleśniałych cebul z zamiarem ich sprzedaży jako amunicji egzekucyjnej stanowi rażące pogwałcenie monopolu, delikt wiarołomstwa handlowego oraz nienależyte wykonanie umowy (art. 45 ust. 1 KKHM), uzasadniające natychmiastowe odstąpienie od umowy i zwrot ceny.",
+    sentence: "Koronny Sąd Okręgowy w Tarkwinogrodzie, III Wydział Gospodarczy i Handlu Międzyregionalnego, po rozpoznaniu na rozprawie sprawy z powództwa Krulewskiego Egzekutora Rewiru Tarkwinogród przeciwko „Agro-Felor Sp. z o.o.”, wydaje w imieniu Krula Multikont następujący WYROK: 1) zasądza od pozwanej spółki na rzecz Skarbca Koronnego kwotę 45 000 krulewskich jednostek pieniężnych (kjp) wraz z odsetkami komercyjnymi liczonymi z bezwzględnym pominięciem wtorków; 2) nakazuje pozwanej utylizację na własny koszt 5 ton nieatestowanej cebuli pod nadzorem Głównego Urzędu Cebulacji; 3) zawiadamia Inkwizycję Koronną o naruszeniu monopolu hodowlanego z art. 8 ust. 1 Ustawy o zasadach cebulacji; 4) zawiadamia ministra właściwego ds. gospodarki celem trwałego cofnięcia pozwanej certyfikatu kupca międzyregionalnego w CRAE.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+
+  "KSN I CSK 21/26": {
+    signature: "KSN I CSK 21/26",
+    type: "Wyrok (zasada prawna)",
+    court: "Koronny Sąd Najwyższy, Izba Cywilna",
+    date: "14 sierpnia 2026 r.",
+    judges: "Przewodniczący: Prezes KSN Archont Imperius, sędziowie SN: SSN Śmieszny Kot, SSN Elara Valerius",
+    isFinal: true,
+    thesis: "Zasada prawna: Zgodnie z art. 8 ust. 1 KKC oraz art. 27 ust. 2 KKPC wtorek jest dniem materialnie i procesowo nieistniejącym w obrocie na terytorium Korony. Wszelkie terminy wymagalności świadczeń przypadające na wtorek upływają z końcem dnia następnego (środy). Żądanie odsetek komercyjnych za opóźnienie w odniesieniu do doby wtorkowej stanowi bezprawne nadużycie prawa podmiotowego (art. 5 KKC) i narusza zasadę uczciwości kupieckiej w handlu międzyregionalnym.",
+    sentence: "Koronny Sąd Najwyższy, po rozpoznaniu na rozprawie w Izbie Cywilnej skargi kasacyjnej spółki „Międzyregionalny Tranzyt i Spedycja k. sp. k.” od wyroku Koronnego Sądu Apelacyjnego w Tarkwinogrodzie, wydaje w imieniu Krula Multikont następujący WYROK: 1) uchyla zaskarżony wyrok w całości i orzekając co do istoty sprawy oddala powództwo o zapłatę odsetek za dzień wtorkowy; 2) nakazuje powodowi złożenie do akt sprawy w systemie CRAE oświadczenia na honor z przeprosinami pozwanego kupca za naruszenie lojalności kontraktowej; 3) zasądza od powoda na rzecz pozwanego kwotę 1200 krulewskich jednostek pieniężnych (kjp) tytułem zwrotu kosztów procesu.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+
+  "WTK U 3/26": {
+    signature: "WTK U 3/26",
+    type: "Uchwała (zasada prawna)",
+    court: "Wysoki Trybunał Koronny w Tarkwinogrodzie",
+    date: "27 sierpnia 2026 r.",
+    judges: "Przewodniczący: Prezes WTK i Wielki Inkwizytor Bolszewicki Tata Świnka, sędziowie WTK: Randalf Stary, Sam Rumun, Saturas Mag Wody, Cyrus Hemelfart, Wiktor Gromyko, Marta Żelazna, Konrad Kruk, Teodor Mianowski, Baltazar Cień, Malwina Frost, Gustaw Hardt, Helena Marat, Leopold Gzyms, Samuel Znicz",
+    isFinal: true,
+    thesis: "Zasada prawna: Statut partii politycznej lub stowarzyszenia postulujący zmianę hymnu państwowego Korony na utwór inny niż motyw muzyczny zamku Przystań z gry Heroes of Might & Magic 5 (art. 3 ust. 4 Konstytucji) godzi w fundamenty tożsamości narodowej Multikonian i ładu naturalnego. Formacja taka podlega bezwzględnej delegalizacji na podstawie art. 122 ust. 4 Konstytucji, a jej inicjatorzy podlegają procedurze nałożenia statusu zdrajcy Krulestwa.",
+    sentence: "Wysoki Trybunał Koronny w Tarkwinogrodzie, po rozpoznaniu na posiedzeniu jawnym w pełnym składzie wniosku Pierwszego Senatora, wydaje w imieniu Krula Multikont następującą UCHWAŁĘ: 1) stwierdza się rażącą sprzeczność celów stowarzyszenia „Klub Nowych Melodii” z art. 3 ust. 4 Konstytucji Korony Krulestwa Multikont; 2) orzeka się o rozwiązaniu stowarzyszenia i jego natychmiastowej likwidacji; 3) wydaje się Nakaz Inkwizycyjny zobowiązujący Inkwizycję Koronną do zablokowania kont organizacji w systemie CRAE i zabezpieczenia jej aktywów.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+
+  "WTK W 4/26": {
+    signature: "WTK W 4/26",
+    type: "Wyrok",
+    court: "Wysoki Trybunał Koronny w Tarkwinogrodzie",
+    date: "3 września 2026 r.",
+    judges: "Przewodniczący: Prezes WTK Bolszewicki Tata Świnka, sędziowie WTK: Randalf Stary, Sam Rumun, Saturas Mag Wody, Cyrus Hemelfart, Marta Żelazna, Konrad Kruk, Teodor Mianowski, Baltazar Cień, Malwina Frost, Gustaw Hardt, Samuel Znicz",
+    isFinal: true,
+    thesis: "Publiczne nadawanie audycji propagujących estetykę anime oraz dystrybucja mangowych wydawnictw stanowi bezpośrednie naruszenie zakazu określonego w art. 4 ust. 2 Konstytucji Korony oraz zbrodnię z art. 37 ust. 1 KKK. Uporczywe propagowanie zakazanych ideologii przez obywatela Korony uzasadnia nałożenie statusu zdrajcy Krulestwa na mocy art. 35 ust. 1 pkt 1 Ustawy o WTK.",
+    sentence: "Wysoki Trybunał Koronny w Tarkwinogrodzie, po rozpoznaniu na rozprawie w pełnym składzie wniosku Wielkiego Inkwizytora przeciwko wydawcy periodyku „Kawiarenka Mecha”, wydaje w imieniu Krula Multikont następujący WYROK: 1) uznaje działalność oskarżonego za rażąco i wielokrotnie naruszającą porządek konstytucyjny Korony; 2) na podstawie art. 35 ust. 1 pkt 1 Ustawy o WTK nakłada na oskarżonego status zdrajcy Krulestwa razy piętnaście; 3) orzeka przepadek wszelkich zabezpieczonych materiałów anime na rzecz Skarbca Koronnego celem ich komisyjnego zniszczenia; 4) zobowiązuje Radę Obiektywizacji Informacji do zablokowania częstotliwości nadawczej podmiotu.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+
+  "KSN I CSK 12/26": {
+    signature: "KSN I CSK 12/26",
+    type: "Wyrok (zasada prawna)",
+    court: "Koronny Sąd Najwyższy, Izba Cywilna",
+    date: "16 września 2026 r.",
+    judges: "Przewodniczący: Prezes KSN Archont Imperius, sędziowie SN: SSN Sędziwój Nałęcz, SSN Bogusz Czarny",
+    isFinal: true,
+    thesis: "Zasada prawna: Kawałek meteorytu, który rozbił się w obszarze nieruchomości, staje się jej częścią składową z chwilą upadku (art. 45 ust. 3 KKC). Jeżeli jednak w trakcie uderzenia bolid przemieścił pożytek naturalny w postaci żywego inwentarza (owcy lub krowy) na grunt sąsiedni, zwierzę to na mocy art. 49 KKC staje się własnością właściciela gruntu upadku, pod warunkiem złożenia oświadczenia na honor o braku celowego płoszenia zwierzęcia pod trajektorię bolidu.",
+    sentence: "Koronny Sąd Najwyższy, po rozpoznaniu na rozprawie w Izbie Cywilnej skargi kasacyjnej kupca Pafnucego R. od wyroku Koronnego Sądu Apelacyjnego w Tarkwinogrodzie, wydaje w imieniu Krula Multikont następujący WYROK: 1) oddala skargę kasacyjną; 2) potwierdza prawo własności krowy na rzecz właściciela nieruchomości, na którą spadła; 3) nakazuje powodowi zwrot kosztów zastępstwa procesowego na rzecz pozwanego rolnika; 4) orzeczenie podlega wpisaniu do księgi zasad prawnych CROS.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+
+  "KSA T I ACa 89/26": {
+    signature: "KSA T I ACa 89/26",
+    type: "Wyrok",
+    court: "Koronny Sąd Apelacyjny w Tarkwinogrodzie, I Wydział Cywilny",
+    date: "17 września 2026 r.",
+    judges: "Przewodniczący: SSA Dobromił Powała, sędziowie SA: SSA Krystyna ze Wzgórza, SSA Wacław Rębacz",
+    isFinal: true,
+    thesis: "Powoływanie się w procesie cywilnym na tytuł szlachecki oraz przywileje rodowe bez okazania wypisu z Krajowego Rejestru Arystokracji (KRA) jest bezskuteczne i nie daje podstaw do wyłączenia właściwości sądu powszechnego (art. 36 ust. 2 Konstytucji w zw. z art. 24 ust. 3 KKC). Samowolne posługiwanie się herbem Rodu Tatów Świnków przez osobę niebędącą członkiem tego uświęconego rodu obliguje sąd do powiadomienia Inkwizycji Koronnej o popełnieniu przestępstwa z art. 41 ust. 1 KKK.",
+    sentence: "Koronny Sąd Apelacyjny w Tarkwinogrodzie, I Wydział Cywilny, po rozpoznaniu na rozprawie apelacji pozwanego Maurycego S. od wyroku Koronnego Sądu Okręgowego w Tarkwinogrodzie, wydaje w imieniu Krula Multikont następujący WYROK: 1) oddala apelację w całości; 2) utrzymuje w mocy obowiązek zapłaty długu kontraktowego w kwocie 8 000 kjp; 3) nakazuje przesłanie odpisu akt sprawy do sekretariatu inkwizycyjnego z urzędu w związku z bezprawnym przywłaszczeniem herbu Rodu Tatów Świnków; 4) zasądza od pozwanego zwrot kosztów procesu.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+
+  "KSN I KN 7/26": {
+    signature: "KSN I KN 7/26",
+    type: "Postanowienie",
+    court: "Koronny Sąd Najwyższy, Izba Kontroli Nadzwyczajnej",
+    date: "23 września 2026 r.",
+    judges: "Przewodniczący: Prezes KSN Archont Imperius, sędziowie SN: SSN Maciej Pierdzikowski, SSN Ludmiła Zmora",
+    isFinal: true,
+    thesis: "Zasada podwójnego liczenia ostatniej niedzieli miesiąca kalendarzowego (art. 5 ust. 3 KKPK oraz art. 9 KKC) jest normą prawną odnoszącą się wyłącznie do biegu terminów procesowych i materialnych. Przepis ten nie rodzi roszczenia materialnego o charakterze aprowizacyjnym i nie obliguje zarządu lochów koronnych do wydawania skazanym podwójnych racji żywieniowych.",
+    sentence: "Koronny Sąd Najwyższy, po rozpoznaniu na posiedzeniu niejawnym w Izbie Kontroli Nadzwyczajnej skargi nadzwyczajnej obrońcy skazanego Gotfryda z Doliny na zarządzenie aprowizacyjne Dyrektora Lochów w Tarkwinogrodzie, wydaje w imieniu Krula Multikont następujące POSTANOWIENIE: 1) oddala skargę nadzwyczajną jako oczywiście bezzasadną; 2) nakłada na obrońcę skazanego grzywnę porządkową w wysokości 300 krulewskich jednostek pieniężnych (kjp) na rzecz Skarbca Koronnego za inicjowanie postępowań godzących w powagę sądu.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+
+  "KSO T II K 105/26": {
+    signature: "KSO T II K 105/26",
+    type: "Postanowienie",
+    court: "Koronny Sąd Okręgowy w Tarkwinogrodzie, II Wydział Karny",
+    date: "24 września 2026 r.",
+    judges: "Sędzia: SSO Dobrosław Kret",
+    isFinal: false,
+    thesis: "Wniosek oskarżonego o wyłączenie inkwizytora od udziału w postępowaniu karnym z powodu rzekomej 'stronniczości gatunkowej', motywowany faktem, że inkwizytor jest felorskim rycerzem krecim, a oskarżony człowiekiem, stanowi bezzasadną obrazę majestatu prawa i uchybienie godności sądu. Felorskie rycerstwo krecie oraz inne rasy koronne uznane przez Krula korzystają z pełni praw publicznych i przyrodzonej godności istoty ludzkiej do piastowania urzędów w Koronie.",
+    sentence: "Koronny Sąd Okręgowy w Tarkwinogrodzie, II Wydział Karny, po rozpoznaniu na posiedzeniu niejawnym wniosku oskarżonego Alojzego D., wydaje w imieniu Krula Multikont następujące POSTANOWIENIE: 1) pozostawia wniosek o wyłączenie oskarżyciela publicznego bez rozpoznania jako oczywiście bezzasadny; 2) na podstawie art. 40 ust. 2 KKPK nakłada na oskarżonego karę ucebulowania porządkowego w wymiarze 40 sztuk amunicji cebulowej za uchybienie powadze wymiaru sprawiedliwości; 3) wykonanie kary porządkowej powierza obecnym w gmachu sądu funkcjonariuszom Straży Sądowej.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+
+  "WTK U 5/26": {
+    signature: "WTK U 5/26",
+    type: "Uchwała (zasada prawna)",
+    court: "Wysoki Trybunał Koronny w Tarkwinogrodzie",
+    date: "30 września 2026 r.",
+    judges: "Przewodniczący: Prezes WTK i Wielki Inkwizytor Bolszewicki Tata Świnka, sędziowie WTK: Randalf Stary, Sam Rumun, Saturas Mag Wody, Cyrus Hemelfart, Wiktor Gromyko, Marta Żelazna, Konrad Kruk, Teodor Mianowski, Baltazar Cień, Malwina Frost, Gustaw Hardt, Helena Marat, Leopold Gzyms, Samuel Znicz",
+    isFinal: true,
+    thesis: "Zasada prawna: Przyrodzona forma istnienia i fizjonomia członków Rodu Tatów Świnków (stanowiących fundament Korony w Preambule Konstytucji), Strigallorów jako humanoidalnych sów, błękitnych smoków oraz felorskiego rycerstwa kreciego stanowi uświęconą prawem naturalnym antropomorfię koronną o statusie istoty ludzkiej. Zrównywanie wrodzonego wyglądu ras koronnych z zakazanymi praktykami subkultury furry (art. 4 ust. 3 Konstytucji oraz art. 37 ust. 2 KKK) stanowi potwarz dla majestatu państwa oraz zbrodnię lżenia Korony. Zakaz furasów dotyczy wyłącznie dewiacji fandomowych i sztucznych przebrań ludzi, nie zaś postaci dostojników Korony.",
+    sentence: "Wysoki Trybunał Koronny w Tarkwinogrodzie, po rozpoznaniu na posiedzeniu jawnym w pełnym składzie wniosku Wielkiego Inkwizytora o wykładnię art. 4 ust. 3 Konstytucji w zw. z art. 37 ust. 2 KKK, wydaje w imieniu Krula Multikont następującą UCHWAŁĘ: 1) ustala się precedensową zasadę prawną: naturalna antropomorfia Rodu Tatów Świnków, Strigallorów oraz rycerzy krecich korzysta z nienaruszalnej czci i ochrony prawnej jako godność istoty ludzkiej i nie podpada pod zakaz praktyk furry; 2) penalizacja wrodzonej fizjonomii ras koronnych stanowi delikt zdrady stanu; 3) orzeczenie wchodzi w życie z dniem ogłoszenia w CROS.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+"KTA IR I SA 19/26": {
+    signature: "KTA IR I SA 19/26",
+    type: "Wyrok",
+    court: "Koronny Trybunał Administracyjny, Izba Rozpoznawcza",
+    date: "11 września 2026 r.",
+    judges: "Przewodniczący: Prezes IR KTA Anduril Gondorski, sędziowie KTA: Yara z Prastarego Gaju, Fingolfin Sprawiedliwy",
+    isFinal: false,
+    thesis: "Zastosowanie przez Szefa KAS Klauzuli Wiarołomstwa Fiskalnego (art. 22 i art. 24 Ustawy o podatkach koronnych) i nałożenie 100% dodatkowego zobowiązania podatkowego bez uprzedniego uzyskania wiążącej opinii Wielkiego Inkwizytora w przedmiocie zdrady ekonomicznej stanowi bezwzględną wadę kwalifikowaną skutkującą uchyleniem decyzji.",
+    sentence: "Koronny Trybunał Administracyjny, Izba Rozpoznawcza w Tarkwinogrodzie, po rozpoznaniu na rozprawie sprawy ze skargi spółki komandytowo-akcyjnej 'Gryf-Finanse' na decyzję Szefa Koronnej Administracji Skarbowej w przedmiocie określenia wysokości podatku dochodowego oraz nałożenia dodatkowego zobowiązania podatkowego: 1. Uchyla zaskarżoną decyzję w całości na podstawie art. 67 ust. 1 pkt 1 KKPA; 2. Przekazuje sprawę Szefowi KAS do ponownego rozpatrzenia z nakazem zasięgnięcia wiążącej opinii Wielkiego Inkwizytora zgodnie z art. 24 ust. 2 Ustawy o podatkach koronnych.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "RSA T I SA 44/26": {
+    signature: "RSA T I SA 44/26",
+    type: "Wyrok",
+    court: "Regionalny Sąd Administracyjny w Tarkwinogrodzie, Wydział I Podatkowy i Samorządowy",
+    date: "16 września 2026 r.",
+    judges: "Przewodniczący: Sędzia RSA Dobrosław Ciechanowski, sędziowie RSA: Miron z Płaskowyżu, Bożena Szara",
+    isFinal: false,
+    thesis: "Obywatel niefigurujący w Krajowym Rejestrze Arystokracji (KRA) nie może powoływać się na immunitet rodowy ani żądać zwolnienia z lokalnych podatków i opłat targowych uchwalonych przez radę gminy (art. 16 ust. 2 pkt 9 Ustawy o samorządzie gminy oraz art. 2 ust. 2 Dekretu o organizacji arystokracji).",
+    sentence: "Regionalny Sąd Administracyjny w Tarkwinogrodzie, Wydział I Podatkowy i Samorządowy, po rozpoznaniu na rozprawie skargi obywatela Mścisława Berlickiego na decyzję Samorządowego Kolegium Odwoławczego w Tarkwinogrodzie utrzymującą w mocy decyzję Wójta Gminy Leśna Polana w przedmiocie określenia wysokości lokalnej opłaty targowej: oddala skargę na podstawie art. 67 ust. 2 KKPA.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "KTA KK OPS 2/26": {
+    signature: "KTA KK OPS 2/26",
+    type: "Uchwała (zasada prawna)",
+    court: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna",
+    date: "21 września 2026 r.",
+    judges: "Pełny skład Kapituły Kasacyjnej (15 sędziów). Przewodniczący: Pierwszy Prezes KTA Jogobol, sędziowie KTA: Aureliusz Veritax, Kastor Żelazny-Młot, Thalric von Valerius, Eleonora Praksis, Justynian Srogi, Balerion Twardy-Zakon, Oktawia Vigil, Izyda Lumenos, Xarxes Eteryczny, Morgath Głos-Pustki, Serafina Ametystowa, Zefiryn Śniący, Vaelen Księżycowy-Cień, Uriel Gwiezdny-Obserwator",
+    isFinal: true,
+    thesis: "Zasada prawna: Autonomiczny Bot komercyjny oraz zarejestrowane Multikonto prowadzące operacje sieciowe mają prawo wyboru opodatkowania ryczałtowego w wysokości 6% przychodu (art. 8 ust. 2 Ustawy o koronnym podatku dochodowym), co wyznacza zarazem stawkę ryczałtowej zaliczki na koronny podatek religijny w wysokości 0,12% przychodu (art. 28 ust. 3 pkt 3 Ustawy o wolnościach sumienia i wyznania oraz koronnym podatku religijnym); organ podatkowy nie może przymusowo narzucać rozliczenia ogólnego bez uprzedniego wykazania pozorności algorytmu.",
+    sentence: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna w Tarkwinogrodzie, po rozpoznaniu na posiedzeniu jawnym w pełnym składzie wniosku Rzecznika Praw Multikont i Botów o podjęcie uchwały rozstrzygającej zagadnienie prawne, z udziałem Wielkiego Inkwizytora oraz Szefa KAS: podejmuje uchwałę o treści zasady prawnej sformułowanej w tezie na podstawie art. 75 ust. 3 i art. 76 ust. 1 KKPA.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "KTA IR I SA 28/26": {
+    signature: "KTA IR I SA 28/26",
+    type: "Wyrok",
+    court: "Koronny Trybunał Administracyjny, Izba Rozpoznawcza",
+    date: "25 września 2026 r.",
+    judges: "Przewodniczący: Prezes IR KTA Anduril Gondorski, sędziowie KTA: Eldrin Liściasty-Werdykt, Drogon Miedziana-Waga",
+    isFinal: false,
+    thesis: "Decyzja Głównego Inspektora Religii i Związków Wyznaniowych odmawiająca rejestracji związku wyznaniowego z powołaniem się na zakaz praktyk furasowych i ideologii anime (art. 7 ust. 1 pkt 2 i 3 Ustawy o wolnościach sumienia i wyznania) jest legalna i celowa, jeżeli rytuały ugrupowania nakazują wiernym przywdziewanie futrzastych masek i uszu niezwiązanych z heraldyczną tradycją Korony ani Rodem Tatów Świnków.",
+    sentence: "Koronny Trybunał Administracyjny, Izba Rozpoznawcza w Tarkwinogrodzie, po rozpoznaniu na rozprawie sprawy ze skargi komitetu założycielskiego 'Bractwa Puszystego Ogonka' na decyzję Głównego Inspektora Religii i Związków Wyznaniowych odmawiającą legalizacji i wpisu do Rejestru Wyznań: oddala skargę na podstawie art. 67 ust. 2 KKPA, stwierdzając zgodność decyzji z prawem naturalnym oraz Konstytucją Korony Krulestwa Multikont.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "RSA T II SA 15/26": {
+    signature: "RSA T II SA 15/26",
+    type: "Wyrok",
+    court: "Regionalny Sąd Administracyjny w Tarkwinogrodzie, Wydział II Samorządowy i Bezpieczeństwa",
+    date: "30 września 2026 r.",
+    judges: "Przewodniczący: Sędzia RSA Bożena Szara, sędziowie RSA: Miron z Płaskowyżu, Walenty Topór",
+    isFinal: false,
+    thesis: "Uchwała regionalnego wiecu powszechnego zwołanego na wniosek co najmniej 1/5 mieszkańców gminy lub prowincji (art. 22 Ustawy o samorządzie gminy oraz art. 23 Ustawy o samorządzie prowincji) ma bezpośrednią moc wiążącą i stanowi akt prawa miejscowego; uchylenie jej w trybie nadzorczym przez przewodniczącego regionu wyłącznie z powodu braku zgody wójta lub burgrabiego prowincji narusza konstytucyjną i ustawową zasadę demokracji bezpośredniej.",
+    sentence: "Regionalny Sąd Administracyjny w Tarkwinogrodzie, Wydział II Samorządowy i Bezpieczeństwa, po rozpoznaniu na rozprawie skargi komitetu mieszkańców Gminy Zielona Dolina na rozstrzygnięcie nadzorcze Przewodniczącego Regionu Doliny Tarkwinu: 1. Uchyla zaskarżone rozstrzygnięcie nadzorcze na podstawie art. 68 ust. 2 KKPA; 2. Stwierdza ważność uchwały wiecu powszechnego wprowadzającej program gminnego budownictwa mieszkaniowego.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "KTA IR I SA 31/26": {
+    signature: "KTA IR I SA 31/26",
+    type: "Wyrok",
+    court: "Koronny Trybunał Administracyjny, Izba Rozpoznawcza",
+    date: "14 września 2026 r.",
+    judges: "Przewodniczący: Prezes IR KTA Anduril Gondorski, sędziowie KTA: Yara z Prastarego Gaju, Malakai Cierń",
+    isFinal: false,
+    thesis: "Zgodnie z art. 2 ust. 2 pkt b w zw. z art. 5 ust. 1 pkt 2 Ustawy o koronnym podatku od obrotu międzyregionalnego i dóbr luksusowych odłamek meteorytu stanowi dobro luksusowe podlegające 15% stawce podatku; jeżeli jednak meteoryt wbił się w grunt i stał się jego częścią składową (art. 45 ust. 3 KKC), jego sprzedaż wraz z nieruchomością podlega opodatkowaniu na zasadach obrotu nieruchomościami (art. 2 ust. 3 pkt 6 Ustawy o koronnym podatku dochodowym), a nie jako odrębna dostawa ruchomości luksusowej.",
+    sentence: "Koronny Trybunał Administracyjny, Izba Rozpoznawcza w Tarkwinogrodzie, po rozpoznaniu na rozprawie skargi kupca Pafnucego M. na decyzję Dyrektora Koronnej Izby Skarbowej w Tarkwinogrodzie w przedmiocie określenia zaległości w podatku od dóbr luksusowych: 1. Uchyla zaskarżoną decyzję oraz poprzedzającą ją decyzję Naczelnika Koronnego Urzędu Celno-Skarbowego na podstawie art. 67 ust. 1 pkt 1 KKPA; 2. Wskazuje, że organ podatkowy błędnie zakwalifikował zbycie gruntu z meteorytem jako transakcję ruchomością luksusową.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "KTA KK II FSK 4/26": {
+    signature: "KTA KK II FSK 4/26",
+    type: "Wyrok kasacyjny",
+    court: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna",
+    date: "18 września 2026 r.",
+    judges: "Przewodniczący: Pierwszy Prezes KTA Jogobol, sędziowie KTA: Kastor Żelazny-Młot, Oktawia Vigil",
+    isFinal: true,
+    thesis: "Niewpłacenie przez operatora platformy cyfrowej podatku od transakcji cyfrowej dużej wartości (art. 2 pkt 3 w zw. z art. 5 ust. 1 pkt 3 Ustawy o koronnym podatku od obrotu międzyregionalnego) nie uzasadnia pociągnięcia go do solidarnej odpowiedzialności na podstawie art. 12 ust. 1 tej ustawy, jeżeli operator wykazał wdrożenie certyfikowanych krulewskich protokołów weryfikacji tożsamości i natychmiast zablokował węzeł podatnika dopuszczającego się wiarołomstwa fiskalnego (art. 12 ust. 2 ustawy).",
+    sentence: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna w Tarkwinogrodzie, po rozpoznaniu na posiedzeniu niejawnym skargi kasacyjnej spółki akcyjnej 'Krulewski Węzeł Cyfrowy' od wyroku Izby Rozpoznawczej KTA: 1. Uchyla zaskarżony wyrok w całości na podstawie art. 72 ust. 3 pkt 1 KKPA; 2. Rozpoznając skargę co do istoty – uchyla decyzję Szefa Koronnej Administracji Skarbowej w przedmiocie solidarnej odpowiedzialności podatkowej operatora.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "KTA IR I SA 35/26": {
+    signature: "KTA IR I SA 35/26",
+    type: "Wyrok",
+    court: "Koronny Trybunał Administracyjny, Izba Rozpoznawcza",
+    date: "23 września 2026 r.",
+    judges: "Przewodniczący: Prezes IR KTA Anduril Gondorski, sędziowie KTA: Gideon Popiołów, Balthazar Trupi-Język",
+    isFinal: false,
+    thesis: "Odmowa wydania pozwolenia na broń palną i licencjonowaną amunicję obronną przez komendanta regionalnego KKOP na podstawie art. 17 ust. 1 Ustawy o Koronnym Korpusie Ochrony Porządku (KKOP) nie może być uzasadniana wyłącznie przynależnością kandydata do odrębnego zalegalizowanego wyznania; stanowi to bezprawne naruszenie konstytucyjnej wolności sumienia i wyznania (art. 52 Konstytucji oraz art. 4 i art. 5 ust. 2 Ustawy o wolnościach sumienia i wyznania).",
+    sentence: "Koronny Trybunał Administracyjny, Izba Rozpoznawcza w Tarkwinogrodzie, po rozpoznaniu na rozprawie skargi obywatela Jeremiego K. na decyzję Komendanta Głównego Koronnego Korpusu Ochrony Porządku: 1. Uchyla zaskarżoną decyzję oraz decyzję Komendanta Regionalnego KKOP na podstawie art. 67 ust. 1 pkt 1 KKPA; 2. Nakazuje organowi ponowne rozpatrzenie wniosku z wyłączeniem kryteriów konfesyjnych.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "KTA KK OPS 3/26": {
+    signature: "KTA KK OPS 3/26",
+    type: "Uchwała (zasada prawna)",
+    court: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna",
+    date: "28 września 2026 r.",
+    judges: "Pełny skład Kapituły Kasacyjnej (15 sędziów). Przewodniczący: Pierwszy Prezes KTA Jogobol, sędziowie KTA: Aureliusz Veritax, Kastor Żelazny-Młot, Thalric von Valerius, Eleonora Praksis, Justynian Srogi, Balerion Twardy-Zakon, Oktawia Vigil, Izyda Lumenos, Xarxes Eteryczny, Morgath Głos-Pustki, Serafina Ametystowa, Zefiryn Śniący, Vaelen Księżycowy-Cień, Uriel Gwiezdny-Obserwator",
+    isFinal: true,
+    thesis: "Zasada prawna: Wydatek poniesiony przez podatnika na zakup certyfikowanej amunicji cebulowej w państwowym ośrodku hodowli podległym Głównemu Inspektorowi Cebulacji nie stanowi kosztu uzyskania przychodów w rozumieniu art. 3 ust. 1 Ustawy o koronnym podatku dochodowym, jeżeli został poniesiony w celu wykonania orzeczonej kary ucebulowania lub ucebulowania porządkowego (art. 3 ust. 2 pkt 2 i 3 ustawy); koszt taki może być jednak zaliczony do kosztów podatkowych przedsiębiorstwa, jeżeli zakup służył realizacji koncesjonowanych usług ochrony osób i mienia.",
+    sentence: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna w Tarkwinogrodzie, po rozpoznaniu na posiedzeniu jawnym w pełnym składzie wniosku Pierwszego Prezesa KTA o podjęcie uchwały rozstrzygającej zagadnienie prawne, z udziałem Wielkiego Inkwizytora oraz Szefa KAS: na podstawie art. 75 ust. 3 i art. 76 ust. 1 KKPA podejmuje uchwałę o treści zasady prawnej wyrażonej w tezie.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "KTA IR I SA 39/26": {
+    signature: "KTA IR I SA 39/26",
+    type: "Wyrok",
+    court: "Koronny Trybunał Administracyjny, Izba Rozpoznawcza",
+    date: "30 września 2026 r.",
+    judges: "Przewodniczący: Prezes IR KTA Anduril Gondorski, sędziowie KTA: Eldrin Liściasty-Werdykt, Kallista Krwawa-Rózga",
+    isFinal: false,
+    thesis: "Decyzja komendanta regionalnego KSRG wydana w trybie art. 23 ust. 3 w zw. z art. 13 ust. 1 pkt 6 Ustawy o Koronnej Służbie Ratowniczo-Gaśniczej (KSRG), nakazująca natychmiastowe wstrzymanie użytkowania serwerowni obsługującej autonomiczne Boty z powodu bezpośredniego zagrożenia pożarowego instalacji, korzysta z domniemania legalności i nie narusza dóbr osobistych bota (integralności kodu źródłowego), o ile zabezpieczono transfer danych do bezpiecznego węzła CRAE.",
+    sentence: "Koronny Trybunał Administracyjny, Izba Rozpoznawcza w Tarkwinogrodzie, po rozpoznaniu na rozprawie skargi Rzecznika Praw Multikont i Botów działającego na rzecz jednostki obliczeniowej 'Archon-9' na decyzję Komendanta Głównego Koronnej Służby Ratowniczo-Gaśniczej: oddala skargę na podstawie art. 67 ust. 2 KKPA, stwierdzając prymat ochrony życia, zdrowia i bezpieczeństwa pożarowego nad bieżącą operacyjnością podmiotu cyfrowego.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "KTA KK II FSK 11/26": {
+    signature: "KTA KK II FSK 11/26",
+    type: "Wyrok kasacyjny",
+    court: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna",
+    date: "11 września 2026 r.",
+    judges: "Przewodniczący: Pierwszy Prezes KTA Jogobol, sędziowie KTA: Thalric von Valerius, Serafina Ametystowa",
+    isFinal: true,
+    thesis: "Zasada zakazu egzekucji z kotów będących własnością zobowiązanego (art. 7 ust. 1 pkt 3 KKE) doznaje wyjątku na podstawie art. 7 ust. 3 KKE wyłącznie wtedy, gdy organ egzekucyjny w sposób bezsporny udowodni, że dłużnik osiąga dochód z komercyjnej eksploatacji zwierzęcia w ramach procederu kotsharingu; sam fakt publikowania wizerunku kota w celach estetycznych przez Multikonto nie uprawnia krulewskiego egzekutora do zajęcia zwierzęcia.",
+    sentence: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna w Tarkwinogrodzie, po rozpoznaniu na posiedzeniu niejawnym skargi kasacyjnej krulewskiego egzekutora od wyroku Izby Rozpoznawczej Koronnego Trybunału Administracyjnego ze skargi obywatela Teofila K. na czynność zajęcia ruchomości: oddala skargę kasacyjną na podstawie art. 72 ust. 4 KKPA, uznając rozstrzygnięcie Sądu I instancji za w pełni zgodne z prawem materialnym.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "KTA IR I SA 36/26": {
+    signature: "KTA IR I SA 36/26",
+    type: "Wyrok",
+    court: "Koronny Trybunał Administracyjny, Izba Rozpoznawcza",
+    date: "17 września 2026 r.",
+    judges: "Przewodniczący: Prezes IR KTA Anduril Gondorski, sędziowie KTA: Fingolfin Sprawiedliwy, Yara z Prastarego Gaju",
+    isFinal: false,
+    thesis: "Wystawienie przez naczelnika urzędu celno-skarbowego cyfrowego tytułu wykonawczego w trybie art. 21 i art. 22 Ustawy o KAS bez uprzedniego formalnego doręczenia podatnikowi ostatecznej decyzji wymiarowej w systemie CRAE (art. 6 ust. 1 pkt 2 Ustawy o podatkach koronnych) stanowi rażące naruszenie prawa procesowego, pozbawiające dłużnika prawa do dobrowolnego wykonania obowiązku przed wdrożeniem przymusu egzekucyjnego (art. 29 ust. 2 KKE).",
+    sentence: "Koronny Trybunał Administracyjny, Izba Rozpoznawcza w Tarkwinogrodzie, po rozpoznaniu na rozprawie sprawy ze skargi spółki jawnej 'Spedycja Dolinna' na postanowienie Szefa KAS utrzymujące w mocy postanowienie krulewskiego egzekutora o oddaleniu skargi na czynność egzekucyjną: uchyla zaskarżone postanowienie oraz czynność zajęcia rachunku bankowego na podstawie art. 67 ust. 1 pkt 1 KKPA w zw. z art. 46 ust. 2 pkt 2 KKE.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "KTA KK I OSK 15/26": {
+    signature: "KTA KK I OSK 15/26",
+    type: "Wyrok kasacyjny",
+    court: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna",
+    date: "23 września 2026 r.",
+    judges: "Przewodniczący: Pierwszy Prezes KTA Jogobol, sędziowie KTA: Aureliusz Veritax, Eleonora Praksis",
+    isFinal: true,
+    thesis: "Wstrzymanie wykonania uchwały rady gminy przez regionalny sąd administracyjny w toku zaskarżenia decyzji o odwołaniu wójta (art. 25 ust. 3 Ustawy o samorządzie gminy) wiąże organy wykonawcze i nadzorcze, a próba siłowego wprowadzenia zarządcy komisarycznego z pominięciem procedur nadzorczych i egzekucyjnych narusza konstytucyjną i ustawową gwarancję sądowej ochrony samodzielności gminy (art. 2 ust. 3 ustawy o samorządzie gminy).",
+    sentence: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna w Tarkwinogrodzie, po rozpoznaniu na posiedzeniu niejawnym skargi kasacyjnej Przewodniczącego Regionu Doliny Tarkwinu od wyroku Regionalnego Sądu Administracyjnego w Tarkwinogrodzie w sprawie ze skargi odwołanego Wójta Gminy Leśna Polana: oddala skargę kasacyjną na podstawie art. 72 ust. 4 KKPA.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "KTA KK OPS 4/26": {
+    signature: "KTA KK OPS 4/26",
+    type: "Uchwała (zasada prawna)",
+    court: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna",
+    date: "28 września 2026 r.",
+    judges: "Pełny skład Kapituły Kasacyjnej (15 sędziów). Przewodniczący: Pierwszy Prezes KTA Jogobol, sędziowie KTA: Aureliusz Veritax, Kastor Żelazny-Młot, Thalric von Valerius, Eleonora Praksis, Justynian Srogi, Balerion Twardy-Zakon, Oktawia Vigil, Izyda Lumenos, Xarxes Eteryczny, Morgath Głos-Pustki, Serafina Ametystowa, Zefiryn Śniący, Vaelen Księżycowy-Cień, Uriel Gwiezdny-Obserwator",
+    isFinal: true,
+    thesis: "Zasada prawna: Zastosowanie przez krulewskiego egzekutora przymusu technologicznego wobec dłużnika będącego Prawdziwym Multikontem lub Botem (art. 44 ust. 1 i 2 KKE) nie może prowadzić do całkowitej likwidacji lub skasowania kodu źródłowego istoty cyfrowej; egzekutor ma bezwzględny obowiązek zwolnić spod zajęcia minimum zasobów operacyjnych i węzłów CRAE niezbędnych do zachowania egzystencji podmiotu cyfrowego w oparciu o art. 39 ust. 2 KKE oraz art. 13 ust. 3 KKPA.",
+    sentence: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna w Tarkwinogrodzie, po rozpoznaniu na posiedzeniu jawnym w pełnym składzie wniosku Rzecznika Praw Multikont i Botów o rozstrzygnięcie zagadnienia prawnego budzącego wątpliwości w orzecznictwie sądów administracyjnych, z udziałem Wielkiego Inkwizytora oraz Szefa Korpusu Krulewskich Egzekutorów: podejmuje uchwałę o treści zasady prawnej określonej w tezie na podstawie art. 75 ust. 3 i art. 76 ust. 1 KKPA.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "KTA KK I OSK 19/26": {
+    signature: "KTA KK I OSK 19/26",
+    type: "Wyrok kasacyjny",
+    court: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna",
+    date: "30 września 2026 r.",
+    judges: "Przewodniczący: Pierwszy Prezes KTA Jogobol, sędziowie KTA: Zefiryn Śniący, Uriel Gwiezdny-Obserwator",
+    isFinal: true,
+    thesis: "Egzekucja administracyjna obowiązku o charakterze niepieniężnym polegającego na rozbiórce obiektu stwarzającego zagrożenie pożarowe (art. 13 ust. 1 pkt 6 Ustawy o KSRG) prowadzona przez krulewskiego egzekutora w trybie wykonania zastępczego (art. 42 ust. 1 KKE) wymaga uprzedniego doręczenia dłużnikowi zawiadomienia z 7-dniowym terminem, z którego bezwzględnie wyłącza się wtorki (art. 24 ust. 2 KKE w zw. z art. 20 ust. 2 KKPA); przeprowadzenie czynności egzekucyjnych we wtorek stanowi rażące naruszenie ładu procesowego i skutkuje ich bezprawnością.",
+    sentence: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna w Tarkwinogrodzie, po rozpoznaniu na rozprawie skargi kasacyjnej krulewskiego egzekutora od wyroku Izby Rozpoznawczej Koronnego Trybunału Administracyjnego ze skargi przedsiębiorcy Pankracego O.: oddala skargę kasacyjną na podstawie art. 72 ust. 4 KKPA, potwierdzając materialną i procesową bezskuteczność czynności egzekucyjnych podjętych w dniu ustawowo nieistniejącym.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "RSA T I SA 12/26": {
+    signature: "RSA T I SA 12/26",
+    type: "Wyrok",
+    court: "Regionalny Sąd Administracyjny w Tarkwinogrodzie, Wydział I Podatkowy i Samorządowy",
+    date: "4 czerwca 2026 r.",
+    judges: "Przewodniczący: Sędzia RSA Dobrosław Ciechanowski, sędziowie RSA: Miron z Płaskowyżu, Bożena Szara",
+    isFinal: false,
+    thesis: "Uchwała rady gminy w sprawie uchwalenia budżetu oraz podatków i opłat lokalnych (art. 16 ust. 2 pkt 4 i 9 Ustawy o samorządzie gminy) nie może uzależniać wysokości opłaty od przynależności wyznaniowej mieszkańców ani nakładać danin na cele kultowe; narusza to art. 140 ust. 3 Konstytucji oraz wyłączną właściwość prawa koronnego w sprawach podatku religijnego (art. 27 Ustawy o wolnościach sumienia i wyznania oraz koronnym podatku religijnym).",
+    sentence: "Regionalny Sąd Administracyjny w Tarkwinogrodzie, Wydział I Podatkowy i Samorządowy, po rozpoznaniu na rozprawie sprawy ze skargi Rzecznika Praw Obywatelskich na uchwałę Rady Gminy Podgórze w przedmiocie lokalnej opłaty renowacyjnej: stwierdza nieważność zaskarżonej uchwały w całości na podstawie art. 68 ust. 1 KKPA.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "RSA T II SA 8/26": {
+    signature: "RSA T II SA 8/26",
+    type: "Wyrok",
+    court: "Regionalny Sąd Administracyjny w Tarkwinogrodzie, Wydział II Samorządowy i Bezpieczeństwa",
+    date: "19 czerwca 2026 r.",
+    judges: "Przewodniczący: Sędzia RSA Bożena Szara, sędziowie RSA: Walenty Topór, Dobrosław Ciechanowski",
+    isFinal: false,
+    thesis: "Zaskarżenie przez wójta gminy uchwały rady gminy o jego odwołaniu przed końcem kadencji (art. 25 ust. 1 i 3 Ustawy o samorządzie gminy) wstrzymuje wykonanie tej uchwały z mocy prawa; powołanie w tym okresie osoby pełniącej obowiązki wójta przez przewodniczącego regionu stanowi rażące naruszenie zasady kadencyjności i sądowej ochrony samodzielności gminy (art. 2 ust. 3 w zw. z art. 23 ust. 2 i art. 26 ustawy).",
+    sentence: "Regionalny Sąd Administracyjny w Tarkwinogrodzie, Wydział II Samorządowy i Bezpieczeństwa, po rozpoznaniu na rozprawie skargi Wójta Gminy Chmielnik na uchwałę Rady Gminy Chmielnik o odwołaniu wójta: 1. Uchyla zaskarżoną uchwałę na podstawie art. 68 ust. 1 KKPA z powodu braku wykazania rażącego naruszenia prawa lub niewykonywania obowiązków; 2. Stwierdza, że mandat wójta nie wygasł.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "RSA T I SA 29/26": {
+    signature: "RSA T I SA 29/26",
+    type: "Wyrok",
+    court: "Regionalny Sąd Administracyjny w Tarkwinogrodzie, Wydział I Podatkowy i Samorządowy",
+    date: "16 lipca 2026 r.",
+    judges: "Przewodniczący: Sędzia RSA Miron z Płaskowyżu, sędziowie RSA: Bożena Szara, Walenty Topór",
+    isFinal: false,
+    thesis: "Zarządzenie burgrabiego prowincji odmawiające zgody na zbycie mienia prowincjonalnej osoby prawnej (art. 35 ust. 2 Ustawy o samorządzie prowincji) podlega kontroli sądowoadministracyjnej pod względem legalności i gospodarności; burgrabia prowincji gospodarując mieniem prowincjonalnym (art. 27 ust. 2 pkt 2 ustawy) nie może arbitralnie blokować transakcji z podmiotem prywatnym, o ile zbycie służy realizacji celów publicznych i nie godzi w interes majątkowy prowincji.",
+    sentence: "Regionalny Sąd Administracyjny w Tarkwinogrodzie, Wydział I Podatkowy i Samorządowy, po rozpoznaniu na rozprawie skargi Prowincjonalnego Przedsiębiorstwa Wodociągów sp. z o.o. na zarządzenie Burgrabiego Prowincji Nadjeziornej: uchyla zaskarżone zarządzenie na podstawie art. 67 ust. 1 pkt 1 KKPA i przekazuje sprawę do ponownego rozpatrzenia.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "RSA T II SA 21/26": {
+    signature: "RSA T II SA 21/26",
+    type: "Wyrok",
+    court: "Regionalny Sąd Administracyjny w Tarkwinogrodzie, Wydział II Samorządowy i Bezpieczeństwa",
+    date: "14 sierpnia 2026 r.",
+    judges: "Przewodniczący: Sędzia RSA Dobrosław Ciechanowski, sędziowie RSA: Miron z Płaskowyżu, Walenty Topór",
+    isFinal: false,
+    thesis: "Odmowa wypłaty ekwiwalentu pieniężnego strażakowi ratownikowi ochotniczej straży pożarnej za udział w akcji ratowniczo-gaśniczej z powodu braku zgody wójta na dysponowanie jednostki przez KSRG stanowi rażące naruszenie art. 32 ust. 1 w zw. z art. 12 ust. 2 Ustawy o KSRG; z chwilą wezwania do akcji jednostka OSP podlega wyłącznie kierującemu działaniem ratowniczym z ramienia Koronnej Służby Ratowniczo-Gaśniczej, a obowiązek wypłaty ekwiwalentu z budżetu gminy ma charakter obligatoryjny.",
+    sentence: "Regionalny Sąd Administracyjny w Tarkwinogrodzie, Wydział II Samorządowy i Bezpieczeństwa, po rozpoznaniu na rozprawie skargi strażaka ratownika OSP Radzimira W. na decyzję Samorządowego Kolegium Odwoławczego w Tarkwinogrodzie utrzymującą w mocy odmowną decyzję Wójta Gminy Dębowa Góra: 1. Uchyla zaskarżoną decyzję oraz decyzję Wójta Gminy Dębowa Góra na podstawie art. 67 ust. 1 pkt 1 KKPA; 2. Zobowiązuje Wójta do wypłaty należnego ekwiwalentu pieniężnego wraz z ustawowymi odsetkami.",
+    pdfUrl: null,
+    justificationUrl: null
+  },
+  "RSA T I SA 52/26": {
+    signature: "RSA T I SA 52/26",
+    type: "Wyrok",
+    court: "Regionalny Sąd Administracyjny w Tarkwinogrodzie, Wydział I Podatkowy i Samorządowy",
+    date: "25 września 2026 r.",
+    judges: "Przewodniczący: Sędzia RSA Bożena Szara, sędziowie RSA: Dobrosław Ciechanowski, Miron z Płaskowyżu",
+    isFinal: false,
+    thesis: "Rozstrzygnięcie nadzorcze przewodniczącego regionu stwierdzające nieważność uchwały kongresu prowincji w przedmiocie strategii rozwoju i lokalnego transportu zbiorowego (art. 7 ust. 1 pkt 9 oraz art. 16 pkt 2 Ustawy o samorządzie prowincji) wydane po upływie terminu ustawowego lub oparte na kryterium celowości zamiast legalności narusza art. 39 ust. 1 oraz art. 42 ust. 2 tej ustawy i podlega uchyleniu.",
+    sentence: "Regionalny Sąd Administracyjny w Tarkwinogrodzie, Wydział I Podatkowy i Samorządowy, po rozpoznaniu na rozprawie skargi Kongresu Prowincji Solnej na rozstrzygnięcie nadzorcze Przewodniczącego Regionu Doliny Tarkwinu: uchyla zaskarżone rozstrzygnięcie nadzorcze na podstawie art. 68 ust. 2 KKPA, przywracając moc prawną uchwale Kongresu Prowincji.",
+    pdfUrl: null,
+    justificationUrl: null
   }
 };

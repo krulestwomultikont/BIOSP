@@ -18,9 +18,7 @@
       line-height: 1.5;
     }
 
-    /* ==========================================================================
-       PASEK NAWIGACYJNY (PORTAL RZĄDOWY) - Styl ze style.css
-       ========================================================================== */
+    /* Pasek nawigacyjny */
     .navbar {
       background-color: #0f2d4a;
       width: 100%;
@@ -29,7 +27,6 @@
       z-index: 1000;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
     }
-
     .menu {
       list-style: none;
       margin: 0;
@@ -37,11 +34,9 @@
       display: flex;
       justify-content: center;
     }
-
     .menu > li {
       position: relative;
     }
-
     .menu a {
       display: block;
       color: #f8fafc;
@@ -53,12 +48,9 @@
       letter-spacing: 0.5px;
       transition: background-color 0.15s ease;
     }
-
     .menu > li > a:hover {
       background-color: #1b4570;
     }
-
-    /* Rozwijane podmenu */
     .submenu {
       display: none;
       position: absolute;
@@ -74,7 +66,6 @@
       border-top: none;
       z-index: 1001;
     }
-
     .submenu li a {
       color: #24292f;
       padding: 10px 16px;
@@ -83,25 +74,20 @@
       font-weight: 500;
       border-bottom: 1px solid #f1f3f5;
     }
-
     .submenu li:last-child a {
       border-bottom: none;
     }
-
     .submenu li a:hover {
       background-color: #f6f8fa;
       color: #0f2d4a;
     }
-
     .menu li:hover .submenu {
       display: block;
     }
 
-    /* ==========================================================================
-       GŁÓWNA ZAWARTOŚĆ REPOZYTORIUM
-       ========================================================================== */
+    /* Zawartość repozytorium */
     .container {
-      max-width: 760px;
+      max-width: 820px;
       margin: 40px auto 0 auto;
       background: #ffffff;
       padding: 36px;
@@ -123,25 +109,51 @@
       border-bottom: 2px solid #0f2d4a;
       padding-bottom: 12px;
     }
-    .search-box {
+
+    /* Formularz wyszukiwarki */
+    .search-panel {
       display: flex;
-      gap: 8px;
-      margin-bottom: 8px;
+      flex-direction: column;
+      gap: 12px;
+      background: #f6f8fa;
+      padding: 16px;
+      border: 1px solid #d0d7de;
+      border-radius: 4px;
+      margin-bottom: 20px;
     }
-    input[type="text"] {
+    .search-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .search-group {
       flex: 1;
-      padding: 11px 14px;
-      font-size: 15px;
+      display: flex;
+      flex-direction: column;
+      min-width: 240px;
+      gap: 4px;
+    }
+    .search-group label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #57606a;
+      text-transform: uppercase;
+    }
+    input[type="text"], select {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 14px;
       border: 1px solid #8c959f;
       border-radius: 3px;
+      background-color: #fff;
     }
-    input[type="text"]:focus {
+    input[type="text"]:focus, select:focus {
       outline: none;
       border-color: #0f2d4a;
       box-shadow: 0 0 0 2px rgba(15, 45, 74, 0.15);
     }
-    button {
-      padding: 11px 22px;
+    .btn-search {
+      padding: 10px 24px;
       background: #0f2d4a;
       color: #fff;
       border: none;
@@ -149,37 +161,79 @@
       font-weight: 600;
       cursor: pointer;
       border-radius: 3px;
+      align-self: flex-end;
+      height: 41px;
     }
-    button:hover {
+    .btn-search:hover {
       background: #1b4570;
     }
-    .hint {
-      font-size: 12px;
-      color: #6e7781;
-      margin-bottom: 24px;
+    .results-count {
+      font-size: 13px;
+      color: #57606a;
+      margin-bottom: 14px;
     }
+
+    /* Karta orzeczenia (z opcją zwijania/rozwijania) */
     .case-card {
-      margin-top: 28px;
+      margin-top: 12px;
       border: 1px solid #d0d7de;
       border-radius: 4px;
       background: #fff;
       overflow: hidden;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .case-card:hover {
+      border-color: #0f2d4a;
     }
     .case-header {
       background: #f6f8fa;
-      padding: 16px 20px;
-      border-bottom: 1px solid #d0d7de;
+      padding: 14px 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
+      cursor: pointer;
+      user-select: none;
       gap: 12px;
     }
+    .case-header:hover {
+      background: #eef2f6;
+    }
+    .case-header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
     .case-sig {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 700;
       color: #0f2d4a;
     }
+    .case-mini-meta {
+      font-size: 13px;
+      color: #57606a;
+    }
+    .case-header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .chevron-icon {
+      font-size: 11px;
+      color: #57606a;
+      transition: transform 0.2s ease;
+    }
+    .case-card.open .chevron-icon {
+      transform: rotate(180deg);
+    }
+    .case-body {
+      display: none;
+      border-top: 1px solid #d0d7de;
+    }
+    .case-card.open .case-body {
+      display: block;
+    }
+
     .badge {
       display: inline-block;
       padding: 4px 9px;
@@ -235,6 +289,16 @@
       color: #1f2328;
       margin-bottom: 20px;
     }
+    .thesis-box {
+      background: #fffdf5;
+      border-left: 3px solid #b95a00;
+      padding: 12px 16px;
+      font-size: 13px;
+      font-style: italic;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 20px;
+    }
     .pdf-box {
       border-top: 1px solid #e1e4e8;
       padding-top: 16px;
@@ -271,7 +335,7 @@
       border-color: #0f2d4a;
     }
     .error-box {
-      margin-top: 24px;
+      margin-top: 20px;
       padding: 14px 16px;
       background: #ffebe9;
       border: 1px solid rgba(255, 129, 130, 0.4);
@@ -279,22 +343,11 @@
       font-size: 14px;
       border-radius: 3px;
     }
-    .thesis-box {
-      background: #fffdf5;
-      border-left: 3px solid #b95a00;
-      padding: 12px 16px;
-      font-size: 13px;
-      font-style: italic;
-      line-height: 1.6;
-      color: #333;
-      margin-bottom: 20px;
-    }
     .hidden { display: none; }
   </style>
 </head>
 <body>
 
-<!-- Rządowy pasek nawigacyjny -->
 <nav class="navbar">
   <ul class="menu">
     <li>
@@ -329,110 +382,191 @@
   <h1>Centralne Repozytorium Orzeczeń Sądowych</h1>
   <div class="subtitle">Repozytorium orzeczeń sądów Korony Krulestwa Multikont oraz DWZZM</div>
   
-  <div class="search-box">
-    <input type="text" id="caseInput" placeholder="Wprowadź sygnaturę akt" autocomplete="off">
-    <button onclick="handleSearch()">Szukaj</button>
+  <div class="search-panel">
+    <div class="search-row">
+      <div class="search-group">
+        <label for="courtSelect">Sąd orzekający</label>
+        <select id="courtSelect">
+          <option value="">Wszystkie sądy</option>
+        </select>
+      </div>
+      <div class="search-group">
+        <label for="keywordInput">Szukaj frazy lub sygnatury</label>
+        <input type="text" id="keywordInput" placeholder="" autocomplete="off">
+      </div>
+      <button class="btn-search" onclick="handleSearch()">Szukaj</button>
+    </div>
   </div>
-  <div class="hint">Wpisz dokładną sygnaturę sprawy.</div>
 
-  <div id="resultContainer" class="case-card hidden"></div>
-  
+  <div id="resultsCount" class="results-count hidden"></div>
+  <div id="resultsContainer"></div>
   <div id="notFoundContainer" class="error-box hidden">
-    Nie odnaleziono orzeczenia o wskazanej sygnaturze. Upewnij się, że wpisany identyfikator jest poprawny.
+    Nie odnaleziono orzeczeń spełniających wybrane kryteria wyszukiwania.
   </div>
 </div>
 
 <script src="orzeczenia.js"></script>
 
 <script>
-  function displayCase(caseData) {
-    const resultBox = document.getElementById("resultContainer");
+  function initCourtSelect() {
+    if (typeof casesDb === "undefined") return;
+    const courtSelect = document.getElementById("courtSelect");
+    const courts = new Set();
+    
+    Object.values(casesDb).forEach(c => {
+      if (c.court) courts.add(c.court.trim());
+    });
+
+    Array.from(courts).sort().forEach(court => {
+      const option = document.createElement("option");
+      option.value = court;
+      option.textContent = court;
+      courtSelect.appendChild(option);
+    });
+  }
+
+  function toggleCaseCard(headerElement) {
+    const card = headerElement.closest(".case-card");
+    if (card) {
+      card.classList.toggle("open");
+    }
+  }
+
+  function renderCaseHtml(caseData) {
     const badgeClass = caseData.isFinal ? "badge-valid" : "badge-pending";
     const badgeText = caseData.isFinal ? "Prawomocne" : "Nieprawomocne / W toku";
 
-    // 1. Sekcja tezy – widoczna tylko jeśli thesis != null
     const thesisHtml = caseData.thesis
-      ? `
-        <div class="section-title">Teza orzeczenia</div>
-        <div class="thesis-box">${caseData.thesis}</div>
-      `
+      ? `<div class="section-title">Teza orzeczenia</div>
+         <div class="thesis-box">${caseData.thesis}</div>`
       : '';
 
-    // 2. Przycisk uzasadnienia – widoczny tylko jeśli justificationUrl != null
     const justificationBtn = caseData.justificationUrl
       ? `<a href="${caseData.justificationUrl}" target="_blank" class="btn-pdf btn-pdf-justification">
            📑 Uzasadnienie orzeczenia
          </a>`
       : '';
 
-    // 3. Przycisk odpisu orzeczenia – widoczny tylko jeśli pdfUrl != null
     const pdfBtn = caseData.pdfUrl
       ? `<a href="${caseData.pdfUrl}" target="_blank" class="btn-pdf btn-pdf-doc">
            📄 Pełny odpis orzeczenia (PDF)
          </a>`
       : '';
 
-    // Dolny kontener przycisków
     const footerBox = (justificationBtn || pdfBtn)
       ? `<div class="pdf-box">${justificationBtn} ${pdfBtn}</div>`
       : '';
 
-    resultBox.innerHTML = `
-      <div class="case-header">
-        <span class="case-sig">Sygnatura: ${caseData.signature}</span>
-        <span class="badge ${badgeClass}">${badgeText}</span>
-      </div>
-      <div class="case-metadata">
-        ${caseData.type ? `
-          <span class="meta-label">Rodzaj orzeczenia:</span>
-          <span class="meta-value"><strong>${caseData.type}</strong></span>
-        ` : ''}
-        <span class="meta-label">Organ orzekający:</span>
-        <span class="meta-value">${caseData.court}</span>
-        <span class="meta-label">Data wydania:</span>
-        <span class="meta-value">${caseData.date}</span>
-        <span class="meta-label">Skład sądu:</span>
-        <span class="meta-value">${caseData.judges}</span>
-      </div>
-      <div class="case-content">
-        ${thesisHtml}
-        <div class="section-title">Sentencja orzeczenia</div>
-        <div class="sentence-box">${caseData.sentence}</div>
-        ${footerBox}
+    return `
+      <div class="case-card">
+        <div class="case-header" onclick="toggleCaseCard(this)">
+          <div class="case-header-left">
+            <span class="case-sig">${caseData.signature}</span>
+            <span class="case-mini-meta">${caseData.type || 'Orzeczenie'} z dn. ${caseData.date}</span>
+          </div>
+          <div class="case-header-right">
+            <span class="badge ${badgeClass}">${badgeText}</span>
+            <span class="chevron-icon">▼</span>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-metadata">
+            ${caseData.type ? `
+              <span class="meta-label">Rodzaj orzeczenia:</span>
+              <span class="meta-value"><strong>${caseData.type}</strong></span>
+            ` : ''}
+            <span class="meta-label">Organ orzekający:</span>
+            <span class="meta-value">${caseData.court}</span>
+            <span class="meta-label">Data wydania:</span>
+            <span class="meta-value">${caseData.date}</span>
+            <span class="meta-label">Skład sądu:</span>
+            <span class="meta-value">${caseData.judges}</span>
+          </div>
+          <div class="case-content">
+            ${thesisHtml}
+            <div class="section-title">Sentencja orzeczenia</div>
+            <div class="sentence-box">${caseData.sentence}</div>
+            ${footerBox}
+          </div>
+        </div>
       </div>
     `;
-    resultBox.classList.remove("hidden");
   }
 
   function handleSearch() {
-    const input = document.getElementById("caseInput").value.trim();
-    const resultBox = document.getElementById("resultContainer");
-    const errorBox = document.getElementById("notFoundContainer");
+    if (typeof casesDb === "undefined") return;
 
-    resultBox.classList.add("hidden");
-    errorBox.classList.add("hidden");
+    const keyword = document.getElementById("keywordInput").value.trim().toLowerCase();
+    const selectedCourt = document.getElementById("courtSelect").value;
+    
+    const resultsContainer = document.getElementById("resultsContainer");
+    const countContainer = document.getElementById("resultsCount");
+    const notFoundContainer = document.getElementById("notFoundContainer");
 
-    if (!input) return;
+    resultsContainer.innerHTML = "";
+    notFoundContainer.classList.add("hidden");
+    countContainer.classList.add("hidden");
 
-    if (typeof casesDb !== "undefined" && casesDb[input]) {
-      displayCase(casesDb[input]);
-      history.replaceState(null, "", `?sygnatura=${encodeURIComponent(input)}`);
-    } else {
-      errorBox.classList.remove("hidden");
+    if (!keyword && !selectedCourt) {
+      return;
     }
+
+    const matchedCases = Object.values(casesDb).filter(item => {
+      if (selectedCourt && item.court !== selectedCourt) {
+        return false;
+      }
+
+      if (keyword) {
+        const fullContent = [
+          item.signature || '',
+          item.sentence || '',
+          item.thesis || '',
+          item.judges || '',
+          item.type || ''
+        ].join(' ').toLowerCase();
+
+        const queryTerms = keyword.split(/\s+/).filter(Boolean);
+        const matchesAllTerms = queryTerms.every(term => fullContent.includes(term));
+        if (!matchesAllTerms) return false;
+      }
+
+      return true;
+    });
+
+    if (matchedCases.length === 0) {
+      notFoundContainer.classList.remove("hidden");
+    } else {
+      countContainer.textContent = `Znaleziono orzeczeń: ${matchedCases.length} (kliknij pozycję, aby rozwinąć szczegóły)`;
+      countContainer.classList.remove("hidden");
+      resultsContainer.innerHTML = matchedCases.map(renderCaseHtml).join("");
+    }
+
+    const params = new URLSearchParams();
+    if (keyword) params.set("q", keyword);
+    if (selectedCourt) params.set("sad", selectedCourt);
+    history.replaceState(null, "", `?${params.toString()}`);
   }
 
   window.addEventListener("DOMContentLoaded", () => {
+    initCourtSelect();
+
     const params = new URLSearchParams(window.location.search);
-    const sig = params.get("sygnatura");
-    if (sig) {
-      document.getElementById("caseInput").value = sig;
+    const q = params.get("q") || params.get("sygnatura");
+    const sad = params.get("sad");
+
+    if (q) document.getElementById("keywordInput").value = q;
+    if (sad) document.getElementById("courtSelect").value = sad;
+
+    if (q || sad) {
       handleSearch();
     }
   });
 
-  document.getElementById("caseInput").addEventListener("keydown", (e) => {
+  document.getElementById("keywordInput").addEventListener("keydown", (e) => {
     if (e.key === "Enter") handleSearch();
+  });
+  document.getElementById("courtSelect").addEventListener("change", () => {
+    handleSearch();
   });
 </script>
 
