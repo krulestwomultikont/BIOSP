@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genealogia Rodu Świnek – Wielka Encyklopedia Uniwersum Felorostu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wiki-wrapper">
+    <!-- Boczny pasek nawigacyjny -->
+    <nav class="sidebar">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <h2 style="margin: 0; font-family: 'Georgia', serif;">WIKI</h2>
+            <small>UNIWERSUM FELOROSTU</small>
+        </div>
+        
+        <h3>Eksploracja</h3>
+        <ul>
+            <li><a href="https://krulestwomultikont.github.io/BIOSP/index.html">🏠 Strona Główna</a></li>
+            <li><a href="https://krulestwomultikont.github.io/BIOSP/postacie.html">👥 Postacie</a></li>
+            <li><a href="https://krulestwomultikont.github.io/BIOSP/miejsca.html">🌍 Miejsca</a></li>
+            <li><a href="https://krulestwomultikont.github.io/BIOSP/organizacje.html">🛡️ Państwa i Frakcje</a></li>
+        </ul>
+
+        <h3>Świat</h3>
+        <ul>
+            <li><a href="https://krulestwomultikont.github.io/BIOSP/historia.html">📜 Oś czasu</a></li>
+            <li><a href="https://krulestwomultikont.github.io/BIOSP/magia.html">✨ Teologia i Mistyka</a></li>
+            <li><a href="https://krulestwomultikont.github.io/BIOSP/bestiariusz.html">🐉 Bestiariusz</a></li>
+        </ul>
+
+        <h3>Prawo Koronne i Multikont</h3>
+        <ul>
+            <li><a href="https://krulestwomultikont.github.io/KDU/">📜 Krulewski Dziennik Ustaw</a></li>
+            <li><a href="https://krulestwomultikont.github.io/DUDWZZM/">👥 DWZZM</a></li>
+        </ul>
+    </nav>
+
+    <!-- Główna treść z drzewem genealogicznym -->
+    <main class="content">
+        <h1>Drzewo Genealogiczne Rodu Świnek</h1>
+        
+        <p>Oficjalna ewidencja genealogiczna dynastii Świnek w Uniwersum Felorostu. Tablica przedstawia linię braci, ich potomstwo oraz boczne gałęzie rodu.</p>
+
+        
+        <p><small>Wskazówka: Chwyć planszę kursorem myszy i przeciągaj w dowolnym kierunku. Użyj kółka myszy lub przycisków w prawym dolnym rogu, aby przybliżać i oddalać widok.</small></p>
+
+        <!-- Legenda relacji -->
+        <div class="tree-legend">
+            <span style="font-weight: bold;">Legenda:</span>
+            <div class="legend-item">
+                <span class="legend-line direct"></span>
+                <span>Relacja krwi</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-line half"></span>
+                <span>Pakt krwi</span>
+            </div>
+        </div>
+
+        <!-- Plansza drzewka -->
+        <div class="viewport-wrapper" id="viewport">
+            <div class="tree-controls">
+                <button class="control-btn" id="zoomIn" title="Powiększ">+</button>
+                <button class="control-btn" id="zoomOut" title="Pomniejsz">−</button>
+                <button class="control-btn" id="resetView" title="Wyśrodkuj">⟲</button>
+            </div>
+
+            <div class="pan-canvas" id="canvas">
+                <div class="tree">
+                    <ul>
+                        <!-- Seniorzy Rodu -->
+                        <li>
+                            <div class="person">
+                                <div class="avatar-container">
+                                    <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238b4513'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" alt="Przodkowie">
+                                </div>
+                                <div class="name">Seniorzy Rodu Świnek</div>
+                                <div class="dates"></div>
+                            </div>
+                            <ul>
+                                <!-- Linia Braci -->
+                                <li>
+                                    <div class="person">
+                                        <div class="avatar-container">
+                                            <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238b4513'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" alt="Rodzice Braci">
+                                        </div>
+                                        <div class="name">Ideologiczny Praojciec Świnka</div>
+                                        <div class="dates"></div>
+                                    </div>
+                                    <ul>
+                                        <!-- 1. Bolszewicki -->
+                                        <li>
+                                            <div class="group">
+                                                <div class="avatar-container">
+                                                    <img class="avatar" src="bolszewicki.png" alt="Bolszewicki">
+                                                    <img class="avatar" src="pani-bolszewicka.png" alt="Pani Bolszewicka">
+                                                </div>
+                                                <div class="name">Bolszewicki Tata Świnka & Pani Bolszewicka</div>
+                                                <div class="dates"></div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <div class="person">
+                                                        <div class="avatar-container">
+                                                            <img class="avatar" src="militarno-radziecki.png" alt="Militarno-Radziecki">
+                                                        </div>
+                                                        <div class="name">Militarno-Radziecki Wujek Świnka</div>
+                                                        <div class="dates"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="person">
+                                                        <div class="avatar-container">
+                                                            <img class="avatar" src="ludowo-socjalistyczny.png" alt="Ludowo-Socjalistyczny">
+                                                        </div>
+                                                        <div class="name">Ludowo-Socjalistyczny Wujek Świnka</div>
+                                                        <div class="dates"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- 2. Demokratyczny -->
+                                        <li>
+                                            <div class="person">
+                                                <div class="avatar-container">
+                                                    <img class="avatar" src="demokratyczny.png" alt="Demokratyczny">
+                                                </div>
+                                                <div class="name">Demokratyczny Tata Świnka</div>
+                                                <div class="dates"></div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <div class="person">
+                                                        <div class="avatar-container">
+                                                            <img class="avatar" src="lokalno-samorzodowy.png" alt="Lokalno-Samorządowy">
+                                                        </div>
+                                                        <div class="name">Lokalno-Samorządowy Wujek Świnka</div>
+                                                        <div class="dates"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="person">
+                                                        <div class="avatar-container">
+                                                            <img class="avatar" src="ponadnarodowo-eurokratyczny.png" alt="Ponadnarodowo-Eurokratyczny">
+                                                        </div>
+                                                        <div class="name">Ponadnarodowo-Eurokratyczny Wujek Świnka</div>
+                                                        <div class="dates"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="person">
+                                                        <div class="avatar-container">
+                                                            <img class="avatar" src="obywatelsko-postepowy.png" alt="Obywatelsko-Postępowy">
+                                                        </div>
+                                                        <div class="name">Obywatelsko-Postępowy Wujek Świnka</div>
+                                                        <div class="dates"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- 3. Kapitalistyczny -->
+                                        <li>
+                                            <div class="person">
+                                                <div class="avatar-container">
+                                                    <img class="avatar" src="kapitalistyczny.png" alt="Kapitalistyczny">
+                                                </div>
+                                                <div class="name">Kapitalistyczny Tata Świnka</div>
+                                                <div class="dates"></div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <div class="person">
+                                                        <div class="avatar-container">
+                                                            <img class="avatar" src="korporacyjno-finansowy.png" alt="Korporacyjno-Finansowy">
+                                                        </div>
+                                                        <div class="name">Korporacyjno-Finansowy Wujek Świnka</div>
+                                                        <div class="dates"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="person">
+                                                        <div class="avatar-container">
+                                                            <img class="avatar" src="krypto-spekulacyjny.png" alt="Krypto-Spekulacyjny">
+                                                        </div>
+                                                        <div class="name">Krypto-Spekulacyjny Wujek Świnka</div>
+                                                        <div class="dates"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- 4. Ekologiczny -->
+                                        <li>
+                                            <div class="person">
+                                                <div class="avatar-container">
+                                                    <img class="avatar" src="ekologiczny.png" alt="Ekologiczny">
+                                                </div>
+                                                <div class="name">Ekologiczny Tata Świnka</div>
+                                                <div class="dates"></div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <div class="person">
+                                                        <div class="avatar-container">
+                                                            <img class="avatar" src="paramilitarno-zielony.png" alt="Paramilitarno-Zielony">
+                                                        </div>
+                                                        <div class="name">Paramilitarno-Zielony Wujek Świnka</div>
+                                                        <div class="dates"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- 5. Żydowski -->
+                                        <li>
+                                            <div class="person">
+                                                <div class="avatar-container">
+                                                    <img class="avatar" src="zydowski.png" alt="Żydowski">
+                                                </div>
+                                                <div class="name">Żydowski Tata Świnka</div>
+                                                <div class="dates"></div>
+                                            </div>
+                                        </li>
+
+                                        <!-- 6. Nacjonalistyczny -->
+                                        <li>
+                                            <div class="person">
+                                                <div class="avatar-container">
+                                                    <img class="avatar" src="nacjonalistyczny.png" alt="Nacjonalistyczny">
+                                                </div>
+                                                <div class="name">Nacjonalistyczny Tata Świnka</div>
+                                                <div class="dates"></div>
+                                            </div>
+                                        </li>
+
+                                        <!-- 7. Tęczowy -->
+                                        <li>
+                                            <div class="person">
+                                                <div class="avatar-container">
+                                                    <img class="avatar" src="teczowy.png" alt="Tęczowy">
+                                                </div>
+                                                <div class="name">Tęczowy Tata Świnka</div>
+                                                <div class="dates"></div>
+                                            </div>
+                                        </li>
+
+                                        <!-- 8. Republikański -->
+                                        <li>
+                                            <div class="person">
+                                                <div class="avatar-container">
+                                                    <img class="avatar" src="republikanski.png" alt="Republikański">
+                                                </div>
+                                                <div class="name">Republikański Tata Świnka</div>
+                                                <div class="dates"></div>
+                                            </div>
+                                        </li>
+
+                                        <!-- 9. Anarchistyczny -->
+                                        <li>
+                                            <div class="person">
+                                                <div class="avatar-container">
+                                                    <img class="avatar" src="anarchistyczny.png" alt="Anarchistyczny">
+                                                </div>
+                                                <div class="name">Anarchistyczny Tata Świnka</div>
+                                                <div class="dates"></div>
+                                            </div>
+                                        </li>
+
+                                        <!-- 10. Feministyczny -->
+                                        <li>
+                                            <div class="person">
+                                                <div class="avatar-container">
+                                                    <img class="avatar" src="feministyczny.png" alt="Feministyczny">
+                                                </div>
+                                                <div class="name">Feministyczny Tata Świnka</div>
+                                                <div class="dates"></div>
+                                            </div>
+                                        </li>
+
+                                        <!-- 11. Artur Gryfion (Przyrodni brat) i jego rodzina -->
+                                        <li class="half-sibling">
+                                            <div class="group">
+                                                <div class="avatar-container">
+                                                    <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232b6cb0'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" alt="Artur Gryfion">
+                                                    <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%239b59b6'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" alt="Małgorzata Gryfion">
+                                                </div>
+                                                <div class="name">Artur Gryfion & Małgorzata Gryfion</div>
+                                                <div class="dates"></div>
+                                            </div>
+                                            <!-- Dzieci Artura i Małgorzaty -->
+                                            <ul>
+                                                <!-- Synowie -->
+                                                <li>
+                                                    <div class="person">
+                                                        <div class="avatar-container">
+                                                            <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232a2e33'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" alt="Bonifacy Gryfion">
+                                                        </div>
+                                                        <div class="name">Bonifacy Gryfion</div>
+                                                        <div class="dates"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="person">
+                                                        <div class="avatar-container">
+                                                            <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232a2e33'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" alt="Młotek Gryfion">
+                                                        </div>
+                                                        <div class="name">Młotek Gryfion</div>
+                                                        <div class="dates"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="person">
+                                                        <div class="avatar-container">
+                                                            <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232a2e33'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" alt="Bóbr Julek Gryfion">
+                                                        </div>
+                                                        <div class="name">Bóbr Julek Gryfion</div>
+                                                        <div class="dates"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="person">
+                                                        <div class="avatar-container">
+                                                            <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232a2e33'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" alt="Kazimierz Gryfion">
+                                                        </div>
+                                                        <div class="name">Kazimierz Gryfion</div>
+                                                        <div class="dates"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="person">
+                                                        <div class="avatar-container">
+                                                            <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232a2e33'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" alt="Henri Gryfion">
+                                                        </div>
+                                                        <div class="name">Henri Gryfion</div>
+                                                        <div class="dates"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="person">
+                                                        <div class="avatar-container">
+                                                            <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232a2e33'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" alt="Kapibariusz Gryfion">
+                                                        </div>
+                                                        <div class="name">Kapibariusz Gryfion</div>
+                                                        <div class="dates"></div>
+                                                    </div>
+                                                </li>
+
+                                                <!-- Córki -->
+                                                <li>
+                                                    <div class="group">
+                                                        <div class="avatar-container">
+                                                            <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232a2e33'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" alt="Urszula Gryfion-Frankowiczówna">
+                                                            <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232a2e33'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" alt="Bożydar Frankowicz">
+                                                        </div>
+                                                        <div class="name">Urszula Gryfion-Frankowiczówna & Bożydar Frankowicz-Miszczu</div>
+                                                        <div class="dates"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="person">
+                                                        <div class="avatar-container">
+                                                            <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232a2e33'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" alt="Adolfina Gryfion">
+                                                        </div>
+                                                        <div class="name">Adolfina Gryfion</div>
+                                                        <div class="dates"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <!-- Kuzyn Stefan -->
+                                <li>
+                                    <div class="person">
+                                        <div class="avatar-container">
+                                            <img class="avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238b4513'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" alt="Rodzice Braci">
+                                        </div>
+                                        <div class="name">Pragmatyczno-pozytywistyczny Stryj Świnka</div>
+                                        <div class="dates"></div>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                        <div class="person">
+                                        <div class="avatar-container">
+                                            <img class="avatar" src="stefan-swinka.png" alt="Stefan">
+                                        </div>
+                                        <div class="name">Stefan Świnka</div>
+                                        <div class="dates"></div>
+                                        </div>
+                                        </li>
+                                        <li>
+                                        <div class="person">
+                                        <div class="avatar-container">
+                                            <img class="avatar" src="stanislaw-swinka.png" alt="Stefan">
+                                        </div>
+                                        <div class="name">Stanisław Świnka</div>
+                                        <div class="dates"></div>
+                                        </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            © 2026 Wielka Kronika Uniwersum Felorostu. Wszystkie prawa zastrzeżone.
+        </footer>
+    </main>
+</div>
+
+<!-- Skrypt obsługujący płynne przeciąganie (Pan) i zoom w kierunku kursora -->
+<script>
+    const viewport = document.getElementById('viewport');
+    const canvas = document.getElementById('canvas');
+    const btnZoomIn = document.getElementById('zoomIn');
+    const btnZoomOut = document.getElementById('zoomOut');
+    const btnReset = document.getElementById('resetView');
+
+    let isPanning = false;
+    let startX = 0;
+    let startY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    let scale = 0.8;
+
+    const MIN_SCALE = 0.2;
+    const MAX_SCALE = 2.5;
+
+    function updateTransform() {
+        canvas.style.transform = `translate(${currentX}px, ${currentY}px) scale(${scale})`;
+    }
+
+    // Funkcja powiększania/pomniejszania względem zadanego punktu (focal point)
+    function zoomAt(newScale, focalX, focalY) {
+        newScale = Math.min(Math.max(newScale, MIN_SCALE), MAX_SCALE);
+        if (newScale === scale) return;
+
+        // Przeliczenie przesunięcia tak, aby punkt pod kursorem pozostał w tym samym miejscu
+        currentX = focalX - (focalX - currentX) * (newScale / scale);
+        currentY = focalY - (focalY - currentY) * (newScale / scale);
+        scale = newScale;
+
+        updateTransform();
+    }
+
+    function centerTree() {
+        const vRect = viewport.getBoundingClientRect();
+        scale = 0.75;
+        currentX = (vRect.width - (canvas.offsetWidth * scale)) / 2;
+        currentY = 30;
+        updateTransform();
+    }
+
+    // 1. Przeciąganie myszą (Pan)
+    viewport.addEventListener('mousedown', (e) => {
+        if (e.target.closest('.tree-controls')) return;
+        isPanning = true;
+        startX = e.clientX - currentX;
+        startY = e.clientY - currentY;
+        viewport.classList.add('is-dragging');
+    });
+
+    window.addEventListener('mousemove', (e) => {
+        if (!isPanning) return;
+        currentX = e.clientX - startX;
+        currentY = e.clientY - startY;
+        updateTransform();
+    });
+
+    window.addEventListener('mouseup', () => {
+        isPanning = false;
+        viewport.classList.remove('is-dragging');
+    });
+
+    // 2. Zoom kółkiem myszy – dokładnie w miejsce kursora
+    viewport.addEventListener('wheel', (e) => {
+        e.preventDefault();
+
+        const rect = viewport.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+
+        // Płynny współczynnik powiększenia
+        const zoomDelta = e.deltaY < 0 ? 1.15 : 0.87;
+        zoomAt(scale * zoomDelta, mouseX, mouseY);
+    }, { passive: false });
+
+    // 3. Przyciski ekranowe – przybliżają do geometrycznego środka widoku
+    btnZoomIn.addEventListener('click', () => {
+        const rect = viewport.getBoundingClientRect();
+        zoomAt(scale * 1.2, rect.width / 2, rect.height / 2);
+    });
+
+    btnZoomOut.addEventListener('click', () => {
+        const rect = viewport.getBoundingClientRect();
+        zoomAt(scale / 1.2, rect.width / 2, rect.height / 2);
+    });
+
+    btnReset.addEventListener('click', centerTree);
+
+    window.addEventListener('load', centerTree);
+</script>
+
+</body>
+</html>

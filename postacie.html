@@ -5,6 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wielka Encyklopedia Uniwersum Felorostu</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .character-card {
+            border: 1px solid #ddd;
+            padding: 8px 10px;
+            display: flex;
+            align-items: center;
+            background: #fafafa;
+            border-radius: 4px;
+        }
+        .character-card img {
+            margin-right: 10px;
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+        .character-card .card-icon {
+            margin-right: 10px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            background: #eee;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+        .character-card a {
+            font-weight: bold;
+            color: #8b4513;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .character-card a:hover {
+            text-decoration: underline;
+        }
+        .character-card small {
+            font-size: 0.8rem;
+            color: #555;
+            line-height: 1.2;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 <div class="wiki-wrapper">
@@ -40,47 +91,55 @@
         <p>Poniżej znajduje się lista znanych osobistości, których czyny zapisały się na kartach historii Felorostu.</p>
 
         <div class="section-title"><h2>Korona Krulestwa Multikont</h2></div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
-            <div style="border: 1px solid #ddd; padding: 10px; display: flex; align-items: center;">
-                <img src="obrazy/artur_gryfion.png" style="margin-right: 15px; width: 200px;">
+        <div class="character-grid">
+            <div class="character-card">
+                <img src="obrazy/artur_gryfion.png" alt="Krul Artur I Gryfion">
                 <div>
-                    <a href="postacie/artur_gryfion.html" style="font-weight: bold; color: #8b4513;">Krul Artur I Gryfion</a><br>
+                    <a href="postacie/artur_gryfion.html">Krul Artur I Gryfion</a><br>
                     <small>Monarcha Korony Krulestwa Multikont, Krul Multikont</small>
                 </div>
             </div>
-            <div style="border: 1px solid #ddd; padding: 10px; display: flex; align-items: center;">
-                <img src="obrazy/puchacz_potezny.png" style="margin-right: 15px; width: 200px;">
+            <div class="character-card">
+                <img src="obrazy/puchacz_potezny.png" alt="Puchacz Potężny">
                 <div>
-                    <a href="postacie/puchacz_potezny.html" style="font-weight: bold; color: #8b4513;">Puchacz Potężny</a><br>
+                    <a href="postacie/puchacz_potezny.html">Puchacz Potężny</a><br>
                     <small>Lider Strigallorów</small>
                 </div>
             </div>
-            <div style="border: 1px solid #ddd; padding: 10px; display: flex; align-items: center;">
-                <img src="obrazy/margarita.png" style="margin-right: 15px; width: 200px;">
+            <div class="character-card">
+                <img src="obrazy/margarita.png" alt="Margarita">
                 <div>
-                    <a href="postacie/margarita.html" style="font-weight: bold; color: #8b4513;">Margarita</a><br>
+                    <a href="postacie/margarita.html">Margarita</a><br>
                     <small>Diuszessa Księstwa Margarity</small>
                 </div>
             </div>
         </div>
 
         <div class="section-title"><h2>Tatowie Świnkowie</h2></div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
-            <div style="border: 1px solid #ddd; padding: 10px; display: flex; align-items: center;">
-                <img src="obrazy/bolszewicki.png" style="margin-right: 15px; width: 200px;">
+        <div class="character-grid">
+            <div class="character-card">
+                <div class="card-icon">🌳</div>
                 <div>
-                    <a href="postacie/bolszewicki.html" style="font-weight: bold; color: #8b4513;">Bolszewicki Tata Świnka</a><br>
+                    <a href="drzewo/index.html">Drzewo genealogiczne Tatów Świnków</a><br>
+                    <small>Linia rodowa i powiązania Tatów Świnków</small>
+                </div>
+            </div>
+            <div class="character-card">
+                <img src="obrazy/bolszewicki.png" alt="Bolszewicki Tata Świnka">
+                <div>
+                    <a href="postacie/bolszewicki.html">Bolszewicki Tata Świnka</a><br>
                     <small>Najstarszy z Tatów Świnków</small>
                 </div>
             </div>
-            <div style="border: 1px solid #ddd; padding: 10px; display: flex; align-items: center;">
-                <img src="obrazy/demokratyczny.png" style="margin-right: 15px; width: 200px;">
+            <div class="character-card">
+                <img src="obrazy/demokratyczny.png" alt="Demokratyczny Tata Świnka">
                 <div>
-                    <a href="postacie/demokratyczny.html" style="font-weight: bold; color: #8b4513;">Demokratyczny Tata Świnka</a><br>
+                    <a href="postacie/demokratyczny.html">Demokratyczny Tata Świnka</a><br>
                     <small>Wielki Diuk Korony Krulestwa Multikont</small>
                 </div>
             </div>
         </div>
+
         <footer style="margin-top: 50px;">
             © 2026 Wielka Kronika Uniwersum Felorostu. Wszystkie prawa zastrzeżone.
         </footer>

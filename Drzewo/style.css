@@ -1,0 +1,357 @@
+/* Główne ustawienia - Styl Encyklopedii Uniwersum Felorostu */
+:root {
+    --primary-color: #2a2e33;    /* Ciemny antracyt dla nagłówków */
+    --accent-color: #8b4513;     /* Brąz "skórzany" dla linii rodzonych i akcentów */
+    --half-sibling-color: #ff0000; 
+    --bg-color: #f4f1ea;         /* Delikatny kremowy "papier" */
+    --sidebar-bg: #eae6da;       /* Nieco ciemniejszy papier dla menu */
+    --border-color: #c8c2b0;     /* Kolor obramowań */
+    --card-bg: #fdfbf7;          /* Jasny pergamin dla wizytówek */
+}
+
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: #333;
+}
+
+/* Układ strony wiki */
+.wiki-wrapper {
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+    min-height: 100vh;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Pasek boczny (Nawigacja) */
+.sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    background-color: var(--sidebar-bg);
+    padding: 20px;
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar h3 {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    font-variant: small-caps;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+/* Główna treść */
+.content {
+    flex: 1;
+    background: white;
+    padding: 40px;
+    min-width: 0;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    background: #f0f0f0;
+    padding: 5px 12px;
+    border-left: 5px solid var(--accent-color);
+    margin: 20px 0 15px 0;
+}
+
+.section-title h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+/* Legenda oznaczeń */
+.tree-legend {
+    display: flex;
+    gap: 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 10px 16px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    align-items: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-line {
+    width: 28px;
+    height: 3px;
+    display: inline-block;
+}
+
+.legend-line.direct {
+    background-color: var(--accent-color);
+}
+
+.legend-line.half {
+    background-color: var(--half-sibling-color);
+    border-top: 1px dashed var(--half-sibling-color);
+}
+
+/* ==========================================================================
+   INTERAKTYWNY OBSZAR DRZEWA GENEALOGICZNEGO (PAN & ZOOM)
+   ========================================================================== */
+.viewport-wrapper {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 520px;
+    background-color: #faf7f0;
+    background-image: 
+        radial-gradient(var(--border-color) 1px, transparent 1px),
+        radial-gradient(var(--border-color) 1px, #faf7f0 1px);
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.06);
+    overflow: hidden;
+    cursor: grab;
+    user-select: none;
+    margin-bottom: 25px;
+}
+
+.viewport-wrapper.is-dragging {
+    cursor: grabbing;
+}
+
+.tree-controls {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 100;
+}
+
+.control-btn {
+    width: 36px;
+    height: 36px;
+    background: var(--sidebar-bg);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+}
+
+.control-btn:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+.pan-canvas {
+    transform-origin: 0 0;
+    display: inline-block;
+    padding: 70px;
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   STRUKTURA I LINIE DRZEWA
+   ========================================================================== */
+.tree ul {
+    padding-top: 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin: 0;
+}
+
+.tree li {
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 25px 12px 0 12px;
+}
+
+.tree li::before,
+.tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 2px solid var(--accent-color);
+    width: 50%;
+    height: 25px;
+}
+
+.tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 2px solid var(--accent-color);
+}
+
+.tree li:only-child::after,
+.tree li:only-child::before {
+    display: none;
+}
+
+.tree li:only-child {
+    padding-top: 0;
+}
+
+.tree li:first-child::before,
+.tree li:last-child::after {
+    border: 0 none;
+}
+
+.tree li:last-child::before {
+    border-right: 2px solid var(--accent-color);
+    border-radius: 0 4px 0 0;
+}
+
+.tree li:first-child::after {
+    border-radius: 4px 0 0 0;
+}
+
+.tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 2px solid var(--accent-color);
+    width: 0;
+    height: 25px;
+}
+
+/* Kolorowa linia na przyrodnie rodzeństwo */
+/* Kolorowa linia na przyrodnie rodzeństwo */
+.tree li.half-sibling::before {
+    border-top-color: var(--half-sibling-color);
+    border-top-style: dashed;
+    border-right-color: var(--half-sibling-color);
+    border-right-style: dashed;
+}
+
+.tree li.half-sibling::after {
+    border-left-color: var(--half-sibling-color);
+    border-left-style: dashed;
+}
+
+
+/* Kafelki postaci stylizowane na pergaminowe wizytówki */
+.tree .person {
+    border: 1px solid var(--border-color);
+    padding: 14px 12px;
+    background: var(--card-bg);
+    color: var(--primary-color);
+    border-radius: 4px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    white-space: normal;
+}
+
+.tree .person:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-color);
+    box-shadow: 0 5px 14px rgba(139, 69, 19, 0.2);
+}
+
+.tree .group {
+    border: 1px solid var(--border-color);
+    padding: 14px 12px;
+    background: var(--card-bg);
+    color: var(--primary-color);
+    border-radius: 4px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    white-space: normal;
+}
+
+.tree .group:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-color);
+    box-shadow: 0 5px 14px rgba(139, 69, 19, 0.2);
+}
+
+.tree .avatar-container {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.tree .avatar {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-color);
+    background-color: var(--sidebar-bg);
+}
+
+.tree .name {
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1.35;
+    margin-bottom: 4px;
+    color: var(--primary-color);
+    font-variant: small-caps;
+}
+
+.tree .dates {
+    font-size: 11px;
+    font-style: italic;
+    color: var(--accent-color);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: #777;
+    border-top: 1px solid var(--border-color);
+    margin-top: 40px;
+}
