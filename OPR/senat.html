@@ -250,6 +250,13 @@
         .reveal.delay-2 { transition-delay: 0.3s; }
         .reveal.delay-3 { transition-delay: 0.45s; }
         .reveal.delay-4 { transition-delay: 0.6s; }
+    
+        /* LISTA SENATORÓW */
+        .senator-list { list-style:none; padding:0; margin:1.25rem 0 3rem; display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:0.35rem 2.2rem; }
+        .senator-list li { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:0.35rem 0; border-bottom:1px solid #e5e5e5; font-size:0.95rem; }
+        .senator-list .sen-name { color:#222; }
+        .senator-list .sen-party { font-size:0.72rem; font-weight:700; color:#fff; border-radius:10px; padding:1px 9px; white-space:nowrap; }
+        .senator-list .sen-house { font-size:0.78rem; color:#666; }
     </style>
 </head>
 <body>
@@ -293,7 +300,7 @@
             <div class="chart-area">
                 <div class="donut-chart" id="parliamentChart"></div>
                 <div class="donut-hole">
-                    <span class="total-seats" id="centerSeatsCount">100</span>
+                    <span class="total-seats" id="centerSeatsCount">54</span>
                     <span class="total-label" id="centerLabel">Mandatów</span>
                 </div>
             </div>
@@ -352,6 +359,65 @@
                 <div class="member-role">Wicemarszałek Izby Multikont</div>
             </div>
         </div>
+        <!-- ================= SENATOROWIE IZBY MULTIKONT ================= -->
+        <div class="senate-section-title">Senatorowie Izby Multikont (IV kadencja)</div>
+        <ul class="senator-list">
+            <li><span class="sen-name">Nacjonalistyczny Tata Świnka</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Republikański Tata Świnka</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Thor Gruby</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Herpon Podły</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Propssuj Sandro</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Mistrz Yoda</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Pani co jej Ryszard ukradł Rower</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Ahelissa</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Abrahaham</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Egzegar</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Niko Zdzich</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Aleksander Andrzejowski</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Mekrotyka</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Adominus Minus</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Pragmatyczno-pozytywistyczny Stryj Świnka</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Gromosław</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Mściwój</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Stefan Świnka</span><span class="sen-party" style="background:#DA1111;">NSM</span></li>
+            <li><span class="sen-name">Decimus</span><span class="sen-party" style="background:#F3CB00;color:#222;">LLK</span></li>
+            <li><span class="sen-name">Raolin</span><span class="sen-party" style="background:#F3CB00;color:#222;">LLK</span></li>
+            <li><span class="sen-name">Gwiazdka</span><span class="sen-party" style="background:#F3CB00;color:#222;">LLK</span></li>
+            <li><span class="sen-name">Hektor Radosławski</span><span class="sen-party" style="background:#F3CB00;color:#222;">LLK</span></li>
+            <li><span class="sen-name">Lubomił</span><span class="sen-party" style="background:#F3CB00;color:#222;">LLK</span></li>
+            <li><span class="sen-name">Bartłomieja Zawadzka</span><span class="sen-party" style="background:#F3CB00;color:#222;">LLK</span></li>
+            <li><span class="sen-name">Tyvurea</span><span class="sen-party" style="background:#F3CB00;color:#222;">LLK</span></li>
+            <li><span class="sen-name">Drothellan</span><span class="sen-party" style="background:#F3CB00;color:#222;">LLK</span></li>
+            <li><span class="sen-name">Renthurak</span><span class="sen-party" style="background:#F3CB00;color:#222;">LLK</span></li>
+            <li><span class="sen-name">Othmarion</span><span class="sen-party" style="background:#F3CB00;color:#222;">LLK</span></li>
+            <li><span class="sen-name">Meliostra</span><span class="sen-party" style="background:#F3CB00;color:#222;">LLK</span></li>
+            <li><span class="sen-name">Brodagast Bury</span><span class="sen-party" style="background:#327627;">KPE</span></li>
+            <li><span class="sen-name">Miau Miau</span><span class="sen-party" style="background:#327627;">KPE</span></li>
+            <li><span class="sen-name">Paprotkatotka</span><span class="sen-party" style="background:#327627;">KPE</span></li>
+            <li><span class="sen-name">Felork Kozibroda</span><span class="sen-party" style="background:#327627;">KPE</span></li>
+            <li><span class="sen-name">Ludwik Hardy</span><span class="sen-party" style="background:#327627;">KPE</span></li>
+            <li><span class="sen-name">Oswald Pędzel</span><span class="sen-party" style="background:#327627;">KPE</span></li>
+            <li><span class="sen-name">Kleofas Kidzicki</span><span class="sen-party" style="background:#327627;">KPE</span></li>
+            <li><span class="sen-name">Jeremi Goździcki</span><span class="sen-party" style="background:#327627;">KPE</span></li>
+            <li><span class="sen-name">Paramilitarno-Zielony Wujek Świnka</span><span class="sen-party" style="background:#327627;">KPE</span></li>
+            <li><span class="sen-name">Tadeusz Kurwoń Kiblowy</span><span class="sen-party" style="background:#6E0000;">KWZZM</span></li>
+            <li><span class="sen-name">Towarzysz Edzio</span><span class="sen-party" style="background:#6E0000;">KWZZM</span></li>
+            <li><span class="sen-name">Franklin de Żółw</span><span class="sen-party" style="background:#6E0000;">KWZZM</span></li>
+            <li><span class="sen-name">Militarno-Radziecki Wujek Świnka</span><span class="sen-party" style="background:#6E0000;">KWZZM</span></li>
+            <li><span class="sen-name">Pani Bolszewicka</span><span class="sen-party" style="background:#6E0000;">KWZZM</span></li>
+            <li><span class="sen-name">Anarchistyczny Tata Świnka</span><span class="sen-party" style="background:#6E0000;">KWZZM</span></li>
+            <li><span class="sen-name">Brat Zygfryd</span><span class="sen-party" style="background:#6E0000;">KWZZM</span></li>
+            <li><span class="sen-name">Lokalno-Samorządowy Wujek Świnka</span><span class="sen-party" style="background:#478BCE;">DSM</span></li>
+            <li><span class="sen-name">Ponadnarodowo-Eurokratyczny Wujek Świnka</span><span class="sen-party" style="background:#478BCE;">DSM</span></li>
+            <li><span class="sen-name">Obywatelsko-Postępowy Wujek Świnka</span><span class="sen-party" style="background:#478BCE;">DSM</span></li>
+            <li><span class="sen-name">Feministyczny Tata Świnka</span><span class="sen-party" style="background:#478BCE;">DSM</span></li>
+            <li><span class="sen-name">Tęczowy Tata Świnka</span><span class="sen-party" style="background:#478BCE;">DSM</span></li>
+            <li><span class="sen-name">Brat Mateusz</span><span class="sen-party" style="background:#478BCE;">DSM</span></li>
+            <li><span class="sen-name">Brat Janusz</span><span class="sen-party" style="background:#478BCE;">DSM</span></li>
+            <li><span class="sen-name">Kunegunda Piastowska</span><span class="sen-party" style="background:#478BCE;">DSM</span></li>
+            <li><span class="sen-name">Stanisław Świnka</span><span class="sen-party" style="background:#478BCE;">DSM</span></li>
+        </ul>
+
 
         <!-- ================= IZBA ARYSTOKRATÓW ================= -->
         <div class="senate-section-title">Prezydium Izby Arystokratów</div>
@@ -380,6 +446,22 @@
                 <div class="member-role">Wicemarszałek Izby Arystokratów</div>
             </div>
         </div>
+        <!-- ================= SENATOROWIE IZBY ARYSTOKRATÓW ================= -->
+        <div class="senate-section-title">Senatorowie Izby Arystokratów</div>
+        <ul class="senator-list">
+            <li><span class="sen-name">Bolszewicki Tata Świnka</span><span class="sen-house">Diuk Księstwa Świnków</span></li>
+            <li><span class="sen-name">Margarita</span><span class="sen-house">Diuszessa Księstwa Margarity</span></li>
+            <li><span class="sen-name">Puchacz Potężny</span><span class="sen-house">Diuk Księstwa Strigallorów</span></li>
+            <li><span class="sen-name">Kalozoross III Strażnik Lasu</span><span class="sen-house">Diuk Księstwa Binturonga</span></li>
+            <li><span class="sen-name">Arniel Artrupovic</span><span class="sen-house">Diuk Księstwa Suma</span></li>
+            <li><span class="sen-name">Lavasz u</span><span class="sen-house">Diuk Księstwa Kwiatosmoka</span></li>
+            <li><span class="sen-name">Ekologiczny Tata Świnka</span><span class="sen-house">Markiz Zielonogrodu Świdnickiego</span></li>
+            <li><span class="sen-name">Galbrannor</span><span class="sen-house">Markiz Ganozewsza</span></li>
+            <li><span class="sen-name">Ivor</span><span class="sen-house">Baron Tarkwinogrodu</span></li>
+            <li><span class="sen-name">Maria</span><span class="sen-house">Hrabina Podrzecza Wschodniego</span></li>
+            <li><span class="sen-name">Wojciech</span><span class="sen-house">Hrabia Podrzecza Zachodniego</span></li>
+        </ul>
+
 
     </main>
 
