@@ -6,7 +6,7 @@ const krolewskaDb = {
   // 1. INFORMACJE O CZŁONKACH RODZINY KRULEWSKIEJ
   monarchName: "Artur Gryfion",
   queenName: "Małgorzata Gryfion",
-  royalArmsImg: "../KRA/herb_krul.png",
+  royalArmsImg: "../KRA/herb_gryfionow.png",
   royalArmsBlazon: "Szary gryf zwrócony w lewą stronę, stojący na dwóch tylnych łapach, na tle czerwono-złotej tarczy.",
   
   familyMembers: [
@@ -33,6 +33,6 @@ const krolewskaDb = {
   ],
 
   // 3. POZOSTAŁE INFORMACJE (HERB UŻYWANY PRZEZ MONARCHĘ)
-  personalArmsImg: "../KRA/herb_krul_uz.png",
+  personalArmsImg: "../KRA/herb_gryfionow.png",
   personalArmsBlazon: "Szary gryf zwrócony w lewą stronę, stojący na dwóch tylnych łapach, na tle czerwono-złotej tarczy. Nad tarczą znajduje się Korona Krula."
 };
