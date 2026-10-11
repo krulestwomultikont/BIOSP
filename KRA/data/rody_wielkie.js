@@ -292,5 +292,44 @@ const rodyWielkieDb = [
       "Papirz"
     ],
     n45_houseSeat: "Twierdza Twitter"
+  },
+  // 7. DIUK KSIĘSTWA KIRINA
+  {
+    title: "Diuk Księstwa Kirina",
+    ranga: "Książę",
+    kategoriaRodu: "Wielki Ród",
+    koronaImg: "../KRA/korona ksiecia.png",
+
+    n11_title: "Diuk Księstwa Kirina",
+    n12_creationOrder: "Postanowienie Krula Multikont nr 24/T/2026 z dnia 11.10.2026 r.",
+    classes: {
+      publicFunction: true,
+      landAndBusiness: true,
+      honorary: false
+    },
+    n14_ranga: "Książę",
+    n15_publicEstate: "Zamek Siedmiu Wirów; Gród nad Bursztynowym Brzegiem",
+    n16_businessEstate: "Bursztynowe Warsztaty i Łowiska Srebrnej Łuski",
+    n17_publicLegalBasis: "Art. 102 ust. 1 Konstytucji Korony Krulestwa Multikont z 26.12.2025 r. (Kr. Dz. U. z 2025 r. poz. 26)",
+    n18_ringDesc: "Platynowy sygnet z akwamarynem",
+    n19_dates: "11.10.2026 r./nie dotyczy",
+
+    n21_holderName: "Archadius Błękitny Smok",
+    n22_grantOrder: "Postanowienie Krula Multikont nr 28/N/2026 z dnia 11.10.2026 r.",
+    n23_prevHolders: "Brak",
+    n24_heir: "Brak",
+    n25_individualPrivileges: "Prawo zasiadania w Izbie Arystokratów Senatu Koronnego",
+
+    n31_usedHerbImg: null,
+    n31_usedHerbDesc: "Błękitny smok na srebrnej tarczy. Nad tarczą herbową znajduje się korona rangowa księcia. (herb wzorcowy – placeholder do zatwierdzenia)",
+    n32_usageTitle: "Diuk",
+    n33_otherTitles: "Baron (tytuł osobisty)",
+
+    n41_houseCategory: "Wielki Ród (głowa rodu w randze Księcia)",
+    n42_vassalStatus: "Suzeren regionalny Księstwa Kirina. Zwierzchnictwo lenne nad rodami Ziemi Srebrnej Łuski, Ziemi Bursztynowego Brzegu i Krainy Siedmiu Wirów.",
+    n43_houseHerbImg: null,
+    n43_houseHerbDesc: "Błękitny smok na srebrnej tarczy. (herb rodowy – placeholder do zatwierdzenia)",
+    n44_houseMembers: [],
+    n45_houseSeat: "Zamek Siedmiu Wirów"
   }
 ];

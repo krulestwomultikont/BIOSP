@@ -420,6 +420,53 @@ function renderRycerze(container) {
   `;
 }
 
+// 6. Biskupi Kościoła
+function renderBiskupi(container) {
+  if (typeof biskupiDb === "undefined" || !Array.isArray(biskupiDb)) {
+    container.innerHTML = '<div class="vassal-box">Oczekiwanie na bazę danych Biskupów Kościoła (data/biskupi.js)...</div>';
+    return;
+  }
+  var rows = biskupiDb.map(function (b, i) {
+    return '<tr>' +
+      '<td>' + (i + 1) + '</td>' +
+      '<td><strong>' + b.biskupstwo + '</strong></td>' +
+      '<td><strong>' + b.biskup + '</strong></td>' +
+      '<td>' + b.swiecenia + '</td>' +
+      '<td style="font-size: 12px; color: #57606a;">' + b.katedra + '</td>' +
+      '<td style="text-align: center;"><span class="badge ' + (b.statusBadge || 'badge-grand') + '" style="font-size: 10px;">' + b.status + '</span></td>' +
+    '</tr>';
+  }).join('');
+  container.innerHTML =
+    '<article class="item-card">' +
+      '<header class="item-header" style="cursor: default;">' +
+        '<div class="item-title-group"><span class="item-sig">Episkopat Koronnego Kościoła Ignistrigona</span></div>' +
+        '<span class="badge badge-grand">Ustawa z 14.05.2026 r. (poz. 23)</span>' +
+      '</header>' +
+      '<div class="item-body open">' +
+        '<div class="meta-section">' +
+          '<div class="section-label">Podstawa prawna</div>' +
+          '<div class="meta-grid">' +
+            '<span class="grid-key">Reżim prawny:</span>' +
+            '<span class="grid-val">Art. 9, 11 i 31 Ustawy z 14.05.2026 r. o Koronnym Kościele Ignistrigona (Kr. Dz. U. z 2026 r. poz. 23) w zw. z Konkordatem Szkarłatu i Złota (Kr. Dz. U. z 2026 r. poz. 22) oraz Działem VIII Konstytucji Korony Krulestwa Multikont. Biskupa katedralnego powołuje i odwołuje Krul Multikont na wniosek Arcybiskupa; biskup katedralny powinien posiadać święcenia egzarchy.</span>' +
+          '</div>' +
+        '</div>' +
+        '<div class="table-responsive" style="margin-top: 14px;">' +
+          '<table class="official-table">' +
+            '<thead><tr>' +
+              '<th style="width: 44px;">Lp.</th>' +
+              '<th>Biskupstwo</th>' +
+              '<th style="width: 190px;">Biskup</th>' +
+              '<th style="width: 110px;">Święcenia</th>' +
+              '<th>Siedziba / katedra</th>' +
+              '<th style="width: 100px; text-align: center;">Status</th>' +
+            '</tr></thead>' +
+            '<tbody>' + rows + '</tbody>' +
+          '</table>' +
+        '</div>' +
+      '</div>' +
+    '</article>';
+}
+
 // ==========================================================================
 // ROUTER
 // ==========================================================================
@@ -447,6 +494,9 @@ function loadTab(tabName, btnElement) {
       break;
     case 'rycerze':
       renderRycerze(container);
+      break;
+    case 'biskupi':
+      renderBiskupi(container);
       break;
     default:
       renderKrolewska(container);
@@ -562,6 +612,20 @@ function handleRegistrySearch() {
         hasMatch(item.merits, query)
       ) {
         matches.push({ type: 'rycerze', data: item });
+      }
+    });
+  }
+
+  // 6. Biskupi Kościoła
+  if (typeof biskupiDb !== "undefined" && Array.isArray(biskupiDb)) {
+    biskupiDb.forEach(item => {
+      if (
+        hasMatch(item.biskupstwo, query) ||
+        hasMatch(item.biskup, query) ||
+        hasMatch(item.katedra, query) ||
+        hasMatch(item.ranga, query)
+      ) {
+        matches.push({ type: 'biskupi', data: item });
       }
     });
   }
@@ -689,6 +753,21 @@ function handleRegistrySearch() {
           </div>
         </article>
       `;
+    } else if (m.type === 'biskupi') {
+      html += '<article class="item-card">' +
+        '<header class="item-header active" style="cursor: default;">' +
+          '<span class="item-sig">' + item.biskupstwo + '</span>' +
+          '<span class="badge badge-grand">' + (item.ranga || 'Biskupstwo') + '</span>' +
+        '</header>' +
+        '<div class="item-body open">' +
+          '<div class="meta-grid">' +
+            '<span class="grid-key">Biskup:</span><span class="grid-val"><strong>' + item.biskup + '</strong></span>' +
+            '<span class="grid-key">Święcenia:</span><span class="grid-val">' + item.swiecenia + '</span>' +
+            '<span class="grid-key">Siedziba / katedra:</span><span class="grid-val">' + item.katedra + '</span>' +
+            '<span class="grid-key">Status:</span><span class="grid-val">' + item.status + '</span>' +
+          '</div>' +
+        '</div>' +
+      '</article>';
     }
   });
 
