@@ -29,7 +29,7 @@ const rodyWielkieDb = [
     n25_individualPrivileges: "Prawo własności nieruchomości o wielkości 28 ha, położonej w mieście Świdnik w kwadracie 8/120, prawo zasiadania w Izbie Arystokratów Senatu Koronnego",
 
     // 3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE
-    n31_usedHerbImg: "../KRA/herb_pozr1.png",
+    n31_usedHerbImg: "../KRA/herb-swinia.png",
     n31_usedHerbDesc: "Trzy złote świnki stojące na dwóch tylnych raciczkach, pierwsza i ostatnia zwrócone w lewo, środkowa w prawo, umieszczone w dwóch złotych pierścieniach nachylonych pod kątem 45' względem powierzchni, na tle tarczy o czterech barwach: w górnym lewym rogu czerwień, w górnym prawnym błękit, w dolnym lewym zieleń, a w dolnym prawym fiolet. Nad tarczą herbową znajduje się korona rangowa księcia.",
     n32_usageTitle: "Diuk",
     n33_otherTitles: "Brak",
@@ -37,7 +37,7 @@ const rodyWielkieDb = [
     // 4. INFORMACJE O RODZIE SZLACHECKIM
     n41_houseCategory: "Wielki Ród (głowa rodu w randze Księcia)",
     n42_vassalStatus: "Suzeren regionalny Księstwa Świnków. Podległe rody wasalne: Ród Markiza Zielonogrodu Świdnickiego (Ród Przysięgły, Akt Hołdu z 25.02.2026 r.) oraz Ród Hrabstwa Świdnickiego (Ród Przysięgły, Akt Hołdu z 25.02.2026 r.).",
-    n43_houseHerbImg: "../KRA/herb_rod_poz1.png",
+    n43_houseHerbImg: "../KRA/herb-swinia.png",
     n43_houseHerbDesc: "Trzy złote świnki stojące na dwóch tylnych raciczkach, pierwsza i ostatnia zwrócone w lewo, środkowa w prawo, umieszczone w dwóch złotych pierścieniach nachylonych pod kątem 45' względem powierzchni, na tle tarczy o czterech barwach: w górnym lewym rogu czerwień, w górnym prawnym błękit, w dolnym lewym zieleń, a w dolnym prawym fiolet.",
     n44_houseMembers: [
       "Militarno-radziecki Wujek Świnka",
@@ -81,7 +81,7 @@ const rodyWielkieDb = [
     n25_individualPrivileges: "Prawo zasiadania w Izbie Arystokratów Senatu Koronnego",
 
     // 3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE
-    n31_usedHerbImg: "../KRA/herb_pozr2.png",
+    n31_usedHerbImg: "../KRA/herb-zaba.png",
     n31_usedHerbDesc: "Zielona żaba na tle błękitnej tarczy. Nad tarczą herbową znajduje się korona rangowa księcia.",
     n32_usageTitle: "Diuszessa",
     n33_otherTitles: "Brak",
@@ -89,7 +89,7 @@ const rodyWielkieDb = [
     // 4. INFORMACJE O RODZIE SZLACHECKIM
     n41_houseCategory: "Wielki Ród (głowa rodu w randze Księcia)",
     n42_vassalStatus: "Suzeren regionalny Księstwa Margarity. Rody wasalne: brak bezpośrednich wasali (jurysdykcja zakonna).",
-    n43_houseHerbImg: "../KRA/herb_rod_poz2.png",
+    n43_houseHerbImg: "../KRA/herb-zaba.png",
     n43_houseHerbDesc: "Zielona żaba na tle błękitnej tarczy.",
     n44_houseMembers: [
       "Kunegunda",
@@ -130,7 +130,7 @@ const rodyWielkieDb = [
     n25_individualPrivileges: "Prawo własności nieruchomości - Złota Dolina, prawo zasiadania w Izbie Arystokratów Senatu Koronnego",
 
     // 3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE
-    n31_usedHerbImg: "../KRA/herb_pozr3.png",
+    n31_usedHerbImg: "../KRA/herb-sowy.png",
     n31_usedHerbDesc: "Biało-brązowy Strigallor z błękitnymi oczami na tle złotej tarczy. Nad tarczą herbową znajduje się korona rangowa księcia.",
     n32_usageTitle: "Diuk",
     n33_otherTitles: "Brak",
@@ -138,7 +138,7 @@ const rodyWielkieDb = [
     // 4. INFORMACJE O RODZIE SZLACHECKIM
     n41_houseCategory: "Wielki Ród (głowa rodu w randze Księcia)",
     n42_vassalStatus: "Suzeren regionalny Księstwa Strigallorów. Zwierzchnictwo lenne nad klanami i rodami strigallorskimi.",
-    n43_houseHerbImg: "../KRA/herb_rod_poz3.png",
+    n43_houseHerbImg: "../KRA/herb-sowy.png",
     n43_houseHerbDesc: "Biało-brązowy Strigallor z błękitnymi oczami na tle złotej tarczy.",
     n44_houseMembers: [
       "Archont Imperius",
@@ -181,7 +181,7 @@ const rodyWielkieDb = [
     n25_individualPrivileges: "Prawo zasiadania w Izbie Arystokratów Senatu Koronnego",
 
     // 3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE
-    n31_usedHerbImg: "../KRA/herb_pozr4.png",
+    n31_usedHerbImg: "../KRA/herb-binturong.png",
     n31_usedHerbDesc: "Ciemnoszary binturong z pomarańczowymi oczami na tle brązowo-zielonej tarczy. Nad tarczą herbową znajduje się korona rangowa księcia.",
     n32_usageTitle: "Diuk",
     n33_otherTitles: "Brak",
@@ -189,7 +189,7 @@ const rodyWielkieDb = [
     // 4. INFORMACJE O RODZIE SZLACHECKIM
     n41_houseCategory: "Wielki Ród (głowa rodu w randze Księcia)",
     n42_vassalStatus: "Suzeren regionalny Puszczy Binturonga. Podległość klanów leśnych na prawie obyczajowym.",
-    n43_houseHerbImg: "../KRA/herb_rod_poz4.png",
+    n43_houseHerbImg: "../KRA/herb-binturong.png",
     n43_houseHerbDesc: "Ciemnoszary binturong z pomarańczowymi oczami na tle brązowo-zielonej tarczy.",
     n44_houseMembers: [
       "Jezzarus",
@@ -228,7 +228,7 @@ const rodyWielkieDb = [
     n25_individualPrivileges: "Prawo zasiadania w Izbie Arystokratów Senatu Koronnego",
 
     // 3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE
-    n31_usedHerbImg: "../KRA/herb_pozr5.png",
+    n31_usedHerbImg: "../KRA/herb-sum.png",
     n31_usedHerbDesc: "Czerwono-złoty sum na tle morskiej tarczy. Nad tarczą herbową znajduje się korona rangowa księcia.",
     n32_usageTitle: "Diuk",
     n33_otherTitles: "Brak",
@@ -236,7 +236,7 @@ const rodyWielkieDb = [
     // 4. INFORMACJE O RODZIE SZLACHECKIM
     n41_houseCategory: "Wielki Ród (głowa rodu w randze Księcia)",
     n42_vassalStatus: "Suzeren regionalny Księstwa Suma i Archipelagu Wysp Centralnych.",
-    n43_houseHerbImg: "../KRA/herb_rod_poz5.png",
+    n43_houseHerbImg: "../KRA/herb-sum.png",
     n43_houseHerbDesc: "Czerwono-złoty sum na tle morskiej tarczy.",
     n44_houseMembers: [
       "Cyrus Artrupovic",
@@ -275,7 +275,7 @@ const rodyWielkieDb = [
     n25_individualPrivileges: "Prawo zasiadania w Izbie Arystokratów Senatu Koronnego",
 
     // 3. POZOSTAŁE INFORMACJE O ARYSTOKRACIE
-    n31_usedHerbImg: "../KRA/herb_pozr6.png",
+    n31_usedHerbImg: "../KRA/herb-kwiatosmok.png",
     n31_usedHerbDesc: "Fioletowo-zielony magiczny smok ze skrzysłami owada na tle niebieskiej tarczy. Nad tarczą herbową znajduje się korona rangowa księcia.",
     n32_usageTitle: "Diuk",
     n33_otherTitles: "Brak",
@@ -283,7 +283,7 @@ const rodyWielkieDb = [
     // 4. INFORMACJE O RODZIE SZLACHECKIM
     n41_houseCategory: "Wielki Ród (głowa rodu w randze Księcia)",
     n42_vassalStatus: "Suzeren regionalny Księstwa Kwiatosmoka. Podległe twierdze i strażnice zakonne.",
-    n43_houseHerbImg: "../KRA/herb_rod_poz6.png",
+    n43_houseHerbImg: "../KRA/herb-kwiatosmok.png",
     n43_houseHerbDesc: "Fioletowo-zielony magiczny smok ze skrzysłami owada na tle niebieskiej tarczy.",
     n44_houseMembers: [
       "Jogobol",
@@ -320,14 +320,14 @@ const rodyWielkieDb = [
     n24_heir: "Brak",
     n25_individualPrivileges: "Prawo zasiadania w Izbie Arystokratów Senatu Koronnego",
 
-    n31_usedHerbImg: null,
+    n31_usedHerbImg: "../KRA/herb-kirin.png",
     n31_usedHerbDesc: "Błękitny smok na srebrnej tarczy. Nad tarczą herbową znajduje się korona rangowa księcia. (herb wzorcowy – placeholder do zatwierdzenia)",
     n32_usageTitle: "Diuk",
     n33_otherTitles: "Baron (tytuł osobisty)",
 
     n41_houseCategory: "Wielki Ród (głowa rodu w randze Księcia)",
     n42_vassalStatus: "Suzeren regionalny Księstwa Kirina. Zwierzchnictwo lenne nad rodami Ziemi Srebrnej Łuski, Ziemi Bursztynowego Brzegu i Krainy Siedmiu Wirów.",
-    n43_houseHerbImg: null,
+    n43_houseHerbImg: "../KRA/herb-kirin.png",
     n43_houseHerbDesc: "Błękitny smok na srebrnej tarczy. (herb rodowy – placeholder do zatwierdzenia)",
     n44_houseMembers: [],
     n45_houseSeat: "Zamek Siedmiu Wirów"

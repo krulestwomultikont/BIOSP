@@ -5,8 +5,9 @@ const rodyWasalneDb = [
   {
     isDivider: true,
     html: `
-      <div style="margin: 28px 0 14px 0; padding: 12px 18px; background: linear-gradient(90deg, #0f2d4a 0%, #1e4a75 100%); color: #ffffff; border-radius: 4px; border-left: 6px solid #d4af37; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center;">
-        <div>
+      <div style="margin: 28px 0 14px 0; padding: 12px 18px; background: linear-gradient(90deg, #0f2d4a 0%, #1e4a75 100%); color: #ffffff; border-radius: 4px; border-left: 6px solid #d4af37; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 16px;">
+        <img src="../KRA/herb-swinia.png" alt="Herb Wielkiego Rodu Świnków" style="height: 54px; width: auto; flex: 0 0 auto; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35));">
+        <div style="flex: 1 1 auto;">
           <span style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85;">Wasalitet Regionalny</span>
           <strong style="font-size: 16px; letter-spacing: 0.5px;">Lenna Wielkiego Rodu Świnków</strong>
         </div>
@@ -257,8 +258,9 @@ const rodyWasalneDb = [
   {
     isDivider: true,
     html: `
-      <div style="margin: 28px 0 14px 0; padding: 12px 18px; background: linear-gradient(90deg, #0f2d4a 0%, #1e4a75 100%); color: #ffffff; border-radius: 4px; border-left: 6px solid #d4af37; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center;">
-        <div>
+      <div style="margin: 28px 0 14px 0; padding: 12px 18px; background: linear-gradient(90deg, #0f2d4a 0%, #1e4a75 100%); color: #ffffff; border-radius: 4px; border-left: 6px solid #d4af37; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 16px;">
+        <img src="../KRA/herb-sowy.png" alt="Herb Wielkiego Rodu Strigallorów" style="height: 54px; width: auto; flex: 0 0 auto; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35));">
+        <div style="flex: 1 1 auto;">
           <span style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85;">Wasalitet Regionalny</span>
           <strong style="font-size: 16px; letter-spacing: 0.5px;">Lenna Wielkiego Rodu Strigallorów</strong>
         </div>
@@ -425,67 +427,18 @@ const rodyWasalneDb = [
     n45_houseSeat: "Belweder Burgrabiego w Złotej Grani"
   },
 
-  // ==========================================================================
-  // GRUPA 3: PROWINCJE I WASALE BEZPOŚREDNI TRONU KRULEWSKIEGO
-  // ==========================================================================
   {
     isDivider: true,
     html: `
-      <div style="margin: 28px 0 14px 0; padding: 12px 18px; background: linear-gradient(90deg, #6e1313 0%, #9e1c1c 100%); color: #ffffff; border-radius: 4px; border-left: 6px solid #d4af37; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center;">
-        <div>
-          <span style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85;">Zależność Bezpośrednia (Art. 36b ust. 1 in fine Dekretu)</span>
-          <strong style="font-size: 16px; letter-spacing: 0.5px;">Bezpośredni Wasale Tronu Krulewskiego</strong>
+      <div style="margin: 28px 0 14px 0; padding: 12px 18px; background: linear-gradient(90deg, #0f2d4a 0%, #1e4a75 100%); color: #ffffff; border-radius: 4px; border-left: 6px solid #d4af37; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 16px;">
+        <img src="../KRA/herb-sum.png" alt="Herb Wielkiego Rodu Suma" style="height: 54px; width: auto; flex: 0 0 auto; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35));">
+        <div style="flex: 1 1 auto;">
+          <span style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85;">Wasalitet Regionalny</span>
+          <strong style="font-size: 16px; letter-spacing: 0.5px;">Lenna Wielkiego Rodu Suma</strong>
         </div>
-        <span style="font-size: 12px; font-style: italic; opacity: 0.9;">Najwyższy Suzeren: Krul Multikont</span>
+        <span style="font-size: 12px; font-style: italic; opacity: 0.9;">Suzeren: Diuk Arniel Artrupovic</span>
       </div>
     `
-  },
-
-  // 6. BARON DOLINY DRAPIEŻNIKÓW
-  {
-    title: "Baron Doliny Drapieżników",
-    ranga: "Baron",
-    kategoriaRodu: "Ród Ziemski",
-    koronaImg: "../KRA/korona barona.png",
-
-    n11_title: "Baron Doliny Drapieżników",
-    n12_creationOrder: "Postanowienie Krula Multikont nr 10/T/2026 z dnia 26.02.2026 r.",
-    classes: {
-      publicFunction: false,
-      landAndBusiness: true,
-      honorary: false
-    },
-    n14_ranga: "Baron",
-    n15_publicEstate: "Brak",
-    n16_businessEstate: "Gospodarstwo Hodowlane i Rezerwat Łowiecki Doliny Drapieżników",
-    n17_publicLegalBasis: "Nie dotyczy",
-    n18_ringDesc: "Srebrny sygnet z nefrytem",
-    n19_dates: "26.02.2026 r./nie dotyczy",
-
-    n21_holderName: "Gromosław",
-    n22_grantOrder: "Postanowienie Krula Multikont nr 16/N/2026 z dnia 26.02.2026 r.",
-    n23_prevHolders: "Brak",
-    n24_heir: "Brak",
-    n25_individualPrivileges: "Prawo jurysdykcji bartnej w granicach posiadłości",
-
-    n31_usedHerbImg: null,
-    n31_usedHerbDesc: "Brak",
-    n32_usageTitle: "Baron",
-    n33_otherTitles: "Brak",
-
-    n41_houseCategory: "Ród Ziemski (głowa rodu w randze Barona)",
-    n42_vassalStatus: "Bezpośrednia zależność lenna od Krula Multikont (art. 36b ust. 1 in fine Dekretu – z uwagi na brak właściwego terytorialnie Wielkiego Rodu).",
-    n43_houseHerbImg: null,
-    n43_houseHerbDesc: "Brak",
-    n44_houseMembers: [
-      "Gromosław",
-      "Mściwój"
-    ],
-    n45_houseSeat: "Twierdza Wilczy Szczerb"
-  },
-  {
-    isDivider: true,
-    html: '<div style="margin: 28px 0 14px 0; padding: 12px 18px; background: linear-gradient(90deg, #0f2d4a 0%, #1e4a75 100%); color: #ffffff; border-radius: 4px; border-left: 6px solid #d4af37; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center;"><div><span style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85;">Wasalitet Regionalny</span><strong style="font-size: 16px; letter-spacing: 0.5px;">Lenna Wielkiego Rodu Suma</strong></div><span style="font-size: 12px; font-style: italic; opacity: 0.9;">Suzeren: Diuk Arniel Artrupovic</span></div>'
   },
   {
     "title": "Markiz Archipelagu Trzech Gwiazd",
@@ -598,7 +551,16 @@ const rodyWasalneDb = [
   },
   {
     isDivider: true,
-    html: '<div style="margin: 28px 0 14px 0; padding: 12px 18px; background: linear-gradient(90deg, #1b4332 0%, #2d6a4f 100%); color: #ffffff; border-radius: 4px; border-left: 6px solid #d4af37; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center;"><div><span style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85;">Wasalitet Regionalny</span><strong style="font-size: 16px; letter-spacing: 0.5px;">Lenna Wielkiego Rodu Binturonga</strong></div><span style="font-size: 12px; font-style: italic; opacity: 0.9;">Suzeren: Diuk Kalozoross III Strażnik Lasu</span></div>'
+    html: `
+      <div style="margin: 28px 0 14px 0; padding: 12px 18px; background: linear-gradient(90deg, #1b4332 0%, #2d6a4f 100%); color: #ffffff; border-radius: 4px; border-left: 6px solid #d4af37; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 16px;">
+        <img src="../KRA/herb-binturong.png" alt="Herb Wielkiego Rodu Binturonga" style="height: 54px; width: auto; flex: 0 0 auto; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35));">
+        <div style="flex: 1 1 auto;">
+          <span style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85;">Wasalitet Regionalny</span>
+          <strong style="font-size: 16px; letter-spacing: 0.5px;">Lenna Wielkiego Rodu Binturonga</strong>
+        </div>
+        <span style="font-size: 12px; font-style: italic; opacity: 0.9;">Suzeren: Diuk Kalozoross III Strażnik Lasu</span>
+      </div>
+    `
   },
   {
     "title": "Markiz Lasów Południowych",
@@ -711,7 +673,16 @@ const rodyWasalneDb = [
   },
   {
     isDivider: true,
-    html: '<div style="margin: 28px 0 14px 0; padding: 12px 18px; background: linear-gradient(90deg, #4a148c 0%, #6a1b9a 100%); color: #ffffff; border-radius: 4px; border-left: 6px solid #d4af37; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center;"><div><span style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85;">Wasalitet Regionalny</span><strong style="font-size: 16px; letter-spacing: 0.5px;">Lenna Wielkiego Rodu Margarity</strong></div><span style="font-size: 12px; font-style: italic; opacity: 0.9;">Suzeren: Diuszessa Margarita</span></div>'
+    html: `
+      <div style="margin: 28px 0 14px 0; padding: 12px 18px; background: linear-gradient(90deg, #4a148c 0%, #6a1b9a 100%); color: #ffffff; border-radius: 4px; border-left: 6px solid #d4af37; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 16px;">
+        <img src="../KRA/herb-zaba.png" alt="Herb Wielkiego Rodu Margarity" style="height: 54px; width: auto; flex: 0 0 auto; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35));">
+        <div style="flex: 1 1 auto;">
+          <span style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85;">Wasalitet Regionalny</span>
+          <strong style="font-size: 16px; letter-spacing: 0.5px;">Lenna Wielkiego Rodu Margarity</strong>
+        </div>
+        <span style="font-size: 12px; font-style: italic; opacity: 0.9;">Suzeren: Diuszessa Margarita</span>
+      </div>
+    `
   },
   {
     "title": "Hrabina Księżycowego Półwyspu",
@@ -826,7 +797,16 @@ const rodyWasalneDb = [
   },
   {
     isDivider: true,
-    html: '<div style="margin: 28px 0 14px 0; padding: 12px 18px; background: linear-gradient(90deg, #0b7285 0%, #15aabf 100%); color: #ffffff; border-radius: 4px; border-left: 6px solid #d4af37; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center;"><div><span style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85;">Wasalitet Regionalny</span><strong style="font-size: 16px; letter-spacing: 0.5px;">Lenna Wielkiego Rodu Kwiatosmoka</strong></div><span style="font-size: 12px; font-style: italic; opacity: 0.9;">Suzeren: Diuk Lavaszu</span></div>'
+    html: `
+      <div style="margin: 28px 0 14px 0; padding: 12px 18px; background: linear-gradient(90deg, #0b7285 0%, #15aabf 100%); color: #ffffff; border-radius: 4px; border-left: 6px solid #d4af37; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 16px;">
+        <img src="../KRA/herb-kwiatosmok.png" alt="Herb Wielkiego Rodu Kwiatosmoka" style="height: 54px; width: auto; flex: 0 0 auto; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35));">
+        <div style="flex: 1 1 auto;">
+          <span style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85;">Wasalitet Regionalny</span>
+          <strong style="font-size: 16px; letter-spacing: 0.5px;">Lenna Wielkiego Rodu Kwiatosmoka</strong>
+        </div>
+        <span style="font-size: 12px; font-style: italic; opacity: 0.9;">Suzeren: Diuk Lavaszu</span>
+      </div>
+    `
   },
   {
     "title": "Markiz Ziemi Twitterowskiej",
@@ -978,7 +958,16 @@ const rodyWasalneDb = [
   },
   {
     isDivider: true,
-    html: '<div style="margin: 28px 0 14px 0; padding: 12px 18px; background: linear-gradient(90deg, #1a2b3c 0%, #2f4f6f 100%); color: #ffffff; border-radius: 4px; border-left: 6px solid #d4af37; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center;"><div><span style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85;">Wasalitet Regionalny</span><strong style="font-size: 16px; letter-spacing: 0.5px;">Lenna Wielkiego Rodu Kirina</strong></div><span style="font-size: 12px; font-style: italic; opacity: 0.9;">Suzeren: Diuk Archadius Błękitny Smok</span></div>'
+    html: `
+      <div style="margin: 28px 0 14px 0; padding: 12px 18px; background: linear-gradient(90deg, #1a2b3c 0%, #2f4f6f 100%); color: #ffffff; border-radius: 4px; border-left: 6px solid #d4af37; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 16px;">
+        <img src="../KRA/herb-kirin.png" alt="Herb Wielkiego Rodu Kirina" style="height: 54px; width: auto; flex: 0 0 auto; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35));">
+        <div style="flex: 1 1 auto;">
+          <span style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85;">Wasalitet Regionalny</span>
+          <strong style="font-size: 16px; letter-spacing: 0.5px;">Lenna Wielkiego Rodu Kirina</strong>
+        </div>
+        <span style="font-size: 12px; font-style: italic; opacity: 0.9;">Suzeren: Diuk Archadius Błękitny Smok</span>
+      </div>
+    `
   },
   {
     "title": "Hrabia Ziemi Bursztynowego Brzegu",
@@ -1049,5 +1038,65 @@ const rodyWasalneDb = [
     "n43_houseHerbDesc": "Brak (placeholder do zatwierdzenia)",
     "n44_houseMembers": [],
     "n45_houseSeat": "Gród Siedmiu Wirów"
-  }
+  },
+
+  // ==========================================================================
+  // GRUPA 3: PROWINCJE I WASALE BEZPOŚREDNI TRONU KRULEWSKIEGO
+  // ==========================================================================
+  {
+    isDivider: true,
+    html: `
+      <div style="margin: 28px 0 14px 0; padding: 12px 18px; background: linear-gradient(90deg, #6e1313 0%, #9e1c1c 100%); color: #ffffff; border-radius: 4px; border-left: 6px solid #d4af37; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 16px;">
+        <img src="../KRA/herb_krul.png" alt="Herb Krula Multikont" style="height: 54px; width: auto; flex: 0 0 auto; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35));">
+        <div style="flex: 1 1 auto;">
+          <span style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85;">Zależność Bezpośrednia (Art. 36b ust. 1 in fine Dekretu)</span>
+          <strong style="font-size: 16px; letter-spacing: 0.5px;">Bezpośredni Wasale Tronu Krulewskiego</strong>
+        </div>
+        <span style="font-size: 12px; font-style: italic; opacity: 0.9;">Najwyższy Suzeren: Krul Multikont</span>
+      </div>
+    `
+  },
+
+  // 6. BARON DOLINY DRAPIEŻNIKÓW
+  {
+    title: "Baron Doliny Drapieżników",
+    ranga: "Baron",
+    kategoriaRodu: "Ród Ziemski",
+    koronaImg: "../KRA/korona barona.png",
+
+    n11_title: "Baron Doliny Drapieżników",
+    n12_creationOrder: "Postanowienie Krula Multikont nr 10/T/2026 z dnia 26.02.2026 r.",
+    classes: {
+      publicFunction: false,
+      landAndBusiness: true,
+      honorary: false
+    },
+    n14_ranga: "Baron",
+    n15_publicEstate: "Brak",
+    n16_businessEstate: "Gospodarstwo Hodowlane i Rezerwat Łowiecki Doliny Drapieżników",
+    n17_publicLegalBasis: "Nie dotyczy",
+    n18_ringDesc: "Srebrny sygnet z nefrytem",
+    n19_dates: "26.02.2026 r./nie dotyczy",
+
+    n21_holderName: "Gromosław",
+    n22_grantOrder: "Postanowienie Krula Multikont nr 16/N/2026 z dnia 26.02.2026 r.",
+    n23_prevHolders: "Brak",
+    n24_heir: "Brak",
+    n25_individualPrivileges: "Prawo jurysdykcji bartnej w granicach posiadłości",
+
+    n31_usedHerbImg: null,
+    n31_usedHerbDesc: "Brak",
+    n32_usageTitle: "Baron",
+    n33_otherTitles: "Brak",
+
+    n41_houseCategory: "Ród Ziemski (głowa rodu w randze Barona)",
+    n42_vassalStatus: "Bezpośrednia zależność lenna od Krula Multikont (art. 36b ust. 1 in fine Dekretu – z uwagi na brak właściwego terytorialnie Wielkiego Rodu).",
+    n43_houseHerbImg: null,
+    n43_houseHerbDesc: "Brak",
+    n44_houseMembers: [
+      "Gromosław",
+      "Mściwój"
+    ],
+    n45_houseSeat: "Twierdza Wilczy Szczerb"
+  },
 ];
