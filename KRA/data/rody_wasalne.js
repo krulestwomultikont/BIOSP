@@ -1047,7 +1047,7 @@ const rodyWasalneDb = [
     isDivider: true,
     html: `
       <div style="margin: 28px 0 14px 0; padding: 12px 18px; background: linear-gradient(90deg, #6e1313 0%, #9e1c1c 100%); color: #ffffff; border-radius: 4px; border-left: 6px solid #d4af37; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 16px;">
-        <img src="../KRA/herb_krul.png" alt="Herb Krula Multikont" style="height: 54px; width: auto; flex: 0 0 auto; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35));">
+        <img src="../KRA/herb_gryfionow.png" alt="Herb Krula Multikont" style="height: 54px; width: auto; flex: 0 0 auto; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35));">
         <div style="flex: 1 1 auto;">
           <span style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.85;">Zależność Bezpośrednia (Art. 36b ust. 1 in fine Dekretu)</span>
           <strong style="font-size: 16px; letter-spacing: 0.5px;">Bezpośredni Wasale Tronu Krulewskiego</strong>
