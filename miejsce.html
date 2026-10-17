@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miejsce – Wielka Encyklopedia Uniwersum Felorostu</title>
+    <link rel="icon" type="image/png" href="KRA/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .place-infobox {
+            float: right;
+            width: 300px;
+            margin: 0 0 20px 22px;
+            border: 1px solid #d9c9a5;
+            border-top: 5px solid #b8862b;
+            background: #fffdf6;
+            font-size: .88rem;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px rgba(60, 42, 18, .1);
+        }
+        .place-infobox .ib-head {
+            background: #1f2f45;
+            color: #f1e8d5;
+            text-align: center;
+            padding: 9px 10px;
+            font-weight: 700;
+            letter-spacing: .04em;
+        }
+        .place-infobox table { width: 100%; border-collapse: collapse; }
+        .place-infobox td {
+            padding: 6px 10px;
+            border-bottom: 1px solid #eee3c9;
+            vertical-align: top;
+        }
+        .place-infobox td.k { color: #7a6444; font-weight: 700; width: 42%; }
+        .place-infobox .ib-map {
+            display: block;
+            margin: 12px;
+            text-align: center;
+            background: #1f2f45;
+            color: #f1e8d5 !important;
+            text-decoration: none;
+            padding: 9px 10px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+        .place-infobox .ib-map:hover { background: #b8862b; color: #1b1408 !important; }
+
+        .place-type {
+            display: inline-block;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: .66rem;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: #fff;
+            background: #8b4513;
+            border-radius: 3px;
+            padding: 3px 9px;
+            margin-bottom: 8px;
+        }
+        .place-lead {
+            font-size: 1.02rem;
+            line-height: 1.6;
+            color: #40321f;
+        }
+        .place-meta-line {
+            font-size: .82rem;
+            color: #7a6444;
+            margin: -4px 0 16px;
+        }
+        .related {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 10px;
+            margin: 12px 0 20px;
+        }
+        .related a {
+            display: block;
+            background: #fffdf7;
+            border: 1px solid #e0d2b2;
+            border-left: 4px solid #b8862b;
+            border-radius: 4px;
+            padding: 10px 12px;
+            text-decoration: none;
+            color: #2a2e33;
+            font-weight: 700;
+            font-size: .86rem;
+        }
+        .related a:hover { background: #f7efdd; color: #8b4513; }
+        .related a small { display: block; color: #7a6444; font-weight: 400; margin-top: 2px; }
+        .not-found {
+            background: #fff4e0;
+            border: 1px solid #e0c98f;
+            border-left: 5px solid #b8862b;
+            padding: 16px 18px;
+            border-radius: 4px;
+        }
+        @media (max-width: 700px) {
+            .content { padding: 22px 16px; }
+            .place-infobox { float: none; width: auto; margin: 0 0 18px; }
+        }
+    </style>
+</head>
+<body>
+<div class="wiki-wrapper">
+    <nav class="sidebar">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <h2 style="margin: 0;">WIKI</h2>
+            <small>UNIWERSUM FELOROSTU</small>
+        </div>
+        <h3>Eksploracja</h3>
+        <ul>
+            <li><a href="https://krulestwomultikont.github.io/BIOSP/index.html">🏠 Strona Główna</a></li>
+            <li><a href="https://krulestwomultikont.github.io/BIOSP/postacie.html">👥 Postacie</a></li>
+            <li><a href="https://krulestwomultikont.github.io/BIOSP/miejsca.html">🌍 Miejsca</a></li>
+            <li><a href="https://krulestwomultikont.github.io/BIOSP/MAPA/">🗺️ Mapa świata</a></li>
+            <li><a href="https://krulestwomultikont.github.io/BIOSP/organizacje.html">🛡️ Państwa i Frakcje</a></li>
+        </ul>
+
+        <h3>Świat</h3>
+        <ul>
+            <li><a href="https://krulestwomultikont.github.io/BIOSP/historia.html">📜 Oś czasu</a></li>
+            <li><a href="https://krulestwomultikont.github.io/BIOSP/magia.html">✨ Teologia i Mistyka</a></li>
+            <li><a href="https://krulestwomultikont.github.io/BIOSP/bestiariusz.html">🐉 Bestiariusz</a></li>
+        </ul>
+
+        <h3>Prawo Koronne i Multikont</h3>
+        <ul>
+            <li><a href="https://krulestwomultikont.github.io/KDU/">📜 Krulewski Dziennik Ustaw</a></li>
+            <li><a href="https://krulestwomultikont.github.io/DUDWZZM/">👥 DWZZM</a></li>
+        </ul>
+    </nav>
+
+    <main class="content" id="placeContent">
+        <p>Wczytywanie wpisu…</p>
+    </main>
+</div>
+
+<script src="MAPA/data/swiat.js?v=1"></script>
+<script>
+(function () {
+    var D = window.SWIAT;
+    var root = document.getElementById("placeContent");
+    if (!D) { root.innerHTML = '<p>Brak danych mapy.</p>'; return; }
+
+    var TYPE = {
+        kontynent: "Kontynent", kraina: "Kraina", krolestwo: "Królestwo", "królestwo": "Królestwo", księstwo: "Księstwo",
+        prowincja: "Prowincja", marchia: "Marchia", dystrykt: "Dystrykt", państwo: "Państwo",
+        terytorium: "Terytorium", miasto: "Miasto", stolica: "Stolica", zamek: "Zamek",
+        twierdza: "Twierdza", gród: "Gród", klasztor: "Klasztor", port: "Port", dwór: "Dwór",
+        świątynia: "Świątynia", landmark: "Miejsce", biskupstwo: "Biskupstwo", ziemia: "Ziemia",
+        podziemia: "Państwo podziemne", góry: "Góry", region: "Region"
+    };
+    function typeLabel(t) { return TYPE[t] || t || "Miejsce"; }
+    function esc(s) {
+        return String(s == null ? "" : s).replace(/[&<>"]/g, function (m) {
+            return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[m];
+        });
+    }
+    function parentName(e) {
+        if (e.region) { var r = D.byId(e.region); return r ? r.name : ""; }
+        if (e.parent) { var p = D.byId(e.parent); return p ? p.name : ""; }
+        return "";
+    }
+    function row(k, v) {
+        if (!v) return "";
+        return "<tr><td class=\"k\">" + esc(k) + "</td><td>" + esc(v) + "</td></tr>";
+    }
+
+    var params = new URLSearchParams(location.search);
+    var id = params.get("id");
+    var item = id ? D.byId(id) : null;
+
+    if (!item) {
+        root.innerHTML =
+            '<h1>Nie znaleziono miejsca</h1>' +
+            '<div class="not-found"><p>Wpis o podanym identyfikatorze nie istnieje lub został przeniesiony.</p>' +
+            '<p><a href="miejsca.html">← Wróć do listy miejsc</a></p></div>';
+        document.title = "Nie znaleziono miejsca – Wielka Encyklopedia";
+        return;
+    }
+
+    document.title = item.name + " – Wielka Encyklopedia Uniwersum Felorostu";
+
+    var isBishop = item.holder !== undefined;
+    var parent = parentName(item);
+
+    var rows = "";
+    rows += row("Rodzaj", typeLabel(item.type));
+    if (parent) rows += row("Położenie", parent);
+    if (isBishop) {
+        rows += row("Biskup", item.holder);
+        rows += row("Ranga", item.rank);
+        rows += row("Siedziba", item.see);
+    } else {
+        if (item.capital) rows += row("Stolica", item.capital);
+        if (item.ruler) rows += row("Władca", item.ruler);
+    }
+
+    var related = [];
+    var regionId = item.region || (item.parent ? null : item.id);
+    if (item.region) {
+        related = D.places.concat(D.bishoprics).filter(function (p) {
+            return p.region === item.region && p.id !== item.id;
+        });
+    }
+    if (!related.length && item.parent) {
+        related = D.regions.filter(function (r) { return r.parent === item.parent && r.id !== item.id; }).slice(0, 8);
+    }
+    related = related.slice(0, 8);
+
+    var relatedHtml = related.length
+        ? '<div class="section-title"><h2>Powiązane miejsca</h2></div><div class="related">' +
+          related.map(function (p) {
+              return '<a href="miejsce.html?id=' + encodeURIComponent(p.id) + '">' + esc(p.name) +
+                  '<small>' + esc(typeLabel(p.type)) + '</small></a>';
+          }).join("") + '</div>'
+        : '';
+
+    root.innerHTML =
+        '<div class="place-type">' + esc(typeLabel(item.type)) + '</div>' +
+        '<h1 style="margin-top:0;">' + esc(item.name) + '</h1>' +
+        (parent ? '<div class="place-meta-line">' + esc(parent) + '</div>' : '') +
+        '<aside class="place-infobox">' +
+            '<div class="ib-head">' + esc(typeLabel(item.type)) + '</div>' +
+            '<table>' + rows + '</table>' +
+            '<a class="ib-map" href="MAPA/index.html#' + encodeURIComponent(item.id) + '">🗺️ Pokaż na mapie</a>' +
+        '</aside>' +
+        (item.description ? '<p class="place-lead">' + esc(item.description) + '</p>' : '') +
+        '<p><a href="miejsca.html">← Wszystkie miejsca</a> · <a href="MAPA/index.html#' +
+            encodeURIComponent(item.id) + '">Otwórz na interaktywnej mapie</a></p>' +
+        relatedHtml +
+        '<footer style="margin-top: 50px;">© 2026 Wielka Kronika Uniwersum Felorostu. Wszystkie prawa zastrzeżone.</footer>';
+})();
+</script>
+</body>
+</html>

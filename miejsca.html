@@ -3,8 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wielka Encyklopedia Uniwersum Felorostu</title>
+    <title>Miejsca w Feloroście – Wielka Encyklopedia Uniwersum Felorostu</title>
+    <link rel="icon" type="image/png" href="KRA/favicon.png">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .places-hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            background: linear-gradient(135deg, #f7f1e3, #efe4cc);
+            border: 1px solid #d9c9a5;
+            border-left: 6px solid #8b4513;
+            border-radius: 6px;
+            padding: 20px 24px;
+            margin: 0 0 22px;
+        }
+        .places-hero h2 {
+            margin: 0 0 6px;
+            font-size: 1.5rem;
+            color: #2a2e33;
+        }
+        .places-hero p {
+            margin: 0;
+            max-width: 620px;
+            font-size: .92rem;
+            line-height: 1.5;
+            color: #5d4b33;
+        }
+        .map-cta {
+            display: inline-block;
+            background: #1f2f45;
+            color: #f1e8d5 !important;
+            text-decoration: none;
+            padding: 11px 20px;
+            border-radius: 4px;
+            font-weight: 700;
+            white-space: nowrap;
+            border: 2px solid #b8862b;
+        }
+        .map-cta:hover { background: #b8862b; color: #1b1408 !important; }
+
+        .places-tools {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 0 0 18px;
+        }
+        .places-tools input, .places-tools select {
+            padding: 9px 12px;
+            border: 1px solid #b9a273;
+            border-radius: 4px;
+            background: #fffdf6;
+            font-family: inherit;
+            font-size: .9rem;
+            color: #2f2416;
+        }
+        .places-tools input { flex: 1 1 260px; }
+        .places-tools input:focus, .places-tools select:focus {
+            outline: 2px solid #b8862b;
+            outline-offset: 1px;
+        }
+        .places-count { font-size: .8rem; color: #7a6444; }
+
+        .places-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+            gap: 14px;
+            margin-bottom: 30px;
+        }
+        .place-card {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            background: #fffdf7;
+            border: 1px solid #d9c9a5;
+            border-top: 4px solid #b8862b;
+            border-radius: 5px;
+            padding: 14px 16px 12px;
+            box-shadow: 0 2px 8px rgba(60, 42, 18, .06);
+        }
+        .pc-type {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: .64rem;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: #8b4513;
+            font-weight: 700;
+        }
+        .place-card h3 {
+            margin: 0;
+            font-size: 1.06rem;
+            line-height: 1.25;
+            color: #2a2e33;
+        }
+        .pc-sub {
+            font-size: .76rem;
+            color: #7a6444;
+        }
+        .pc-desc {
+            margin: 2px 0 4px;
+            font-size: .82rem;
+            line-height: 1.45;
+            color: #40321f;
+            flex: 1;
+        }
+        .pc-links {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            border-top: 1px solid #eee3c9;
+            padding-top: 8px;
+            margin-top: 2px;
+        }
+        .pc-links a {
+            font-size: .78rem;
+            font-weight: 700;
+            color: #1f2f45;
+            text-decoration: none;
+        }
+        .pc-links a:hover { color: #8b4513; text-decoration: underline; }
+        .pc-links a.map-link { color: #8b4513; }
+        .places-empty { color: #7a6444; font-style: italic; }
+
+        @media (max-width: 700px) {
+            .content { padding: 22px 16px; }
+            .places-hero { padding: 16px; }
+            .map-cta { width: 100%; text-align: center; }
+        }
+    </style>
 </head>
 <body>
 <div class="wiki-wrapper">
@@ -18,6 +147,7 @@
             <li><a href="https://krulestwomultikont.github.io/BIOSP/index.html">🏠 Strona Główna</a></li>
             <li><a href="https://krulestwomultikont.github.io/BIOSP/postacie.html">👥 Postacie</a></li>
             <li><a href="https://krulestwomultikont.github.io/BIOSP/miejsca.html">🌍 Miejsca</a></li>
+            <li><a href="https://krulestwomultikont.github.io/BIOSP/MAPA/">🗺️ Mapa świata</a></li>
             <li><a href="https://krulestwomultikont.github.io/BIOSP/organizacje.html">🛡️ Państwa i Frakcje</a></li>
         </ul>
 
@@ -37,13 +167,114 @@
 
     <main class="content">
         <h1>Miejsca w Feloroście</h1>
-        
 
-        
+        <section class="places-hero">
+            <div>
+                <h2>Interaktywna mapa świata</h2>
+                <p>Kontynenty, księstwa, prowincje, miasta i biskupstwa Felorostu na jednej mapie.
+                   Kliknij krainę lub miejscowość, aby zobaczyć szczegóły, albo przejdź do wpisu w wiki.</p>
+            </div>
+            <a class="map-cta" href="MAPA/">🗺️ Otwórz mapę świata</a>
+        </section>
+
+        <div class="places-tools">
+            <input id="placesSearch" type="search" autocomplete="off" placeholder="Szukaj miejsca, krainy, księstwa…">
+            <select id="placesType" aria-label="Rodzaj miejsca">
+                <option value="">— wszystkie rodzaje —</option>
+            </select>
+            <span class="places-count" id="placesCount"></span>
+        </div>
+
+        <div class="places-grid" id="placesGrid"></div>
+
+        <p class="places-empty" id="placesEmpty" style="display:none;">Brak miejsc spełniających kryteria.</p>
+
         <footer style="margin-top: 50px;">
             © 2026 Wielka Kronika Uniwersum Felorostu. Wszystkie prawa zastrzeżone.
         </footer>
     </main>
 </div>
+
+<script src="MAPA/data/swiat.js?v=1"></script>
+<script>
+(function () {
+    var D = window.SWIAT;
+    if (!D) return;
+    var TYPE = {
+        kontynent: "Kontynent", kraina: "Kraina", krolestwo: "Królestwo", "królestwo": "Królestwo", księstwo: "Księstwo",
+        prowincja: "Prowincja", marchia: "Marchia", dystrykt: "Dystrykt", państwo: "Państwo",
+        terytorium: "Terytorium", miasto: "Miasto", stolica: "Stolica", zamek: "Zamek",
+        twierdza: "Twierdza", gród: "Gród", klasztor: "Klasztor", port: "Port", dwór: "Dwór",
+        świątynia: "Świątynia", landmark: "Miejsce", biskupstwo: "Biskupstwo", ziemia: "Ziemia",
+        podziemia: "Państwo podziemne", góry: "Góry", region: "Region"
+    };
+    function typeLabel(t) { return TYPE[t] || t || "Miejsce"; }
+    function norm(s) {
+        return String(s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    }
+    function esc(s) {
+        return String(s == null ? "" : s).replace(/[&<>"]/g, function (m) {
+            return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[m];
+        });
+    }
+    function parentName(e) {
+        if (e.region) { var r = D.byId(e.region); return r ? r.name : ""; }
+        if (e.parent) { var p = D.byId(e.parent); return p ? p.name : ""; }
+        return "";
+    }
+
+    var entries = D.allEntries().filter(function (e) { return e.id !== e.name; });
+
+    var search = document.getElementById("placesSearch");
+    var typeSel = document.getElementById("placesType");
+    var grid = document.getElementById("placesGrid");
+    var count = document.getElementById("placesCount");
+    var empty = document.getElementById("placesEmpty");
+
+    var types = [];
+    entries.forEach(function (e) { if (types.indexOf(e.type) === -1) types.push(e.type); });
+    types.sort();
+    types.forEach(function (t) {
+        var o = document.createElement("option");
+        o.value = t; o.textContent = typeLabel(t);
+        typeSel.appendChild(o);
+    });
+
+    function card(e) {
+        var sub = parentName(e);
+        var desc = e.description || "";
+        if (desc.length > 190) desc = desc.slice(0, 187).replace(/\s+\S*$/, "") + "…";
+        return '<article class="place-card">' +
+            '<div class="pc-type">' + esc(typeLabel(e.type)) + '</div>' +
+            '<h3>' + esc(e.name) + '</h3>' +
+            (sub ? '<div class="pc-sub">' + esc(sub) + '</div>' : '') +
+            (desc ? '<p class="pc-desc">' + esc(desc) + '</p>' : '') +
+            '<div class="pc-links">' +
+                '<a href="miejsce.html?id=' + encodeURIComponent(e.id) + '">Czytaj w wiki →</a>' +
+                '<a class="map-link" href="MAPA/index.html#' + encodeURIComponent(e.id) + '">Na mapie</a>' +
+            '</div>' +
+        '</article>';
+    }
+
+    function render() {
+        var q = norm(search.value);
+        var t = typeSel.value;
+        var list = entries.filter(function (e) {
+            if (t && e.type !== t) return false;
+            if (!q) return true;
+            var hay = [e.name, e.description, e.region, e.parent, e.capital, e.ruler, e.holder].join(" ");
+            return norm(hay).indexOf(q) !== -1;
+        });
+        list.sort(function (a, b) { return a.name.localeCompare(b.name, "pl"); });
+        grid.innerHTML = list.map(card).join("");
+        count.textContent = list.length + " z " + entries.length + " miejsc";
+        empty.style.display = list.length ? "none" : "block";
+    }
+
+    search.addEventListener("input", render);
+    typeSel.addEventListener("change", render);
+    render();
+})();
+</script>
 </body>
 </html>
