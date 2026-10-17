@@ -16,6 +16,7 @@
   const datalist = document.getElementById("placeList");
   const W = D.meta.canvas.w;
   const H = D.meta.canvas.h;
+  svg.setAttribute("viewBox", "0 0 " + W + " " + H);
 
   const view = { x: 0, y: 0, k: 1 };
   let dragMoved = false;
@@ -64,8 +65,8 @@
   el("stop", { offset: "1", "stop-color": "#e0cda3" }, landGrad);
 
   const rough = el("filter", { id: "rough", x: "-5%", y: "-5%", width: "110%", height: "110%" }, defs);
-  el("feTurbulence", { type: "fractalNoise", baseFrequency: "0.012", numOctaves: "2", seed: "11", result: "noise" }, rough);
-  el("feDisplacementMap", { in: "SourceGraphic", in2: "noise", scale: "5", xChannelSelector: "R", yChannelSelector: "G" }, rough);
+  el("feTurbulence", { type: "fractalNoise", baseFrequency: "0.006", numOctaves: "2", seed: "11", result: "noise" }, rough);
+  el("feDisplacementMap", { in: "SourceGraphic", in2: "noise", scale: "12", xChannelSelector: "R", yChannelSelector: "G" }, rough);
 
   const paper = el("filter", { id: "paper", x: "0", y: "0", width: "100%", height: "100%" }, defs);
   el("feTurbulence", { type: "fractalNoise", baseFrequency: "0.9", numOctaves: "2", seed: "3", result: "n" }, paper);
@@ -94,8 +95,20 @@
   const gBishops = el("g", { id: "bishops", class: "layer-off" }, world);
 
   /* ------------------------------------------------------------- LĄDY */
+  const continentEls = {};
   D.continents.forEach(function (c) {
-    el("path", { d: c.d, class: "land" }, gContinents);
+    const p = el("path", { d: c.d, class: "land continent", "data-id": c.id }, gContinents);
+    continentEls[c.id] = p;
+    p.addEventListener("pointerenter", function (e) {
+      if (!dragging) showTooltip(e, c.name, typeLabel(c.type));
+    });
+    p.addEventListener("pointermove", function (e) {
+      if (!dragging) moveTooltip(e);
+    });
+    p.addEventListener("pointerleave", hideTooltip);
+    p.addEventListener("click", function () {
+      if (!dragMoved) select(c);
+    });
   });
   D.islands.forEach(function (i) {
     el("path", { d: i.d, class: "land island" }, gContinents);
@@ -286,7 +299,7 @@
   function select(item) {
     hideTooltip();
     document.querySelectorAll(".selected").forEach(function (e) { e.classList.remove("selected"); });
-    const elTarget = regionEls[item.id] || placeEls[item.id] || bishopEls[item.id];
+    const elTarget = continentEls[item.id] || regionEls[item.id] || placeEls[item.id] || bishopEls[item.id];
     if (elTarget) { elTarget.classList.add("selected"); selectedEl = elTarget; }
 
     const isBishop = item.holder !== undefined;
@@ -328,7 +341,7 @@
       view.x = W / 2 - view.k * item.x;
       view.y = H / 2 - view.k * item.y;
     } else {
-      const path = regionEls[item.id] || document.querySelector('[data-id="' + item.id + '"]');
+      const path = continentEls[item.id] || regionEls[item.id] || document.querySelector('[data-id="' + item.id + '"]');
       if (!path || !path.getBBox) return;
       const b = path.getBBox();
       if (!b.width || !b.height) return;
@@ -403,17 +416,17 @@
     if (!g) return;
     g.classList.toggle("layer-off", !on);
   }
-  document.getElementById("layerPolitical").addEventListener("change", function (e) {
-    setLayer("regions", "layer-off", e.target.checked);
-  });
-  document.getElementById("layerPhysical").addEventListener("change", function (e) {
+  const lp = document.getElementById("layerPolitical");
+  if (lp) lp.addEventListener("change", function (e) { setLayer("regions", "layer-off", e.target.checked); });
+  const lf = document.getElementById("layerPhysical");
+  if (lf) lf.addEventListener("change", function (e) {
     setLayer("terrain", "layer-off", e.target.checked);
     setLayer("rivers", "layer-off", e.target.checked);
   });
-  document.getElementById("layerBishops").addEventListener("change", function (e) {
-    setLayer("bishops", "layer-off", e.target.checked);
-  });
-  document.getElementById("layerLabels").addEventListener("change", function (e) {
+  const lb = document.getElementById("layerBishops");
+  if (lb) lb.addEventListener("change", function (e) { setLayer("bishops", "layer-off", e.target.checked); });
+  const ll = document.getElementById("layerLabels");
+  if (ll) ll.addEventListener("change", function (e) {
     document.body.classList.toggle("hide-labels", !e.target.checked);
   });
 

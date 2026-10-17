@@ -199,10 +199,10 @@ body { overflow: hidden; }
 .land {
   fill: url(#landGrad);
   stroke: #8a6a3a;
-  stroke-width: 2.2;
+  stroke-width: 3.2;
   stroke-linejoin: round;
 }
-.land.island { stroke-width: 1.8; }
+.land.island { stroke-width: 2.4; }
 
 .region {
   stroke: rgba(90, 62, 28, .55);
@@ -235,39 +235,39 @@ body { overflow: hidden; }
 /* ------------------------------------------------------------------ LABELS */
 .region-label {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: .03em;
   fill: #3a2a16;
   paint-order: stroke;
   stroke: rgba(247, 238, 214, .92);
-  stroke-width: 4px;
+  stroke-width: 5px;
   stroke-linejoin: round;
   pointer-events: auto;
   cursor: pointer;
   user-select: none;
 }
 .region-label.minor {
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 600;
   display: none;
 }
 .zoomed-in .region-label.minor { display: block; }
 .continent-label {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 34px;
+  font-size: 56px;
   font-weight: 700;
-  letter-spacing: .28em;
+  letter-spacing: .22em;
   fill: rgba(70, 48, 20, .55);
   paint-order: stroke;
   stroke: rgba(247, 238, 214, .55);
-  stroke-width: 6px;
+  stroke-width: 8px;
   pointer-events: none;
   user-select: none;
 }
 .sea-label {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 22px;
+  font-size: 34px;
   letter-spacing: .35em;
   fill: rgba(28, 68, 92, .5);
   font-style: italic;
@@ -278,18 +278,18 @@ body { overflow: hidden; }
 .place { cursor: pointer; }
 .place-label {
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 600;
   fill: #2f2416;
   paint-order: stroke;
   stroke: rgba(250, 244, 228, .95);
-  stroke-width: 3.5px;
+  stroke-width: 4.5px;
   stroke-linejoin: round;
   pointer-events: none;
   user-select: none;
 }
-.place-1 .place-label { font-size: 13px; font-weight: 800; }
-.place-3 .place-label { font-size: 10px; font-weight: 500; opacity: .92; display: none; }
+.place-1 .place-label { font-size: 20px; font-weight: 800; }
+.place-3 .place-label { font-size: 14px; font-weight: 500; opacity: .92; display: none; }
 .zoomed-in .place-3 .place-label { display: block; }
 
 .mk { vector-effect: non-scaling-stroke; }

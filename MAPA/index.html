@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mapa świata Felorost – Wielka Encyklopedia Uniwersum Felorostu</title>
-  <meta name="description" content="Interaktywna, publikowana w internecie mapa świata Felorost: kontynenty, księstwa, prowincje, miasta i biskupstwa.">
+  <meta name="description" content="Interaktywna mapa świata Felorost — kształt kontynentów: Vermindor, Multikonia, Mythandria.">
   <link rel="icon" type="image/png" href="../KRA/favicon.png">
   <link rel="apple-touch-icon" href="../KRA/favicon.png">
-  <link rel="stylesheet" href="style.css?v=1">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
   <div class="map-shell">
@@ -31,14 +31,11 @@
       <div class="map-toolbar">
         <div class="map-search">
           <input id="search" list="placeList" type="search" autocomplete="off"
-                 placeholder="Szukaj miejsca, krainy lub biskupstwa…" aria-label="Szukaj na mapie">
+                 placeholder="Szukaj kontynentu…" aria-label="Szukaj na mapie">
           <datalist id="placeList"></datalist>
         </div>
 
         <div class="map-layers" aria-label="Warstwy mapy">
-          <label><input type="checkbox" id="layerPolitical" checked> Polityczna</label>
-          <label><input type="checkbox" id="layerPhysical" checked> Fizyczna</label>
-          <label><input type="checkbox" id="layerBishops"> Biskupstwa</label>
           <label><input type="checkbox" id="layerLabels" checked> Nazwy</label>
         </div>
 
@@ -51,7 +48,7 @@
       </div>
 
       <div class="map-stage" id="stage">
-        <svg id="map" viewBox="0 0 2100 1500" role="img"
+        <svg id="map" viewBox="0 0 3600 2200" role="img"
              aria-label="Interaktywna mapa świata Felorost"></svg>
 
         <div class="map-tooltip" id="tooltip" role="status" aria-live="polite"></div>
@@ -59,21 +56,19 @@
         <aside class="map-panel" id="panel" aria-label="Szczegóły miejsca"></aside>
 
         <div class="map-legend" aria-hidden="true">
-          <span><b class="legend-star">★</b> stolica</span>
-          <span><span class="legend-dot" style="background:#f4ead2;border:1.5px solid #3f2e18"></span> miasto</span>
-          <span><span class="legend-dot" style="background:#7a5a3a"></span> twierdza / zamek</span>
-          <span><span class="legend-dot" style="background:#6b4f8a"></span> klasztor</span>
-          <span><b class="legend-cross">✚</b> biskupstwo</span>
+          <span><b>Wersja 0.2</b> — kształt kontynentów</span>
+          <span>Regiony, państwa i miejsca w przygotowaniu</span>
         </div>
 
         <div class="map-note">
-          Pierwszy szkic kanoniczny. Kształty i położenia krain są robocze — będą sukcesywnie poprawiane.
+          Vermindor — największy, od prawej krawędzi, podłużny w lewo. Multikonia — pod nim, pozioma.
+          Mythandria — najdalej na zachód, podłużna z północy na południe.
         </div>
       </div>
     </main>
   </div>
 
-  <script src="data/swiat.js?v=1"></script>
-  <script src="app.js?v=1"></script>
+  <script src="data/swiat.js?v=2"></script>
+  <script src="app.js?v=2"></script>
 </body>
 </html>
