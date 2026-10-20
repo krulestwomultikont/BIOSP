@@ -114,7 +114,6 @@
             <li><a href="https://krulestwomultikont.github.io/BIOSP/index.html">🏠 Strona Główna</a></li>
             <li><a href="https://krulestwomultikont.github.io/BIOSP/postacie.html">👥 Postacie</a></li>
             <li><a href="https://krulestwomultikont.github.io/BIOSP/miejsca.html">🌍 Miejsca</a></li>
-            <li><a href="https://krulestwomultikont.github.io/BIOSP/MAPA/">🗺️ Mapa świata</a></li>
             <li><a href="https://krulestwomultikont.github.io/BIOSP/organizacje.html">🛡️ Państwa i Frakcje</a></li>
         </ul>
 
@@ -137,12 +136,12 @@
     </main>
 </div>
 
-<script src="MAPA/data/swiat.js?v=2"></script>
+<script src="miejsca/data.js?v=2"></script>
 <script>
 (function () {
     var D = window.SWIAT;
     var root = document.getElementById("placeContent");
-    if (!D) { root.innerHTML = '<p>Brak danych mapy.</p>'; return; }
+    if (!D) { root.innerHTML = '<p>Brak danych.</p>'; return; }
 
     var TYPE = {
         kontynent: "Kontynent", kraina: "Kraina", krolestwo: "Królestwo", "królestwo": "Królestwo", księstwo: "Księstwo",
@@ -225,11 +224,9 @@
         '<aside class="place-infobox">' +
             '<div class="ib-head">' + esc(typeLabel(item.type)) + '</div>' +
             '<table>' + rows + '</table>' +
-            '<a class="ib-map" href="MAPA/index.html#' + encodeURIComponent(item.id) + '">🗺️ Pokaż na mapie</a>' +
         '</aside>' +
         (item.description ? '<p class="place-lead">' + esc(item.description) + '</p>' : '') +
-        '<p><a href="miejsca.html">← Wszystkie miejsca</a> · <a href="MAPA/index.html#' +
-            encodeURIComponent(item.id) + '">Otwórz na interaktywnej mapie</a></p>' +
+        '<p><a href="miejsca.html">← Wszystkie miejsca</a></p>' +
         relatedHtml +
         '<footer style="margin-top: 50px;">© 2026 Wielka Kronika Uniwersum Felorostu. Wszystkie prawa zastrzeżone.</footer>';
 })();
