@@ -116,6 +116,22 @@ h1 {
     margin-top: 25px;
 }
 
+.map-cta {
+    display: inline-block;
+    background: #1f2f45;
+    color: #f1e8d5 !important;
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 4px;
+    font-weight: 700;
+    border: 2px solid #b8862b;
+}
+
+.map-cta:hover {
+    background: #b8862b;
+    color: #1b1408 !important;
+}
+
 footer {
     text-align: center;
     padding: 20px;

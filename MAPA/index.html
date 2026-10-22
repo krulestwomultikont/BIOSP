@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felorost — mapa polityczna</title>
+  <meta name="description" content="Interaktywna, wysokorozdzielcza mapa Felorostu: teren i granice państw.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=12">
+</head>
+<body>
+  <div id="app">
+    <header id="topbar">
+      <div class="brand">
+        <div class="emblem" aria-hidden="true"><span>✦</span></div>
+        <div class="brand-text">
+          <h1>FELOROST</h1>
+          <p>Mapa polityczna · wersja 1.0</p>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <a class="layer-btn" href="../mapa.html" target="_top" title="Wróć do wiki" style="text-decoration:none">← Wiki</a>
+        <div class="layers" role="group" aria-label="Warstwy mapy">
+          <button id="toggle-terrain" class="layer-btn is-on" aria-pressed="true">
+            <span class="layer-dot layer-dot-terrain"></span>Teren
+          </button>
+          <button id="toggle-borders" class="layer-btn is-on" aria-pressed="true">
+            <span class="layer-dot layer-dot-borders"></span>Granice państw
+          </button>
+        </div>
+
+        <div class="zoom-controls" role="group" aria-label="Przybliżenie">
+          <button id="zoom-out" class="icon-btn" aria-label="Oddal" title="Oddal">−</button>
+          <span id="zoom-label" class="zoom-label">100%</span>
+          <button id="zoom-in" class="icon-btn" aria-label="Przybliż" title="Przybliż">+</button>
+          <button id="zoom-reset" class="icon-btn reset-btn" aria-label="Dopasuj mapę" title="Dopasuj mapę">⤢</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="viewport" aria-label="Interaktywna mapa Felorostu">
+      <div id="world">
+        <svg id="map" viewBox="0 0 4744 2506" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="map-title">
+          <title id="map-title">Mapa polityczna Felorostu</title>
+          <defs>
+            <radialGradient id="ocean-vignette" cx="50%" cy="45%" r="72%">
+              <stop offset="0%" stop-color="#2a5b62" stop-opacity="0.0"/>
+              <stop offset="100%" stop-color="#061014" stop-opacity="0.46"/>
+            </radialGradient>
+            <filter id="soft-glow" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="7" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
+          <rect id="ocean-base" x="0" y="0" width="4744" height="2506" fill="#102b33"/>
+          <image id="terrain-image" class="terrain-image" href="assets/terrain.webp?v=4" x="0" y="0" width="4744" height="2506" preserveAspectRatio="none"/>
+          <rect class="ocean-vignette" x="0" y="0" width="4744" height="2506" fill="url(#ocean-vignette)" pointer-events="none"/>
+          <g id="land-silhouette" class="land-silhouette" aria-hidden="true"></g>
+          <g id="states-layer" class="states-layer"></g>
+          <g id="coast-layer" class="coast-layer" aria-hidden="true"></g>
+          <g id="duchies-layer" class="duchies-layer"></g>
+          <g id="volcano-layer" class="volcano-layer"></g>
+          <g id="terrain-labels-layer" class="terrain-labels-layer"></g>
+          <g id="state-labels-layer" class="state-labels-layer"></g>
+          <g id="duchy-labels-layer" class="duchy-labels-layer"></g>
+          <g id="sea-labels-layer" class="sea-labels-layer"></g>
+          <g id="compass" class="compass" aria-hidden="true" transform="translate(4490 2320)">
+            <circle cx="0" cy="0" r="58" fill="rgba(10,22,26,.38)" stroke="rgba(214,179,106,.35)" stroke-width="1.5"/>
+            <path d="M 0 -44 L 12 8 L 0 0 L -12 8 Z" fill="#d6b36a" opacity=".85"/>
+            <path d="M 0 44 L 8 16 L 0 20 L -8 16 Z" fill="#8fb3b8" opacity=".65"/>
+            <text x="0" y="-66" text-anchor="middle" class="compass-n">N</text>
+            <text x="0" y="86" text-anchor="middle" class="compass-s">S</text>
+          </g>
+        </svg>
+      </div>
+
+      <div id="tooltip" class="tooltip" role="status" aria-live="polite"></div>
+
+      <div id="hint" class="hint">
+        <span>Przeciągnij, aby przesunąć</span>
+        <span class="hint-sep">·</span>
+        <span>kółko myszy — przybliżenie</span>
+        <span class="hint-sep">·</span>
+        <span>kliknij obszar, aby poznać opis</span>
+      </div>
+
+      <aside id="panel" class="panel is-closed" aria-hidden="true" aria-live="polite">
+        <button id="panel-close" class="panel-close" aria-label="Zamknij panel">×</button>
+        <div id="panel-content" class="panel-content"></div>
+      </aside>
+
+      <div id="loading" class="loading">
+        <div class="loading-ring"></div>
+        <p>Ładowanie mapy…</p>
+      </div>
+    </main>
+  </div>
+
+  <script>window.FELOROST_WIKI_ENTRY = "../miejsce.html?id=";</script>
+  <script src="data/world.js?v=16"></script>
+  <script src="app.js?v=18"></script>
+</body>
+</html>

@@ -114,6 +114,7 @@
             <li><a href="https://krulestwomultikont.github.io/BIOSP/index.html">🏠 Strona Główna</a></li>
             <li><a href="https://krulestwomultikont.github.io/BIOSP/postacie.html">👥 Postacie</a></li>
             <li><a href="https://krulestwomultikont.github.io/BIOSP/miejsca.html">🌍 Miejsca</a></li>
+            <li><a href="mapa.html">🗺️ Mapa Felorostu</a></li>
             <li><a href="https://krulestwomultikont.github.io/BIOSP/organizacje.html">🛡️ Państwa i Frakcje</a></li>
         </ul>
 
@@ -136,7 +137,8 @@
     </main>
 </div>
 
-<script src="miejsca/data.js?v=2"></script>
+<script src="MAPA/data/entries.js?v=4"></script>
+<script src="miejsca/data.js?v=6"></script>
 <script>
 (function () {
     var D = window.SWIAT;
@@ -149,7 +151,9 @@
         terytorium: "Terytorium", miasto: "Miasto", stolica: "Stolica", zamek: "Zamek",
         twierdza: "Twierdza", gród: "Gród", klasztor: "Klasztor", port: "Port", dwór: "Dwór",
         świątynia: "Świątynia", landmark: "Miejsce", biskupstwo: "Biskupstwo", ziemia: "Ziemia",
-        podziemia: "Państwo podziemne", góry: "Góry", region: "Region"
+        podziemia: "Państwo podziemne", góry: "Góry", region: "Region",
+        federacja: "Federacja", cesarstwo: "Cesarstwo", republika: "Republika",
+        ezarchat: "Ezarchat", zakon: "Zakon", "państwo-miasto": "Państwo-miasto"
     };
     function typeLabel(t) { return TYPE[t] || t || "Miejsce"; }
     function esc(s) {
@@ -198,14 +202,14 @@
     }
 
     var related = [];
-    var regionId = item.region || (item.parent ? null : item.id);
+    var allEntries = D.allEntries();
     if (item.region) {
-        related = D.places.concat(D.bishoprics).filter(function (p) {
+        related = allEntries.filter(function (p) {
             return p.region === item.region && p.id !== item.id;
         });
     }
     if (!related.length && item.parent) {
-        related = D.regions.filter(function (r) { return r.parent === item.parent && r.id !== item.id; }).slice(0, 8);
+        related = allEntries.filter(function (r) { return r.parent === item.parent && r.id !== item.id; }).slice(0, 8);
     }
     related = related.slice(0, 8);
 
@@ -224,6 +228,7 @@
         '<aside class="place-infobox">' +
             '<div class="ib-head">' + esc(typeLabel(item.type)) + '</div>' +
             '<table>' + rows + '</table>' +
+            (item.mapId ? '<a class="ib-map" href="mapa.html?id=' + encodeURIComponent(item.mapId) + '">Pokaż na mapie</a>' : '') +
         '</aside>' +
         (item.description ? '<p class="place-lead">' + esc(item.description) + '</p>' : '') +
         '<p><a href="miejsca.html">← Wszystkie miejsca</a></p>' +

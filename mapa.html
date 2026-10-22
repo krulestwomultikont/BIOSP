@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Felorostu – Wielka Encyklopedia Uniwersum Felorostu</title>
+    <meta name="description" content="Interaktywna mapa polityczna Felorostu: teren, granice państw, księstwa i miasta.">
+    <link rel="icon" type="image/png" href="KRA/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body.map-page .wiki-wrapper {
+            max-width: 1500px;
+        }
+
+        body.map-page .content {
+            padding: 28px 30px 34px;
+        }
+
+        .map-hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            background: linear-gradient(135deg, #f7f1e3, #efe4cc);
+            border: 1px solid #d9c9a5;
+            border-left: 6px solid #8b4513;
+            border-radius: 6px;
+            padding: 18px 22px;
+            margin: 0 0 18px;
+        }
+
+        .map-hero p {
+            margin: 0;
+            max-width: 760px;
+            font-size: .93rem;
+            line-height: 1.55;
+            color: #5d4b33;
+        }
+
+        .map-hero .map-cta {
+            display: inline-block;
+            background: #1f2f45;
+            color: #f1e8d5 !important;
+            text-decoration: none;
+            padding: 11px 20px;
+            border-radius: 4px;
+            font-weight: 700;
+            white-space: nowrap;
+            border: 2px solid #b8862b;
+        }
+
+        .map-hero .map-cta:hover {
+            background: #b8862b;
+            color: #1b1408 !important;
+        }
+
+        .map-frame {
+            background: linear-gradient(135deg, #fffdf7, #f3ead7);
+            border: 1px solid #d9c9a5;
+            border-left: 6px solid #8b4513;
+            border-radius: 6px;
+            padding: 10px;
+            box-shadow: 0 8px 26px rgba(60, 42, 18, .12);
+        }
+
+        .map-frame-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 2px 4px 10px;
+            font-size: .78rem;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: #7a6444;
+        }
+
+        .map-frame-head a {
+            color: #8b4513;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .map-frame-head a:hover {
+            text-decoration: underline;
+        }
+
+        .map-frame iframe {
+            display: block;
+            width: 100%;
+            height: clamp(560px, 72vh, 840px);
+            border: 1px solid #1f2f45;
+            border-radius: 3px;
+            background: #081418;
+        }
+
+        .map-frame-foot {
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+            padding: 9px 4px 1px;
+            font-size: .8rem;
+            line-height: 1.45;
+            color: #6d5a3e;
+        }
+
+        .map-frame-foot a {
+            color: #8b4513;
+            font-weight: 700;
+        }
+
+        .sidebar a.is-current {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 820px) {
+            body.map-page .wiki-wrapper {
+                display: block;
+            }
+
+            body.map-page .sidebar {
+                width: auto;
+                border-right: 0;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            body.map-page .sidebar ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px 18px;
+            }
+
+            body.map-page .sidebar ul li {
+                margin-bottom: 4px;
+            }
+
+            body.map-page .content {
+                padding: 22px 16px 28px;
+            }
+
+            .map-frame iframe {
+                height: 68vh;
+                min-height: 480px;
+            }
+        }
+    </style>
+</head>
+<body class="map-page">
+<div class="wiki-wrapper">
+    <nav class="sidebar">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <h2 style="margin: 0;">WIKI</h2>
+            <small>UNIWERSUM FELOROSTU</small>
+        </div>
+        <h3>Eksploracja</h3>
+        <ul>
+            <li><a href="index.html">🏠 Strona Główna</a></li>
+            <li><a href="postacie.html">👥 Postacie</a></li>
+            <li><a href="miejsca.html">🌍 Miejsca</a></li>
+            <li><a href="mapa.html" class="is-current">🗺️ Mapa Felorostu</a></li>
+            <li><a href="organizacje.html">🛡️ Państwa i Frakcje</a></li>
+        </ul>
+
+        <h3>Świat</h3>
+        <ul>
+            <li><a href="historia.html">📜 Oś czasu</a></li>
+            <li><a href="magia.html">✨ Teologia i Mistyka</a></li>
+            <li><a href="bestiariusz.html">🐉 Bestiariusz</a></li>
+        </ul>
+
+        <h3>Prawo Koronne i Multikont</h3>
+        <ul>
+            <li><a href="https://krulestwomultikont.github.io/KDU/">📜 Krulewski Dziennik Ustaw</a></li>
+            <li><a href="https://krulestwomultikont.github.io/DUDWZZM/">👥 DWZZM</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>Mapa Felorostu</h1>
+
+        <section class="map-hero">
+            <p>
+                Interaktywny atlas polityczny Felorostu. Dwie warstwy — <strong>Teren</strong>
+                i <strong>Granice państw</strong> — pokazują ukształtowanie świata oraz
+                państwa, księstwa i miasta. Kliknij obszar, aby otworzyć jego opis.
+            </p>
+            <a class="map-cta" href="MAPA/index.html?v=7" target="_blank" rel="noopener">Otwórz pełny ekran ↗</a>
+        </section>
+
+        <div class="map-frame">
+            <div class="map-frame-head">
+                <span>Atlas polityczny · teren i granice</span>
+                <a href="MAPA/index.html?v=7" target="_blank" rel="noopener">Pełny ekran ↗</a>
+            </div>
+
+            <iframe id="felorost-map"
+                    src="MAPA/index.html?v=7"
+                    title="Interaktywna mapa Felorostu"
+                    loading="lazy"
+                    allowfullscreen></iframe>
+
+            <div class="map-frame-foot">
+                <span>Przeciągnij, aby przesunąć · kółko myszy — przybliżenie · kliknij obszar, aby poznać opis.</span>
+                <a href="miejsca.html">Przejdź do opisów miejsc →</a>
+            </div>
+        </div>
+
+        <footer style="margin-top: 50px;">
+            © 2026 Wielka Kronika Uniwersum Felorostu. Wszystkie prawa zastrzeżone.
+        </footer>
+    </main>
+</div>
+
+<script>
+(function () {
+    var frame = document.getElementById("felorost-map");
+    if (!frame) return;
+    var id = new URLSearchParams(location.search).get("id");
+    if (id) {
+        frame.src = "MAPA/index.html?v=7#" + encodeURIComponent(id);
+    }
+})();
+</script>
+</body>
+</html>
