@@ -299,6 +299,8 @@
       color: #333;
       margin-bottom: 20px;
     }
+    .principle-box { background: #eef6fc; border-left-color: #0f2d4a; font-style: normal; font-weight: 600; }
+    .editorial-note { margin: 0 20px 16px; padding: 10px 14px; background: #f6f8fa; border-left: 3px solid #57606a; color: #57606a; font-size: 12px; line-height: 1.5; }
     .pdf-box {
       border-top: 1px solid #e1e4e8;
       padding-top: 16px;
@@ -441,6 +443,14 @@
          <div class="thesis-box">${caseData.thesis}</div>`
       : '';
 
+    const legalPrincipleHtml = caseData.legalPrinciple
+      ? `<div class="section-title">Zasada prawna</div><div class="sentence-box principle-box">${caseData.legalPrinciple}</div>`
+      : '';
+
+    const editorialNoteHtml = caseData.editorialNote
+      ? `<div class="editorial-note"><strong>Informacja o aktualizacji:</strong> ${caseData.editorialNote}</div>`
+      : '';
+
     const justificationBtn = caseData.justificationUrl
       ? `<a href="${caseData.justificationUrl}" target="_blank" class="btn-pdf btn-pdf-justification">
            📑 Uzasadnienie orzeczenia
@@ -484,6 +494,8 @@
           </div>
           <div class="case-content">
             ${thesisHtml}
+            ${legalPrincipleHtml}
+            ${editorialNoteHtml}
             <div class="section-title">Sentencja orzeczenia</div>
             <div class="sentence-box">${caseData.sentence}</div>
             ${footerBox}
