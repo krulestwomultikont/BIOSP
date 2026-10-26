@@ -69,7 +69,6 @@ const casesDb = {
     thesis: null,
     legalPrinciple: "Wyłączenie wtorków przewidziane w art. 5 ust. 2 KKPK, art. 27 ust. 2 KKPC oraz art. 8 ust. 1 KKC dotyczy wyłącznie obliczania biegu terminów określonych w tych przepisach. Wtorek pozostaje dniem, w którym może dojść do popełnienia czynu; wyłączenie dnia z obliczania terminu nie przenosi chwili czynu na środę ani samo nie wyłącza odpowiedzialności karnej.",
     sentence: "Wysoki Trybunał Koronny w Tarkwinogrodzie, po rozpoznaniu w pełnym składzie sprawy precedensowej przedstawionej pytaniem prawnym Koronnego Sądu Okręgowego w Tarkwinogrodzie na podstawie art. 124 ust. 2 Konstytucji i art. 21 ust. 1 pkt 2 Ustawy o Wysokim Trybunale Koronnym, wydaje w imieniu Krula Multikont następujący WYROK: 1) ustala się zasadę prawną określoną w odrębnej sekcji orzeczenia; 2) wyłączenie wtorków przy obliczaniu terminów nie przenosi chwili popełnienia czynu na środę; 3) sprawę przekazuje się sądowi przedstawiającemu do rozpoznania z uwzględnieniem tej zasady; 4) orzeczenie podlega ogłoszeniu w CROS.",
-    editorialNote: "Aktualizacja redakcyjna z 26.10.2026 r.: doprecyzowano, że wyłączenie wtorków dotyczy obliczania terminów, a nie daty czynu.",
     pdfUrl: null,
     justificationUrl: null
   },
@@ -96,7 +95,6 @@ const casesDb = {
     isFinal: true,
     thesis: "Teza orzeczenia: Zawarcie małżeństwa wymaga dobrowolnej zgody stron mających zdolność prawną. Konto lub bot bez cyfrowej podmiotowości prawnej przyznanej na podstawie art. 15 ust. 3 KKC nie może być stroną małżeństwa ani umowy majątkowej.",
     sentence: "Wysoki Trybunał Koronny w Tarkwinogrodzie, po rozpoznaniu w dziewięcioosobowym składzie wniosku Rzecznika Praw Multikont i Botów o zbadanie zgodności wykładni art. 15 ust. 3 i art. 74 ust. 1–2 KKC z prawem naturalnym, w trybie art. 122 ust. 1 pkt 6 i art. 123 pkt 6 Konstytucji oraz art. 20 ust. 2 pkt 1 Ustawy o Wysokim Trybunale Koronnym, wydaje w imieniu Krula Multikont następujący WYROK: 1) stwierdza, że małżeństwo jest dobrowolnym związkiem podmiotów mających zdolność prawną; 2) stwierdza, że bot lub algorytm bez cyfrowej podmiotowości prawnej nie może być do niego przymuszony; 3) rozstrzygnięcie o indywidualnych roszczeniach stron pozostawia sądowi powszechnemu; 4) orzeczenie podlega ogłoszeniu w CROS.",
-    editorialNote: "Aktualizacja redakcyjna z 26.10.2026 r.: rozstrzygnięcie ujęto jako kontrolę prawną w składzie dziewięcioosobowym; Rzecznik występuje na podstawie art. 123 pkt 6 Konstytucji.",
     pdfUrl: null,
     justificationUrl: null
   },
@@ -163,7 +161,6 @@ const casesDb = {
     thesis: null,
     legalPrinciple: "Art. 8 ust. 1–2 KKC wyłącza wtorki z obliczania biegu terminów materialno-cywilnych i przesuwa na środę termin kończący się we wtorek. Nie oznacza to, że wtorek jest dniem prawnie nieistniejącym poza obliczaniem tych terminów. Przy świadczeniu zależnym od liczby dni opóźnienia wtorku nie uwzględnia się w zakresie wyliczenia terminu.",
     sentence: "Koronny Sąd Najwyższy, po rozpoznaniu na rozprawie w Izbie Cywilnej skargi kasacyjnej spółki „Międzyregionalny Tranzyt i Spedycja k. sp. k.” od wyroku Koronnego Sądu Apelacyjnego w Tarkwinogrodzie, wydaje w imieniu Krula Multikont następujący WYROK: 1) uchyla zaskarżony wyrok w całości i orzekając co do istoty sprawy oddala powództwo o zapłatę odsetek za dzień wtorkowy; 2) nakazuje powodowi złożenie do akt sprawy w systemie CRAE oświadczenia na honor z przeprosinami pozwanego kupca za naruszenie lojalności kontraktowej; 3) zasądza od powoda na rzecz pozwanego kwotę 1200 krulewskich jednostek pieniężnych (kjp) tytułem zwrotu kosztów procesu.",
-    editorialNote: "Aktualizacja redakcyjna z 26.10.2026 r.: ograniczono zasadę do biegu terminów materialno-cywilnych.",
     pdfUrl: null,
     justificationUrl: null
   },
@@ -177,7 +174,6 @@ const casesDb = {
     isFinal: true,
     thesis: "Statut stowarzyszenia postulujący zmianę hymnu Korony na utwór inny niż określony w art. 3 ust. 4 Konstytucji pozostaje w sprzeczności z tym przepisem. Wysoki Trybunał Koronny może stwierdzić taką niezgodność i wydać wiążący nakaz Inkwizycyjny; konkretne środki, w tym delegalizacja lub indywidualna odpowiedzialność karna, podejmują właściwe organy w trybie określonym prawem.",
     sentence: "Wysoki Trybunał Koronny w Tarkwinogrodzie, po rozpoznaniu w pełnym składzie wniosku Pierwszego Senatora na podstawie art. 122 ust. 4 Konstytucji, art. 21 ust. 1 pkt 3 Ustawy o Wysokim Trybunale Koronnym oraz art. 123 pkt 2 Konstytucji, wydaje w imieniu Krula Multikont następujący WYROK: 1) stwierdza niezgodność celów stowarzyszenia „Klub Nowych Melodii” z art. 3 ust. 4 Konstytucji; 2) wydaje wiążący nakaz Inkwizycyjny zobowiązujący Inkwizycję Koronną do podjęcia czynności przewidzianych prawem w celu wykonania tego rozstrzygnięcia; 3) orzeczenie podlega ogłoszeniu w CROS.",
-    editorialNote: "Aktualizacja redakcyjna z 26.10.2026 r.: rozstrzygnięcie merytoryczne oznaczono jako wyrok, a wykonanie powierzono Inkwizycji w formie nakazu.",
     pdfUrl: null,
     justificationUrl: null
   },
@@ -205,7 +201,6 @@ const casesDb = {
     thesis: null,
     legalPrinciple: "Art. 45 ust. 3 KKC zalicza meteoryt do części składowych gruntu. Art. 49 KKC przenosi własność zwierząt lub pożytków, które spadły z drzewa albo przedostały się z roślinności w sposób naturalny; nie przesądza o własności zwierzęcia przemieszczonego na sąsiedni grunt wskutek uderzenia meteorytu. Własność takiego zwierzęcia ustala się na zasadach ogólnych.",
     sentence: "Koronny Sąd Najwyższy, po rozpoznaniu na rozprawie w Izbie Cywilnej skargi kasacyjnej kupca Pafnucego R. od wyroku Koronnego Sądu Apelacyjnego w Tarkwinogrodzie, wydaje w imieniu Krula Multikont następujący WYROK: 1) uchyla zaskarżony wyrok w części dotyczącej ustalenia własności krowy; 2) przekazuje sprawę do ponownego rozpoznania w celu ustalenia tytułu własności zwierzęcia na zasadach ogólnych, bez zastosowania art. 49 KKC do przemieszczenia spowodowanego uderzeniem meteorytu; 3) rozstrzygnięcie o kosztach pozostawia sądowi ponownie rozpoznającemu sprawę.",
-    editorialNote: "Aktualizacja redakcyjna z 26.10.2026 r.: oddzielono własność fragmentu meteorytu od własności zwierzęcia przemieszczonego jego uderzeniem.",
     pdfUrl: null,
     justificationUrl: null
   },
@@ -258,7 +253,6 @@ const casesDb = {
     isFinal: true,
     thesis: "Art. 4 ust. 3 Konstytucji i art. 37 ust. 2 KKK zakazują publicznego wykonywania praktyk związanych z furasami. Sam naturalny wygląd lub ubarwienie ras koronnych, bez publicznego zachowania stanowiącego taką praktykę, nie wypełnia tego zakazu.",
     sentence: "Wysoki Trybunał Koronny w Tarkwinogrodzie, po rozpoznaniu w pełnym składzie wniosku Wielkiego Inkwizytora, działającego także jako Prezes Trybunału z inicjatywy, o której mowa w art. 21 ust. 1 pkt 1 Ustawy o Wysokim Trybunale Koronnym, oraz na podstawie art. 122 ust. 1 pkt 6 i art. 123 pkt 4 Konstytucji, wydaje w imieniu Krula Multikont następujący WYROK: 1) wyjaśnia, że art. 4 ust. 3 Konstytucji i art. 37 ust. 2 KKK dotyczą publicznego wykonywania praktyk związanych z furasami; 2) stwierdza, że naturalny wygląd lub ubarwienie rasy koronnej samo w sobie nie stanowi takiej praktyki; 3) nakazuje stosować zakaz z uwzględnieniem ustaleń dotyczących zachowania, a nie wyłącznie cech wrodzonych; 4) orzeczenie podlega ogłoszeniu w CROS.",
-    editorialNote: "Aktualizacja redakcyjna z 26.10.2026 r.: rozstrzygnięcie merytoryczne ujęto jako wyrok, a zakres zakazu odniesiono do publicznego zachowania.",
     pdfUrl: null,
     justificationUrl: null
   },
@@ -296,7 +290,6 @@ const casesDb = {
     thesis: null,
     legalPrinciple: "Autonomiczny Bot komercyjny oraz zarejestrowane Multikonto prowadzące operacje sieciowe mają prawo wyboru opodatkowania ryczałtowego w wysokości 6% przychodu (art. 8 ust. 2 Ustawy o koronnym podatku dochodowym), co wyznacza zarazem stawkę ryczałtowej zaliczki na koronny podatek religijny w wysokości 0,12% przychodu (art. 28 ust. 3 pkt 3 Ustawy o wolnościach sumienia i wyznania oraz koronnym podatku religijnym); organ podatkowy nie może przymusowo narzucać rozliczenia ogólnego bez uprzedniego wykazania pozorności algorytmu.",
     sentence: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna w Tarkwinogrodzie, po rozpoznaniu na posiedzeniu jawnym w pełnym składzie wniosku Rzecznika Praw Multikont i Botów o podjęcie uchwały rozstrzygającej zagadnienie prawne, z udziałem Wielkiego Inkwizytora oraz Szefa KAS: podejmuje uchwałę o treści zasady prawnej sformułowanej w tezie na podstawie art. 75 ust. 3 i art. 76 ust. 1 KKPA.",
-    editorialNote: "Aktualizacja redakcyjna z 26.10.2026 r.: zasadę prawną wyodrębniono w osobnej sekcji.",
     pdfUrl: null,
     justificationUrl: null
   },
@@ -357,7 +350,6 @@ const casesDb = {
     isFinal: false,
     thesis: "Odmowa wydania pozwolenia na broń palną i licencjonowaną amunicję obronną przez komendanta regionalnego KKOP na podstawie art. 17 ust. 1 Ustawy o Koronnym Korpusie Ochrony Porządku (KKOP) nie może być uzasadniana wyłącznie przynależnością kandydata do odrębnego zalegalizowanego wyznania; stanowi to bezprawne naruszenie konstytucyjnej wolności sumienia i wyznania (art. 52 Konstytucji oraz art. 4 i art. 5 ust. 2 Ustawy o wolnościach sumienia i wyznania).",
     sentence: "Koronny Trybunał Administracyjny, Izba Rozpoznawcza w Tarkwinogrodzie, po rozpoznaniu na rozprawie skargi obywatela Jeremiego K. na decyzję Komendanta Głównego Koronnego Korpusu Ochrony Porządku: 1. Uchyla zaskarżoną decyzję oraz decyzję Komendanta Regionalnego KKOP na podstawie art. 67 ust. 1 pkt 1 KKPA; 2. Nakazuje organowi ponowne rozpatrzenie wniosku z wyłączeniem kryteriów konfesyjnych.",
-    editorialNote: "Pisownię nazwiska sędziego ujednolicono z zarządzeniem nominacyjnym MK 2026 poz. 15 i bazą postaci.",
     pdfUrl: null,
     justificationUrl: null
   },
@@ -371,7 +363,6 @@ const casesDb = {
     thesis: null,
     legalPrinciple: "Wydatek poniesiony przez podatnika na zakup certyfikowanej amunicji cebulowej w państwowym ośrodku hodowli podległym Głównemu Inspektorowi Cebulacji nie stanowi kosztu uzyskania przychodów w rozumieniu art. 3 ust. 1 Ustawy o koronnym podatku dochodowym, jeżeli został poniesiony w celu wykonania orzeczonej kary ucebulowania lub ucebulowania porządkowego (art. 3 ust. 2 pkt 2 i 3 ustawy); koszt taki może być jednak zaliczony do kosztów podatkowych przedsiębiorstwa, jeżeli zakup służył realizacji koncesjonowanych usług ochrony osób i mienia.",
     sentence: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna w Tarkwinogrodzie, po rozpoznaniu na posiedzeniu jawnym w pełnym składzie wniosku Pierwszego Prezesa KTA o podjęcie uchwały rozstrzygającej zagadnienie prawne, z udziałem Wielkiego Inkwizytora oraz Szefa KAS: na podstawie art. 75 ust. 3 i art. 76 ust. 1 KKPA podejmuje uchwałę o treści zasady prawnej wyrażonej w tezie.",
-    editorialNote: "Aktualizacja redakcyjna z 26.10.2026 r.: zasadę prawną wyodrębniono w osobnej sekcji.",
     pdfUrl: null,
     justificationUrl: null
   },
@@ -433,7 +424,6 @@ const casesDb = {
     thesis: null,
     legalPrinciple: "Na podstawie art. 39 ust. 2 KKE, na wniosek Rzecznika Praw Multikont i Botów, krulewski egzekutor może zwolnić spod zajęcia zasoby systemowe i logi operacyjne niezbędne do podtrzymania podstawowej egzystencji oraz stabilności technonaturalnej dłużnika. Ocena dotyczy okoliczności konkretnej egzekucji i uwzględnia ustawowy wyjątek ochrony interesu narodowego Korony; przepis nie ustanawia bezwarunkowego obowiązku zwolnienia zasobów.",
     sentence: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna w Tarkwinogrodzie, po rozpoznaniu na posiedzeniu jawnym w pełnym składzie wniosku Rzecznika Praw Multikont i Botów o podjęcie uchwały rozstrzygającej zagadnienie prawne, z udziałem Wielkiego Inkwizytora oraz Szefa Korpusu Krulewskich Egzekutorów, na podstawie art. 75 ust. 3 i art. 76 ust. 1 KKPA podejmuje uchwałę o treści zasady prawnej określonej w odrębnej sekcji orzeczenia.",
-    editorialNote: "Aktualizacja redakcyjna z 26.10.2026 r.: uwzględniono wniosek Rzecznika, uznaniowy charakter zwolnienia oraz wyjątek ochrony interesu narodowego.",
     pdfUrl: null,
     justificationUrl: null
   },
@@ -446,7 +436,6 @@ const casesDb = {
     isFinal: true,
     thesis: "Art. 24 KKE wyłącza wtorki z obliczania terminów egzekucyjnych, w tym terminu dobrowolnego wykonania obowiązku z art. 30 ust. 2 KKE. Nie ustanawia zakazu dokonywania czynności egzekucyjnych we wtorek. O legalności wykonania zastępczego rozstrzyga w szczególności to, czy zawiadomienie zostało prawidłowo doręczone i upłynął pełny siedmiodniowy termin, liczony z pominięciem wtorków.",
     sentence: "Koronny Trybunał Administracyjny, Kapituła Kasacyjna w Tarkwinogrodzie, po rozpoznaniu na rozprawie skargi kasacyjnej krulewskiego egzekutora od wyroku Izby Rozpoznawczej Koronnego Trybunału Administracyjnego: 1) uwzględnia skargę kasacyjną; 2) uchyla zaskarżony wyrok i przekazuje sprawę Izbie Rozpoznawczej do ponownego rozpoznania w celu ustalenia, czy przed wykonaniem zastępczym prawidłowo doręczono zawiadomienie i upłynął pełny termin z art. 30 ust. 2 KKE, z uwzględnieniem art. 24 KKE; 3) stwierdza, że sam fakt podjęcia czynności we wtorek nie przesądza o jej bezprawności.",
-    editorialNote: "Aktualizacja redakcyjna z 26.10.2026 r.: oddzielono liczenie terminu egzekucyjnego od dopuszczalności czynności wykonywanej we wtorek.",
     pdfUrl: null,
     justificationUrl: null
   },
