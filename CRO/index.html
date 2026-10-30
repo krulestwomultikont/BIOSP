@@ -5,12 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#202122">
   <title>Centralne Repozytorium Orzeczeń Sądowych</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="portal-nav.css?v=2">
   <script defer src="data/precedents.js"></script>
   <script defer src="app.js"></script>
 </head>
 <body>
-  <header><a class="brand" href="https://krulestwomultikont.github.io/BIOSP/OPR/">Korona Krulestwa Multikont</a><nav aria-label="Nawigacja główna"><a href="https://krulestwomultikont.github.io/BIOSP/OPR/">Oficjalny Portal Rządowy</a><a href="https://koronalegal.krulestwomultikont.workers.dev/">KoronaLegal</a><a href="https://krulestwomultikont.github.io/KDU/">Publikatory</a></nav><span>OFICJALNY PUBLIKATOR ORZECZEŃ PRECEDENSOWYCH</span></header>
+<nav class="portal-nav" aria-label="Nawigacja między portalami">
+  <ul class="portal-menu">
+    <li><details><summary>Oficjalny Portal Rządowy</summary><ul class="portal-submenu">
+      <li><a href="https://krulestwomultikont.github.io/BIOSP/OPR/">Strona Główna</a></li>
+      <li><a href="https://krulestwomultikont.github.io/BIOSP/OPR/konstytucja.html">Konstytucja Korony Krulestwa Multikont</a></li>
+      <li><a href="https://krulestwomultikont.github.io/BIOSP/OPR/rzad.html">Rząd Koronny</a></li>
+      <li><a href="https://krulestwomultikont.github.io/BIOSP/OPR/senat.html">Senat Koronny</a></li>
+    </ul></details></li>
+    <li><a href="https://koronalegal.krulestwomultikont.workers.dev/">KoronaLegal</a></li>
+    <li><details><summary>Publikatory</summary><ul class="portal-submenu">
+      <li><a href="https://krulestwomultikont.github.io/KDU/">Krulewski Dziennik Ustaw</a></li>
+      <li><a href="https://krulestwomultikont.github.io/MK/">Monitor Krulewski</a></li>
+      <li><a href="https://krulestwomultikont.github.io/BIOSP/KRA/">Krajowy Rejestr Arystokracji</a></li>
+      <li><a href="https://krulestwomultikont.github.io/BIOSP/CRO/">Centralne Repozytorium Orzeczeń Sądowych</a></li>
+    </ul></details></li>
+    <li><details><summary>DWZZM</summary><ul class="portal-submenu">
+      <li><a href="https://krulestwomultikont.github.io/DUDWZZM/">Dziennik Urzędowy DWZZM</a></li>
+    </ul></details></li>
+    <li><a href="https://krulestwomultikont.github.io/BIOSP/">BIOSP</a></li>
+  </ul>
+</nav>
+  <header><a class="brand" href="https://krulestwomultikont.github.io/BIOSP/OPR/">Korona Krulestwa Multikont</a><span>OFICJALNY PUBLIKATOR ORZECZEŃ PRECEDENSOWYCH</span></header>
   <main><section class="intro"><p>WYSOKI TRYBUNAŁ KORONNY · PRECEDENSY</p><h1>Centralne Repozytorium Orzeczeń Sądowych</h1><p>Urzędowe ogłoszenia orzeczeń Wysokiego Trybunału Koronnego oraz orzeczeń zawierających zasady prawne.</p></section>
     <section class="search"><label for="q">Szukaj sygnatury, sądu lub treści</label><input id="q" type="search" placeholder="np. WTK P 1/26"><label for="kind">Forma orzeczenia</label><select id="kind"><option value="">Wszystkie formy</option><option>Wyrok</option><option>Postanowienie</option><option>Uchwała</option></select><div id="count" aria-live="polite"></div></section>
     <section id="results" aria-live="polite"></section>
